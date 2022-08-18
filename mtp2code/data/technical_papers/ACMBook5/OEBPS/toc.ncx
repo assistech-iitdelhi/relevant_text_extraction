@@ -1,0 +1,1431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN" "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="en">
+	<head>
+		<meta name="dtb:uid" content="9781970001143"/>
+		<meta name="dtb:depth" content="1"/>
+		<meta name="dtb:totalPageCount" content="0"/>
+		<meta name="dtb:maxPageNumber" content="0"/>
+	</head>
+	<docTitle>
+		<text>The VR Book</text>
+	</docTitle>
+	<navMap>
+	<navPoint id="i1" playOrder="1">
+	  <navLabel>
+	   <text>Cover</text>
+	  </navLabel>
+	<content src="xhtml/cover.html"/>
+	</navPoint>
+	<navPoint id="i2" playOrder="2">
+	  <navLabel>
+	   <text>Half title</text>
+	  </navLabel>
+	<content src="xhtml/halftitle.html"/>
+	</navPoint>
+	<navPoint id="i3" playOrder="3">
+	  <navLabel>
+	   <text>ACM Books</text>
+	  </navLabel>
+	<content src="xhtml/fm01.html"/>
+	</navPoint>
+	<navPoint id="i4" playOrder="4">
+	  <navLabel>
+	   <text>Title</text>
+	  </navLabel>
+	<content src="xhtml/title.html"/>
+	</navPoint>
+	<navPoint id="i5" playOrder="5">
+	  <navLabel>
+	   <text>Copyright</text>
+	  </navLabel>
+	<content src="xhtml/copyright.html"/>
+	</navPoint>
+	<navPoint id="i6" playOrder="6">
+	  <navLabel>
+	   <text>Contents</text>
+	  </navLabel>
+	<content src="xhtml/contents.html"/>
+	</navPoint>
+	<navPoint id="i7" playOrder="7">
+	  <navLabel>
+	   <text>Preface</text>
+	  </navLabel>
+	<content src="xhtml/preface.html#pre"/>
+	</navPoint>
+	<navPoint id="i8" playOrder="8">
+	  <navLabel>
+	   <text>Figure Credits</text>
+	  </navLabel>
+	<content src="xhtml/figure.html#fig"/>
+	</navPoint>
+	<navPoint id="i9" playOrder="9">
+	  <navLabel>
+	   <text>Overview</text>
+	  </navLabel>
+	<content src="xhtml/overview.html#ove"/>
+	</navPoint>
+	<navPoint id="i10" playOrder="10">
+	  <navLabel>
+	   <text>Part I Introduction and Background</text>
+	  </navLabel>
+	<content src="xhtml/part01.html#part1"/>
+	<navPoint id="i11" playOrder="11">
+	  <navLabel>
+	   <text>Chapter 1 What Is Virtual Reality?</text>
+	  </navLabel>
+	<content src="xhtml/chapter01.html#ch1"/>
+	<navPoint id="i12" playOrder="12">
+	  <navLabel>
+	   <text>1.1 The Definition of Virtual Reality</text>
+	  </navLabel>
+	<content src="xhtml/chapter01.html#lev1.1"/>
+	</navPoint>
+	<navPoint id="i13" playOrder="13">
+	  <navLabel>
+	   <text>1.2 VR Is Communication</text>
+	  </navLabel>
+	<content src="xhtml/chapter01.html#lev1.2"/>
+	</navPoint>
+	<navPoint id="i14" playOrder="14">
+	  <navLabel>
+	   <text>1.3 What Is VR Good For?</text>
+	  </navLabel>
+	<content src="xhtml/chapter01.html#lev1.3"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i15" playOrder="15">
+	  <navLabel>
+	   <text>Chapter 2 A History of VR</text>
+	  </navLabel>
+	<content src="xhtml/chapter02.html#ch2"/>
+	<navPoint id="i16" playOrder="16">
+	  <navLabel>
+	   <text>2.1 The 1800s</text>
+	  </navLabel>
+	<content src="xhtml/chapter02.html#lev2.1"/>
+	</navPoint>
+	<navPoint id="i17" playOrder="17">
+	  <navLabel>
+	   <text>2.2 The 1900s</text>
+	  </navLabel>
+	<content src="xhtml/chapter02.html#lev2.2"/>
+	</navPoint>
+	<navPoint id="i18" playOrder="18">
+	  <navLabel>
+	   <text>2.3 The 2000s</text>
+	  </navLabel>
+	<content src="xhtml/chapter02.html#lev2.3"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i19" playOrder="19">
+	  <navLabel>
+	   <text>Chapter 3 An Overview of Various Realities</text>
+	  </navLabel>
+	<content src="xhtml/chapter03.html#ch3"/>
+	<navPoint id="i20" playOrder="20">
+	  <navLabel>
+	   <text>3.1 Forms of Reality</text>
+	  </navLabel>
+	<content src="xhtml/chapter03.html#lev3.1"/>
+	</navPoint>
+	<navPoint id="i21" playOrder="21">
+	  <navLabel>
+	   <text>3.2 Reality Systems</text>
+	  </navLabel>
+	<content src="xhtml/chapter03.html#lev3.2"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i22" playOrder="22">
+	  <navLabel>
+	   <text>Chapter 4 Immersion, Presence, and Reality Trade-Offs</text>
+	  </navLabel>
+	<content src="xhtml/chapter04.html#ch4"/>
+	<navPoint id="i23" playOrder="23">
+	  <navLabel>
+	   <text>4.1 Immersion</text>
+	  </navLabel>
+	<content src="xhtml/chapter04.html#lev4.1"/>
+	</navPoint>
+	<navPoint id="i24" playOrder="24">
+	  <navLabel>
+	   <text>4.2 Presence</text>
+	  </navLabel>
+	<content src="xhtml/chapter04.html#lev4.2"/>
+	</navPoint>
+	<navPoint id="i25" playOrder="25">
+	  <navLabel>
+	   <text>4.3 Illusions of Presence</text>
+	  </navLabel>
+	<content src="xhtml/chapter04.html#lev4.3"/>
+	</navPoint>
+	<navPoint id="i26" playOrder="26">
+	  <navLabel>
+	   <text>4.4 Reality Trade-Offs</text>
+	  </navLabel>
+	<content src="xhtml/chapter04.html#lev4.4"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i27" playOrder="27">
+	  <navLabel>
+	   <text>Chapter 5 The Basics: Design Guidelines</text>
+	  </navLabel>
+	<content src="xhtml/chapter05.html#ch5"/>
+	<navPoint id="i28" playOrder="28">
+	  <navLabel>
+	   <text>5.1 Introduction and Background</text>
+	  </navLabel>
+	<content src="xhtml/chapter05.html#lev5.1"/>
+	</navPoint>
+	<navPoint id="i29" playOrder="29">
+	  <navLabel>
+	   <text>5.2 VR Is Communication</text>
+	  </navLabel>
+	<content src="xhtml/chapter05.html#lev5.2"/>
+	</navPoint>
+	<navPoint id="i30" playOrder="30">
+	  <navLabel>
+	   <text>5.3 An Overview of Various Realities</text>
+	  </navLabel>
+	<content src="xhtml/chapter05.html#lev5.3"/>
+	</navPoint>
+	<navPoint id="i31" playOrder="31">
+	  <navLabel>
+	   <text>5.4 Immersion, Presence, and Reality Trade-Offs</text>
+	  </navLabel>
+	<content src="xhtml/chapter05.html#lev5.4"/>
+	</navPoint>
+</navPoint>
+</navPoint>
+	<navPoint id="i32" playOrder="32">
+	  <navLabel>
+	   <text>Part II Perception</text>
+	  </navLabel>
+	<content src="xhtml/part02.html#part2"/>
+	<navPoint id="i33" playOrder="33">
+	  <navLabel>
+	   <text>Chapter 6 Objective and Subjective Reality</text>
+	  </navLabel>
+	<content src="xhtml/chapter06.html#ch6"/>
+	<navPoint id="i34" playOrder="34">
+	  <navLabel>
+	   <text>6.1 Reality Is Subjective</text>
+	  </navLabel>
+	<content src="xhtml/chapter06.html#lev6.1"/>
+	</navPoint>
+	<navPoint id="i35" playOrder="35">
+	  <navLabel>
+	   <text>6.2 Perceptual Illusions</text>
+	  </navLabel>
+	<content src="xhtml/chapter06.html#lev6.2"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i36" playOrder="36">
+	  <navLabel>
+	   <text>Chapter 7 Perceptual Models and Processes</text>
+	  </navLabel>
+	<content src="xhtml/chapter07.html#ch7"/>
+	<navPoint id="i37" playOrder="37">
+	  <navLabel>
+	   <text>7.1 Distal and Proximal Stimuli</text>
+	  </navLabel>
+	<content src="xhtml/chapter07.html#lev7.1"/>
+	</navPoint>
+	<navPoint id="i38" playOrder="38">
+	  <navLabel>
+	   <text>7.2 Sensation vs. Perception</text>
+	  </navLabel>
+	<content src="xhtml/chapter07.html#lev7.2"/>
+	</navPoint>
+	<navPoint id="i39" playOrder="39">
+	  <navLabel>
+	   <text>7.3 Bottom-Up and Top-Down Processing</text>
+	  </navLabel>
+	<content src="xhtml/chapter07.html#lev7.3"/>
+	</navPoint>
+	<navPoint id="i40" playOrder="40">
+	  <navLabel>
+	   <text>7.4 Afference and Efference</text>
+	  </navLabel>
+	<content src="xhtml/chapter07.html#lev7.4"/>
+	</navPoint>
+	<navPoint id="i41" playOrder="41">
+	  <navLabel>
+	   <text>7.5 Iterative Perceptual Processing</text>
+	  </navLabel>
+	<content src="xhtml/chapter07.html#lev7.5"/>
+	</navPoint>
+	<navPoint id="i42" playOrder="42">
+	  <navLabel>
+	   <text>7.6 The Subconscious and Conscious</text>
+	  </navLabel>
+	<content src="xhtml/chapter07.html#lev7.6"/>
+	</navPoint>
+	<navPoint id="i43" playOrder="43">
+	  <navLabel>
+	   <text>7.7 Visceral, Behavioral, Reflective, and Emotional Processes</text>
+	  </navLabel>
+	<content src="xhtml/chapter07.html#lev7.7"/>
+	</navPoint>
+	<navPoint id="i44" playOrder="44">
+	  <navLabel>
+	   <text>7.8 Mental Models</text>
+	  </navLabel>
+	<content src="xhtml/chapter07.html#lev7.8"/>
+	</navPoint>
+	<navPoint id="i45" playOrder="45">
+	  <navLabel>
+	   <text>7.9 Neuro-Linguistic Programming</text>
+	  </navLabel>
+	<content src="xhtml/chapter07.html#lev7.9"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i46" playOrder="46">
+	  <navLabel>
+	   <text>Chapter 8 Perceptual Modalities</text>
+	  </navLabel>
+	<content src="xhtml/chapter08.html#ch8"/>
+	<navPoint id="i47" playOrder="47">
+	  <navLabel>
+	   <text>8.1 Sight</text>
+	  </navLabel>
+	<content src="xhtml/chapter08.html#lev8.1"/>
+	</navPoint>
+	<navPoint id="i48" playOrder="48">
+	  <navLabel>
+	   <text>8.2 Hearing</text>
+	  </navLabel>
+	<content src="xhtml/chapter08.html#lev8.2"/>
+	</navPoint>
+	<navPoint id="i49" playOrder="49">
+	  <navLabel>
+	   <text>8.3 Touch</text>
+	  </navLabel>
+	<content src="xhtml/chapter08.html#lev8.3"/>
+	</navPoint>
+	<navPoint id="i50" playOrder="50">
+	  <navLabel>
+	   <text>8.4 Proprioception</text>
+	  </navLabel>
+	<content src="xhtml/chapter08.html#lev8.4"/>
+	</navPoint>
+	<navPoint id="i51" playOrder="51">
+	  <navLabel>
+	   <text>8.5 Balance and Physical Motion</text>
+	  </navLabel>
+	<content src="xhtml/chapter08.html#lev8.5"/>
+	</navPoint>
+	<navPoint id="i52" playOrder="52">
+	  <navLabel>
+	   <text>8.6 Smell and Taste</text>
+	  </navLabel>
+	<content src="xhtml/chapter08.html#lev8.6"/>
+	</navPoint>
+	<navPoint id="i53" playOrder="53">
+	  <navLabel>
+	   <text>8.7 Multimodal Perceptions</text>
+	  </navLabel>
+	<content src="xhtml/chapter08.html#lev8.7"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i54" playOrder="54">
+	  <navLabel>
+	   <text>Chapter 9 Perception of Space and Time</text>
+	  </navLabel>
+	<content src="xhtml/chapter09.html#ch9"/>
+	<navPoint id="i55" playOrder="55">
+	  <navLabel>
+	   <text>9.1 Space Perception</text>
+	  </navLabel>
+	<content src="xhtml/chapter09.html#lev9.1"/>
+	</navPoint>
+	<navPoint id="i56" playOrder="56">
+	  <navLabel>
+	   <text>9.2 Time Perception</text>
+	  </navLabel>
+	<content src="xhtml/chapter09.html#lev9.2"/>
+	</navPoint>
+	<navPoint id="i57" playOrder="57">
+	  <navLabel>
+	   <text>9.3 Motion Perception</text>
+	  </navLabel>
+	<content src="xhtml/chapter09.html#lev9.3"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i58" playOrder="58">
+	  <navLabel>
+	   <text>Chapter 10 Perceptual Stability, Attention, and Action</text>
+	  </navLabel>
+	<content src="xhtml/chapter10.html#ch10"/>
+	<navPoint id="i59" playOrder="59">
+	  <navLabel>
+	   <text>10.1 Perceptual Constancies</text>
+	  </navLabel>
+	<content src="xhtml/chapter10.html#lev10.1"/>
+	</navPoint>
+	<navPoint id="i60" playOrder="60">
+	  <navLabel>
+	   <text>10.2 Adaptation</text>
+	  </navLabel>
+	<content src="xhtml/chapter10.html#lev10.2"/>
+	</navPoint>
+	<navPoint id="i61" playOrder="61">
+	  <navLabel>
+	   <text>10.3 Attention</text>
+	  </navLabel>
+	<content src="xhtml/chapter10.html#lev10.3"/>
+	</navPoint>
+	<navPoint id="i62" playOrder="62">
+	  <navLabel>
+	   <text>10.4 Action</text>
+	  </navLabel>
+	<content src="xhtml/chapter10.html#lev10.4"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i63" playOrder="63">
+	  <navLabel>
+	   <text>Chapter 11 Perception: Design Guidelines</text>
+	  </navLabel>
+	<content src="xhtml/chapter11.html#ch11"/>
+	<navPoint id="i64" playOrder="64">
+	  <navLabel>
+	   <text>11.1 Objective and Subjective Reality</text>
+	  </navLabel>
+	<content src="xhtml/chapter11.html#lev11.1"/>
+	</navPoint>
+	<navPoint id="i65" playOrder="65">
+	  <navLabel>
+	   <text>11.2 Perceptual Models and Processes</text>
+	  </navLabel>
+	<content src="xhtml/chapter11.html#lev11.2"/>
+	</navPoint>
+	<navPoint id="i66" playOrder="66">
+	  <navLabel>
+	   <text>11.3 Perceptual Modalities</text>
+	  </navLabel>
+	<content src="xhtml/chapter11.html#lev11.3"/>
+	</navPoint>
+	<navPoint id="i67" playOrder="67">
+	  <navLabel>
+	   <text>11.4 Perception of Space and Time</text>
+	  </navLabel>
+	<content src="xhtml/chapter11.html#lev11.4"/>
+	</navPoint>
+	<navPoint id="i68" playOrder="68">
+	  <navLabel>
+	   <text>11.5 Perceptual Stability, Attention, and Action</text>
+	  </navLabel>
+	<content src="xhtml/chapter11.html#lev11.5"/>
+	</navPoint>
+</navPoint>
+</navPoint>
+	<navPoint id="i69" playOrder="69">
+	  <navLabel>
+	   <text>Part III Adverse Health Effects</text>
+	  </navLabel>
+	<content src="xhtml/part03.html#part3"/>
+	<navPoint id="i70" playOrder="70">
+	  <navLabel>
+	   <text>Chapter 12 Motion Sickness</text>
+	  </navLabel>
+	<content src="xhtml/chapter12.html#ch12"/>
+	<navPoint id="i71" playOrder="71">
+	  <navLabel>
+	   <text>12.1 Scene Motion</text>
+	  </navLabel>
+	<content src="xhtml/chapter12.html#lev12.1"/>
+	</navPoint>
+	<navPoint id="i72" playOrder="72">
+	  <navLabel>
+	   <text>12.2 Motion Sickness and Vection</text>
+	  </navLabel>
+	<content src="xhtml/chapter12.html#lev12.2"/>
+	</navPoint>
+	<navPoint id="i73" playOrder="73">
+	  <navLabel>
+	   <text>12.3 Theories of Motion Sickness</text>
+	  </navLabel>
+	<content src="xhtml/chapter12.html#lev12.3"/>
+	</navPoint>
+	<navPoint id="i74" playOrder="74">
+	  <navLabel>
+	   <text>12.4 A Unified Model of Motion Sickness</text>
+	  </navLabel>
+	<content src="xhtml/chapter12.html#lev12.4"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i75" playOrder="75">
+	  <navLabel>
+	   <text>Chapter 13 Eye Strain, Seizures, and Aftereffects</text>
+	  </navLabel>
+	<content src="xhtml/chapter13.html#ch13"/>
+	<navPoint id="i76" playOrder="76">
+	  <navLabel>
+	   <text>13.1 Accommodation-Vergence Conflict</text>
+	  </navLabel>
+	<content src="xhtml/chapter13.html#lev13.1"/>
+	</navPoint>
+	<navPoint id="i77" playOrder="77">
+	  <navLabel>
+	   <text>13.2 Binocular-Occlusion Conflict</text>
+	  </navLabel>
+	<content src="xhtml/chapter13.html#lev13.2"/>
+	</navPoint>
+	<navPoint id="i78" playOrder="78">
+	  <navLabel>
+	   <text>13.3 Flicker</text>
+	  </navLabel>
+	<content src="xhtml/chapter13.html#lev13.3"/>
+	</navPoint>
+	<navPoint id="i79" playOrder="79">
+	  <navLabel>
+	   <text>13.4 Aftereffects</text>
+	  </navLabel>
+	<content src="xhtml/chapter13.html#lev13.4"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i80" playOrder="80">
+	  <navLabel>
+	   <text>Chapter 14 Hardware Challenges</text>
+	  </navLabel>
+	<content src="xhtml/chapter14.html#ch14"/>
+	<navPoint id="i81" playOrder="81">
+	  <navLabel>
+	   <text>14.1 Physical Fatigue</text>
+	  </navLabel>
+	<content src="xhtml/chapter14.html#lev14.1"/>
+	</navPoint>
+	<navPoint id="i82" playOrder="82">
+	  <navLabel>
+	   <text>14.2 Headset Fit</text>
+	  </navLabel>
+	<content src="xhtml/chapter14.html#lev14.2"/>
+	</navPoint>
+	<navPoint id="i83" playOrder="83">
+	  <navLabel>
+	   <text>14.3 Injury</text>
+	  </navLabel>
+	<content src="xhtml/chapter14.html#lev14.3"/>
+	</navPoint>
+	<navPoint id="i84" playOrder="84">
+	  <navLabel>
+	   <text>14.4 Hygiene</text>
+	  </navLabel>
+	<content src="xhtml/chapter14.html#lev14.4"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i85" playOrder="85">
+	  <navLabel>
+	   <text>Chapter 15 Latency</text>
+	  </navLabel>
+	<content src="xhtml/chapter15.html#ch15"/>
+	<navPoint id="i86" playOrder="86">
+	  <navLabel>
+	   <text>15.1 Negative Effects of Latency</text>
+	  </navLabel>
+	<content src="xhtml/chapter15.html#lev15.1"/>
+	</navPoint>
+	<navPoint id="i87" playOrder="87">
+	  <navLabel>
+	   <text>15.2 Latency Thresholds</text>
+	  </navLabel>
+	<content src="xhtml/chapter15.html#lev15.2"/>
+	</navPoint>
+	<navPoint id="i88" playOrder="88">
+	  <navLabel>
+	   <text>15.3 Delayed Perception as a Function of Dark Adaptation</text>
+	  </navLabel>
+	<content src="xhtml/chapter15.html#lev15.3"/>
+	</navPoint>
+	<navPoint id="i89" playOrder="89">
+	  <navLabel>
+	   <text>15.4 Sources of Delay</text>
+	  </navLabel>
+	<content src="xhtml/chapter15.html#lev15.4"/>
+	</navPoint>
+	<navPoint id="i90" playOrder="90">
+	  <navLabel>
+	   <text>15.5 Timing Analysis</text>
+	  </navLabel>
+	<content src="xhtml/chapter15.html#lev15.5"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i91" playOrder="91">
+	  <navLabel>
+	   <text>Chapter 16 Measuring Sickness</text>
+	  </navLabel>
+	<content src="xhtml/chapter16.html#ch16"/>
+	<navPoint id="i92" playOrder="92">
+	  <navLabel>
+	   <text>16.1 The Kennedy Simulator Sickness Questionnaire</text>
+	  </navLabel>
+	<content src="xhtml/chapter16.html#lev16.1"/>
+	</navPoint>
+	<navPoint id="i93" playOrder="93">
+	  <navLabel>
+	   <text>16.2 Postural Stability</text>
+	  </navLabel>
+	<content src="xhtml/chapter16.html#lev16.2"/>
+	</navPoint>
+	<navPoint id="i94" playOrder="94">
+	  <navLabel>
+	   <text>16.3 Physiological Measures</text>
+	  </navLabel>
+	<content src="xhtml/chapter16.html#lev16.3"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i95" playOrder="95">
+	  <navLabel>
+	   <text>Chapter 17 Summary of Factors That Contribute to Adverse Effects</text>
+	  </navLabel>
+	<content src="xhtml/chapter17.html#ch17"/>
+	<navPoint id="i96" playOrder="96">
+	  <navLabel>
+	   <text>17.1 System Factors</text>
+	  </navLabel>
+	<content src="xhtml/chapter17.html#lev17.1"/>
+	</navPoint>
+	<navPoint id="i97" playOrder="97">
+	  <navLabel>
+	   <text>17.2 Individual User Factors</text>
+	  </navLabel>
+	<content src="xhtml/chapter17.html#lev17.2"/>
+	</navPoint>
+	<navPoint id="i98" playOrder="98">
+	  <navLabel>
+	   <text>17.3 Application Design Factors</text>
+	  </navLabel>
+	<content src="xhtml/chapter17.html#lev17.3"/>
+	</navPoint>
+	<navPoint id="i99" playOrder="99">
+	  <navLabel>
+	   <text>17.4 Presence vs. Motion Sickness</text>
+	  </navLabel>
+	<content src="xhtml/chapter17.html#lev17.4"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i100" playOrder="100">
+	  <navLabel>
+	   <text>Chapter 18 Examples of Reducing Adverse Effects</text>
+	  </navLabel>
+	<content src="xhtml/chapter18.html#ch18"/>
+	<navPoint id="i101" playOrder="101">
+	  <navLabel>
+	   <text>18.1 Optimize Adaptation</text>
+	  </navLabel>
+	<content src="xhtml/chapter18.html#lev18.1"/>
+	</navPoint>
+	<navPoint id="i102" playOrder="102">
+	  <navLabel>
+	   <text>18.2 Real-World Stabilized Cues</text>
+	  </navLabel>
+	<content src="xhtml/chapter18.html#lev18.2"/>
+	</navPoint>
+	<navPoint id="i103" playOrder="103">
+	  <navLabel>
+	   <text>18.3 Manipulate the World as an Object</text>
+	  </navLabel>
+	<content src="xhtml/chapter18.html#lev18.3"/>
+	</navPoint>
+	<navPoint id="i104" playOrder="104">
+	  <navLabel>
+	   <text>18.4 Leading Indicators</text>
+	  </navLabel>
+	<content src="xhtml/chapter18.html#lev18.4"/>
+	</navPoint>
+	<navPoint id="i105" playOrder="105">
+	  <navLabel>
+	   <text>18.5 Minimize Visual Accelerations and Rotations</text>
+	  </navLabel>
+	<content src="xhtml/chapter18.html#lev18.5"/>
+	</navPoint>
+	<navPoint id="i106" playOrder="106">
+	  <navLabel>
+	   <text>18.6 Ratcheting</text>
+	  </navLabel>
+	<content src="xhtml/chapter18.html#lev18.6"/>
+	</navPoint>
+	<navPoint id="i107" playOrder="107">
+	  <navLabel>
+	   <text>18.7 Delay Compensation</text>
+	  </navLabel>
+	<content src="xhtml/chapter18.html#lev18.7"/>
+	</navPoint>
+	<navPoint id="i108" playOrder="108">
+	  <navLabel>
+	   <text>18.8 Motion Platforms</text>
+	  </navLabel>
+	<content src="xhtml/chapter18.html#lev18.8"/>
+	</navPoint>
+	<navPoint id="i109" playOrder="109">
+	  <navLabel>
+	   <text>18.9 Reducing Gorilla Arm</text>
+	  </navLabel>
+	<content src="xhtml/chapter18.html#lev18.9"/>
+	</navPoint>
+	<navPoint id="i110" playOrder="110">
+	  <navLabel>
+	   <text>18.10 Warning Grids and Fade-Outs</text>
+	  </navLabel>
+	<content src="xhtml/chapter18.html#lev18.10"/>
+	</navPoint>
+	<navPoint id="i111" playOrder="111">
+	  <navLabel>
+	   <text>18.11 Medication</text>
+	  </navLabel>
+	<content src="xhtml/chapter18.html#lev18.11"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i112" playOrder="112">
+	  <navLabel>
+	   <text>Chapter 19 Adverse Health Effects: Design Guidelines</text>
+	  </navLabel>
+	<content src="xhtml/chapter19.html#ch19"/>
+	<navPoint id="i113" playOrder="113">
+	  <navLabel>
+	   <text>19.1 Hardware</text>
+	  </navLabel>
+	<content src="xhtml/chapter19.html#lev19.1"/>
+	</navPoint>
+	<navPoint id="i114" playOrder="114">
+	  <navLabel>
+	   <text>19.2 System Calibration</text>
+	  </navLabel>
+	<content src="xhtml/chapter19.html#lev19.2"/>
+	</navPoint>
+	<navPoint id="i115" playOrder="115">
+	  <navLabel>
+	   <text>19.3 Latency Reduction</text>
+	  </navLabel>
+	<content src="xhtml/chapter19.html#lev19.3"/>
+	</navPoint>
+	<navPoint id="i116" playOrder="116">
+	  <navLabel>
+	   <text>19.4 General Design</text>
+	  </navLabel>
+	<content src="xhtml/chapter19.html#lev19.4"/>
+	</navPoint>
+	<navPoint id="i117" playOrder="117">
+	  <navLabel>
+	   <text>19.5 Motion Design</text>
+	  </navLabel>
+	<content src="xhtml/chapter19.html#lev19.5"/>
+	</navPoint>
+	<navPoint id="i118" playOrder="118">
+	  <navLabel>
+	   <text>19.6 Interaction Design</text>
+	  </navLabel>
+	<content src="xhtml/chapter19.html#lev19.6"/>
+	</navPoint>
+	<navPoint id="i119" playOrder="119">
+	  <navLabel>
+	   <text>19.7 Usage</text>
+	  </navLabel>
+	<content src="xhtml/chapter19.html#lev19.7"/>
+	</navPoint>
+	<navPoint id="i120" playOrder="120">
+	  <navLabel>
+	   <text>19.8 Measuring Sickness</text>
+	  </navLabel>
+	<content src="xhtml/chapter19.html#lev19.8"/>
+	</navPoint>
+</navPoint>
+</navPoint>
+<navPoint id="i121" playOrder="121">
+	  <navLabel>
+	   <text>Part IV Content Creation</text>
+	  </navLabel>
+	<content src="xhtml/part04.html#part4"/>
+	<navPoint id="i122" playOrder="122">
+	  <navLabel>
+	   <text>Chapter 20 High-Level Concepts of Content Creation</text>
+	  </navLabel>
+	<content src="xhtml/chapter20.html#ch20"/>
+	<navPoint id="i123" playOrder="123">
+	  <navLabel>
+	   <text>20.1 Experiencing the Story</text>
+	  </navLabel>
+	<content src="xhtml/chapter20.html#lev20.1"/>
+	</navPoint>
+	<navPoint id="i124" playOrder="124">
+	  <navLabel>
+	   <text>20.2 The Core Experience</text>
+	  </navLabel>
+	<content src="xhtml/chapter20.html#lev20.2"/>
+	</navPoint>
+	<navPoint id="i125" playOrder="125">
+	  <navLabel>
+	   <text>20.3 Conceptual Integrity</text>
+	  </navLabel>
+	<content src="xhtml/chapter20.html#lev20.3"/>
+	</navPoint>
+	<navPoint id="i126" playOrder="126">
+	  <navLabel>
+	   <text>20.4 Gestalt Perceptual Organization</text>
+	  </navLabel>
+	<content src="xhtml/chapter20.html#lev20.4"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i127" playOrder="127">
+	  <navLabel>
+	   <text>Chapter 21 Environmental Design</text>
+	  </navLabel>
+	<content src="xhtml/chapter21.html#ch21"/>
+	<navPoint id="i128" playOrder="128">
+	  <navLabel>
+	   <text>21.1 The Scene</text>
+	  </navLabel>
+	<content src="xhtml/chapter21.html#lev21.1"/>
+	</navPoint>
+	<navPoint id="i129" playOrder="129">
+	  <navLabel>
+	   <text>21.2 Color and Lighting</text>
+	  </navLabel>
+	<content src="xhtml/chapter21.html#lev21.2"/>
+	</navPoint>
+	<navPoint id="i130" playOrder="130">
+	  <navLabel>
+	   <text>21.3 Audio</text>
+	  </navLabel>
+	<content src="xhtml/chapter21.html#lev21.3"/>
+	</navPoint>
+	<navPoint id="i131" playOrder="131">
+	  <navLabel>
+	   <text>21.4 Sampling and Aliasing</text>
+	  </navLabel>
+	<content src="xhtml/chapter21.html#lev21.4"/>
+	</navPoint>
+	<navPoint id="i132" playOrder="132">
+	  <navLabel>
+	   <text>21.5 Environmental Wayfinding Aids</text>
+	  </navLabel>
+	<content src="xhtml/chapter21.html#lev21.5"/>
+	</navPoint>
+	<navPoint id="i133" playOrder="133">
+	  <navLabel>
+	   <text>21.6 Real-World Content</text>
+	  </navLabel>
+	<content src="xhtml/chapter21.html#lev21.6"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i134" playOrder="134">
+	  <navLabel>
+	   <text>Chapter 22 Affecting Behavior</text>
+	  </navLabel>
+	<content src="xhtml/chapter22.html#ch22"/>
+	<navPoint id="i135" playOrder="135">
+	  <navLabel>
+	   <text>22.1 Personal Wayfinding Aids</text>
+	  </navLabel>
+	<content src="xhtml/chapter22.html#lev22.1"/>
+	</navPoint>
+	<navPoint id="i136" playOrder="136">
+	  <navLabel>
+	   <text>22.2 Center of Action</text>
+	  </navLabel>
+	<content src="xhtml/chapter22.html#lev22.2"/>
+	</navPoint>
+	<navPoint id="i137" playOrder="137">
+	  <navLabel>
+	   <text>22.3 Field of View</text>
+	  </navLabel>
+	<content src="xhtml/chapter22.html#lev22.3"/>
+	</navPoint>
+	<navPoint id="i138" playOrder="138">
+	  <navLabel>
+	   <text>22.4 Casual vs. High-End VR</text>
+	  </navLabel>
+	<content src="xhtml/chapter22.html#lev22.4"/>
+	</navPoint>
+	<navPoint id="i139" playOrder="139">
+	  <navLabel>
+	   <text>22.5 Characters, Avatars, and Social Networking</text>
+	  </navLabel>
+	<content src="xhtml/chapter22.html#lev22.5"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i140" playOrder="140">
+	  <navLabel>
+	   <text>Chapter 23 Transitioning to VR Content Creation</text>
+	  </navLabel>
+	<content src="xhtml/chapter23.html#ch23"/>
+	<navPoint id="i141" playOrder="141">
+	  <navLabel>
+	   <text>23.1 Paradigm Shifts from Traditional Development to VR Development</text>
+	  </navLabel>
+	<content src="xhtml/chapter23.html#lev23.1"/>
+	</navPoint>
+	<navPoint id="i142" playOrder="142">
+	  <navLabel>
+	   <text>23.2 Reusing Existing Content</text>
+	  </navLabel>
+	<content src="xhtml/chapter23.html#lev23.2"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i143" playOrder="143">
+	  <navLabel>
+	   <text>Chapter 24 Content Creation: Design Guidelines</text>
+	  </navLabel>
+	<content src="xhtml/chapter24.html#ch24"/>
+	<navPoint id="i144" playOrder="144">
+	  <navLabel>
+	   <text>24.1 High-Level Concepts of Content Creation</text>
+	  </navLabel>
+	<content src="xhtml/chapter24.html#lev24.1"/>
+	</navPoint>
+	<navPoint id="i145" playOrder="145">
+	  <navLabel>
+	   <text>24.2 Environmental Design</text>
+	  </navLabel>
+	<content src="xhtml/chapter24.html#lev24.2"/>
+	</navPoint>
+	<navPoint id="i146" playOrder="146">
+	  <navLabel>
+	   <text>24.3 Affecting Behavior</text>
+	  </navLabel>
+	<content src="xhtml/chapter24.html#lev24.3"/>
+	</navPoint>
+	<navPoint id="i147" playOrder="147">
+	  <navLabel>
+	   <text>24.4 Transitioning to VR Content Creation</text>
+	  </navLabel>
+	<content src="xhtml/chapter24.html#lev24.4"/>
+	</navPoint>
+</navPoint>
+</navPoint>
+	<navPoint id="i148" playOrder="148">
+	  <navLabel>
+	   <text>Part V Interaction</text>
+	  </navLabel>
+	<content src="xhtml/part05.html#part5"/>
+	<navPoint id="i149" playOrder="149">
+	  <navLabel>
+	   <text>Chapter 25 Human-Centered Interaction</text>
+	  </navLabel>
+	<content src="xhtml/chapter25.html#ch25"/>
+	<navPoint id="i150" playOrder="150">
+	  <navLabel>
+	   <text>25.1 Intuitiveness</text>
+	  </navLabel>
+	<content src="xhtml/chapter25.html#lev25.1"/>
+	</navPoint>
+	<navPoint id="i151" playOrder="151">
+	  <navLabel>
+	   <text>25.2 Norman&#8217;s Principles of Interaction Design</text>
+	  </navLabel>
+	<content src="xhtml/chapter25.html#lev25.2"/>
+	</navPoint>
+	<navPoint id="i152" playOrder="152">
+	  <navLabel>
+	   <text>25.3 Direct vs. Indirect Interaction</text>
+	  </navLabel>
+	<content src="xhtml/chapter25.html#lev25.3"/>
+	</navPoint>
+	<navPoint id="i153" playOrder="153">
+	  <navLabel>
+	   <text>25.4 The Cycle of Interaction</text>
+	  </navLabel>
+	<content src="xhtml/chapter25.html#lev25.4"/>
+	</navPoint>
+	<navPoint id="i154" playOrder="154">
+	  <navLabel>
+	   <text>25.5 The Human Hands</text>
+	  </navLabel>
+	<content src="xhtml/chapter25.html#lev25.5"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i155" playOrder="155">
+	  <navLabel>
+	   <text>Chapter 26 VR Interaction Concepts</text>
+	  </navLabel>
+	<content src="xhtml/chapter26.html#ch26"/>
+	<navPoint id="i156" playOrder="156">
+	  <navLabel>
+	   <text>26.1 Interaction Fidelity</text>
+	  </navLabel>
+	<content src="xhtml/chapter26.html#lev26.1"/>
+	</navPoint>
+	<navPoint id="i157" playOrder="157">
+	  <navLabel>
+	   <text>26.2 Proprioceptive and Egocentric Interaction</text>
+	  </navLabel>
+	<content src="xhtml/chapter26.html#lev26.2"/>
+	</navPoint>
+	<navPoint id="i158" playOrder="158">
+	  <navLabel>
+	   <text>26.3 Reference Frames</text>
+	  </navLabel>
+	<content src="xhtml/chapter26.html#lev26.3"/>
+	</navPoint>
+	<navPoint id="i159" playOrder="159">
+	  <navLabel>
+	   <text>26.4 Speech and Gestures</text>
+	  </navLabel>
+	<content src="xhtml/chapter26.html#lev26.4"/>
+	</navPoint>
+	<navPoint id="i160" playOrder="160">
+	  <navLabel>
+	   <text>26.5 Modes and Flow</text>
+	  </navLabel>
+	<content src="xhtml/chapter26.html#lev26.5"/>
+	</navPoint>
+	<navPoint id="i161" playOrder="161">
+	  <navLabel>
+	   <text>26.6 Multimodal Interaction</text>
+	  </navLabel>
+	<content src="xhtml/chapter26.html#lev26.6"/>
+	</navPoint>
+	<navPoint id="i162" playOrder="162">
+	  <navLabel>
+	   <text>26.7 Beware of Sickness and Fatigue</text>
+	  </navLabel>
+	<content src="xhtml/chapter26.html#lev26.7"/>
+	</navPoint>
+	<navPoint id="i163" playOrder="163">
+	  <navLabel>
+	   <text>26.8 Visual-Physical Conflict and Sensory Substitution</text>
+	  </navLabel>
+	<content src="xhtml/chapter26.html#lev26.8"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i164" playOrder="164">
+	  <navLabel>
+	   <text>Chapter 27 Input Devices</text>
+	  </navLabel>
+	<content src="xhtml/chapter27.html#ch27"/>
+	<navPoint id="i165" playOrder="165">
+	  <navLabel>
+	   <text>27.1 Input Device Characteristics</text>
+	  </navLabel>
+	<content src="xhtml/chapter27.html#lev27.1"/>
+	</navPoint>
+	<navPoint id="i166" playOrder="166">
+	  <navLabel>
+	   <text>27.2 Classes of Hand Input Devices</text>
+	  </navLabel>
+	<content src="xhtml/chapter27.html#lev27.2"/>
+	</navPoint>
+	<navPoint id="i167" playOrder="167">
+	  <navLabel>
+	   <text>27.3 Classes of Non-hand Input Devices</text>
+	  </navLabel>
+	<content src="xhtml/chapter27.html#lev27.3"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i168" playOrder="168">
+	  <navLabel>
+	   <text>Chapter 28 Interaction Patterns and Techniques</text>
+	  </navLabel>
+	<content src="xhtml/chapter28.html#ch28"/>
+	<navPoint id="i169" playOrder="169">
+	  <navLabel>
+	   <text>28.1 Selection Patterns</text>
+	  </navLabel>
+	<content src="xhtml/chapter28.html#lev28.1"/>
+	</navPoint>
+	<navPoint id="i170" playOrder="170">
+	  <navLabel>
+	   <text>28.2 Manipulation Patterns</text>
+	  </navLabel>
+	<content src="xhtml/chapter28.html#lev28.2"/>
+	</navPoint>
+	<navPoint id="i171" playOrder="171">
+	  <navLabel>
+	   <text>28.3 Viewpoint Control Patterns</text>
+	  </navLabel>
+	<content src="xhtml/chapter28.html#lev28.3"/>
+	</navPoint>
+	<navPoint id="i172" playOrder="172">
+	  <navLabel>
+	   <text>28.4 Indirect Control Patterns</text>
+	  </navLabel>
+	<content src="xhtml/chapter28.html#lev28.4"/>
+	</navPoint>
+	<navPoint id="i173" playOrder="173">
+	  <navLabel>
+	   <text>28.5 Compound Patterns</text>
+	  </navLabel>
+	<content src="xhtml/chapter28.html#lev28.5"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i174" playOrder="174">
+	  <navLabel>
+	   <text>Chapter 29 Interaction: Design Guidelines</text>
+	  </navLabel>
+	<content src="xhtml/chapter29.html#ch29"/>
+	<navPoint id="i175" playOrder="175">
+	  <navLabel>
+	   <text>29.1 Human-Centered Interaction</text>
+	  </navLabel>
+	<content src="xhtml/chapter29.html#lev29.1"/>
+	</navPoint>
+	<navPoint id="i176" playOrder="176">
+	  <navLabel>
+	   <text>29.2 VR Interaction Concepts</text>
+	  </navLabel>
+	<content src="xhtml/chapter29.html#lev29.2"/>
+	</navPoint>
+	<navPoint id="i177" playOrder="177">
+	  <navLabel>
+	   <text>29.3 Input Devices</text>
+	  </navLabel>
+	<content src="xhtml/chapter29.html#lev29.3"/>
+	</navPoint>
+	<navPoint id="i178" playOrder="178">
+	  <navLabel>
+	   <text>29.4 Interaction Patterns and Techniques</text>
+	  </navLabel>
+	<content src="xhtml/chapter29.html#lev29.4"/>
+	</navPoint>
+</navPoint>
+</navPoint>
+	<navPoint id="i179" playOrder="179">
+	  <navLabel>
+	   <text>Part VI Iterative Design</text>
+	  </navLabel>
+	<content src="xhtml/part06.html#part6"/>
+	<navPoint id="i180" playOrder="180">
+	  <navLabel>
+	   <text>Chapter 30 Philosophy of Iterative Design</text>
+	  </navLabel>
+	<content src="xhtml/chapter30.html#ch30"/>
+	<navPoint id="i181" playOrder="181">
+	  <navLabel>
+	   <text>30.1 VR Is Both an Art and a Science</text>
+	  </navLabel>
+	<content src="xhtml/chapter30.html#lev30.1"/>
+	</navPoint>
+	<navPoint id="i182" playOrder="182">
+	  <navLabel>
+	   <text>30.2 Human-Centered Design</text>
+	  </navLabel>
+	<content src="xhtml/chapter30.html#lev30.2"/>
+	</navPoint>
+	<navPoint id="i183" playOrder="183">
+	  <navLabel>
+	   <text>30.3 Continuous Discovery through Iteration</text>
+	  </navLabel>
+	<content src="xhtml/chapter30.html#lev30.3"/>
+	</navPoint>
+	<navPoint id="i184" playOrder="184">
+	  <navLabel>
+	   <text>30.4 There Is No One Way&#8212;Processes Are Project Dependent</text>
+	  </navLabel>
+	<content src="xhtml/chapter30.html#lev30.4"/>
+	</navPoint>
+	<navPoint id="i185" playOrder="185">
+	  <navLabel>
+	   <text>30.5 Teams</text>
+	  </navLabel>
+	<content src="xhtml/chapter30.html#lev30.5"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i186" playOrder="186">
+	  <navLabel>
+	   <text>Chapter 31 The Define Stage</text>
+	  </navLabel>
+	<content src="xhtml/chapter31.html#ch31"/>
+	<navPoint id="i187" playOrder="187">
+	  <navLabel>
+	   <text>31.1 The Vision</text>
+	  </navLabel>
+	<content src="xhtml/chapter31.html#lev31.1"/>
+	</navPoint>
+	<navPoint id="i188" playOrder="188">
+	  <navLabel>
+	   <text>31.2 Questions</text>
+	  </navLabel>
+	<content src="xhtml/chapter31.html#lev31.2"/>
+	</navPoint>
+	<navPoint id="i189" playOrder="189">
+	  <navLabel>
+	   <text>31.3 Assessment and Feasibility</text>
+	  </navLabel>
+	<content src="xhtml/chapter31.html#lev31.3"/>
+	</navPoint>
+	<navPoint id="i190" playOrder="190">
+	  <navLabel>
+	   <text>31.4 High-Level Design Considerations</text>
+	  </navLabel>
+	<content src="xhtml/chapter31.html#lev31.4"/>
+	</navPoint>
+	<navPoint id="i191" playOrder="191">
+	  <navLabel>
+	   <text>31.5 Objectives</text>
+	  </navLabel>
+	<content src="xhtml/chapter31.html#lev31.5"/>
+	</navPoint>
+	<navPoint id="i192" playOrder="192">
+	  <navLabel>
+	   <text>31.6 Key Players</text>
+	  </navLabel>
+	<content src="xhtml/chapter31.html#lev31.6"/>
+	</navPoint>
+	<navPoint id="i193" playOrder="193">
+	  <navLabel>
+	   <text>31.7 Time and Costs</text>
+	  </navLabel>
+	<content src="xhtml/chapter31.html#lev31.7"/>
+	</navPoint>
+	<navPoint id="i194" playOrder="194">
+	  <navLabel>
+	   <text>31.8 Risks</text>
+	  </navLabel>
+	<content src="xhtml/chapter31.html#lev31.8"/>
+	</navPoint>
+	<navPoint id="i195" playOrder="195">
+	  <navLabel>
+	   <text>31.9 Assumptions</text>
+	  </navLabel>
+	<content src="xhtml/chapter31.html#lev31.9"/>
+	</navPoint>
+	<navPoint id="i196" playOrder="196">
+	  <navLabel>
+	   <text>31.10 Project Constraints</text>
+	  </navLabel>
+	<content src="xhtml/chapter31.html#lev31.10"/>
+	</navPoint>
+	<navPoint id="i197" playOrder="197">
+	  <navLabel>
+	   <text>31.11 Personas</text>
+	  </navLabel>
+	<content src="xhtml/chapter31.html#lev31.11"/>
+	</navPoint>
+	<navPoint id="i198" playOrder="198">
+	  <navLabel>
+	   <text>31.12 User Stories</text>
+	  </navLabel>
+	<content src="xhtml/chapter31.html#lev31.12"/>
+	</navPoint>
+	<navPoint id="i199" playOrder="199">
+	  <navLabel>
+	   <text>31.13 Storyboards</text>
+	  </navLabel>
+	<content src="xhtml/chapter31.html#lev31.13"/>
+	</navPoint>
+	<navPoint id="i200" playOrder="200">
+	  <navLabel>
+	   <text>31.14 Scope</text>
+	  </navLabel>
+	<content src="xhtml/chapter31.html#lev31.14"/>
+	</navPoint>
+	<navPoint id="i201" playOrder="201">
+	  <navLabel>
+	   <text>31.15 Requirements</text>
+	  </navLabel>
+	<content src="xhtml/chapter31.html#lev31.15"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i202" playOrder="202">
+	  <navLabel>
+	   <text>Chapter 32 The Make Stage</text>
+	  </navLabel>
+	<content src="xhtml/chapter32.html#ch32"/>
+	<navPoint id="i203" playOrder="203">
+	  <navLabel>
+	   <text>32.1 Task Analysis</text>
+	  </navLabel>
+	<content src="xhtml/chapter32.html#lev32.1"/>
+	</navPoint>
+	<navPoint id="i204" playOrder="204">
+	  <navLabel>
+	   <text>32.2 Design Specification</text>
+	  </navLabel>
+	<content src="xhtml/chapter32.html#lev32.2"/>
+	</navPoint>
+	<navPoint id="i205" playOrder="205">
+	  <navLabel>
+	   <text>32.3 System Considerations</text>
+	  </navLabel>
+	<content src="xhtml/chapter32.html#lev32.3"/>
+	</navPoint>
+	<navPoint id="i206" playOrder="206">
+	  <navLabel>
+	   <text>32.4 Simulation</text>
+	  </navLabel>
+	<content src="xhtml/chapter32.html#lev32.4"/>
+	</navPoint>
+	<navPoint id="i207" playOrder="207">
+	  <navLabel>
+	   <text>32.5 Networked Environments</text>
+	  </navLabel>
+	<content src="xhtml/chapter32.html#lev32.5"/>
+	</navPoint>
+	<navPoint id="i208" playOrder="208">
+	  <navLabel>
+	   <text>32.6 Prototypes</text>
+	  </navLabel>
+	<content src="xhtml/chapter32.html#lev32.6"/>
+	</navPoint>
+	<navPoint id="i209" playOrder="209">
+	  <navLabel>
+	   <text>32.7 Final Production</text>
+	  </navLabel>
+	<content src="xhtml/chapter32.html#lev32.7"/>
+	</navPoint>
+	<navPoint id="i210" playOrder="210">
+	  <navLabel>
+	   <text>32.8 Delivery</text>
+	  </navLabel>
+	<content src="xhtml/chapter32.html#lev32.8"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i211" playOrder="211">
+	  <navLabel>
+	   <text>Chapter 33 The Learn Stage</text>
+	  </navLabel>
+	<content src="xhtml/chapter33.html#ch33"/>
+	<navPoint id="i212" playOrder="212">
+	  <navLabel>
+	   <text>33.1 Communication and Attitude</text>
+	  </navLabel>
+	<content src="xhtml/chapter33.html#lev33.1"/>
+	</navPoint>
+	<navPoint id="i213" playOrder="213">
+	  <navLabel>
+	   <text>33.2 Research Concepts</text>
+	  </navLabel>
+	<content src="xhtml/chapter33.html#lev33.2"/>
+	</navPoint>
+	<navPoint id="i214" playOrder="214">
+	  <navLabel>
+	   <text>33.3 Constructivist Approaches</text>
+	  </navLabel>
+	<content src="xhtml/chapter33.html#lev33.3"/>
+	</navPoint>
+	<navPoint id="i215" playOrder="215">
+	  <navLabel>
+	   <text>33.4 The Scientific Method</text>
+	  </navLabel>
+	<content src="xhtml/chapter33.html#lev33.4"/>
+	</navPoint>
+	<navPoint id="i216" playOrder="216">
+	  <navLabel>
+	   <text>33.5 Data Analysis</text>
+	  </navLabel>
+	<content src="xhtml/chapter33.html#lev33.5"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i217" playOrder="217">
+	  <navLabel>
+	   <text>Chapter 34 Iterative Design: Design Guidelines</text>
+	  </navLabel>
+	<content src="xhtml/chapter34.html#ch34"/>
+	<navPoint id="i218" playOrder="218">
+	  <navLabel>
+	   <text>34.1 Philosophy of Iterative Design</text>
+	  </navLabel>
+	<content src="xhtml/chapter34.html#lev34.1"/>
+	</navPoint>
+	<navPoint id="i219" playOrder="219">
+	  <navLabel>
+	   <text>34.2 The Define Stage</text>
+	  </navLabel>
+	<content src="xhtml/chapter34.html#lev34.2"/>
+	</navPoint>
+	<navPoint id="i220" playOrder="220">
+	  <navLabel>
+	   <text>34.3 The Make Stage</text>
+	  </navLabel>
+	<content src="xhtml/chapter34.html#lev34.3"/>
+	</navPoint>
+	<navPoint id="i221" playOrder="221">
+	  <navLabel>
+	   <text>34.4 The Learn Stage</text>
+	  </navLabel>
+	<content src="xhtml/chapter34.html#lev34.4"/>
+	</navPoint>
+</navPoint>
+</navPoint>
+	<navPoint id="i222" playOrder="222">
+	  <navLabel>
+	   <text>Part VII The Future Starts Now</text>
+	  </navLabel>
+	<content src="xhtml/part07.html#part7"/>
+	<navPoint id="i223" playOrder="223">
+	  <navLabel>
+	   <text>Chapter 35 The Present and Future State of VR</text>
+	  </navLabel>
+	<content src="xhtml/chapter35.html#ch35"/>
+	<navPoint id="i224" playOrder="224">
+	  <navLabel>
+	   <text>35.1 Selling VR to the Masses</text>
+	  </navLabel>
+	<content src="xhtml/chapter35.html#lev35.1"/>
+	</navPoint>
+	<navPoint id="i225" playOrder="225">
+	  <navLabel>
+	   <text>35.2 Culture of the VR Community</text>
+	  </navLabel>
+	<content src="xhtml/chapter35.html#lev35.2"/>
+	</navPoint>
+	<navPoint id="i226" playOrder="226">
+	  <navLabel>
+	   <text>35.3 Communication</text>
+	  </navLabel>
+	<content src="xhtml/chapter35.html#lev35.3"/>
+	</navPoint>
+	<navPoint id="i227" playOrder="227">
+	  <navLabel>
+	   <text>35.4 Standards and Open Source</text>
+	  </navLabel>
+	<content src="xhtml/chapter35.html#lev35.4"/>
+	</navPoint>
+	<navPoint id="i228" playOrder="228">
+	  <navLabel>
+	   <text>35.5 Hardware</text>
+	  </navLabel>
+	<content src="xhtml/chapter35.html#lev35.5"/>
+	</navPoint>
+	<navPoint id="i229" playOrder="229">
+	  <navLabel>
+	   <text>35.6 The Convergence of AR and VR</text>
+	  </navLabel>
+	<content src="xhtml/chapter35.html#lev35.6"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i230" playOrder="230">
+	  <navLabel>
+	   <text>Chapter 36 Getting Started</text>
+	  </navLabel>
+	<content src="xhtml/chapter36.html#ch36"/>
+	</navPoint>
+</navPoint>
+	<navPoint id="i231" playOrder="231">
+	  <navLabel>
+	   <text>Appendix A Example Questionnaire</text>
+	  </navLabel>
+	<content src="xhtml/appendixa.html#appa"/>
+	</navPoint>
+	<navPoint id="i232" playOrder="232">
+	  <navLabel>
+	   <text>Appendix B Example Interview Guidelines</text>
+	  </navLabel>
+	<content src="xhtml/appendixb.html#appb"/>
+	</navPoint>
+	<navPoint id="i233" playOrder="233">
+	  <navLabel>
+	   <text>Glossary</text>
+	  </navLabel>
+	<content src="xhtml/glossary.html#glo"/>
+	</navPoint>
+	<navPoint id="i234" playOrder="234">
+	  <navLabel>
+	   <text>References</text>
+	  </navLabel>
+	<content src="xhtml/reference.html#ref"/>
+	</navPoint>
+	<navPoint id="i235" playOrder="235">
+	  <navLabel>
+	   <text>Index</text>
+	  </navLabel>
+	<content src="xhtml/index.html#ind"/>
+	</navPoint>
+	<navPoint id="i236" playOrder="236">
+	  <navLabel>
+	   <text>Author&#8217;s Biography</text>
+	  </navLabel>
+	<content src="xhtml/author.html#aut"/>
+	</navPoint>
+	</navMap>
+</ncx>

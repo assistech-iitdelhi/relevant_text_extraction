@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="bookid" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign" name="generator" />
+    <dc:date>2020-05-04</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2020-08-26T21:08:55Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta content="0.9.12" name="Sigil version" />
+    <meta name="cover" content="cover.png" />
+  </metadata>
+  <manifest>
+    <item id="ch-8" href="Text/ch-8.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="toc" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="ch-8.css" href="Styles/ch-8.css" media-type="text/css"/>
+    <item id="BookmanOldStyle-Bold.TTF" href="Fonts/BookmanOldStyle-Bold.TTF" media-type="application/vnd.ms-opentype"/>
+    <item id="BookmanOldStyle-BoldItalic.TTF" href="Fonts/BookmanOldStyle-BoldItalic.TTF" media-type="application/vnd.ms-opentype"/>
+    <item id="CenturyGothic.TTF" href="Fonts/CenturyGothic.TTF" media-type="application/vnd.ms-opentype"/>
+    <item id="SymbolMT.ttf" href="Fonts/SymbolMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="x11080CH08_fmt.png" href="Images/11080CH08_fmt.png" media-type="image/png"/>
+    <item id="x1194.png" href="Images/1194.png" media-type="image/png"/>
+    <item id="x1277.png" href="Images/1277.png" media-type="image/png"/>
+    <item id="x1334.png" href="Images/1334.png" media-type="image/png"/>
+    <item id="x1401.png" href="Images/1401.png" media-type="image/png"/>
+    <item id="x1402.png" href="Images/1402.png" media-type="image/png"/>
+    <item id="x1413.png" href="Images/1413.png" media-type="image/png"/>
+    <item id="x1414.png" href="Images/1414.png" media-type="image/png"/>
+    <item id="x1416.png" href="Images/1416.png" media-type="image/png"/>
+    <item id="x1443.png" href="Images/1443.png" media-type="image/png"/>
+    <item id="x1479.png" href="Images/1479.png" media-type="image/png"/>
+    <item id="x1480.png" href="Images/1480.png" media-type="image/png"/>
+    <item id="x1481.png" href="Images/1481.png" media-type="image/png"/>
+    <item id="x1512.png" href="Images/1512.png" media-type="image/png"/>
+    <item id="x1544.png" href="Images/1544.png" media-type="image/png"/>
+    <item id="x1632.png" href="Images/1632.png" media-type="image/png"/>
+    <item id="x1638.png" href="Images/1638.png" media-type="image/png"/>
+    <item id="x1669.png" href="Images/1669.png" media-type="image/png"/>
+    <item id="x1697.png" href="Images/1697.png" media-type="image/png"/>
+    <item id="x1748.png" href="Images/1748.png" media-type="image/png"/>
+    <item id="x1798.png" href="Images/1798.png" media-type="image/png"/>
+    <item id="x1876.png" href="Images/1876.png" media-type="image/png"/>
+    <item id="x1877.png" href="Images/1877.png" media-type="image/png"/>
+    <item id="x1878.png" href="Images/1878.png" media-type="image/png"/>
+    <item id="x1879.png" href="Images/1879.png" media-type="image/png"/>
+    <item id="x1903.png" href="Images/1903.png" media-type="image/png"/>
+    <item id="x1922p_fmt.png" href="Images/1922p_fmt.png" media-type="image/png"/>
+    <item id="x1_fmt.png" href="Images/1_fmt.png" media-type="image/png"/>
+    <item id="fig-8.12-_fmt.png" href="Images/fig%208.12%20_fmt.png" media-type="image/png"/>
+    <item id="fig-8.4_fmt.png" href="Images/fig%208.4_fmt.png" media-type="image/png"/>
+    <item id="fig-8.7_fmt.png" href="Images/fig%208.7_fmt.png" media-type="image/png"/>
+    <item id="fig-8.9_fmt.png" href="Images/fig%208.9_fmt.png" media-type="image/png"/>
+    <item id="fig_9-9_fmt.png" href="Images/fig_9-9_fmt.png" media-type="image/png"/>
+    <item id="unit-btm_fmt.png" href="Images/unit-btm_fmt.png" media-type="image/png"/>
+    <item id="Screenshot_from_2020-08-26_08-52-55.png" href="Images/Screenshot%20from%202020-08-26%2008-52-55.png" media-type="image/png"/>
+    <item id="Screenshot_from_2020-08-26_08-54-15.png" href="Images/Screenshot%20from%202020-08-26%2008-54-15.png" media-type="image/png"/>
+    <item id="Screenshot_from_2020-08-26_08-56-29.png" href="Images/Screenshot%20from%202020-08-26%2008-56-29.png" media-type="image/png"/>
+    <item id="Screenshot_from_2020-08-26_08-58-58.png" href="Images/Screenshot%20from%202020-08-26%2008-58-58.png" media-type="image/png"/>
+    <item id="cover.png" href="Images/cover.png" media-type="image/png" properties="cover-image"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="ch-8"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

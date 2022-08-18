@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ncx version="2005-1" xmlns="http://www.daisy.org/z3986/2005/ncx/">
+  <head>
+    <meta content="urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b" name="dtb:uid"/>
+    <meta content="3" name="dtb:depth"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>8</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="navPoint-1" playOrder="1">
+      <navLabel>
+        <text>Chapter 8</text>
+      </navLabel>
+      <content src="Text/8.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-2" playOrder="2">
+      <navLabel>
+        <text>APPLICATION OF INTEGRALS</text>
+      </navLabel>
+      <content src="Text/8.xhtml#sigil_toc_id_1"/>
+      <navPoint id="navPoint-3" playOrder="3">
+        <navLabel>
+          <text>8.1 Introduction</text>
+        </navLabel>
+        <content src="Text/8.xhtml#sigil_toc_id_2"/>
+      </navPoint>
+      <navPoint id="navPoint-4" playOrder="4">
+        <navLabel>
+          <text>8.2 Area under Simple Curves</text>
+        </navLabel>
+        <content src="Text/8.xhtml#sigil_toc_id_3"/>
+        <navPoint id="navPoint-5" playOrder="5">
+          <navLabel>
+            <text>8.2.1 The area of the region bounded by a curve and a line</text>
+          </navLabel>
+          <content src="Text/8.xhtml#sigil_toc_id_4"/>
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint-6" playOrder="6">
+        <navLabel>
+          <text>EXERCISE 8.1</text>
+        </navLabel>
+        <content src="Text/8.xhtml#sigil_toc_id_5"/>
+      </navPoint>
+      <navPoint id="navPoint-7" playOrder="7">
+        <navLabel>
+          <text>8.3 Area between Two curves</text>
+        </navLabel>
+        <content src="Text/8.xhtml#sigil_toc_id_6"/>
+      </navPoint>
+      <navPoint id="navPoint-8" playOrder="8">
+        <navLabel>
+          <text>EXERCISE 8.2</text>
+        </navLabel>
+        <content src="Text/8.xhtml#sigil_toc_id_7"/>
+      </navPoint>
+    </navPoint>
+  </navMap>
+</ncx>

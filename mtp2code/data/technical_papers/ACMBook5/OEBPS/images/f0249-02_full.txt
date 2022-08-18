@@ -1,0 +1,141 @@
+text_annotations {
+  locale: "und"
+  description: "3\n"
+  bounding_poly {
+    vertices {
+      x: 237
+      y: 258
+    }
+    vertices {
+      x: 268
+      y: 258
+    }
+    vertices {
+      x: 268
+      y: 266
+    }
+    vertices {
+      x: 237
+      y: 266
+    }
+  }
+}
+text_annotations {
+  description: "3"
+  bounding_poly {
+    vertices {
+      x: 237
+      y: 267
+    }
+    vertices {
+      x: 237
+      y: 259
+    }
+    vertices {
+      x: 268
+      y: 259
+    }
+    vertices {
+      x: 268
+      y: 267
+    }
+  }
+}
+full_text_annotation {
+  pages {
+    width: 310
+    height: 268
+    blocks {
+      bounding_box {
+        vertices {
+          x: 237
+          y: 267
+        }
+        vertices {
+          x: 237
+          y: 259
+        }
+        vertices {
+          x: 268
+          y: 259
+        }
+        vertices {
+          x: 268
+          y: 267
+        }
+      }
+      paragraphs {
+        bounding_box {
+          vertices {
+            x: 237
+            y: 267
+          }
+          vertices {
+            x: 237
+            y: 259
+          }
+          vertices {
+            x: 268
+            y: 259
+          }
+          vertices {
+            x: 268
+            y: 267
+          }
+        }
+        words {
+          bounding_box {
+            vertices {
+              x: 237
+              y: 267
+            }
+            vertices {
+              x: 237
+              y: 259
+            }
+            vertices {
+              x: 268
+              y: 259
+            }
+            vertices {
+              x: 268
+              y: 267
+            }
+          }
+          symbols {
+            property {
+              detected_break {
+                type_: LINE_BREAK
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 237
+                y: 267
+              }
+              vertices {
+                x: 237
+                y: 259
+              }
+              vertices {
+                x: 268
+                y: 259
+              }
+              vertices {
+                x: 268
+                y: 267
+              }
+            }
+            text: "3"
+            confidence: 0.2199999988079071
+          }
+          confidence: 0.2199999988079071
+        }
+        confidence: 0.2199999988079071
+      }
+      block_type: TEXT
+      confidence: 0.2199999988079071
+    }
+  }
+  text: "3\n"
+}

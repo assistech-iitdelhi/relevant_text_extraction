@@ -1,0 +1,1635 @@
+text_annotations {
+  locale: "en"
+  description: "Separating\nfunnel\nKerosene oil\nWater\nStopcock\n"
+  bounding_poly {
+    vertices {
+      x: 182
+      y: 89
+    }
+    vertices {
+      x: 275
+      y: 89
+    }
+    vertices {
+      x: 275
+      y: 287
+    }
+    vertices {
+      x: 182
+      y: 287
+    }
+  }
+}
+text_annotations {
+  description: "Separating"
+  bounding_poly {
+    vertices {
+      x: 184
+      y: 89
+    }
+    vertices {
+      x: 265
+      y: 90
+    }
+    vertices {
+      x: 265
+      y: 109
+    }
+    vertices {
+      x: 184
+      y: 108
+    }
+  }
+}
+text_annotations {
+  description: "funnel"
+  bounding_poly {
+    vertices {
+      x: 182
+      y: 106
+    }
+    vertices {
+      x: 230
+      y: 106
+    }
+    vertices {
+      x: 230
+      y: 124
+    }
+    vertices {
+      x: 182
+      y: 124
+    }
+  }
+}
+text_annotations {
+  description: "Kerosene"
+  bounding_poly {
+    vertices {
+      x: 184
+      y: 158
+    }
+    vertices {
+      x: 252
+      y: 158
+    }
+    vertices {
+      x: 252
+      y: 177
+    }
+    vertices {
+      x: 184
+      y: 177
+    }
+  }
+}
+text_annotations {
+  description: "oil"
+  bounding_poly {
+    vertices {
+      x: 258
+      y: 158
+    }
+    vertices {
+      x: 275
+      y: 158
+    }
+    vertices {
+      x: 275
+      y: 177
+    }
+    vertices {
+      x: 258
+      y: 177
+    }
+  }
+}
+text_annotations {
+  description: "Water"
+  bounding_poly {
+    vertices {
+      x: 183
+      y: 209
+    }
+    vertices {
+      x: 227
+      y: 209
+    }
+    vertices {
+      x: 227
+      y: 225
+    }
+    vertices {
+      x: 183
+      y: 225
+    }
+  }
+}
+text_annotations {
+  description: "Stopcock"
+  bounding_poly {
+    vertices {
+      x: 184
+      y: 269
+    }
+    vertices {
+      x: 252
+      y: 269
+    }
+    vertices {
+      x: 252
+      y: 287
+    }
+    vertices {
+      x: 184
+      y: 287
+    }
+  }
+}
+full_text_annotation {
+  pages {
+    property {
+      detected_languages {
+        language_code: "en"
+        confidence: 1.0
+      }
+    }
+    width: 278
+    height: 382
+    blocks {
+      property {
+        detected_languages {
+          language_code: "en"
+          confidence: 1.0
+        }
+      }
+      bounding_box {
+        vertices {
+          x: 182
+          y: 89
+        }
+        vertices {
+          x: 265
+          y: 89
+        }
+        vertices {
+          x: 265
+          y: 124
+        }
+        vertices {
+          x: 182
+          y: 124
+        }
+      }
+      paragraphs {
+        property {
+          detected_languages {
+            language_code: "en"
+            confidence: 1.0
+          }
+        }
+        bounding_box {
+          vertices {
+            x: 182
+            y: 89
+          }
+          vertices {
+            x: 265
+            y: 89
+          }
+          vertices {
+            x: 265
+            y: 124
+          }
+          vertices {
+            x: 182
+            y: 124
+          }
+        }
+        words {
+          property {
+            detected_languages {
+              language_code: "en"
+            }
+          }
+          bounding_box {
+            vertices {
+              x: 184
+              y: 89
+            }
+            vertices {
+              x: 265
+              y: 90
+            }
+            vertices {
+              x: 265
+              y: 109
+            }
+            vertices {
+              x: 184
+              y: 108
+            }
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 184
+                y: 90
+              }
+              vertices {
+                x: 192
+                y: 90
+              }
+              vertices {
+                x: 192
+                y: 108
+              }
+              vertices {
+                x: 184
+                y: 108
+              }
+            }
+            text: "S"
+            confidence: 0.9900000095367432
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 196
+                y: 90
+              }
+              vertices {
+                x: 201
+                y: 90
+              }
+              vertices {
+                x: 201
+                y: 108
+              }
+              vertices {
+                x: 196
+                y: 108
+              }
+            }
+            text: "e"
+            confidence: 1.0
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 204
+                y: 90
+              }
+              vertices {
+                x: 209
+                y: 90
+              }
+              vertices {
+                x: 209
+                y: 108
+              }
+              vertices {
+                x: 204
+                y: 108
+              }
+            }
+            text: "p"
+            confidence: 0.9900000095367432
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 212
+                y: 90
+              }
+              vertices {
+                x: 218
+                y: 90
+              }
+              vertices {
+                x: 218
+                y: 108
+              }
+              vertices {
+                x: 212
+                y: 108
+              }
+            }
+            text: "a"
+            confidence: 1.0
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 222
+                y: 90
+              }
+              vertices {
+                x: 227
+                y: 90
+              }
+              vertices {
+                x: 227
+                y: 108
+              }
+              vertices {
+                x: 222
+                y: 108
+              }
+            }
+            text: "r"
+            confidence: 1.0
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 230
+                y: 90
+              }
+              vertices {
+                x: 235
+                y: 90
+              }
+              vertices {
+                x: 235
+                y: 108
+              }
+              vertices {
+                x: 230
+                y: 108
+              }
+            }
+            text: "a"
+            confidence: 1.0
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 238
+                y: 90
+              }
+              vertices {
+                x: 242
+                y: 90
+              }
+              vertices {
+                x: 242
+                y: 108
+              }
+              vertices {
+                x: 238
+                y: 108
+              }
+            }
+            text: "t"
+            confidence: 1.0
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 244
+                y: 90
+              }
+              vertices {
+                x: 247
+                y: 90
+              }
+              vertices {
+                x: 247
+                y: 108
+              }
+              vertices {
+                x: 244
+                y: 108
+              }
+            }
+            text: "i"
+            confidence: 1.0
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 248
+                y: 90
+              }
+              vertices {
+                x: 254
+                y: 90
+              }
+              vertices {
+                x: 254
+                y: 108
+              }
+              vertices {
+                x: 248
+                y: 108
+              }
+            }
+            text: "n"
+            confidence: 0.9900000095367432
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+              detected_break {
+                type_: EOL_SURE_SPACE
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 260
+                y: 90
+              }
+              vertices {
+                x: 265
+                y: 90
+              }
+              vertices {
+                x: 265
+                y: 108
+              }
+              vertices {
+                x: 260
+                y: 108
+              }
+            }
+            text: "g"
+            confidence: 1.0
+          }
+          confidence: 0.9900000095367432
+        }
+        words {
+          property {
+            detected_languages {
+              language_code: "en"
+            }
+          }
+          bounding_box {
+            vertices {
+              x: 182
+              y: 106
+            }
+            vertices {
+              x: 230
+              y: 106
+            }
+            vertices {
+              x: 230
+              y: 124
+            }
+            vertices {
+              x: 182
+              y: 124
+            }
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 182
+                y: 106
+              }
+              vertices {
+                x: 188
+                y: 106
+              }
+              vertices {
+                x: 188
+                y: 124
+              }
+              vertices {
+                x: 182
+                y: 124
+              }
+            }
+            text: "f"
+            confidence: 0.9900000095367432
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 189
+                y: 106
+              }
+              vertices {
+                x: 194
+                y: 106
+              }
+              vertices {
+                x: 194
+                y: 124
+              }
+              vertices {
+                x: 189
+                y: 124
+              }
+            }
+            text: "u"
+            confidence: 1.0
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 198
+                y: 106
+              }
+              vertices {
+                x: 205
+                y: 106
+              }
+              vertices {
+                x: 205
+                y: 124
+              }
+              vertices {
+                x: 198
+                y: 124
+              }
+            }
+            text: "n"
+            confidence: 1.0
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 209
+                y: 106
+              }
+              vertices {
+                x: 216
+                y: 106
+              }
+              vertices {
+                x: 216
+                y: 124
+              }
+              vertices {
+                x: 209
+                y: 124
+              }
+            }
+            text: "n"
+            confidence: 0.9900000095367432
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 222
+                y: 106
+              }
+              vertices {
+                x: 226
+                y: 106
+              }
+              vertices {
+                x: 226
+                y: 124
+              }
+              vertices {
+                x: 222
+                y: 124
+              }
+            }
+            text: "e"
+            confidence: 1.0
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+              detected_break {
+                type_: LINE_BREAK
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 228
+                y: 106
+              }
+              vertices {
+                x: 230
+                y: 106
+              }
+              vertices {
+                x: 230
+                y: 124
+              }
+              vertices {
+                x: 228
+                y: 124
+              }
+            }
+            text: "l"
+            confidence: 0.9900000095367432
+          }
+          confidence: 0.9900000095367432
+        }
+        confidence: 0.9900000095367432
+      }
+      block_type: TEXT
+      confidence: 0.9900000095367432
+    }
+    blocks {
+      property {
+        detected_languages {
+          language_code: "en"
+          confidence: 1.0
+        }
+      }
+      bounding_box {
+        vertices {
+          x: 184
+          y: 158
+        }
+        vertices {
+          x: 275
+          y: 158
+        }
+        vertices {
+          x: 275
+          y: 177
+        }
+        vertices {
+          x: 184
+          y: 177
+        }
+      }
+      paragraphs {
+        property {
+          detected_languages {
+            language_code: "en"
+            confidence: 1.0
+          }
+        }
+        bounding_box {
+          vertices {
+            x: 184
+            y: 158
+          }
+          vertices {
+            x: 275
+            y: 158
+          }
+          vertices {
+            x: 275
+            y: 177
+          }
+          vertices {
+            x: 184
+            y: 177
+          }
+        }
+        words {
+          property {
+            detected_languages {
+              language_code: "en"
+            }
+          }
+          bounding_box {
+            vertices {
+              x: 184
+              y: 158
+            }
+            vertices {
+              x: 252
+              y: 158
+            }
+            vertices {
+              x: 252
+              y: 177
+            }
+            vertices {
+              x: 184
+              y: 177
+            }
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 184
+                y: 158
+              }
+              vertices {
+                x: 192
+                y: 158
+              }
+              vertices {
+                x: 192
+                y: 177
+              }
+              vertices {
+                x: 184
+                y: 177
+              }
+            }
+            text: "K"
+            confidence: 0.9800000190734863
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 196
+                y: 158
+              }
+              vertices {
+                x: 201
+                y: 158
+              }
+              vertices {
+                x: 201
+                y: 177
+              }
+              vertices {
+                x: 196
+                y: 177
+              }
+            }
+            text: "e"
+            confidence: 0.9800000190734863
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 204
+                y: 158
+              }
+              vertices {
+                x: 209
+                y: 158
+              }
+              vertices {
+                x: 209
+                y: 177
+              }
+              vertices {
+                x: 204
+                y: 177
+              }
+            }
+            text: "r"
+            confidence: 0.9900000095367432
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 212
+                y: 158
+              }
+              vertices {
+                x: 217
+                y: 158
+              }
+              vertices {
+                x: 217
+                y: 177
+              }
+              vertices {
+                x: 212
+                y: 177
+              }
+            }
+            text: "o"
+            confidence: 0.9700000286102295
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 220
+                y: 158
+              }
+              vertices {
+                x: 225
+                y: 158
+              }
+              vertices {
+                x: 225
+                y: 177
+              }
+              vertices {
+                x: 220
+                y: 177
+              }
+            }
+            text: "s"
+            confidence: 0.9900000095367432
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 228
+                y: 158
+              }
+              vertices {
+                x: 233
+                y: 158
+              }
+              vertices {
+                x: 233
+                y: 177
+              }
+              vertices {
+                x: 228
+                y: 177
+              }
+            }
+            text: "e"
+            confidence: 0.9800000190734863
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 235
+                y: 158
+              }
+              vertices {
+                x: 242
+                y: 158
+              }
+              vertices {
+                x: 242
+                y: 177
+              }
+              vertices {
+                x: 235
+                y: 177
+              }
+            }
+            text: "n"
+            confidence: 1.0
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+              detected_break {
+                type_: SPACE
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 247
+                y: 158
+              }
+              vertices {
+                x: 252
+                y: 158
+              }
+              vertices {
+                x: 252
+                y: 177
+              }
+              vertices {
+                x: 247
+                y: 177
+              }
+            }
+            text: "e"
+            confidence: 0.9900000095367432
+          }
+          confidence: 0.9800000190734863
+        }
+        words {
+          property {
+            detected_languages {
+              language_code: "en"
+            }
+          }
+          bounding_box {
+            vertices {
+              x: 258
+              y: 158
+            }
+            vertices {
+              x: 275
+              y: 158
+            }
+            vertices {
+              x: 275
+              y: 177
+            }
+            vertices {
+              x: 258
+              y: 177
+            }
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 258
+                y: 158
+              }
+              vertices {
+                x: 265
+                y: 158
+              }
+              vertices {
+                x: 265
+                y: 177
+              }
+              vertices {
+                x: 258
+                y: 177
+              }
+            }
+            text: "o"
+            confidence: 0.9900000095367432
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 269
+                y: 158
+              }
+              vertices {
+                x: 272
+                y: 158
+              }
+              vertices {
+                x: 272
+                y: 177
+              }
+              vertices {
+                x: 269
+                y: 177
+              }
+            }
+            text: "i"
+            confidence: 0.9700000286102295
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+              detected_break {
+                type_: LINE_BREAK
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 274
+                y: 158
+              }
+              vertices {
+                x: 275
+                y: 158
+              }
+              vertices {
+                x: 275
+                y: 177
+              }
+              vertices {
+                x: 274
+                y: 177
+              }
+            }
+            text: "l"
+            confidence: 0.9700000286102295
+          }
+          confidence: 0.9700000286102295
+        }
+        confidence: 0.9800000190734863
+      }
+      block_type: TEXT
+      confidence: 0.9800000190734863
+    }
+    blocks {
+      property {
+        detected_languages {
+          language_code: "en"
+          confidence: 1.0
+        }
+      }
+      bounding_box {
+        vertices {
+          x: 183
+          y: 209
+        }
+        vertices {
+          x: 227
+          y: 209
+        }
+        vertices {
+          x: 227
+          y: 225
+        }
+        vertices {
+          x: 183
+          y: 225
+        }
+      }
+      paragraphs {
+        property {
+          detected_languages {
+            language_code: "en"
+            confidence: 1.0
+          }
+        }
+        bounding_box {
+          vertices {
+            x: 183
+            y: 209
+          }
+          vertices {
+            x: 227
+            y: 209
+          }
+          vertices {
+            x: 227
+            y: 225
+          }
+          vertices {
+            x: 183
+            y: 225
+          }
+        }
+        words {
+          property {
+            detected_languages {
+              language_code: "en"
+            }
+          }
+          bounding_box {
+            vertices {
+              x: 183
+              y: 209
+            }
+            vertices {
+              x: 227
+              y: 209
+            }
+            vertices {
+              x: 227
+              y: 225
+            }
+            vertices {
+              x: 183
+              y: 225
+            }
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 183
+                y: 209
+              }
+              vertices {
+                x: 194
+                y: 209
+              }
+              vertices {
+                x: 194
+                y: 225
+              }
+              vertices {
+                x: 183
+                y: 225
+              }
+            }
+            text: "W"
+            confidence: 0.9700000286102295
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 200
+                y: 209
+              }
+              vertices {
+                x: 205
+                y: 209
+              }
+              vertices {
+                x: 205
+                y: 225
+              }
+              vertices {
+                x: 200
+                y: 225
+              }
+            }
+            text: "a"
+            confidence: 0.9900000095367432
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 207
+                y: 209
+              }
+              vertices {
+                x: 211
+                y: 209
+              }
+              vertices {
+                x: 211
+                y: 225
+              }
+              vertices {
+                x: 207
+                y: 225
+              }
+            }
+            text: "t"
+            confidence: 0.9900000095367432
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 214
+                y: 209
+              }
+              vertices {
+                x: 219
+                y: 209
+              }
+              vertices {
+                x: 219
+                y: 225
+              }
+              vertices {
+                x: 214
+                y: 225
+              }
+            }
+            text: "e"
+            confidence: 0.9900000095367432
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+              detected_break {
+                type_: LINE_BREAK
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 223
+                y: 209
+              }
+              vertices {
+                x: 227
+                y: 209
+              }
+              vertices {
+                x: 227
+                y: 225
+              }
+              vertices {
+                x: 223
+                y: 225
+              }
+            }
+            text: "r"
+            confidence: 1.0
+          }
+          confidence: 0.9800000190734863
+        }
+        confidence: 0.9800000190734863
+      }
+      block_type: TEXT
+      confidence: 0.9800000190734863
+    }
+    blocks {
+      property {
+        detected_languages {
+          language_code: "en"
+          confidence: 1.0
+        }
+      }
+      bounding_box {
+        vertices {
+          x: 184
+          y: 269
+        }
+        vertices {
+          x: 252
+          y: 269
+        }
+        vertices {
+          x: 252
+          y: 287
+        }
+        vertices {
+          x: 184
+          y: 287
+        }
+      }
+      paragraphs {
+        property {
+          detected_languages {
+            language_code: "en"
+            confidence: 1.0
+          }
+        }
+        bounding_box {
+          vertices {
+            x: 184
+            y: 269
+          }
+          vertices {
+            x: 252
+            y: 269
+          }
+          vertices {
+            x: 252
+            y: 287
+          }
+          vertices {
+            x: 184
+            y: 287
+          }
+        }
+        words {
+          property {
+            detected_languages {
+              language_code: "en"
+            }
+          }
+          bounding_box {
+            vertices {
+              x: 184
+              y: 269
+            }
+            vertices {
+              x: 252
+              y: 269
+            }
+            vertices {
+              x: 252
+              y: 287
+            }
+            vertices {
+              x: 184
+              y: 287
+            }
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 184
+                y: 269
+              }
+              vertices {
+                x: 191
+                y: 269
+              }
+              vertices {
+                x: 191
+                y: 287
+              }
+              vertices {
+                x: 184
+                y: 287
+              }
+            }
+            text: "S"
+            confidence: 0.9900000095367432
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 195
+                y: 269
+              }
+              vertices {
+                x: 200
+                y: 269
+              }
+              vertices {
+                x: 200
+                y: 287
+              }
+              vertices {
+                x: 195
+                y: 287
+              }
+            }
+            text: "t"
+            confidence: 0.9900000095367432
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 201
+                y: 269
+              }
+              vertices {
+                x: 206
+                y: 269
+              }
+              vertices {
+                x: 206
+                y: 287
+              }
+              vertices {
+                x: 201
+                y: 287
+              }
+            }
+            text: "o"
+            confidence: 1.0
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 209
+                y: 269
+              }
+              vertices {
+                x: 215
+                y: 269
+              }
+              vertices {
+                x: 215
+                y: 287
+              }
+              vertices {
+                x: 209
+                y: 287
+              }
+            }
+            text: "p"
+            confidence: 0.9900000095367432
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 220
+                y: 269
+              }
+              vertices {
+                x: 225
+                y: 269
+              }
+              vertices {
+                x: 225
+                y: 287
+              }
+              vertices {
+                x: 220
+                y: 287
+              }
+            }
+            text: "c"
+            confidence: 0.9900000095367432
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 227
+                y: 269
+              }
+              vertices {
+                x: 232
+                y: 269
+              }
+              vertices {
+                x: 232
+                y: 287
+              }
+              vertices {
+                x: 227
+                y: 287
+              }
+            }
+            text: "o"
+            confidence: 1.0
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 237
+                y: 269
+              }
+              vertices {
+                x: 242
+                y: 269
+              }
+              vertices {
+                x: 242
+                y: 287
+              }
+              vertices {
+                x: 237
+                y: 287
+              }
+            }
+            text: "c"
+            confidence: 0.9900000095367432
+          }
+          symbols {
+            property {
+              detected_languages {
+                language_code: "en"
+              }
+              detected_break {
+                type_: LINE_BREAK
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 245
+                y: 269
+              }
+              vertices {
+                x: 252
+                y: 269
+              }
+              vertices {
+                x: 252
+                y: 287
+              }
+              vertices {
+                x: 245
+                y: 287
+              }
+            }
+            text: "k"
+            confidence: 0.9900000095367432
+          }
+          confidence: 0.9900000095367432
+        }
+        confidence: 0.9900000095367432
+      }
+      block_type: TEXT
+      confidence: 0.9900000095367432
+    }
+  }
+  text: "Separating\nfunnel\nKerosene oil\nWater\nStopcock\n"
+}

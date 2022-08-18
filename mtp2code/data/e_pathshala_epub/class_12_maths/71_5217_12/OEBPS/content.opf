@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/" unique-identifier="bookid" version="3.0" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign 12.0" name="generator"/>
+    <meta property="ibooks:specified-fonts">true</meta>
+    <meta property="dcterms:modified">2018-08-06T11:28:36Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta content="0.9.5" name="Sigil version"/>
+    <meta name="cover" content="maths1127.png"/>
+    <dc:title>12</dc:title>
+    <dc:language>en-GB</dc:language>
+    <dc:language>en-US</dc:language>
+  </metadata>
+  <manifest>
+    <item href="Text/12.xhtml" id="x12" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="Text/toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
+    <item href="Styles/idGeneratedStyles.css" id="idGeneratedStyles.css" media-type="text/css"/>
+    <item href="Fonts/SymbolMT.ttf" id="SymbolMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/TimesNewRomanPS-BoldItalicMT.TTF" id="TimesNewRomanPS-BoldItalicMT.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/TimesNewRomanPS-BoldMT.TTF" id="TimesNewRomanPS-BoldMT.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/TimesNewRomanPS-ItalicMT.TTF" id="TimesNewRomanPS-ItalicMT.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/TimesNewRomanPSMT.TTF" id="TimesNewRomanPSMT.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/Wingdings-Regular.TTF" id="Wingdings-Regular.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/Wingdings2.TTF" id="Wingdings2.TTF" media-type="application/x-font-ttf"/>
+    <item href="Images/1.png" id="x1.png" media-type="image/png"/>
+    <item href="Images/38.png" id="x38.png" media-type="image/png"/>
+    <item href="Images/Fig_12_1.png" id="Fig_12_1.png" media-type="image/png"/>
+    <item href="Images/Fig_12_10.png" id="Fig_12_10.png" media-type="image/png"/>
+    <item href="Images/Fig_12_11.png" id="Fig_12_11.png" media-type="image/png"/>
+    <item href="Images/Fig_12_12.png" id="Fig_12_12.png" media-type="image/png"/>
+    <item href="Images/Fig_12_13.png" id="Fig_12_13.png" media-type="image/png"/>
+    <item href="Images/Fig_12_2.png" id="Fig_12_2.png" media-type="image/png"/>
+    <item href="Images/Fig_12_3.png" id="Fig_12_3.png" media-type="image/png"/>
+    <item href="Images/Fig_12_4.png" id="Fig_12_4.png" media-type="image/png"/>
+    <item href="Images/Fig_12_5.png" id="Fig_12_5.png" media-type="image/png"/>
+    <item href="Images/Fig_12_6.png" id="Fig_12_6.png" media-type="image/png"/>
+    <item href="Images/Fig_12_7.png" id="Fig_12_7.png" media-type="image/png"/>
+    <item href="Images/Fig_12_8.png" id="Fig_12_8.png" media-type="image/png"/>
+    <item href="Images/Fig_12_9.png" id="Fig_12_9.png" media-type="image/png"/>
+    <item href="Images/Picture.png" id="Picture.png" media-type="image/png"/>
+    <item href="Images/image906.png" id="image906.png" media-type="image/png"/>
+    <item href="Images/image910.png" id="image910.png" media-type="image/png"/>
+    <item href="Images/image911.png" id="image911.png" media-type="image/png"/>
+    <item href="Images/image913.png" id="image913.png" media-type="image/png"/>
+    <item href="Images/image915.png" id="image915.png" media-type="image/png"/>
+    <item href="Images/image916.png" id="image916.png" media-type="image/png"/>
+    <item href="Images/image917.png" id="image917.png" media-type="image/png"/>
+    <item href="Images/image918.png" id="image918.png" media-type="image/png"/>
+    <item href="Images/image919.png" id="image919.png" media-type="image/png"/>
+    <item href="Images/image920.png" id="image920.png" media-type="image/png"/>
+    <item href="Images/image921.png" id="image921.png" media-type="image/png"/>
+    <item href="Images/image922.png" id="image922.png" media-type="image/png"/>
+    <item href="Images/image925.png" id="image925.png" media-type="image/png"/>
+    <item href="Images/image927.png" id="image927.png" media-type="image/png"/>
+    <item href="Images/image928.png" id="image928.png" media-type="image/png"/>
+    <item href="Images/image929.png" id="image929.png" media-type="image/png"/>
+    <item href="Images/image930.png" id="image930.png" media-type="image/png"/>
+    <item href="Images/image931.png" id="image931.png" media-type="image/png"/>
+    <item href="Images/image932.png" id="image932.png" media-type="image/png"/>
+    <item href="Images/maths1127.png" id="maths1127.png" media-type="image/png" properties="cover-image"/>
+    <item href="Text/cover.xhtml" id="cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    <item href="Images/sa32.PNG" id="sa32.PNG" media-type="image/png"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="x12"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference href="Text/cover.xhtml" title="Cover" type="cover"/>
+  </guide>
+</package>

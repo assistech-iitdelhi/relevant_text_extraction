@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="bookid" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta name="generator" content="Adobe InDesign" />
+    <dc:date>2019-05-11</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2019-06-03T12:42:04Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta name="Sigil version" content="0.9.10" />
+    <meta name="cover" content="fesc1cc.jpg" />
+  </metadata>
+  <manifest>
+    <item id="Chapter-5" href="Text/Chapter%205.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="toc" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="Chapter-5.css" href="Styles/Chapter%205.css" media-type="text/css"/>
+    <item id="Bookman-Light.TTF" href="Fonts/Bookman-Light.TTF" media-type="application/x-font-ttf"/>
+    <item id="Bookman-LightItalic.TTF" href="Fonts/Bookman-LightItalic.TTF" media-type="application/x-font-ttf"/>
+    <item id="TimesNewRomanPSMT.TTF" href="Fonts/TimesNewRomanPSMT.TTF" media-type="application/vnd.ms-opentype"/>
+    <item id="Wingdings-Regular.ttf" href="Fonts/Wingdings-Regular.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="x05_01_Tea_fmt.jpeg" href="Images/05_01_Tea_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x05_02_Mathni_fmt.jpeg" href="Images/05_02_Mathni_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x05_03_fmt.jpeg" href="Images/05_03_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x05_04_threshning_fmt.jpeg" href="Images/05_04_threshning_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x05_05_fmt.jpeg" href="Images/05_05_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x05_06_fmt.jpeg" href="Images/05_06_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x05_07_bajri_fmt.jpeg" href="Images/05_07_bajri_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x05_08_a_fmt.jpeg" href="Images/05_08_a_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x05_08_b_fmt.jpeg" href="Images/05_08_b_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x05_09_folding_fmt.jpeg" href="Images/05_09_folding_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x05_10_filtration_fmt.jpeg" href="Images/05_10_filtration_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x05_11_heating_fmt.jpeg" href="Images/05_11_heating_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x05_13_evaporation_fmt.jpeg" href="Images/05_13_evaporation_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x05_14_disolving_fmt.jpeg" href="Images/05_14_disolving_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x05_i1_fmt.jpeg" href="Images/05_i1_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x0652-ch-05_fmt.jpeg" href="Images/0652%20ch%2005_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x1389.png" href="Images/1389.png" media-type="image/png"/>
+    <item id="x1407.png" href="Images/1407.png" media-type="image/png"/>
+    <item id="x1462.png" href="Images/1462.png" media-type="image/png"/>
+    <item id="x1484.png" href="Images/1484.png" media-type="image/png"/>
+    <item id="x1496.png" href="Images/1496.png" media-type="image/png"/>
+    <item id="x1507.png" href="Images/1507.png" media-type="image/png"/>
+    <item id="x1517.png" href="Images/1517.png" media-type="image/png"/>
+    <item id="x5_12_obtaining-salt_fmt.jpeg" href="Images/5_12_obtaining%20salt_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x975.png" href="Images/975.png" media-type="image/png"/>
+    <item id="baloon_2_fmt.png" href="Images/baloon_2_fmt.png" media-type="image/png"/>
+    <item id="boojho_paheli_01_fmt.jpeg" href="Images/boojho_paheli_01_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="sum_fmt.jpeg" href="Images/sum_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="sum_fmt1.jpeg" href="Images/sum_fmt1.jpeg" media-type="image/jpeg"/>
+    <item id="winnowing_fmt.jpeg" href="Images/winnowing_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="fesc1cc.jpg" href="Images/fesc1cc.jpg" media-type="image/jpeg" properties="cover-image"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    <item id="x5.1.png" href="Images/5.1.png" media-type="image/png"/>
+    <item id="x5.2.png" href="Images/5.2.png" media-type="image/png"/>
+    <item id="x5.3.png" href="Images/5.3.png" media-type="image/png"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Chapter-5"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

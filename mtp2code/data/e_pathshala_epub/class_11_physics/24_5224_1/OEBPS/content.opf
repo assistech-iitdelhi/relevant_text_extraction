@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package unique-identifier="bookid" version="3.0" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign" name="generator"/>
+    <dc:date>2020-05-06</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2021-01-04T12:03:02Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta name="cover" content="keph1cc.jpg"/>
+    <meta content="0.9.3" name="Sigil version"/>
+  </metadata>
+  <manifest>
+    <item href="Text/Chapter_1.xhtml" id="Chapter_1" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="Styles/Chapter_1.css" id="Chapter_1.css" media-type="text/css"/>
+    <item href="Fonts/Smart-Delhi-Hindi-Bold.ttf" id="Smart-Delhi-Hindi-Bold.ttf" media-type="application/x-font-ttf"/>
+    <item href="Fonts/Smart-Delhi-Hindi.ttf" id="Smart-Delhi-Hindi.ttf" media-type="application/x-font-ttf"/>
+    <item href="Fonts/SmartDelhiHindi-BoldItalic.ttf" id="SmartDelhiHindi-BoldItalic.ttf" media-type="application/x-font-ttf"/>
+    <item href="Fonts/SmartDelhiHindi-Italic.ttf" id="SmartDelhiHindi-Italic.ttf" media-type="application/x-font-ttf"/>
+    <item href="Fonts/SymbolMT.ttf" id="SymbolMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/TimesNewRomanPS-ItalicMT.ttf" id="TimesNewRomanPS-ItalicMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/TimesNewRomanPSMT.ttf" id="TimesNewRomanPSMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/Wingdings-Regular.ttf" id="Wingdings-Regular.ttf" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/Wingdings3.TTF" id="Wingdings3.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Images/1083.png" id="x1083.png" media-type="image/png"/>
+    <item href="Images/1136.png" id="x1136.png" media-type="image/png"/>
+    <item href="Images/1144.png" id="x1144.png" media-type="image/png"/>
+    <item href="Images/1166.png" id="x1166.png" media-type="image/png"/>
+    <item href="Images/1167.png" id="x1167.png" media-type="image/png"/>
+    <item href="Images/1168.png" id="x1168.png" media-type="image/png"/>
+    <item href="Images/1169.png" id="x1169.png" media-type="image/png"/>
+    <item href="Images/1170.png" id="x1170.png" media-type="image/png"/>
+    <item href="Images/1171.png" id="x1171.png" media-type="image/png"/>
+    <item href="Images/1172.png" id="x1172.png" media-type="image/png"/>
+    <item href="Images/1173.png" id="x1173.png" media-type="image/png"/>
+    <item href="Images/1174.png" id="x1174.png" media-type="image/png"/>
+    <item href="Images/1175.png" id="x1175.png" media-type="image/png"/>
+    <item href="Images/1176.png" id="x1176.png" media-type="image/png"/>
+    <item href="Images/1177.png" id="x1177.png" media-type="image/png"/>
+    <item href="Images/1223.png" id="x1223.png" media-type="image/png"/>
+    <item href="Images/777.png" id="x777.png" media-type="image/png"/>
+    <item href="Images/785.png" id="x785.png" media-type="image/png"/>
+    <item href="Images/817.png" id="x817.png" media-type="image/png"/>
+    <item href="Images/Albert%20Einstein_fmt.png" id="Albert-Einstein_fmt.png" media-type="image/png"/>
+    <item href="Images/bose_fmt.png" id="bose_fmt.png" media-type="image/png"/>
+    <item href="Images/CV%20Ramen_fmt.png" id="CV-Ramen_fmt.png" media-type="image/png"/>
+    <item href="Images/QR11086C1_fmt.png" id="QR11086C1_fmt.png" media-type="image/png"/>
+    <item href="Images/keph1cc.jpg" id="keph1cc.jpg" media-type="image/jpeg" properties="cover-image"/>
+    <item href="Text/cover.xhtml" id="cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    <item href="Images/img1.png" id="img1.png" media-type="image/png"/>
+    <item href="Images/img2.png" id="img2.png" media-type="image/png"/>
+    <item href="Images/IMG3.png" id="IMG3.png" media-type="image/png"/>
+    <item href="Images/IMG4.png" id="IMG4.png" media-type="image/png"/>
+    <item href="Images/IMG5.png" id="IMG5.png" media-type="image/png"/>
+    <item href="Styles/sgc-toc.css" id="sgc-toc.css" media-type="text/css"/>
+    <item href="Text/TOC.xhtml" id="TOC.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Chapter_1"/>
+    <itemref idref="TOC.xhtml"/>
+  </spine>
+  <guide>
+    <reference href="Text/cover.xhtml" title="Cover" type="cover"></reference>
+    <reference href="Text/TOC.xhtml" title="Table Of Contents" type="toc"></reference>
+  </guide>
+</package>

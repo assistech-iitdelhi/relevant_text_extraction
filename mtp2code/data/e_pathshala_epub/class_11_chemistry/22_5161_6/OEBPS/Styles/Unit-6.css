@@ -1,0 +1,318 @@
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:100%;
+	line-height:120%;
+	padding:2%;
+	text-align:justify;
+}
+
+* {
+	margin:0;
+	padding:0;
+}
+
+.images {
+	text-align:center;
+}
+
+.newWordsBox{
+background-color:rgba(252, 187, 118, 0.4);
+padding: 15px ;
+font-size:0.9em;
+}
+
+ .subheading {
+	text-transform: uppercase;
+	font-size: 115%;
+	margin:1% 0;
+}
+.ConceptHeading
+{
+color:#d1640f;
+font-size:1.3em;
+font-weight:bold;
+margin-top:20px;
+}
+/* Sub Heading */
+.SubHeading
+{
+color:#d1640f;
+font-size:1.1em;
+font-weight:bold;
+}
+
+.chapterHeading {
+	font-size: 150%;
+	text-align: right;
+	font-weight: bold;
+	margin: 4% 0;
+}
+
+.topicSubheading {
+	color:rgb(200,100,100);
+	font-size:100%;
+	margin:3% 0 1% 0;
+}
+.topicHeading {
+	color:#00aeef;
+font-weight: bold;
+	font-size:130%;
+	text-transform:capitalize;
+	
+}
+.chapterNumber {
+	font-size:200%;
+	text-align:right;
+	font-weight : bold;
+	color:#00aeef;
+}
+.center {
+	text-align:center;
+}
+.left {
+	text-align:center;
+}
+.right {
+	text-align:right;
+}
+.superscript, .char-style-override-49
+{
+vertical-align: super;
+font-size: 90%;
+}
+
+.subscript, .char-style-override-28
+{
+vertical-align: sub;
+font-size: 90%;
+}
+div.layout
+{
+  text-align: center;
+}
+div.chapter_pos
+
+{
+
+text-align: center;
+
+width: 96%;
+
+position:absolute;
+
+top:50%;
+line-height:110%;
+font-weight:bold;
+
+font-size:180%;
+
+color:#fff;
+
+}
+
+div.chapter_pos div
+
+{
+
+background:#266A2E;
+
+padding:10px;
+
+width:40%;
+
+margin:auto;
+opacity:0.9;
+
+}
+
+div.chapter_pos div span
+
+{
+
+font-size:0.7em;
+
+color:#eaeaea;
+
+font-weight:normal;
+
+}
+.activitybox2{
+background-color:#5DADE2;
+padding: 15px ;
+font-size:0.9em;
+}
+.lining_box
+{
+border:1px solid #000;
+padding:5px;
+}
+
+.img_wid
+{
+	margin-left: auto;
+    margin-right: auto;
+	display: block;
+	width:auto;
+}
+ul
+
+{
+
+margin-left:45px;
+
+}
+
+.caption
+
+{
+
+font-style: italic;
+
+font-size: 0.83em;
+
+color: #4D4D4D;
+
+text-align:center;
+
+}
+
+p
+
+{
+font-size:1em;
+
+margin-top:10px;
+
+}
+
+/* Chapter Name */
+h2
+{
+color:#fff;
+font-size:1.5em;
+background:#357FC9 ;
+padding:10px;
+}
+/* Chapter number */
+h1
+{
+color:#2E86C1;
+}
+h3
+{
+background-color:#F1EB8F;
+padding: 15px ;
+font-size:0.9em;
+}
+h4
+{
+color:#357FC9;
+font-size:1.5em;
+}
+
+.footer
+
+{
+
+display:none;
+
+}
+
+table td
+
+{
+
+padding:10px;
+
+}
+p.Exercise {
+	
+	color:#00aeef;
+	
+	font-size:1em;
+	
+	font-weight:500;
+	
+	text-align:justify;
+	
+}
+p.Heading-1 {
+	
+color:#00aeef;
+font-size:1.3em;
+font-weight:bold;
+margin-top:20px;
+	
+}
+span.char-style-override-20 {
+	color:#00aeef;
+	font-weight:600;
+}
+
+.box2{
+background-color:#FACAFF;
+padding: 15px ;
+font-size:0.9em;
+}
+.greenbox{
+background-color:#99CC99;
+padding: 15px ;
+font-size:0.9em;
+}
+.box{
+background-color:#B2F3BB;
+padding: 15px ;
+font-size:0.9em;
+}
+.img1
+{
+width:100%;
+}
+.cover_img_small
+{
+width:50%;
+}
+@media only screen and (max-width: 767px) {
+div.chapter_pos
+{
+top:50%;
+
+font-size:1em;
+}
+div.chapter_pos div
+{
+width:80%;
+}
+.cover_img_small
+{
+width:90%;
+}
+}
+
+
+#prelims
+{
+	line-height:200%;
+}
+#prelims .char-style-override-22, #prelims .char-style-override-26
+{
+	font-weight:bold;
+}
+#prelims .heading
+{
+	font-size: 1.667em; 
+	color:#00aeef;
+}
+#prelims .char-style-override-5
+{
+	font-style:italic;
+}
+#prelims .subheading
+{
+	
+	color:#00aeef;
+}
+#prelims img
+{
+		width:100%;
+}

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>The Sparse Fourier Transform: Theory and Practice</title>
+<link rel="stylesheet" type="text/css" href="../styles/stylesheet.css"/>
+<link rel="stylesheet" type="application/vnd.adobe-page-template+xml" href="../styles/page-template.xpgt"/>
+</head>
+<body>
+<p class="chnoa"><a id="page_233"/><b>APPENDIX</b></p>
+<p class="chno"><b>F</b></p>
+<p class="chtitle"><b>Analysis of the QuickSync System</b></p>
+<p class="h1a"><a id="appF_1"/><span class="big">F.1</span>&#160;&#160;&#160;&#160;Analysis of the Baseline Algorithm</p>
+<p class="noindent">The baseline algorithm computes <i>a<sub>k</sub></i> = <b>c</b><sup>(<i>k</i>)</sup> &#183; <b>x</b> for all shifts <i>k</i> = 0 &#8230; <i>n</i> &#8211; 1. The probability that the algorithm reports an incorrect output is equal to</p>
+<p class="image"><img src="../images/pg233_1.png" alt="image"/></p>
+<p class="noindent">To estimate the probability of success as a function of <i>&#963;</i>, we derive the distribution of the coordinates <i>a<sub>k</sub></i>. From our assumptions we have that <img src="../images/in233_1.png" alt="image"/> <img src="../images/in233_2.png" alt="image"/> Note that <i>u<sub>k</sub></i> has normal distribution with zero mean and variance</p>
+<p class="image"><img src="../images/pg233_2.png" alt="image"/></p>
+<p class="indent">Regarding <i>v<sub>k</sub></i>, we have the following two cases.</p>
+<p class="bull">&#8226;&#160;&#160;If <i>k = t</i>, i.e., for the correct value of the shift, we have <i>v<sub>t</sub></i> = <b>c</b><sup>(<i>t</i>)</sup> &#183; <b>c</b><sup>(<i>t</i>)</sup> = <i>n</i>.</p>
+<p class="bull">&#8226;&#160;&#160;If <i>k &#8800; t</i>, i.e., for an incorrect value of the shift the expectation of <i>v<sub>k</sub></i> is 0.</p>
+<p class="indentt">We need to bound <img src="../images/in233_3.png" alt="image"/> The following theorem establishes the sufficient (and as we show later, necessary) condition for the baseline algorithm to be correct with probability <img src="../images/in233_4.png" alt="image"/></p>
+<p class="noindentt"><b>Lemma F.1</b> Assume that <img src="../images/in233_5.png" alt="image"/></p>
+<p class="noindentt"><b>Proof</b> We will bound the probabilities of the following events: <img src="../images/in233_6.png" alt="image"/> <img src="../images/in233_7.png" alt="image"/> If none of the events hold then the algorithm output is correct. We will show that Pr[<i>E</i><sub>1</sub>] + Pr[<i>E</i><sub>2</sub>] + Pr[<i>E</i><sub>3</sub>] = <i>o</i>(1).</p>
+<p class="indentt"><a id="page_234"/>To analyze <i>E</i><sub>1</sub> and <i>E</i><sub>2</sub> recall the following fact.</p>
+<p class="noindentt"><b>Fact F.1</b> Let &#934;(<i>s</i>) be the cdf of the normal distribution with zero mean and unit variance. Then for <i>s</i> &#62; 0</p>
+<p class="image"><img src="../images/pg234_1.png" alt="image"/></p>
+<p class="indent">We can now bound</p>
+<p class="image"><img src="../images/pg234_2.png" alt="image"/></p>
+<p class="noindent">where <i>k</i> is any index distinct from <i>t</i>. Since <img src="../images/in234_1.png" alt="image"/> we have</p>
+<p class="image"><img src="../images/pg234_3.png" alt="image"/></p>
+<p class="noindent">The probability Pr[<i>E</i><sub>2</sub>] can be bounded in the same way.</p>
+<p class="indent">To bound Pr[<i>E</i><sub>3</sub>], assume without loss of generality that <i>t</i> = 0. In this case,</p>
+<p class="image"><img src="../images/pg234_4.png" alt="image"/></p>
+<p class="noindent">The terms in the sum <img src="../images/in234_2.png" alt="image"/> are in general <i>not</i> independent. In particular, if <i>k</i> = <i>n</i>/2, then <img src="../images/in234_2.png" alt="image"/>. However, we observe the following.</p>
+<p class="noindentt"><b>Claim F.1</b> Each of <i>S<sub>k</sub></i> and <img src="../images/in234_3.png" alt="image"/> is a sum of independent random variables taking values in {&#8211;1,1} with probability 1/2.</p>
+<p class="indentt">The claim enables us to bound each sum separately. We will bound <img src="../images/in234_4.png" alt="image"/> first. If <i>k</i> &#60; <i>n</i>/6 then the probability is zero. Otherwise, by applying the Chernoff bound we have</p>
+<p class="image"><img src="../images/pg234_5.png" alt="image"/></p>
+<p class="noindent">The probability <img src="../images/in234_5.png" alt="image"/> can be bounded in the same way. Hence, <img src="../images/in234_6.png" alt="image"/> &#9632;</p>
+<p class="indentt">Theorem 8.1 follows from Lemma F.1.</p>
+<p class="h1a"><a id="appF_2"/><span class="big">F.2</span>&#160;&#160;&#160;&#160;Tightness of the Variance Bound</p>
+<p class="noindent">In this section we show that the assumption on the noise variance used in Theorem 8.1 is asymptotically tight. Specifically, we show that if <i>&#963;</i> &#8805; <i>cn</i>/ ln <i>n</i> for some <a id="page_235"/>large enough constant <i>c</i> &#62; 0, then there with probability 1 &#8212; <i>o</i>(1) the output of the baseline algorithm is incorrect. This will prove Theorem 8.2.</p>
+<p class="indent">Recalling the notation in Section F.1, we have <img src="../images/in235_1.png" alt="image"/> We need to show that <img src="../images/in235_2.png" alt="image"/> approaches 1 for <i>c</i> large enough. To this end, we first observe that <img src="../images/in235_3.png" alt="image"/> holds always and <img src="../images/in235_4.png" alt="image"/> since <i>u<sub>t</sub></i> is a normal variable with variance <i>n&#963;</i> = <i>O</i>(<i>n</i><sup>2</sup>/ ln <i>n</i>), so the desired bound holds e.g., by Chebyshev inequality. Hence, it suffices to show that</p>
+<p class="equ"><a id="eqF_1"/><img src="../images/eqF_1.png" alt="image"/></p>
+<p class="indent">The main difficulty in proving <a href="#eqF_1">Equation F.1</a> is the fact that the random variables <i>u<sub>k</sub></i> are <i>not</i> independent. If they were, a simple calculation would show that the expected value of the maximum of <i>n&#951;</i> independent normal variables with variance <i>&#951;&#963;</i> is at least <img src="../images/in235_5.png" alt="image"/> which is larger than <i>a<sub>t</sub> = n</i> for a large enough <i>c</i>. This would then ensure that the reported shift is distinct from <i>t</i> with constant probability. Unfortunately, the independence could be guaranteed only if the shifted codes <b>c</b><sup>(<i>k</i>)</sup> were orthogonal, which is not the case.</p>
+<p class="indent">Instead, our argument utilizes the fact that the shifted codes <b>c</b><sup>(<i>k</i>)</sup> are &#8220;almost&#8221; orthogonal. Specifically, let <img src="../images/in235_6.png" alt="image"/> Since (as shown in the earlier section in the context of the event <i>E</i><sub>3</sub>) the probability that for any pair <img src="../images/in235_7.png" alt="image"/> we have <img src="../images/in235_8.png" alt="image"/> it follows that <img src="../images/in235_9.png" alt="image"/> for all such <img src="../images/in235_10.png" alt="image"/> with probability 1 &#8211; <i>o</i>(1).</p>
+<p class="indent">We can now use a powerful inequality due to Sudakov [Pisier 1999] to show that the random variables <i>u<sub>k</sub></i> are &#8220;almost&#8221; independent, and thus the expected value of the maximum is still <img src="../images/in235_11.png" alt="image"/> In our context, the inequality states the following.</p>
+<p class="noindentt"><b>Fact F.2</b> There exists a constant <i>c</i><sub>2</sub> &#62; 0 such that if <i>D</i> is the Euclidean distance between the closest pair of vectors in <i>C</i>, then:</p>
+<p class="image"><img src="../images/pg235_1.png" alt="image"/></p>
+<p class="indent">Since <img src="../images/in235_12.png" alt="image"/> we obtain that</p>
+<p class="image"><img src="../images/pg235_2.png" alt="image"/></p>
+<p class="indent">The lower bound on the expected value of the maximum can be then converted into an upper bound on probability that the maximum is much lower than its expectation (this follows from simple but somewhat tedious calculations). This leads to <a href="#eqF_1">Equation F.1</a> and completes the proof of Theorem 8.2.</p>
+<p class="h1a"><a id="page_236"/><a id="appF_3"/><span class="big">F.3</span>&#160;&#160;&#160;&#160;Analysis of the QuickSync Algorithm</p>
+<p class="noindent">In this section we show that the probability of correctness for the QuickSync algorithm that aliases into <i>n/p</i> buckets exhibits a similar behavior to the baseline algorithm, albeit with the bucket variance larger by a factor of <i>O</i>(<i>p</i>). At the same time, the running time of our algorithm is equal to <i>O</i>(<i>pn</i> + (<i>n/p</i>) log(<i>n/p</i>)). This improves over the baseline algorithm which has <i>O</i>(<i>n</i> log <i>n</i>) runtime as long as the term <i>pn</i> is smaller than (<i>n/p</i>) log(<i>n/p</i>).</p>
+<p class="indent">Recall that the algorithm first computes the aliased spreading code <b>c</b>(<i>p</i>) and signal <b>x</b>(<i>p</i>), defined as</p>
+<p class="image"><img src="../images/pg236_1.png" alt="image"/></p>
+<p class="noindent">for <i>i</i> = 0 &#8230; <i>n/p</i> &#8211; 1. The aliased noise vector <b>g</b>(<i>p</i>) is defined in an analogous way.</p>
+<p class="indent">The application of FFT, coordinate-wise multiplication, and inverse FFT computes</p>
+<p class="image"><img src="../images/pg236_2.png" alt="image"/></p>
+<p class="noindent">for all shifts <i>k</i> = 0 &#8230; <i>n/p</i> &#8211; 1. The algorithm then selects <i>a</i>(<i>p</i>)<sub><i>k</i></sub> with the largest value. The last step of the algorithm fails if for <i>t</i>&#8242; = <i>t</i> mod <i>n/p</i> we have <img src="../images/in236_1.png" alt="image"/>. Let <i>P</i>&#8242;(<i>&#963;</i>) be the probability of this event. We will show that as long as <i>&#963;</i> = <i>o</i>(<i>pn</i>/ ln <i>n</i>) we have <i>P</i>&#8242;(<i>&#963;</i>) = <i>o</i>(1).</p>
+<p class="noindentt"><b>Lemma F.2</b> Assume that <img src="../images/in236_2.png" alt="image"/></p>
+<p class="noindentt"><b>Proof</b> We start by decomposing each term <i>a</i>(<i>p</i>)<sub><i>k</i></sub>:</p>
+<p class="image"><img src="../images/pg236_3.png" alt="image"/></p>
+<p class="indent">Consider the following events:</p>
+<p class="indentt"><img src="../images/pg236_4.png" alt="image"/></p>
+<p class="noindentt"><a id="page_237"/>If none of the events hold, then the algorithm output is correct. We need to show that Pr[<i>E</i><sub>0</sub>] + Pr[<i>E</i><sub>1</sub>] + Pr[<i>E</i><sub>2</sub>] + Pr[<i>E</i><sub>3</sub>] = <i>o</i>(1).</p>
+<p class="noindentt"><b>Events</b> <i>E</i><sub>1</sub> <b>and</b> <i>E</i><sub>2</sub>. Let <img src="../images/in237_1.png" alt="image"/> Observe that <img src="../images/in237_2.png" alt="image"/> are i.i.d. random variables chosen from the normal distribution with mean zero and variance <i>p&#963;</i>. Conditioned on the choice of <img src="../images/in237_3.png" alt="image"/> the random variable <img src="../images/in237_4.png" alt="image"/> has normal distribution with variance <i>&#956;p&#963;</i>, where <img src="../images/in237_5.png" alt="image"/> We first show that <i>&#956;</i> &#8804; 4<i>pm</i> with very high probability, and then bound the tail of a normal random variable with variance 4<i>pm</i>.</p>
+<p class="indent">The following fact is adapted from Matousek [2008, theorem 3.1].</p>
+<p class="noindentt"><b>Fact F.3</b> Let <i>R<sub>ij</sub>, i</i> = 0 &#8230; <i>m</i> &#8211; 1 and <i>j</i> = 0 &#8230; <i>p</i> &#8212; 1, be i.i.d. random variable taking values uniformly at random from <img src="../images/in237_6.png" alt="image"/> There is an absolute constant <i>C</i> such that</p>
+<p class="image"><img src="../images/pg237_1.png" alt="image"/></p>
+<p class="indent">Applying the fact to <img src="../images/in237_7.png" alt="image"/> we conclude that with probability 1 &#8212; <i>o</i>(1) we have <img src="../images/in237_8.png" alt="image"/> In that case <img src="../images/in237_9.png" alt="image"/> We then follow the proof of Lemma F.1.</p>
+<p class="noindentt"><b>Event</b> <i>E</i><sub>0</sub>. Observe that <img src="../images/in237_10a.png" alt="image"/> is a sum of terms <img src="../images/in237_10.png" alt="image"/> where each <i>q<sub>i</sub></i> is a square of a sum of <i>p</i> independent random variables taking values in {&#8211;1, 1} with probability 1/2. It follows that <i>E</i>[<i>q<sub>i</sub></i>] = <i>p</i>, and therefore <img src="../images/in237_11.png" alt="image"/> To bound the deviation of <img src="../images/in237_10a.png" alt="image"/> from its mean <i>n</i>, we first compute its variance:</p>
+<p class="image"><img src="../images/pg237_2.png" alt="image"/></p>
+<p class="indent">We can now use Chebyshev&#8217;s inequality:</p>
+<p class="image"><img src="../images/pg237_3.png" alt="image"/></p>
+<p class="noindent"><a id="page_238"/><b>Event</b> <i>E</i><sub>3</sub>. It suffices to bound Pr[<i>E</i><sub>3</sub>]. To this end we bound Pr[<i>v<sub>k</sub></i> &#8805; <i>n</i>/4]. Without loss of generality we can assume <i>t</i> = 0. Then <img src="../images/in238_1.png" alt="image"/> where <i>i</i> + <i>k</i> is taken modulo <i>n/p</i>.</p>
+<p class="indent">We first observe that in each term <img src="../images/in238_2.png" alt="image"/> the random variables <img src="../images/in238_3.png" alt="image"/> and <img src="../images/in238_4.png" alt="image"/> are independent (since <i>k</i> &#8800; 0). This implies <img src="../images/in238_5.png" alt="image"/> and therefore <i>E</i>[<i>v</i><sub>k</sub>] = 0.</p>
+<p class="indent">To bound Pr[<i>v<sub>k</sub></i> &#8805; <i>n</i>/4], we compute the fourth moment of <img src="../images/in238_6.png" alt="image"/> (using the second moment does not give strong enough probability bound). We have</p>
+<p class="image"><img src="../images/pg238_1.png" alt="image"/></p>
+<p class="noindent">Observe that the expectation of any term in the above sum that contains an odd power of <img src="../images/in238_7.png" alt="image"/> is zero. Hence, the only remaining terms have the form <img src="../images/in238_8.png" alt="image"/> where <i>j</i><sub>1</sub> &#8230; <i>j</i><sub>4</sub> are not necessarily distinct. Let <i>I</i> be a set of such four-tuples (<i>j</i><sub>1</sub>, <i>j</i><sub>2</sub>, <i>j</i><sub>3</sub>, <i>j</i><sub>4</sub>). We observe that for (<i>j</i><sub>1</sub>, <i>j</i><sub>2</sub>, <i>j</i><sub>3</sub>, <i>j</i><sub>4</sub>) to belong in <i>I</i>, at least two disjoint pairs of indices in the sequence <i>i</i><sub>1</sub>, <i>i</i><sub>1</sub> + <i>k, i</i><sub>2</sub>, <i>i</i><sub>2</sub> + <i>k, i</i><sub>3</sub>, <i>i</i><sub>3</sub> + <i>k, i</i><sub>4</sub>, <i>i</i><sub>4</sub> + <i>k</i> must be equal. This means that |<i>I</i>| = <i>C</i>(<i>n/p</i>)<sup>2</sup> for some constant <i>C</i>. Since <img src="../images/in238_9.png" alt="image"/> we have <img src="../images/in238_10.png" alt="image"/> Thus,</p>
+<p class="image"><img src="../images/pg238_2.png" alt="image"/></p>
+<p class="noindent">This implies <img src="../images/in238_11.png" alt="image"/></p>
+<p class="indentt">We now show that if the noise variance <i>&#963;</i> is &#8220;small&#8221; then one can check each shift using few time domain samples.</p>
+<p class="noindentt"><b>Lemma F.3</b> Assume that <img src="../images/in238_12.png" alt="image"/> Consider an algorithm that, given a set <i>K</i> of <i>p</i> shifts, computes</p>
+<p class="image"><img src="../images/pg238_3.png" alt="image"/></p>
+<p class="noindent">for <i>T</i> = <i>n/p</i>, and selects the largest <i>a<sub>k</sub></i> over <i>k</i> &#8712; <i>K</i>. Then</p>
+<p class="image"><img src="../images/pg238_4.png" alt="image"/></p>
+<p class="noindent"><a id="page_239"/><b>Proof</b> The argument is similar to the proof of Lemma F.1. We verify it for an analog of the event <i>E</i><sub>1</sub>; the proofs for <i>E</i><sub>2</sub> and <i>E</i><sub>3</sub> are straightforward syntactic modifications of the original arguments.</p>
+<p class="indent">First, observe that <img src="../images/in239_1.png" alt="image"/> Let <img src="../images/in239_2.png" alt="image"/> Consider the event <img src="../images/in239_3.png" alt="image"/> We can bound</p>
+<p class="image"><img src="../images/pg239_1.png" alt="image"/></p>
+<p class="noindent">Since <img src="../images/in239_4.png" alt="image"/> we have</p>
+<p class="image"><img src="../images/pg239_2.png" alt="image"/></p>
+<p class="noindentt"><b>Proofs of Theorem 8.3 and Theorem 8.4.</b> To prove Theorem 8.3, recall that given a signal <b>x</b> consisting of <i>p</i> blocks, each of length <i>n</i> and with noise variance <i>&#963;</i>, QuickSync starts by aliasing the <i>p</i> blocks into one. This creates one block of length <i>n</i>, with noise variance <i>&#963;/p</i> (after normalization). We then apply Lemmas F.2 and F.3.</p>
+<p class="indent">Theorem 8.4 follows from the assumption that <img src="../images/in239_5.png" alt="image"/> and Lemma F.2.</p>
+</body>
+</html>

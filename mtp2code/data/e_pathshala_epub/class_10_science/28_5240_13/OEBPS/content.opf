@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="BookId" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:identifier opf:scheme="UUID" id="BookId">urn:uuid:111edf0a-842c-465f-9f6a-49b57348ff40</dc:identifier>
+    <dc:title>Science</dc:title>
+    <dc:title>Textbook Std. X</dc:title>
+    <dc:date opf:event="modification">2015-09-21</dc:date>
+    <meta refines="#t1" property="title-type">main</meta>
+    <meta refines="#t1" property="display-seq">1</meta>
+    <meta refines="#t2" property="title-type">subtitle</meta>
+    <meta refines="#t2" property="display-seq">2</meta>
+    <meta name="Sigil version" content="0.9.9" />
+    <meta property="dcterms:modified">2018-08-01T13:48:42Z</meta>
+    <meta name="cover" content="cover.png" />
+  </metadata>
+  <manifest>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="science.css" href="Styles/science.css" media-type="text/css"/>
+    <item id="x1426.png" href="Images/1426.png" media-type="image/png"/>
+    <item id="HC_Orested_fmt.jpeg" href="Images/HC%20Orested_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x1530.png" href="Images/1530.png" media-type="image/png"/>
+    <item id="x1552.png" href="Images/1552.png" media-type="image/png"/>
+    <item id="x1571.png" href="Images/1571.png" media-type="image/png"/>
+    <item id="x1628.png" href="Images/1628.png" media-type="image/png"/>
+    <item id="x1642.png" href="Images/1642.png" media-type="image/png"/>
+    <item id="x1.PNG" href="Images/1.PNG" media-type="image/png"/>
+    <item id="x1682.png" href="Images/1682.png" media-type="image/png"/>
+    <item id="x1739.png" href="Images/1739.png" media-type="image/png"/>
+    <item id="x1765.png" href="Images/1765.png" media-type="image/png"/>
+    <item id="x1791.png" href="Images/1791.png" media-type="image/png"/>
+    <item id="x1809.png" href="Images/1809.png" media-type="image/png"/>
+    <item id="x1824.png" href="Images/1824.png" media-type="image/png"/>
+    <item id="x1913.png" href="Images/1913.png" media-type="image/png"/>
+    <item id="x1933.png" href="Images/1933.png" media-type="image/png"/>
+    <item id="x1948.png" href="Images/1948.png" media-type="image/png"/>
+    <item id="x2023.png" href="Images/2023.png" media-type="image/png"/>
+    <item id="x2103.png" href="Images/2103.png" media-type="image/png"/>
+    <item id="x2122.png" href="Images/2122.png" media-type="image/png"/>
+    <item id="Faraday_fmt.jpeg" href="Images/Faraday_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x2155.png" href="Images/2155.png" media-type="image/png"/>
+    <item id="x2177.png" href="Images/2177.png" media-type="image/png"/>
+    <item id="x2243.png" href="Images/2243.png" media-type="image/png"/>
+    <item id="x2299.png" href="Images/2299.png" media-type="image/png"/>
+    <item id="Chapter-13.html" href="Text/Chapter-13.html" media-type="application/xhtml+xml"/>
+    <item id="x18.png" href="Images/18.png" media-type="image/png"/>
+    <item id="x19.png" href="Images/19.png" media-type="image/png"/>
+    <item id="cover.png" href="Images/cover.png" media-type="image/png" properties="cover-image"/>
+    <item id="nav.xhtml" href="Text/nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Chapter-13.html"/>
+    <itemref idref="nav.xhtml" linear="no"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

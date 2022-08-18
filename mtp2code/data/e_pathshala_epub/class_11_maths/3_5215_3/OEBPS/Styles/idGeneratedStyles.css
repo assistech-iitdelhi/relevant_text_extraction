@@ -1,0 +1,184 @@
+
+
+
+/*------------This is for font Call ----------------- */
+
+
+                           
+
+                            /*------------This is for body Call----------------- */
+body {
+font-family:"Arial";
+font-size:100%;
+line-height:150%;
+padding:2%;
+text-align:justify;
+}
+
+* {
+margin:0;
+padding:0;
+}
+ 
+                            /*------------This is for Heading Call----------------- */
+
+
+h1
+{
+color:#fff;
+font-size:1.5em;
+background: #0d61ea;
+padding:10px;
+}
+h2
+{
+color:#00aeef;
+font-size:1.4em;
+padding:10px;
+}
+h3
+{
+color:#00aeef;
+font-size:1.3em;
+padding:10px;
+}
+h4
+{
+color:#00aeef;
+font-size:1.2em;
+padding:10px;
+}
+h5
+{
+color:#00aeef;
+font-size:1.1em;
+padding:10px;
+}
+h6
+{
+color:#00aeef;
+font-size:1 em;
+padding:10px;
+}
+
+                            /*------------This is for Boxes Call----------------- */
+.CharOverride-5{
+
+color:#00B8F1;
+
+}
+.clear
+{
+	clear:both;
+}
+
+.lining_box2
+{
+border:0px solid;
+background:#BEE6F3;
+padding:15px;
+border-radius:5px;
+}
+.CharOverride-71{
+background:#00BDF4;
+color:#FFFFFF;
+padding:5px;
+}
+.CharOverride-12,.CharOverride-7,.CharOverride-17{
+color:#00BDF4;
+}
+p
+{
+	margin-top:10px;
+}
+
+
+
+                             /*------------This is for Caption Call----------------- */
+.caption{
+font-style: italic;
+font-size: 0.83em;
+color: #4D4D4D;
+text-align:center;
+}
+                             /*------------This is for Image Call----------------- */
+.image{
+text-align:center;
+}
+
+img {
+max-width:100%;
+}
+
+p.resize img, .resize img
+
+{
+position:relative;
+top:10px;
+}
+
+
+
+                             /*------------This is for Cover Page Call----------------- */
+div.layout
+{
+  text-align: center;
+}
+.img_wid
+{
+margin-left: auto;
+    margin-right: auto;
+display: block;
+width:80%;
+}
+.bold
+{
+font-weight:bold;
+}
+div.chapter_pos
+{
+  text-align: center;
+  width: 96%;
+  position:absolute;
+top:60%;
+font-weight:bold;
+font-size:28px;
+color:#fff;
+}
+div.chapter_pos div
+{
+background:#003366;
+padding:10px;
+width:30%;
+margin:auto;
+opacity:0.9;
+}
+div.chapter_pos div span
+{
+font-size:0.7em;
+color:#aeaeae;
+font-weight:normal;
+}
+
+.cover_img_small
+{
+width:50%;
+}
+
+
+                               /*------------This is for QR code Call----------------- */
+.clear                                                      
+{
+clear:both;
+}
+
+img.right-img
+{
+text-align: right;
+display:inline-block;
+float:right;
+width:177px;
+}
+ /*------------
+Written By Mohd Salman
+----------------- */  

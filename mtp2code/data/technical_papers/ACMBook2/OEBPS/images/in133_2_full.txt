@@ -1,0 +1,234 @@
+text_annotations {
+  locale: "und"
+  description: "1\nA\n"
+  bounding_poly {
+    vertices {
+    }
+    vertices {
+      x: 12
+    }
+    vertices {
+      x: 12
+      y: 32
+    }
+    vertices {
+      y: 32
+    }
+  }
+}
+text_annotations {
+  description: "1"
+  bounding_poly {
+    vertices {
+      x: 4
+    }
+    vertices {
+      x: 10
+    }
+    vertices {
+      x: 10
+      y: 14
+    }
+    vertices {
+      x: 4
+      y: 14
+    }
+  }
+}
+text_annotations {
+  description: "A"
+  bounding_poly {
+    vertices {
+      y: 18
+    }
+    vertices {
+      x: 11
+      y: 18
+    }
+    vertices {
+      x: 12
+      y: 32
+    }
+    vertices {
+      x: 1
+      y: 32
+    }
+  }
+}
+full_text_annotation {
+  pages {
+    width: 16
+    height: 33
+    blocks {
+      bounding_box {
+        vertices {
+          x: 4
+        }
+        vertices {
+          x: 10
+        }
+        vertices {
+          x: 10
+          y: 14
+        }
+        vertices {
+          x: 4
+          y: 14
+        }
+      }
+      paragraphs {
+        bounding_box {
+          vertices {
+            x: 4
+          }
+          vertices {
+            x: 10
+          }
+          vertices {
+            x: 10
+            y: 14
+          }
+          vertices {
+            x: 4
+            y: 14
+          }
+        }
+        words {
+          bounding_box {
+            vertices {
+              x: 4
+            }
+            vertices {
+              x: 10
+            }
+            vertices {
+              x: 10
+              y: 14
+            }
+            vertices {
+              x: 4
+              y: 14
+            }
+          }
+          symbols {
+            property {
+              detected_break {
+                type_: LINE_BREAK
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 4
+              }
+              vertices {
+                x: 10
+              }
+              vertices {
+                x: 10
+                y: 14
+              }
+              vertices {
+                x: 4
+                y: 14
+              }
+            }
+            text: "1"
+            confidence: 0.9900000095367432
+          }
+          confidence: 0.9900000095367432
+        }
+        confidence: 0.9900000095367432
+      }
+      block_type: TEXT
+      confidence: 0.9900000095367432
+    }
+    blocks {
+      bounding_box {
+        vertices {
+          y: 18
+        }
+        vertices {
+          x: 11
+          y: 18
+        }
+        vertices {
+          x: 12
+          y: 32
+        }
+        vertices {
+          x: 1
+          y: 32
+        }
+      }
+      paragraphs {
+        bounding_box {
+          vertices {
+            y: 18
+          }
+          vertices {
+            x: 11
+            y: 18
+          }
+          vertices {
+            x: 12
+            y: 32
+          }
+          vertices {
+            x: 1
+            y: 32
+          }
+        }
+        words {
+          bounding_box {
+            vertices {
+              y: 18
+            }
+            vertices {
+              x: 11
+              y: 18
+            }
+            vertices {
+              x: 12
+              y: 32
+            }
+            vertices {
+              x: 1
+              y: 32
+            }
+          }
+          symbols {
+            property {
+              detected_break {
+                type_: LINE_BREAK
+              }
+            }
+            bounding_box {
+              vertices {
+                y: 18
+              }
+              vertices {
+                x: 11
+                y: 18
+              }
+              vertices {
+                x: 12
+                y: 32
+              }
+              vertices {
+                x: 1
+                y: 32
+              }
+            }
+            text: "A"
+            confidence: 0.9399999976158142
+          }
+          confidence: 0.9399999976158142
+        }
+        confidence: 0.9399999976158142
+      }
+      block_type: TEXT
+      confidence: 0.9399999976158142
+    }
+  }
+  text: "1\nA\n"
+}

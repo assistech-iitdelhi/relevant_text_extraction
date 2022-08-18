@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package unique-identifier="bookid" version="3.0" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign" name="generator"/>
+    <meta property="dcterms:modified">2021-02-24T12:04:16Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <dc:date event="">2020-04-29</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta name="cover" content="cover.PNG"/>
+    <meta content="0.9.3" name="Sigil version"/>
+  </metadata>
+  <manifest>
+    <item href="Text/Untitled-2.xhtml" id="Untitled-2" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="Text/toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
+    <item href="Styles/Untitled-4.css" id="Untitled-4.css" media-type="text/css"/>
+    <item href="Fonts/Garamond-Bold.TTF" id="Garamond-Bold.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/SymbolMT.ttf" id="SymbolMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/Wingdings-Regular.ttf" id="Wingdings-Regular.ttf" media-type="application/vnd.ms-opentype"/>
+    <item href="Images/0964CH04_fmt.jpeg" id="x0964CH04_fmt.jpeg" media-type="image/jpeg"/>
+    <item href="Images/1047.png" id="x1047.png" media-type="image/png"/>
+    <item href="Images/1048.png" id="x1048.png" media-type="image/png"/>
+    <item href="Images/1091.png" id="x1091.png" media-type="image/png"/>
+    <item href="Images/1149.png" id="x1149.png" media-type="image/png"/>
+    <item href="Images/1223.png" id="x1223.png" media-type="image/png"/>
+    <item href="Images/1261.png" id="x1261.png" media-type="image/png"/>
+    <item href="Images/1266.png" id="x1266.png" media-type="image/png"/>
+    <item href="Images/1271.png" id="x1271.png" media-type="image/png"/>
+    <item href="Images/1276.png" id="x1276.png" media-type="image/png"/>
+    <item href="Images/1285.png" id="x1285.png" media-type="image/png"/>
+    <item href="Images/1290.png" id="x1290.png" media-type="image/png"/>
+    <item href="Images/1295.png" id="x1295.png" media-type="image/png"/>
+    <item href="Images/1300.png" id="x1300.png" media-type="image/png"/>
+    <item href="Images/1305.png" id="x1305.png" media-type="image/png"/>
+    <item href="Images/1317.png" id="x1317.png" media-type="image/png"/>
+    <item href="Images/1328.png" id="x1328.png" media-type="image/png"/>
+    <item href="Images/1333.png" id="x1333.png" media-type="image/png"/>
+    <item href="Images/1341.png" id="x1341.png" media-type="image/png"/>
+    <item href="Images/1349.png" id="x1349.png" media-type="image/png"/>
+    <item href="Images/1354.png" id="x1354.png" media-type="image/png"/>
+    <item href="Images/1359.png" id="x1359.png" media-type="image/png"/>
+    <item href="Images/836.png" id="x836.png" media-type="image/png"/>
+    <item href="Images/969.png" id="x969.png" media-type="image/png"/>
+    <item href="Images/998.png" id="x998.png" media-type="image/png"/>
+    <item href="Images/BOHR_fmt.jpeg" id="BOHR_fmt.jpeg" media-type="image/jpeg"/>
+    <item href="Images/RUTHERFORD_fmt.jpeg" id="RUTHERFORD_fmt.jpeg" media-type="image/jpeg"/>
+    <item href="Images/THOMSON_fmt.jpeg" id="THOMSON_fmt.jpeg" media-type="image/jpeg"/>
+    <item href="Images/t12.PNG" id="t12.PNG" media-type="image/png"/>
+    <item href="Images/f1.PNG" id="f1.PNG" media-type="image/png"/>
+    <item href="Images/f2.PNG" id="f2.PNG" media-type="image/png"/>
+    <item href="Images/t13.PNG" id="t13.PNG" media-type="image/png"/>
+    <item href="Images/cover.PNG" id="cover.PNG" media-type="image/png"/>
+    <item href="Text/cover.xhtml" id="cover.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Untitled-2"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference href="Text/cover.xhtml" title="Cover" type="cover"></reference>
+  </guide>
+</package>

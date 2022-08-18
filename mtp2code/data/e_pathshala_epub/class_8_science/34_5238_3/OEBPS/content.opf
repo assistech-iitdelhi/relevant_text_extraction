@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="bookid" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta name="generator" content="Adobe InDesign" />
+    <dc:date>2019-05-08</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2019-06-03T13:01:55Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta name="Sigil version" content="0.9.10" />
+    <meta name="cover" content="Capture.JPG" />
+  </metadata>
+  <manifest>
+    <item id="ch3" href="Text/ch3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="toc" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="ch3.css" href="Styles/ch3.css" media-type="text/css"/>
+    <item id="Wingdings-Regular.ttf" href="Fonts/Wingdings-Regular.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="x03_fmt.png" href="Images/03_fmt.png" media-type="image/png"/>
+    <item id="x0854CH3_fmt.png" href="Images/0854CH3_fmt.png" media-type="image/png"/>
+    <item id="x3_1a_chain-of-pearl_fmt.png" href="Images/3_1a_chain%20of%20pearl_fmt.png" media-type="image/png"/>
+    <item id="x3_1b_chain-of-pearl_fmt.png" href="Images/3_1b_chain%20of%20pearl_fmt.png" media-type="image/png"/>
+    <item id="x3_2_fmt.png" href="Images/3_2_fmt.png" media-type="image/png"/>
+    <item id="x3_7_fmt.png" href="Images/3_7_fmt.png" media-type="image/png"/>
+    <item id="x9.png" href="Images/9.png" media-type="image/png"/>
+    <item id="x10.png" href="Images/10.png" media-type="image/png"/>
+    <item id="x11.png" href="Images/11.png" media-type="image/png"/>
+    <item id="x13.png" href="Images/13.png" media-type="image/png"/>
+    <item id="x14.png" href="Images/14.png" media-type="image/png"/>
+    <item id="x15.png" href="Images/15.png" media-type="image/png"/>
+    <item id="x1424.png" href="Images/1424.png" media-type="image/png"/>
+    <item id="images-008.jpg" href="Images/images-008.jpg" media-type="image/jpeg"/>
+    <item id="images-015.jpg" href="Images/images-015.jpg" media-type="image/jpeg"/>
+    <item id="img33.png" href="Images/img33.png" media-type="image/png"/>
+    <item id="Capture.JPG" href="Images/Capture.JPG" media-type="image/jpeg" properties="cover-image"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="ch3"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

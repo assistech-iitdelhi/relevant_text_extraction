@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="bookid" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign" name="generator" />
+    <dc:date>2020-05-04</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2020-08-26T19:39:30Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta content="0.9.12" name="Sigil version" />
+    <meta name="cover" content="cover.png" />
+  </metadata>
+  <manifest>
+    <item id="ch-22" href="Text/ch-22.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="toc" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="ch-22.css" href="Styles/ch-22.css" media-type="text/css"/>
+    <item id="BookmanOldStyle-Bold.TTF" href="Fonts/BookmanOldStyle-Bold.TTF" media-type="application/vnd.ms-opentype"/>
+    <item id="BookmanOldStyle-BoldItalic.TTF" href="Fonts/BookmanOldStyle-BoldItalic.TTF" media-type="application/vnd.ms-opentype"/>
+    <item id="SymbolMT.ttf" href="Fonts/SymbolMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="x1003.png" href="Images/1003.png" media-type="image/png"/>
+    <item id="x1014.png" href="Images/1014.png" media-type="image/png"/>
+    <item id="x11080CH22_fmt.png" href="Images/11080CH22_fmt.png" media-type="image/png"/>
+    <item id="x1155.png" href="Images/1155.png" media-type="image/png"/>
+    <item id="x1176.png" href="Images/1176.png" media-type="image/png"/>
+    <item id="x1214.png" href="Images/1214.png" media-type="image/png"/>
+    <item id="x871.png" href="Images/871.png" media-type="image/png"/>
+    <item id="x935.png" href="Images/935.png" media-type="image/png"/>
+    <item id="x960.png" href="Images/960.png" media-type="image/png"/>
+    <item id="fig-22.4_fmt.png" href="Images/fig%2022.4_fmt.png" media-type="image/png"/>
+    <item id="Screenshot_from_2020-08-25_18-32-52.png" href="Images/Screenshot%20from%202020-08-25%2018-32-52.png" media-type="image/png"/>
+    <item id="cover.png" href="Images/cover.png" media-type="image/png" properties="cover-image"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="ch-22"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

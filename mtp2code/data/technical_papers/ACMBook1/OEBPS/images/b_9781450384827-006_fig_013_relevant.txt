@@ -1,0 +1,2 @@
+In time-series data streams, trend analysis plays a major role. We used the seasonal-trend decomposition by Loess (STL) method, introduced in Lin et al. [2007], to decompose original time-series data into trend, seasonal, and remainder streams. Figure 6.13 shows such a decomposition on PM2.5 observations for a duration of 1 month in Tokyo during December 2014.
+Figure 6.13Seasonal-trend decomposition by Loess on PM2.5 data stream.

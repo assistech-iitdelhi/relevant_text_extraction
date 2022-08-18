@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>The Sparse Fourier Transform: Theory and Practice</title>
+<link rel="stylesheet" type="text/css" href="../styles/stylesheet.css"/>
+<link rel="stylesheet" type="application/vnd.adobe-page-template+xml" href="../styles/page-template.xpgt"/>
+</head>
+<body>
+<p class="chnoa"><a id="page_231"/><b>APPENDIX</b></p>
+<p class="chno"><b>E</b></p>
+<p class="chtitle"><b>Sample Lower Bound for the Bernoulli Distribution</b></p>
+<p class="noindent">We will show that the lower bound of <img src="../images/in231_1.png" alt="image"/> recovery from Price and Woodruff [2011] applies to our Bernoulli distribution from <a href="14_Chapter05.xhtml#ch5_1_4">Section 5.1.4</a>. First, we state their bound:</p>
+<p class="noindentt"><b>Lemma E.1</b> Price and Woodruff [2011, section 4]. For any <i>k</i> &#60; <i>n</i> / log <i>n</i> and constant <img src="../images/in231_2.png" alt="image"/> there exists a distribution <i>D<sub>k</sub></i> over <i>k</i>-sparse vectors in {0,1, &#8211; 1}<sup><i>n</i></sup> such that, for every distribution of matrices <img src="../images/in231_3.png" alt="image"/> with <i>m</i> = <i>o</i>(<i>k</i> log(<i>n</i>/<i>k</i>)) and recovery algorithms <span class="f2">A</span>,</p>
+<p class="image"><img src="../images/pg231_1.png" alt="image"/></p>
+<p class="noindent">as a distribution over <i>x</i> &#8764; <i>D<sub>k</sub></i> and <i>w</i> &#8764; <i>N</i>(0, <i>&#963;</i><sup>2</sup><i>I<sub>n</sub></i>) with <img src="../images/in231_4.png" alt="image"/> as well as over <i>A</i> and <span class="f2">A</span>.</p>
+<p class="indentt">First, we note that we can replace <i>D<sub>k</sub></i> with <i>U<sub>k</sub></i>, the uniform distribution over <i>k</i>-sparse vectors in {0,1, &#8211; 1}<sup><i>n</i></sup> in Lemma E.1. To see this, suppose we have an (A, <span class="f2">A</span>) that works with 1/2 probability over <i>U<sub>k</sub></i>. Then for any <i>k</i>-sparse <i>x</i> &#8712; {0, 1, &#8211; 1}<sup><i>n</i></sup>, if we choose a random permutation matrix <i>P</i> and sign flip matrix <i>S, P Sx</i> &#8764; <i>U<sub>k</sub></i>. Hence, the distribution of matrices <i>APS</i> and algorithm <img src="../images/in231_5.png" alt="image"/> works with 1/2 probability for any <i>x</i>, and therefore on average over <i>D<sub>k</sub></i>. This implies that <i>A</i> has &#8486;(<i>k</i> log(<i>n/k</i>)) rows by Lemma E.1. Hence, we can set <i>D<sub>k</sub> = U<sub>k</sub></i> in Lemma E.1.</p>
+<p class="indent">Our algorithm works with 3/4 probability over vectors <i>x</i> that are not necessarily <i>k</i>-sparse, but have a binomial number <i>B</i>(<i>n, k/n</i>) of nonzeros. That is, it works over the distribution <i>U</i> that is <img src="../images/in231_6.png" alt="image"/> With <img src="../images/in231_7.png" alt="image"/> probability, <img src="../images/in231_8.png" alt="image"/> Hence, our algorithm works with at least 1/2 probability over <img src="../images/in231_9.png" alt="image"/> By an averaging argument, there must exist a <img src="../images/in231_10.png" alt="image"/> where our algorithm works with at least 1/2 probability over <img src="../images/in231_11.png" alt="image"/> but the lemma implies that it must therefore take <img src="../images/in231_12.png" alt="image"/> samples.</p>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="bookid" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign" name="generator" />
+    <dc:date>2020-05-04</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2020-08-26T18:34:20Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta content="0.9.12" name="Sigil version" />
+    <meta name="cover" content="cover.png" />
+  </metadata>
+  <manifest>
+    <item id="ch-12" href="Text/ch-12.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="toc" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="ch-12.css" href="Styles/ch-12.css" media-type="text/css"/>
+    <item id="BookmanOldStyle-Bold.TTF" href="Fonts/BookmanOldStyle-Bold.TTF" media-type="application/vnd.ms-opentype"/>
+    <item id="BookmanOldStyle-BoldItalic.TTF" href="Fonts/BookmanOldStyle-BoldItalic.TTF" media-type="application/vnd.ms-opentype"/>
+    <item id="SymbolMT.ttf" href="Fonts/SymbolMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="x1005.png" href="Images/1005.png" media-type="image/png"/>
+    <item id="x1015.png" href="Images/1015.png" media-type="image/png"/>
+    <item id="x1025.png" href="Images/1025.png" media-type="image/png"/>
+    <item id="x1036.png" href="Images/1036.png" media-type="image/png"/>
+    <item id="x1047.png" href="Images/1047.png" media-type="image/png"/>
+    <item id="x1052.png" href="Images/1052.png" media-type="image/png"/>
+    <item id="x1062.png" href="Images/1062.png" media-type="image/png"/>
+    <item id="x11080CH12_fmt.png" href="Images/11080CH12_fmt.png" media-type="image/png"/>
+    <item id="x636.png" href="Images/636.png" media-type="image/png"/>
+    <item id="x651.png" href="Images/651.png" media-type="image/png"/>
+    <item id="x677.png" href="Images/677.png" media-type="image/png"/>
+    <item id="x798.png" href="Images/798.png" media-type="image/png"/>
+    <item id="x850.png" href="Images/850.png" media-type="image/png"/>
+    <item id="x869.png" href="Images/869.png" media-type="image/png"/>
+    <item id="x884.png" href="Images/884.png" media-type="image/png"/>
+    <item id="x907.png" href="Images/907.png" media-type="image/png"/>
+    <item id="x924.png" href="Images/924.png" media-type="image/png"/>
+    <item id="x934.png" href="Images/934.png" media-type="image/png"/>
+    <item id="x950.png" href="Images/950.png" media-type="image/png"/>
+    <item id="x960.png" href="Images/960.png" media-type="image/png"/>
+    <item id="x971.png" href="Images/971.png" media-type="image/png"/>
+    <item id="x983.png" href="Images/983.png" media-type="image/png"/>
+    <item id="x994.png" href="Images/994.png" media-type="image/png"/>
+    <item id="Screenshot_from_2020-08-26_08-10-14.png" href="Images/Screenshot%20from%202020-08-26%2008-10-14.png" media-type="image/png"/>
+    <item id="Screenshot_from_2020-08-26_08-11-15.png" href="Images/Screenshot%20from%202020-08-26%2008-11-15.png" media-type="image/png"/>
+    <item id="Screenshot_from_2020-08-26_08-15-00.png" href="Images/Screenshot%20from%202020-08-26%2008-15-00.png" media-type="image/png"/>
+    <item id="Screenshot_from_2020-08-26_08-15-13.png" href="Images/Screenshot%20from%202020-08-26%2008-15-13.png" media-type="image/png"/>
+    <item id="Screenshot_from_2020-08-26_08-17-17.png" href="Images/Screenshot%20from%202020-08-26%2008-17-17.png" media-type="image/png"/>
+    <item id="cover.png" href="Images/cover.png" media-type="image/png" properties="cover-image"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="ch-12"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

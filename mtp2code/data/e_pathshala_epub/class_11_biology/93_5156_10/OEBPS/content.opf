@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="bookid" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign" name="generator" />
+    <dc:date>2020-05-04</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2020-08-26T19:14:24Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta content="0.9.12" name="Sigil version" />
+    <meta name="cover" content="cover.png" />
+  </metadata>
+  <manifest>
+    <item id="Chapter-10" href="Text/Chapter%2010.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="toc" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="Chapter-10.css" href="Styles/Chapter%2010.css" media-type="text/css"/>
+    <item id="BookmanOldStyle-Bold.TTF" href="Fonts/BookmanOldStyle-Bold.TTF" media-type="application/vnd.ms-opentype"/>
+    <item id="BookmanOldStyle-BoldItalic.TTF" href="Fonts/BookmanOldStyle-BoldItalic.TTF" media-type="application/vnd.ms-opentype"/>
+    <item id="Wingdings-Regular.ttf" href="Fonts/Wingdings-Regular.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="x11080CH10_fmt.png" href="Images/11080CH10_fmt.png" media-type="image/png"/>
+    <item id="x651.png" href="Images/651.png" media-type="image/png"/>
+    <item id="x664.png" href="Images/664.png" media-type="image/png"/>
+    <item id="x740.png" href="Images/740.png" media-type="image/png"/>
+    <item id="x769.png" href="Images/769.png" media-type="image/png"/>
+    <item id="x801.png" href="Images/801.png" media-type="image/png"/>
+    <item id="x807.png" href="Images/807.png" media-type="image/png"/>
+    <item id="x808.png" href="Images/808.png" media-type="image/png"/>
+    <item id="x809.png" href="Images/809.png" media-type="image/png"/>
+    <item id="x810.png" href="Images/810.png" media-type="image/png"/>
+    <item id="x811.png" href="Images/811.png" media-type="image/png"/>
+    <item id="x816.png" href="Images/816.png" media-type="image/png"/>
+    <item id="x872.png" href="Images/872.png" media-type="image/png"/>
+    <item id="x920.png" href="Images/920.png" media-type="image/png"/>
+    <item id="x948.png" href="Images/948.png" media-type="image/png"/>
+    <item id="fig-10.1_fmt.png" href="Images/fig%2010.1_fmt.png" media-type="image/png"/>
+    <item id="cover.png" href="Images/cover.png" media-type="image/png" properties="cover-image"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Chapter-10"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

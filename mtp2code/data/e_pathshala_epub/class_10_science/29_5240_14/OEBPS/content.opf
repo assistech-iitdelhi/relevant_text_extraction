@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="BookId" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:identifier id="BookId" opf:scheme="UUID">urn:uuid:111edf0a-842c-465f-9f6a-49b57348ff40</dc:identifier>
+    <dc:title>Science</dc:title>
+    <dc:title>Textbook Std. X</dc:title>
+    <dc:date opf:event="modification">2015-09-21</dc:date>
+    <meta refines="#t1" property="title-type">main</meta>
+    <meta refines="#t1" property="display-seq">1</meta>
+    <meta refines="#t2" property="title-type">subtitle</meta>
+    <meta refines="#t2" property="display-seq">2</meta>
+    <meta name="Sigil version" content="0.9.9" />
+    <meta property="dcterms:modified">2018-07-25T11:34:04Z</meta>
+    <meta name="cover" content="cover.png" />
+  </metadata>
+  <manifest>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="science.css" href="Styles/science.css" media-type="text/css"/>
+    <item id="x1151.png" href="Images/1151.png" media-type="image/png"/>
+    <item id="x1671.png" href="Images/1671.png" media-type="image/png"/>
+    <item id="x1191.png" href="Images/1191.png" media-type="image/png"/>
+    <item id="x1251.png" href="Images/1251.png" media-type="image/png"/>
+    <item id="x1228.png" href="Images/1228.png" media-type="image/png"/>
+    <item id="x1266.png" href="Images/1266.png" media-type="image/png"/>
+    <item id="x1425.png" href="Images/1425.png" media-type="image/png"/>
+    <item id="x1476.png" href="Images/1476.png" media-type="image/png"/>
+    <item id="Chapter-14.html" href="Text/Chapter-14.html" media-type="application/xhtml+xml"/>
+    <item id="cover.png" href="Images/cover.png" media-type="image/png" properties="cover-image"/>
+    <item id="nav.xhtml" href="Text/nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Chapter-14.html"/>
+    <itemref idref="nav.xhtml" linear="no"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

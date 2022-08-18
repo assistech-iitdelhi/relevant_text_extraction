@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>The Sparse Fourier Transform: Theory and Practice</title>
+<link rel="stylesheet" type="text/css" href="../styles/stylesheet.css"/>
+<link rel="stylesheet" type="application/vnd.adobe-page-template+xml" href="../styles/page-template.xpgt"/>
+</head>
+<body>
+<p class="chno"><a id="page_75"/><b>6</b></p>
+<p class="chtitle"><b>Numerical Evaluation</b></p>
+<p class="noindent">In this chapter, we simulate and numerically evaluate the performance of some of our Sparse Fourier Transform algorithms.</p>
+<p class="h1"><b><a id="ch6_1"/><span class="big">6.1</span>&#160;&#160;&#160;&#160;Implementation</b></p>
+<p class="noindent">We implement the following algorithms: SFT 1.0, SFT 2.0, and a variant of SFT 3.0 which we will refer to as SFT 3.1. We implement them in C++ using the Standard Template Library. The code can be found on the Sparse Fourier Transform webpage: <a href="http://www.sparsefft.com">http://www.sparsefft.com</a>.</p>
+<p class="indent">We evaluate the performance and compare the following six implementations:</p>
+<p class="hang"><b>SFT 1.0.</b> This algorithm was presented in <a href="12_Chapter03.xhtml">Chapter 3</a> and has a runtime of <img src="../images/in75_1.png" alt="image"/></p>
+<p class="hang"><b>SFT 2.0.</b> This algorithm was also presented in <a href="12_Chapter03.xhtml">Chapter 3</a> and has a runtime of <img src="../images/in75_2.png" alt="image"/></p>
+<p class="hang"><b>SFT 3.1.</b> A variant<sup><a id="fn1" href="#rfn1">1</a></sup> of SFT 3.0 which was presented in <a href="13_Chapter04.xhtml">Chapter 4</a> and has a runtime of <i>O</i>(<i>k</i> log <i>n</i>).</p>
+<p class="hang"><b>AAFFT 0.9.</b> [Iwen 2008] This is an implementation of the prior sublinear algorithm which had the fastest theoretical [Gilbert et al. 2005b] and empirical runtime [Iwen et al. 2007] before our SFT algorithms. The algorithm has a runtime of <i>O</i>(<i>k</i> log<sup><i>c</i></sup>(<i>n</i>) log(<i>n</i>/<i>k</i>)) for some <i>c</i> &#62; 2.</p>
+<p class="hang"><b>FFTW 3.2.2.</b> [Frigo and Johnson 2017] This is the fastest public implementation for the FFT algorithm which has a runtime of <i>O</i>(<i>n</i> log <i>n</i>).</p>
+<p class="hang"><a id="page_76"/><b>FFTW Optimized.</b> [Frigo and Johnson 2017] This is an optimized version of FFTW that requires preprocessing, during which the algorithm is tuned to a particular machine hardware. In contrast, our current implementations of SFT algorithms do not perform hardware specific optimizations.</p>
+<p class="h1"><b><a id="ch6_2"/><span class="big">6.2</span>&#160;&#160;&#160;&#160;Experimental Setup</b></p>
+<p class="noindent">The test signals are generated in a manner similar to that in Iwen et al. [2007]. For the runtime experiments, <i>k</i> frequencies are selected uniformly at random from [<i>n</i>] and assigned a magnitude of 1 and a uniformly random phase. The rest are set to zero. For the tolerance to noise experiments, the test signals are generated as before but they are combined with additive white Gaussian noise, whose variance varies depending on the desired SNR. Each point in the graphs is the average over 100 runs with different instances of test signals and different instances of noise. In all experiments, the parameters of SFT 1.0, SFT 2.0, SFT 3.1 and AAFFT 0.9 are chosen so that the average <i>L</i><sup>1</sup> error in the absence of noise is between 10<sup>&#8722;7</sup> and 10<sup>&#8722;8</sup> per non-zero frequency.<sup><a id="fn2" href="#rfn2">2</a></sup> Finally, all experiments are run on a Dual Core Intel 3.0 GHz CPU running Ubuntu Linux 10.04 with a cache size of 6144 KB and 8 GB of RAM.</p>
+<p class="h1"><b><a id="ch6_3"/><span class="big">6.3</span>&#160;&#160;&#160;&#160;Numerical Results</b></p>
+<p class="h2"><a id="ch6_3_1"/><b><span class="big1">6.3.1</span>&#160;&#160;&#160;&#160;Runtime vs. Signal Size</b></p>
+<p class="noindent">In this experiment, we fix the sparsity parameter <i>k</i> = 50 and report the runtime of the compared algorithms for 12 different signal sizes <i>n</i>: 2<sup>14</sup>, 2<sup>15</sup>, &#8230;, 2<sup>26</sup>. In <a href="#fig6_1">Figure 6.1</a> we plot the mean, maximum, and minimum runtimes for SFT 1.0, SFT 2.0, SFT 3.1, AAFFT 0.9, FFTW, and FFTW OPT, over 100 runs. The relative runtimes of AAFFT 0.9 and FFTW are consistent with those reported in Iwen et al. [2007, figure 3.1].</p>
+<p class="indent">As expected, <a href="#fig6_1">Figure 6.1</a> shows that the runtimes of SFT 1.0, SFT 2.0, and FFTW are approximately linear in the log scale as a function of <i>n</i>. However, the slope of the lines for SFT 1.0 and SFT 2.0 is less than the slope for FFTW, which is a result of their sub-linear runtime. On the other hand, SFT 3.1 and AAFFT 0.9 appear almost constant in the log scale as a function of <i>n</i> which is also expected since they only depend logarithmically on <i>n</i>. Further, the figure shows that for signal sizes <a id="page_77"/><i>n</i> &#62; 16,384, SFT 3.0 has the fastest runtime. It is faster than both variants of FFTW and is 400&#215; faster than AAFFT 0.9. SFT 1.0 and SFT 2.0 are faster than FFTW for <i>n</i> &#62; 100,000 and faster than AAFFT for <i>n</i> &#60; 2<sup>26</sup>. Overall, for a large range of signal sizes the SFT algorithms have the fastest runtime.</p>
+<div class="cap">
+<p class="image"><a id="fig6_1"/><img src="../images/fig6_1.png" alt="image"/></p>
+<p class="figcaption"><b>Figure 6.1</b> Runtime vs. signal size. The figure shows that for a large range of signal sizes, SFT is faster than FFTW and the state-of-the-art sublinear algorithm.</p>
+</div>
+<p class="h2"><a id="ch6_3_2"/><b><span class="big1">6.3.2</span>&#160;&#160;&#160;&#160;Runtime vs. Sparsity</b></p>
+<p class="noindent">In this experiment, we fix the signal size to <i>n</i> = 2<sup>22</sup> (i.e., 4,194,304) and evaluate the runtime vs. the number of non-zero frequencies <i>k</i>. For each value of <i>k</i>, the experiment is repeated 100 times. <a href="#fig6_1">Figure 6.1</a> illustrates the mean, maximum, and minimum runtimes for the compared algorithms.</p>
+<p class="indent"><a href="#fig6_2">Figure 6.2</a> shows that SFT 1.0 and SFT 2.0 have a faster runtime than basic FFTW for <i>k</i> up to 2000 and 2200, respectively. When compared to the optimized FFTW, the crossing values become 500 and 1000. Thus, SFT&#8217;s crossing values are around <img src="../images/in77_1.png" alt="image"/>. In comparison, AAFFT 0.9 is faster than FFTW variants for <i>k</i> between 100 and 200. Further, the relative runtimes of AAFFT 0.9, and FFTW 3.2.2 are close to those reported in Iwen et al. [2007, figure 3.2]. The figure also shows that SFT 3.1 has the fastest runtime among all algorithms. It is almost two orders of magnitude faster than SFT 1.0 and SFT 2.0 and more than 400&#215; faster than AAFFT. <a id="page_78"/>Finally, FFTW has a runtime of <i>O</i>(<i>n</i> log(<i>n</i>)), which is independent of the number of non-zero frequencies <i>k</i>, as can be seen in <a href="#fig6_2">Figure 6.2</a>. Thus, as the sparsity of the signal decreases (i.e., <i>k</i> increases), FFTW eventually becomes faster than all SFT and AAFFT. In fact, the FFTW will become faster than SFT 3.1 for <i>k</i> &#62; 131072. Nonetheless, the results show that in comparison with the fastest prior sublinear algorithm [Iwen et al. 2007], the SFT algorithms significantly extend the range of applications for which sparse approximation of Fourier transform is practical.</p>
+<div class="cap">
+<p class="image"><a id="fig6_2"/><img src="../images/fig6_2.png" alt="image"/></p>
+<p class="figcaption"><b>Figure 6.2</b> Runtime vs. signal sparsity. SFT significantly extends the range of applications for which sparse approximation of Fourier transform is practical, and beats the runtime of FFTW for values of <i>k</i> which are orders of magnitude larger than those achieved by past work.</p>
+</div>
+<p class="h2"><a id="ch6_3_3"/><b><span class="big1">6.3.3</span>&#160;&#160;&#160;&#160;Robustness to Noise</b></p>
+<p class="noindent">Last, we would like to check SFT&#8217;s robustness to noise. Thus, we compare the performance of SFT 1.0 and SFT 2.0 against AAFFT 0.9, for different levels of white Gaussian noise. For this experiment, we exclude SFT 3.1 since it only works for exactly sparse signals. We fix <i>n</i> = 2<sup>22</sup> and <i>k</i> = 50, and experiment with different signal SNRs.<sup><a id="fn3" href="#rfn3">3</a></sup> We change the SNR by changing the variance of the Gaussian noise. For each noise variance, we run multiple experiments by regenerating new instances of the signal and noise vectors. For each run, we compute the error metric per as <a id="page_79"/>the average <i>L</i><sub>1</sub> error between the output approximation <i>x&#770;</i>&#8242; (restricted to its <i>k</i> largest entries) and the best <i>k</i>-sparse approximation of <i>x&#770;</i> referred to as <i>y&#770;</i>:</p>
+<div class="cap">
+<p class="image"><a id="fig6_3"/><img src="../images/fig6_3.png" alt="image"/></p>
+<p class="figcaption"><b>Figure 6.3</b> Robustness to noise results. The figure shows that all three algorithms are stable in the presence of noise but the SFT algorithms have lower errors.</p>
+</div>
+<p class="image"><img src="../images/pg79_1.png" alt="image"/></p>
+<p class="indent"><a href="#fig6_3">Figure 6.3</a> plots the average error per non-zero frequency for SFT 1.0, SFT 2.0, and AAFFT 0.9. The figure shows that all three algorithms are stable under noise. Further, SFT variants appear to be more robust to noise than AAFFT 0.9.</p>
+<p class="line"/>
+<p class="foot"><a id="rfn1" href="#fn1">1</a>. In this variant, an aliasing filter is used in the very first iteration of the algorithm followed by wo Gaussian flat window filters as opposed to only using Gaussian filters in SFT 3.0.</p>
+<p class="foot"><a id="rfn2" href="#fn2">2</a>. For the values of <i>k</i> and <i>n</i> that are close to the ones considered in Iwen et al. [2007], we use the parameters therein. For other ranges, we follow the guidelines in the AAFFT 0.9 documentation [Iwen 2008].</p>
+<p class="foot"><a id="rfn3" href="#fn3">3</a>. The SNR is defined as <img src="../images/in78_1.png" alt="image"/>, where <i>z</i> is an <i>n</i>-dimensional noise vector.</p>
+</body>
+</html>

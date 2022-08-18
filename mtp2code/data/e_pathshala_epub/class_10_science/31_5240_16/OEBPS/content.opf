@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="BookId" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+    <dc:identifier opf:scheme="UUID" id="BookId">urn:uuid:111edf0a-842c-465f-9f6a-49b57348ff40</dc:identifier>
+    <dc:title>Science</dc:title>
+    <dc:title>Textbook Std. X</dc:title>
+    <dc:date opf:event="modification">2015-09-21</dc:date>
+    <meta property="title-type" refines="#t1">main</meta>
+    <meta property="display-seq" refines="#t1">1</meta>
+    <meta property="title-type" refines="#t2">subtitle</meta>
+    <meta property="display-seq" refines="#t2">2</meta>
+    <meta name="Sigil version" content="0.9.9" />
+    <meta property="dcterms:modified">2018-08-01T14:11:50Z</meta>
+    <meta name="cover" content="cover.png" />
+  </metadata>
+  <manifest>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="science.css" href="Styles/science.css" media-type="text/css"/>
+    <item id="x936.png" href="Images/936.png" media-type="image/png"/>
+    <item id="x11_opt.jpeg" href="Images/11_opt.jpeg" media-type="image/jpeg"/>
+    <item id="x1253.png" href="Images/1253.png" media-type="image/png"/>
+    <item id="Chapter-16.html" href="Text/Chapter-16.html" media-type="application/xhtml+xml"/>
+    <item id="cover.png" href="Images/cover.png" media-type="image/png" properties="cover-image"/>
+    <item id="nav.xhtml" href="Text/nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="Capt23ure.JPG" href="Images/Capt23ure.JPG" media-type="image/jpeg"/>
+    <item id="x1126.PNG" href="Images/1126.PNG" media-type="image/png"/>
+    <item id="x1127.PNG" href="Images/1127.PNG" media-type="image/png"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Chapter-16.html"/>
+    <itemref idref="nav.xhtml" linear="no"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

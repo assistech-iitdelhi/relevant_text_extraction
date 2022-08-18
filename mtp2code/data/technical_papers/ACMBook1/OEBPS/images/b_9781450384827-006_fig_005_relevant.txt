@@ -1,0 +1,2 @@
+Figure 6.5 demonstrates an initialized FSA corresponding to a pattern ρ1=(E5;ω[10] E1;ω[3] E4). During run time, Ei.ts and Ei.te are substituted with start and end time of an instance of event Ei from the input event stream. The strategy for counting occurrences of a pattern is straightforward.
+Figure 6.5The automaton corresponding to pattern ρ1 with three event components. It demonstrates three ordinary states, two time states, and EVALUATE() and SET() functions associated with each state.

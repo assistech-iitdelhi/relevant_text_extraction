@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="bookid" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign" name="generator" />
+    <dc:date>2020-05-04</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2020-08-26T17:20:07Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta content="0.9.12" name="Sigil version" />
+    <meta name="cover" content="cover.png" />
+  </metadata>
+  <manifest>
+    <item id="ch-21" href="Text/ch-21.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="toc" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="ch-21.css" href="Styles/ch-21.css" media-type="text/css"/>
+    <item id="x1003.png" href="Images/1003.png" media-type="image/png"/>
+    <item id="x1034.png" href="Images/1034.png" media-type="image/png"/>
+    <item id="x1090.png" href="Images/1090.png" media-type="image/png"/>
+    <item id="x11080CH21_fmt.png" href="Images/11080CH21_fmt.png" media-type="image/png"/>
+    <item id="x632.png" href="Images/632.png" media-type="image/png"/>
+    <item id="x696.png" href="Images/696.png" media-type="image/png"/>
+    <item id="x749.png" href="Images/749.png" media-type="image/png"/>
+    <item id="x779.png" href="Images/779.png" media-type="image/png"/>
+    <item id="x880.png" href="Images/880.png" media-type="image/png"/>
+    <item id="x947.png" href="Images/947.png" media-type="image/png"/>
+    <item id="fig-21.4_fmt.png" href="Images/fig%2021.4_fmt.png" media-type="image/png"/>
+    <item id="fig-21.5_fmt.png" href="Images/fig%2021.5_fmt.png" media-type="image/png"/>
+    <item id="cover.png" href="Images/cover.png" media-type="image/png" properties="cover-image"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="ch-21"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

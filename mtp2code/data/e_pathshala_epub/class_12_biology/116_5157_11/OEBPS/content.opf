@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package unique-identifier="bookid" version="3.0" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign" name="generator"/>
+    <dc:date>2020-06-08</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2021-01-22T14:44:53Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta content="0.9.3" name="Sigil version"/>
+    <meta name="cover" content="lebo1cc.jpg"/>
+  </metadata>
+  <manifest>
+    <item href="Text/Chapter-11.xhtml" id="Chapter-11.xhtml" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="Styles/ch11.css" id="ch11.css" media-type="text/css"/>
+    <item href="Fonts/BookmanOldStyle-Bold.TTF" id="BookmanOldStyle-Bold.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/BookmanOldStyle-BoldItalic.TTF" id="BookmanOldStyle-BoldItalic.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/CenturyGothic-Bold.TTF" id="CenturyGothic-Bold.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/CenturyGothic-Italic.TTF" id="CenturyGothic-Italic.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/CenturyGothic.TTF" id="CenturyGothic.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/SymbolMT.ttf" id="SymbolMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/Wingdings-Regular.ttf" id="Wingdings-Regular.ttf" media-type="application/vnd.ms-opentype"/>
+    <item href="Images/1037.png" id="x1037.png" media-type="image/png"/>
+    <item href="Images/1043.png" id="x1043.png" media-type="image/png"/>
+    <item href="Images/1057.png" id="x1057.png" media-type="image/png"/>
+    <item href="Images/1063.png" id="x1063.png" media-type="image/png"/>
+    <item href="Images/1109.png" id="x1109.png" media-type="image/png"/>
+    <item href="Images/1115.png" id="x1115.png" media-type="image/png"/>
+    <item href="Images/1125.png" id="x1125.png" media-type="image/png"/>
+    <item href="Images/1134.png" id="x1134.png" media-type="image/png"/>
+    <item href="Images/1164.png" id="x1164.png" media-type="image/png"/>
+    <item href="Images/1170.png" id="x1170.png" media-type="image/png"/>
+    <item href="Images/1202.png" id="x1202.png" media-type="image/png"/>
+    <item href="Images/12083CH11_fmt.png" id="x12083CH11_fmt.png" media-type="image/png"/>
+    <item href="Images/1212.png" id="x1212.png" media-type="image/png"/>
+    <item href="Images/1259.png" id="x1259.png" media-type="image/png"/>
+    <item href="Images/1260.png" id="x1260.png" media-type="image/png"/>
+    <item href="Images/1page_fmt.png" id="x1page_fmt.png" media-type="image/png"/>
+    <item href="Images/943.png" id="x943.png" media-type="image/png"/>
+    <item href="Images/boyer1%5B1%5D_fmt.png" id="boyer1-1-_fmt.png" media-type="image/png"/>
+    <item href="Images/Copy%20of%20unit%20one_fmt.png" id="Copy-of-unit-one_fmt.png" media-type="image/png"/>
+    <item href="Images/scientist%20page_fmt.png" id="scientist-page_fmt.png" media-type="image/png"/>
+    <item href="Images/summery_fmt.png" id="summery_fmt.png" media-type="image/png"/>
+    <item href="Images/top_right_final_fmt.png" id="top_right_final_fmt.png" media-type="image/png"/>
+    <item href="Images/klm.png" id="klm.png" media-type="image/png"/>
+    <item href="Images/mno.png" id="mno.png" media-type="image/png"/>
+    <item href="Images/lebo1cc.jpg" id="lebo1cc.jpg" media-type="image/jpeg" properties="cover-image"/>
+    <item href="Text/cover.xhtml" id="cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    <item href="Styles/sgc-toc.css" id="sgc-toc.css" media-type="text/css"/>
+    <item href="Text/TOC.xhtml" id="TOC.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Chapter-11.xhtml"/>
+    <itemref idref="TOC.xhtml"/>
+  </spine>
+  <guide>
+    <reference href="Text/cover.xhtml" title="Cover" type="cover"></reference>
+    <reference href="Text/TOC.xhtml" title="Table Of Contents" type="toc"></reference>
+  </guide>
+</package>

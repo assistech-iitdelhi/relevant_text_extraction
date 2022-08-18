@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>The Handbook of Multimodal-Multisensor Interfaces, Volume 2: Signal Processing, Architectures, and Detection of Emotion and Cognition</title>
+<link rel="stylesheet" type="text/css" href="../styles/stylesheet.css"/>
+<link rel="stylesheet" type="application/vnd.adobe-page-template+xml" href="../styles/page-template.xpgt"/>
+</head>
+<body>
+<p class="chno"><a id="page_167"/>6</p>
+<p class="chtitle"><b>Multimodal-Multisensor Affect Detection</b></p>
+<p class="chauthor"><b>Sidney K. D&#8217;Mello, Nigel Bosch, Huili Chen</b></p>
+<p class="h1"><a id="ch6_1"/><b><span class="bg1">6.1</span>&#160;&#160;&#160;&#160;Introduction</b></p>
+<p class="noindent">Imagine you are interested in analyzing the emotional responses of a person in some interaction context (i.e., with computer software, a robot, in a classroom, on the subway). You could simply ask the person to self-report his or her felt emotion using a questionnaire, a valence-arousal grid [Russell et al. 1989], a self-assessment manikin [Bradley and Lang 1994], or some such measurement instrument. Or you could ask trained humans to observe the person and provide emotion judgments [Ocumpaugh et al. 2015]. You could also record audio/video of the interaction and have trained coders annotate the videos for visible emotion at some later time. You can even use computer vision techniques to obtain automatic estimates of facial expressions in the videos [Girard et al. 2015]. Or you may be interested in the person&#8217;s physiological responses and can use a variety of sensors to collect these data.</p>
+<p class="indent">These examples capture some (but not all) of the contemporary approaches to measure emotional responses [Coan and Allen 2007]. The approaches can be categorized as subjective vs. objective, each with different affordances. The subjective approaches (self and observers) are <i>best</i> suited for emotion-level representations (e.g., discrete emotions like anger and fear or dimensional representations like valence or dominance) at coarse-grained temporal resolutions (tens of seconds to minutes). The objective approaches (sensors and software) are <i>ideal</i> for measurement of behavioral/physiological responses (e.g., facial expressions, electrodermal activity) at fine-grained temporal resolutions (milliseconds to seconds). The two approaches have complementary strengths and weaknesses. The subjective approaches capitalize on humans&#8217; knowledge and reasoning capabilities, resulting in more nuanced and contextualized emotion assessments. However, they are limited by fatigue, biases (e.g., social desirability bias), errors (e.g., memory reconstruction for self-reports), and are difficult to scale. The objective approaches are not affected by fatigue or biases and are more scalable, but have limited inference and reasoning capabilities, thereby mainly providing readouts of behavioral/physiological responses.</p>
+<div class="box">
+<p class="bhead"><a id="page_168"/><b>Glossary</b></p>
+<p class="hangbx"><b>Affect</b>. Broad term encompassing constructs such as emotions, moods, and feelings. Is not the same as personality, motivation, and other related terms.</p>
+<p class="hangbx"><b>Affect annotation</b>. The process of assigning affective labels (e.g., bored, confused, aroused) or values (e.g., arousal = 5) to data (e.g., video, audio, text).</p>
+<p class="hangbx"><b>Affective computing</b>. Computing techniques and applications involving emotion or affect.</p>
+<p class="hangbx"><b>Affective experience-expression link</b>. The relationship between experiencing an affective state (e.g., feeling confused) and expressing it (e.g., displaying a furrowed brow).</p>
+<p class="hangbx"><b>Affective ground truth</b>. Objective reality involving the &#8220;true&#8221; affective state. Is a misleading term for psychological constructs like affect</p>
+<p class="hangbx"><b>Construct</b>. A conceptual variable that cannot be directly observed (e.g., intelligence, personality).</p>
+<p class="hangbx"><b>Multimodal fusion</b>. The process of combining information from multiple modalities.</p>
+<p class="hangbx"><b>User-independent model</b> A model that generalizes to a different set of users beyond those used to develop the model.</p>
+</div>
+<p class="indent">Are there ways to reconcile the two approaches? One strategy is to combine both, for example, collecting subjective self-reports of frustration in tandem with computerized estimates of facial action units (AUs) [Girard et al. 2015]. The two are taken as complementary perspectives of the person&#8217;s emotional response and associations are analyzed offline, i.e., by correlating self-reports of frustration with AUs. But what if there was a way to combine both perspectives on the fly so that the measurement jointly reflects both subjective emotion perception by humans and objective behavioral/physiological signals recorded by sensors? And what if the measurement could occur in a fully automated fashion, thereby providing measurement at fine-grained temporal resolutions and at scale? And further, what if the measurement engine was sufficiently sophisticated to model multiple expressive channels and the nonlinear temporal dependencies among them? This is the <i>affective <a id="page_169"/>computing</i> (AC) approach to emotion measurement and is the focus of this chapter.</p>
+<p class="indent">Affective computing [Calvo et al. 2015, Picard 1997], broadly defined as computing involving or arising from human emotion, is an interdisciplinary field that integrates the affective and computational sciences. Affect detection (or affect recognition) is one of the key subfields of affective computing (see [Calvo and D&#8217;Mello 2010, D&#8217;Mello and Kory 2015, Zeng et al. 2009]). The goal of affect detection is to automatically provide estimates of latent higher-level affective representations (e.g., fear) from machine-readable lower-level response signals (e.g., video, audio, physiology). Multimodal-multisensor affect detection (MMAD) utilizes multiple modalities (e.g., video, cardiac activity) and/or multiple sensors (e.g., video, electromyography) as an alternative to unimodal affect detection (UMAD).</p>
+<p class="indent">In this chapter, we provide a conceptual and technical overview of the field of MMAD, ground the abstract ideas via walk-throughs of three MMAD systems, and provide a summative review of the state-of-the-art in the field. We begin with a background discussion from the affective sciences, starting with a very basic question: &#8220;What is affect?&#8221;</p>
+<p class="h1"><a id="ch6_2"/><b><span class="bg1">6.2</span>&#160;&#160;&#160;&#160;Background from Affective Sciences</b></p>
+<p class="h2"><a id="ch6_2_1"/><b><span class="bg2">6.2.1</span>&#160;&#160;&#160;&#160;Affect</b></p>
+<p class="noindent">What is <i><b>affect?</b></i> The simple answer is that affect has something to do with feeling. Perhaps a more satisfactory answer is that affect is a broad label for a range of psychological phenomena involving feelings. This includes primitive feelings like hunger pangs to more complex social emotions like jealousy and pride. A more technical answer is that affect is a multicomponential <i><b>construct</b></i> (i.e., conceptual entity), that operates across neurobiological, physiological, behavioral, cognitive, metacognitive, and phenomenological levels [Barrett 2014, Lewis 2005, Mesquita and Boiger 2014, Scherer 2009]. It is with good reason that none of these answers seem particularly satisfactory. The term affect (or emotion) has resisted attempts at crisp definition despite a century of concentrated effort [Izard 2007, 2010]. Understanding what emotions are and how they arise has been a contentious issue in the affective sciences and is sometimes referred to as the &#8220;hundred year emotion war&#8221; [Lench et al. 2013, Lindquist et al. 2013]. For example, there has been an ongoing debate as to whether affect is best represented via discrete categories (e.g., angry, fearful) [Lerner and Keltner 2000, Loewenstein and Lerner 2003] or by fundamental dimensions (e.g., valence, arousal, power) [Cowie et al. 2012, Russell <a id="page_170"/>2003] (and on how many dimensions are needed [Fontaine et al. 2007]). Other open issues pertain to whether emotions are innate or are learned, whether they arise via appraisals/reappraisals or are they products of socio-constructivism, and whether emotions are universally expressed or if context and culture shape emotion expression [Barrett 2006, 2007, Ekman 1992, 1994, Gross and Barrett 2011, Izard 1994, 2010].</p>
+<p class="indent">Does the fact that we cannot precisely define affect imply that we cannot detect it? In our view, one does not need to precisely define a phenomenon in order to study it. However, researchers need to be mindful of the implicit assumptions in their operationalizations of affect as these are transferred to the affect detectors. For example, if one operationalizes anger as short-term emotional changes recorded while people viewing anger-eliciting films in isolation and builds an automated anger detector from these recordings, then the detector&#8217;s estimates of anger are inherently coupled to this precise operationalization and not much else (e.g., felt anger, anger in a road-rage scenario, anger in a social context). Thus, it is important to be mindful that measurement is informed by assumptions of reality (operationalizations), which, in turn, are informed by insights gleaned by measurement.</p>
+<p class="h2"><a id="ch6_2_2"/><b><span class="bg2">6.2.2</span>&#160;&#160;&#160;&#160;The <i>Affective Experience-Expression</i> Link</b></p>
+<p class="noindent">Affect detection assumes a link between experienced (or felt) and expressed affect. Thus, it should be theoretically possible to &#8220;decode&#8221; latent affect (e.g., confusion) from visible behaviors (e.g., a furrowed brow). This suggests that there exist &#8220;mappings&#8221; between a set of behaviors (e.g., facial features, gestures, speech patterns) and a set of affective states. This does not mean that one simply needs to learn the mappings to perfectly solve the affect detection problem because the mappings are imprecise. For example, although facial expressions are considered to be strongly associated with affective states, meta-analyses on correlations between facial expressions and affect have yielded small to medium effects under naturalistic conditions [Camras and Shutter 2010, Fridlund et al. 1987, Ruch 1995, Russell 2003]. In the interest of maximizing adaptability to new situations and environments, the mappings have evolved to be loose and variable, not fixed and rigid [Coan 2010, Roseman 2011, Tracy 2014]. Thus, rather than being predefined, the affect-expression links emerge from dynamic interactions between internal processes and the environmental context. Some of these influences include the internal state of the individual, contextual and social factors [Parkinson et al. 2004], and individual and group (or cultural) differences [Elfenbein and Ambady 2002a, 2002b].</p>
+<p class="indent"><a id="page_171"/>At first blush, the lack of a precise experience-expression link seems to threaten the entire affect detection endeavor. But this is not the case. In our view, it is sufficient to assume that there is <i>some</i> link between experience and expression. The link need not be particularly strong. The link need not even be consistent across individuals, situations, and cultures. The only assumption is that there is a &#8220;beyond-chance probabilistic&#8221; [Roseman 2011 (p. 440)] link between affect expression and experience. Most affect detection systems rely on supervised learning methods to learn this link. Supervised learning needs supervision in the form of &#8220;ground truth&#8221; (annotations) which bring us to the question of &#8220;What is <i><b>affective ground truth</b></i>?&#8221;</p>
+<p class="h2"><a id="ch6_2_3"/><b><span class="bg2">6.2.3</span>&#160;&#160;&#160;&#160;Affective Ground Truth</b></p>
+<p class="noindent">Consider speech recognition, where the task is to translate an acoustic representation into a linguistic representation of speech. There is usually little dispute about the desired output (i.e., the words being spoken). But this is rarely the case with affect detection as affect is a psychological construct (see above). One exception is when the affective states are portrayed by actors or are experimentally induced [Kory and D&#8217;Mello 2015]. Here, the acted/induced affect can be taken as ground truth, but the resultant expressions more closely resemble the acting/eliciting micro-context and might not generalize more broadly (see also <a href="20_Chapter08.xhtml">Chapter 8</a>).</p>
+<p class="indent">There is no objective ground truth in the case of naturally occurring affective states. Instead, the truth lies in the eyes of the beholder. The beholder, in the case of humans, is the person experiencing the emotion (the self) or an external observer. Each has access to different sources of information and is subject to different biases, thereby arriving at different approximations of &#8220;ground truth.&#8221; As noted above, affective states are multicomponential in that they encompass conscious feelings (&#8220;I feel afraid&#8221;), overt actions (&#8220;I freeze&#8221;), physiological/behavioral responses (&#8220;My muscles clench&#8221;), and meta-cognitive reflections (&#8220;I am a coward&#8221;). Access to these components varies by source (self vs. observer). The self has access to some conscious feelings, some overt actions, memories of the experience, and meta-cognitive reflections, but usually not to some of the unconscious affective components. They are also more likely to distort or misrepresent their affective states due to biases, such as reference bias [Heine et al. 2002] or social desirability bias [Krosnick 1999]. In contrast, observers only have access to overt actions and behaviors that can be visibly perceived (e.g., facial features, postures, gestures) and must rely more heavily on inference [Mehu and Scherer 2012]. Observers are less likely to succumb to the same biases that befall self-reports, but they introduce biases of their own, such as the halo effect [Podsakoff et al. 2003]. There are strengths and pitfalls of reliance on either the self or external observers to establish affective <a id="page_172"/>&#8220;ground truth.&#8221; [D&#8217;Mello 2016]. Therefore, perhaps the most defensible position is to consider a combination of perspectives, thereby capitalizing on their merits while minimizing their flaws.</p>
+<p class="h2"><a id="ch6_2_4"/><b><span class="bg2">6.2.4</span>&#160;&#160;&#160;&#160;Multimodal Coordination of Affective Responses</b></p>
+<p class="noindent">Consider the following quote from William James in his classic 1884 treatise, &#8220;What is an emotion?&#8221;</p>
+<p class="quote">&#8220;Can one fancy the state of rage and picture no ebullition of it in the chest, no flushing of the face, no dilatation of the nostrils, no clenching of the teeth, no impulse to vigorous action, but in their stead limp muscles, calm breathing, and a placid face?&#8221; [James 1884 (p. 452)]</p>
+<p class="indent">Quotes such as the one above by James [1884] and similar ones by Darwin [1872], Tomkins [1962], Ekman [1992], Damasio [2003] and others, depict affective responses as being inherently multimodal. According to the classical model of emotion (called basic emotion theory), there is a specialized circuit for each (basic) emotion in the brain. Upon activation, this circuit triggers a host of <i>coordinated responses</i> encompassing peripheral physiology, facial expression, speech, modulations of posture, affective speech, instrumental action, cognitions, and subjective experience [Ekman 1992, Izard 2007]. According to this view, MMAD should be substantially more accurate than UMAD because MMAD approaches model this coordinated emotional response.</p>
+<p class="indent">In contrast to this highly integrated, tightly coupled, central executive view of emotion, researchers have recently argued in favor of a disparate, loosely coupled, distributed perspective [Coan 2010, Lewis 2005]. Here, there is no central affect neural circuit [Lindquist et al. 2011, 2016] that coordinates the various components of an emotional episode. Instead, these components are <i>loosely coupled</i> and the situational context and appraisals determine which bodily systems are activated and the dynamics of activation over time. These theories would accommodate the prediction that a combination of modalities might conceivably yield small improvements in classification accuracies, suggesting that the merits of MMAD over UMAD approaches might not necessarily lie in improved classification accuracy, but in other factors (e.g., increased reliability due to redundancy).</p>
+<p class="indent">We consider the extent the data supports each of these views later on in the chapter. The reader is also directed to <a href="19_Chapter07.xhtml">Chapter 7</a> for a discussion on the conditions when multimodal communication should expect benefits over unimodal signaling. There is also a parallel line of work focused on human perception of affect from unimodal and multimodal cues expressed by both humans [D&#8217;Mello et al. 2013] <a id="page_173"/>and virtual agents (see <a href="21_Chapter09.xhtml">Chapter 9</a>), that could establish baselines for what machines might be capable of achieving.</p>
+<div class="cap" id="fig6_1">
+<p class="image"><img src="../images/fig6_1.png" alt="Image"/></p>
+<p class="figcaption"><b>Figure 6.1</b>&#160;&#160;&#160;&#160;Theoretical foundation and steps involved in affect detection.</p>
+</div>
+<p class="h1"><a id="ch6_3"/><b><span class="bg1">6.3</span>&#160;&#160;&#160;&#160;Modality Fusion for Multimodal-Multisensor Affect Detection</b></p>
+<p class="noindent"><a href="#fig6_1">Figure 6.1</a> highlights our theoretical position on affective states (see previous section), which informs the steps involved in building an affect detector. Affective states are assumed to emerge from person-environment interactions and are reflected in changes at multiple levels (i.e., neurobiological changes, physiological responses, bodily expressions, action tendencies, and cognitive, metacognitive, and phenomenological states) in a manner that is modulated by individual differences (e.g., affective traits, culture). Researchers typically adopt a machine learning approach for affect detection, which requires the collection of training and validation data. Accordingly, in Step 1a, raw signals (video, physiology, event log files, etc.) are recorded as participants engage in some interaction of interest (including experimental elicitation). Features are then computed from the raw signals (Step 1b). <i><b>Affect annotations</b></i> (Steps 2a and 2b) are obtained from the participants themselves or from external observers, either online (e.g., live observations) or offline <a id="page_174"/>(e.g., video coding). If affect is experimentally induced, then the elicited condition serves as the annotation. Next, machine learning methods (typically supervised learning) are used to computationally model the relationship between the features and the affect annotations (Step 3). The models can also include contextual information, including both external context (e.g., situational aspects, task constraints, social environment) and internal context (e.g., previous affect predictions). The resulting machine-learned model yields computer-generated annotations, which are compared to the human-provided annotations in a validation step (Step 4). Once validated, the computational model can now produce computer-generated affect annotations from a new set of raw signals without corresponding human-provided annotation.</p>
+<div class="cap" id="fig6_2">
+<p class="image"><img src="../images/fig6_2.png" alt="Image"/></p>
+<p class="figcaption"><b>Figure 6.2</b>&#160;&#160;&#160;&#160;Illustration of feature-level fusion.</p>
+</div>
+<p class="indent">The basic affect detection approach needs an update when multiple modalities and/or sensors are involved. They key issue pertains to how to synchronize and combine (fuse) the different information channels (modalities). In the remainder of this section, we explore a variety of methods for this task. Alternate fusion methods, specifically for online affect detection, are discussed in <a href="20_Chapter08.xhtml">Chapter 8</a>.</p>
+<p class="h2"><a id="ch6_3_1"/><b><span class="bg2">6.3.1</span>&#160;&#160;&#160;&#160;Basic Methods (Data, Feature, Decision, and Hybrid Fusion)</b></p>
+<p class="noindent">The most basic method for fusing modalities is data-level or stream-level fusion. Here, raw signals are first fused before computing features. For example, one might record electrodermal activity (EDA) from multiple sensors to compensate for left-right EDA asymmetry [Picard et al. 2015] and then fuse the two signals (e.g., via convolution) prior to computing features.</p>
+<p class="indent">The next basic method is feature-level fusion (or early fusion), where features from different modalities are concatenated prior to machine learning (see <a href="#fig6_2">Figure 6.2</a>). The primary advantage of feature-level fusion is its simplicity and it can be effective when features from individual modalities are independent and the temporal dependencies among modalities are minimal.</p>
+<div class="cap" id="fig6_3">
+<p class="image"><img src="../images/fig6_3.png" alt="Image"/></p>
+<p class="figcaption"><a id="page_175"/><b>Figure 6.3</b>&#160;&#160;&#160;&#160;Decision-level fusion with two modalities.</p>
+</div>
+<div class="cap" id="fig6_4">
+<p class="image"><img src="../images/fig6_4.png" alt="Image"/></p>
+<p class="figcaption"><b>Figure 6.4</b>&#160;&#160;&#160;&#160;Hybrid fusion with two modalities.</p>
+</div>
+<p class="indent">An alternative is decision-level (or late fusion) fusion (<a href="#fig6_3">Figure 6.3</a>), where models are trained for each modality. The final decision is made by fusing the outputs of models corresponding to each modality via majority voting, weighting votes according to accuracy of each model, or training a new classifier using the outputs of each model as features (stacking).</p>
+<p class="indent">It is also possible to combine feature- and decision- level fusion as illustrated in <a href="#fig6_4">Figure 6.4</a>. The resultant method, called hybrid fusion, is expected to capitalize on the merits of each approach.</p>
+<p class="h2"><a id="page_176"/><a id="ch6_3_2"/><b>6.3.2&#160;&#160;&#160;&#160;Model-based Fusion with Dynamic Bayesian Networks (DBNs) and Hidden Markov Models (HMMs)</b></p>
+<p class="noindent">The aforementioned basic fusion methods are limited in that they do not account for temporal relationships among modalities. There are more sophisticated fusion methods, but these also ignore temporal dependencies. For example, in a support vector machine classifier, a kernel function is used to map input data to a higher-dimensional space. <i><b>Multimodal fusion</b></i> can be achieved by tuning a different kernel for each modality (feature space) and mapping them all into the same higher-dimensional feature space [Liu et al. 2014]. A limitation, however, is that these methods do not afford modeling of temporal dependencies, which is critical for MMAD. Model-based fusion methods model temporal dependencies as well as other relationships as illustrated with two widely used graphical models: Dynamic Bayesian Networks and Hidden Markov Models,</p>
+<p class="indent">Dynamic Bayesian Networks (DBNs) are a common graphical model used for modality fusion in affect detection. Links between variables in DBNs represent conditional dependencies between features as well as relationships across time. <a href="#fig6_5">Figure 6.5</a> shows a DBN that fuses two modalities along with contextual (top-down) features with <i>Affect</i> being the output variable. Top-down features (e.g., age; context factors) influence affect, but do not change from one timestep to the next. Bottom-up features, such as facial expressions and bodily movements, are linked across time. Affect also evolves across time, [D&#8217;Mello and Graesser 2011] so the <i>Affect</i> variable is linked across timesteps. Bayesian inference is used to compute the probability of the output <i>Affect</i> variable given the top-down (predictive) and bottom-up (diagnostic) features [Conati and Maclaren 2009].</p>
+<p class="indent">DBNs have successfully been used in several MMAD systems. Li and Ji [2005] fused a variety of modalities including facial expressions, eye gaze, and top-down features (physical condition and time in circadian rhythm) to detect fatigue, nervousness, and confusion. Chen et al. [2009] detected anger, happiness, meanness, sadness, and neutral using a DBN to fuse audio and visual features. Jiang et al. [2011] expanded that work to detect a larger set of affective states including anger, disgust, fear, happiness, sadness, and surprise, using a similar DBN. In general, DBNs are quite flexible, allowing any structure of relationships between variables and across time. However, more complex DBN structures require considerably more training data to estimate the various parameters, so in practice relatively simple structures like <a href="#fig6_5">Figure 6.5</a> are used.</p>
+<p class="indent">One such structure is a Hidden Markov Model (HMM), which models affect as a hidden variable that influences observable variables (e.g., anger influencing skin conductance and heart rate). Coupled Hidden Markov Models (CHMMs) combine <a id="page_177"/>two or more HMMs (one per modality), such that the hidden states (representing affect) of the individual HMMs interact across time (see <a href="#fig6_6">Figure 6.6</a>). These cross-modal links in a CHMM are chosen to model temporal relationships between modalities that might operate at different time scales (e.g., heart rate vs. facial expressions). As an example, Lu and Jia [2012] used a CHMM to combine audio and video HMMs to detect affect represented in an evaluation-activation (valence-arousal) space. CHMMs capture the temporal relationships between modalities, but consider each modality as a whole. Semi-coupled Hidden Markov models (SCHMMs) extend the structure of CHMMs by coupling modalities at the feature level. Component models are created for each pair of features, resulting in a large number of small models which are subsequently combined by late fusion. The main advantage of the SCHMM approach is that it allows the temporal relationships to vary per feature pair. Lin et al. [2012] demonstrated that SCHMMs were effective for recognizing affect on two audio-visual datasets, one with evaluation-activation dimensions and one with anger, happiness, sadness, and neutral. They found that SCHMMs outperformed standard CHMMs on both datasets.</p>
+<div class="cap" id="fig6_5">
+<p class="image"><img src="../images/fig6_5.png" alt="Image"/></p>
+<p class="figcaption"><b>Figure 6.5</b>&#160;&#160;&#160;&#160;Dynamic Bayesian network model fusing two modalities and top-down features.</p>
+</div>
+<p class="h2"><a id="ch6_3_3"/><b><span class="bg2">6.3.3</span>&#160;&#160;&#160;&#160;Modality Fusion with Neural Networks and Deep Learning</b></p>
+<p class="noindent">Neural networks have emerged as another popular approach for modality fusion. One particularly prominent type of network is the long short-term memory (LSTM) <a id="page_178"/>neural network [Hochreiter and Schmidhuber 1997]. In LSTMs, the artificial neurons in the hidden layers are replaced by memory cells, which allow the network to maintain longer temporal sequences. Thus, they improve on feed-forward neural networks by incorporating temporal information while avoiding the vanishing gradient problem of recurrent neural networks. Bi-directional LSTMs or BLSTMs are a further extension that model both past and future information. <a href="#fig6_7">Figure 6.7</a> shows a BLSTM network in which hidden layers are connected both forwards and backwards. Features from individual modalities are concatenated in the input layer in LSTMs or BLSTMs. However, we do not consider this to be feature-level fusion as the hidden layers maintain a sophisticated internal model of the incoming data and the networks internal context.</p>
+<div class="cap" id="fig6_6">
+<p class="image"><img src="../images/fig6_6.png" alt="Image"/></p>
+<p class="figcaption"><b>Figure 6.6</b>&#160;&#160;&#160;&#160;Coupled hidden Markov model for two modalities.</p>
+</div>
+<p class="indent">LSTMs and BLSTMs have been successful with modalities such as speech where longer context can provide significant discriminative power. For example, Eyben et al. [2010] fused acoustic and linguistic features in a BLSTM to classify affect in an evaluation-activation space, finding that it outperformed a basic recurrent neural network. Ringeval et al. [2015a] fused video, audio, and physiology and showed advantages of LSTMs and BLSTMs compared to feed-forward neural networks (this study is discussed in more detail below).</p>
+<p class="indent">More recently, deep neural networks are being increasingly used for modality fusion in MMAD systems [Le Cun et al. 2015]. Deep networks contain multiple <a id="page_179"/>hidden layers and are capable of learning feature representations from raw data. For example, Kahou et al. [2013] used deep neural networks to classify affect from several modalities including video and audio. They first trained separate deep networks for each modality, then fused the networks together by weighting each network in a final prediction.</p>
+<div class="cap" id="fig6_7">
+<p class="image"><img src="../images/fig6_7.png" alt="Image"/></p>
+<p class="figcaption"><b>Figure 6.7</b>&#160;&#160;&#160;&#160;BLSTM with memory cells in each hidden layer.</p>
+</div>
+<p class="indent">The extremely large amounts of data required for deep learning are difficult to acquire in affect detection applications. However, a two-step approach can be employed to decrease the need for large affect databases (although this is more common for video rather than other modalities). First, deep networks that have been trained for more general classification tasks (e.g., object recognition) are obtained (presumably one for each modality). Second, affect detectors are developed by combining the last few hidden layers from each deep network into a new final layer and training that final layer using affect databases (example network in <a href="#fig6_8">Figure 6.8</a>). This method utilizes the sparse feature representations that have been learned by the deep networks in their deeper hidden layers without requiring prohibitively large affect databases, and can be considered a form of transfer learning. For example, Ng et al. [2015] found a 16% improvement by fine-tuning an object recognition deep network using multiple affect databases versus training on only one affect database.</p>
+<div class="cap" id="fig6_8">
+<p class="image"><a id="page_180"/><img src="../images/fig6_8.png" alt="Image"/></p>
+<p class="figcaption"><b>Figure 6.8</b>&#160;&#160;&#160;&#160;Fusion of deep neural networks by re-training final layers from networks representing each modality.</p>
+</div>
+<p class="h1"><a id="ch6_4"/><b><span class="bg1">6.4</span>&#160;&#160;&#160;&#160;Walk-throughs of Sample Multisensor-Multimodal Affect Detection Systems</b></p>
+<p class="noindent">We present three walk-throughs to serve as concrete renditions of MMAD systems. The walk-throughs were selected to emphasize the wide variability of research in the area and to highlight the various challenges and design decision facing MMAD systems.</p>
+<p class="h2"><a id="ch6_4_1"/><b><span class="bg2">6.4.1</span>&#160;&#160;&#160;&#160;Walk-through 1&#8212;Feature-level Fusion for Detection of Basic Emotions</b></p>
+<p class="noindent">Our first walk-through was concerned with detection of emotions elicited through an affect elicitation procedure. Janssen et al. [2013] compared automatic detection vs. human perception of three basic emotions (happy, sad, angry), relaxed, and neutral, which were induced via an autobiographical recall procedure [Baker and Guttfreund 1993]. According to this procedure, 17 <i>stimulus subjects</i> were asked to write about two events in their life associated with experiences of these emotions. They were then asked to recall a subset of those events in a way that made them relive the emotions experienced. They then verbally described each event (in Dutch) <a id="page_181"/>in 2&#8211;3 minute trials. Audio, video, and physiological signals (electrodermal activity, skin temperature, respiration, and electrocardiography) were recorded while the stimulus subjects recalled and described the events. Each recording was associated with the label of the corresponding emotion being recalled, which was taken to be the &#8220;ground truth.&#8221;</p>
+<div class="cap" id="fig6_9">
+<p class="image"><img src="../images/fig6_9.png" alt="Image"/></p>
+<p class="figcaption"><b>Figure 6.9</b>&#160;&#160;&#160;&#160;Schematic for walk-through 1.</p>
+</div>
+<p class="indent">The authors extracted a variety of features from the signals. Facial features included movement of automatically tracked facial landmarks around the mouth and the eyes, as well as head position. Standard acoustic-prosodic features (e.g., fundamental frequency (pitch), energy, jitter, shimmer, formants) were extracted from the speech signal. Example physiological features included respiration rate, interbeat intervals, mean skin temperature, and number of skin conductance responses. A support vector machine classifier was trained to discriminate among the elicited emotions (five-way classification) using features from the individual modalities as well from feature-level modality fusion and best-first search (see <a href="#fig6_9">Figure 6.9</a>). The multimodal model obtained a classification accuracy of 82%, which was greater <a id="page_182"/>than the individual modalities: 39% for audio, 59% for video, and 76% for physiology.</p>
+<p class="indent">The authors compared computer vs. human affect detection accuracy. This was done by asking a set of human judges to classify the elicited emotions based on various stimuli combinations (audio-only, video-only, audio-video). Both U.S. and Dutch judges were used, but we only report results from the Dutch judges since they match the stimulus subjects. The Dutch judges were the most accurate (63%) when provided with audio (which was also in Dutch), compared to video (36%), and combined audio-video (48%). However, their accuracy was considerably lower than the automated detector (82%), although this result should be interpreted with caution as the testing protocols may have been biased in favor of the computer as strict person-level independence between training and testing sets was not enforced. Nevertheless, this remains one of the few studies that has contrasted human- vs. machine- classification on a multimodal dataset.</p>
+<p class="h2"><a id="ch6_4_2"/><b><span class="bg2">6.4.2</span>&#160;&#160;&#160;&#160;Walk-through 2&#8212;Decision-level Fusion for Detection of Learning-centered Affective States</b></p>
+<p class="noindent">Our second walk-through focuses on multimodal affect detection in a computer-enabled classroom [Bosch et al. 2015b]. The researchers collected training data from 137 (8th and 9th grade) U.S. students who learned from a conceptual physics educational game called Physics Playground [Shute et al. 2013]. Students played the game in two 55-min sessions across two days. Trained observers performed live annotations of boredom, engaged concentration, confusion, frustration, and delight using the Baker-Rodrigo Observation Method Protocol (BROMP) [Ocumpaugh et al. 2012]. According to BROMP, the live annotations were based on observable behavior, including explicit actions towards the interface, interactions with peers and teachers, body movements, gestures, and facial expressions. The observers had to achieve a kappa of 0.6 (inter-rater reliability) with an expert to be certified as a BROMP coder. Videos of students&#8217; faces and upper bodies and log files from the game were recorded and synchronized with the affect annotations.</p>
+<p class="indent">The videos were processed using FACET&#8212;a computer-vision program [FACET 2014] which estimates the likelihood of 19 facial action units along with head pose and position. Body movement was also estimated from the videos using motion filtering algorithms [Kory and D&#8217;Mello 2015]. Supervised learning methods were used to discriminate each affective state from the other states (e.g., boredom vs. confusion, frustration, engaged concentration, and delight) and were validated by randomly assigning students into training and testing sets across multiple iterations. The models yielded an average accuracy of 0.69 (measured with area under <a id="page_183"/>the receiver operating characteristic curve (AUROC or AUC), where a chance model could yield a value of 0.5). Follow-up validation analyses confirmed that the models generalized across multiple days (i.e., training on subset of students from day 1 testing on different students in day 2), class period, genders (i.e., training on males, testing on females and vice versa), and ethnicity as perceived by human coders [Bosch et al. 2016].</p>
+<p class="indent">A limitation of video-based measures is that they are only applicable when the face can be detected in the video. This is not always the case outside of the lab, where there are occlusions, poor lighting, and other complicating factors. In fact, the face could only be detected about 65% of the time in this study. To address this, Bosch et al. [2015a] developed an additional computational model based on interaction/contextual features stored in the game log files (e.g., difficulty of the current game level, the student&#8217;s actions, the feedback received, response times). The log-based models were less accurate (mean AUC of .57) than the video-based models (mean AUC of .67 after retraining), but could be applied in almost all of the cases. Separate logistic regression models were trained to adjudicate among the face- and log-based models, essentially weighting their relative influence on the final outcome via stacking (see <a href="#fig6_10">Figure 6.10</a>). The resultant multimodal model was almost as accurate as the video-based model (mean AUC of .64 for multimodal vs .67 for face only), but was applicable almost all of the time (98% for multimodal vs. 65% for face only). These results are notable given the noisy nature of the real-world environment with students incessantly fidgeting, talking with one another, asking questions, and even occasionally using their cellphones. They also illustrate how a MMAD approach addressed a substantial missing data problem despite it not improving detection accuracy.</p>
+<p class="h2"><a id="ch6_4_3"/><b><span class="bg2">6.4.3</span>&#160;&#160;&#160;&#160;Walk-through 3&#8212;Model-based Fusion for Modeling of Affective Dimensions</b></p>
+<p class="noindent">The previous two case studies focused on detecting discrete affective states with feature- or decision- level fusion. Our third walk-through used a neural network for modality fusion in the course of modeling time-continuous annotations of valence (unpleasant to pleasant) and arousal (sleepy to active) [Ringeval et al. 2015a]. The authors recorded audio, facial video, electrocardiogram (ECG), and electro-dermal activity (EDA) as dyads completed a &#8220;winter survival&#8221; collaborative task. A total of 46 participants completed the task, of whom 34 provided permission for their data to be used. Data from a further 7 participants had recording errors, yielding a final data set of 27 participants. Six observers annotated the first 5 min of each participant&#8217;s data by providing time-continuous ratings of valence and arousal. The recordings and annotations are distributed as part of the RECOLA dataset [Ringeval et al. 2013], which has been used in recent MMAD challenges [Ringeval et al. 2015b].</p>
+<div class="cap" id="fig6_10">
+<p class="image"><img src="../images/fig6_10.png" alt="Image"/></p>
+<p class="figcaption"><b>Figure 6.10</b>&#160;&#160;Schematic for walk-through 2.</p>
+</div>
+<p class="indent"><a id="page_184"/>A variety of features were extracted from each of the modalities (audio, video, ECG, and EDA). Audio features captured spectral, prosodic, and voice quality metrics. Video features included 15 automatically extracted facial action units (AUs) and head pose. ECG features primarily consisted of heart rate, heart rate variability, and spectral features. EDA features mainly emphasized changes in skin conductance. LSTM and BLSTM networks (as discussed above) were trained to estimate continuous valence and arousal annotations by fusing features from the various modalities (<a href="#fig6_11">Figure 6.11</a>). The networks were validated in a person-independent fashion. The concordance correlation <i>rc</i> (combining Pearson&#8217;s <i>r</i> and mean squared error) was used to measure model accuracy.</p>
+<p class="indent">The authors performed several experiments, including both early and late fusion and various combinations of modalities; here we focus on each feature (from any modality or combination) being an input node in the network. The best modellevel fusion achieved a <i>rc</i> of .769 for arousal and a <i>rc</i> of .492 for valence. These best results were obtained using a combination of audio and video features. Further, when compared to standard feed-forward neural networks, the BLSTM models were more accurate across shorter windows of time (2&#8211;3 secs) but accuracy was equitable across longer windows (4&#8211;5 secs). Finally, when compared to individual modalities, <a id="page_185"/>there was a multimodal advantage for valence (<i>r<sub>c</sub></i> = .492 vs. .431), but not for arousal (<i>r<sub>c</sub></i> = .769 vs. .788), once again highlighting selective conditions where MMAD led to improvements over UMAD.</p>
+<div class="cap" id="fig6_11">
+<p class="image"><img src="../images/fig6_11.png" alt="Image"/></p>
+<p class="figcaption"><b>Figure 6.11</b>&#160;&#160;Schematic for walk-through 3.</p>
+</div>
+<p class="h1"><a id="ch6_5"/><b><span class="bg1">6.5</span>&#160;&#160;&#160;&#160;General Trends and State of the Art in Multisensor-Multimodal Affect Detection</b></p>
+<p class="noindent">D&#8217;Mello and Kory [2015] recently performed a review and meta-analysis of 90 MMAD systems. We highlight some of their key findings, both in terms of trends in MMAD system design as well as classification accuracy of MMAD vs. UMAD. <a href="#tab6_1">Table 6.1</a> lists a subset (about 1/3) of the more recent studies (2011 to 2013) reviewed in D&#8217;Mello and Kory [2015] along with a few more recent studies (2014-) published since their review.</p>
+<p class="h2"><a id="ch6_5_1"/><b><span class="bg2">6.5.1</span>&#160;&#160;&#160;&#160;Trends in MMAD systems</b></p>
+<p class="indent">D&#8217;Mello and Kory [2015] coded each MMAD system across a number of dimensions, such as whether the training data consisted of acted, induced, or naturalistic affective expressions, the specific modality combinations used, the most successful fusion method, and so on. Below are some of the highlights of MMAD as of 2013.</p>
+<p class="tcaption" id="tab6_1"><a id="page_186"/><b>Table 6.1</b>&#160;&#160;&#160;&#160;Selective sample of recent MMAD systems in the D&#8217;Mello and Kory [2015]review (2011 to 2013), further extended to include more recent systems</p>
+<table class="table1">
+<tr>
+<td><p class="tab1">Reference</p></td>
+<td><p class="tab1">Modalities</p></td>
+<td><p class="tab1">Fusion</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Chanel et al. 2011]</p></td>
+<td><p class="tab1">EEG + Physiology</p></td>
+<td><p class="tab1">Decision</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Datcu and Rothkrantz 2011]</p></td>
+<td><p class="tab1">Face + Voice</p></td>
+<td><p class="tab1">Feature</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Jiang et al. 2011]</p></td>
+<td><p class="tab1">Face + Voice</p></td>
+<td><p class="tab1">Model</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Lingenfelser et al. 2011]</p></td>
+<td><p class="tab1">Face + Voice</p></td>
+<td><p class="tab1">Decision</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Nicolaou et al. 2011]</p></td>
+<td><p class="tab1">Face + Voice + Body</p></td>
+<td><p class="tab1">Model</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Schuller 2011]</p></td>
+<td><p class="tab1">Voice + Text</p></td>
+<td><p class="tab1">Feature</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Vu et al. 2011]</p></td>
+<td><p class="tab1">Voice + Body</p></td>
+<td><p class="tab1">Decision</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Wagner et al. 2011]</p></td>
+<td><p class="tab1">Face + Voice + Body</p></td>
+<td><p class="tab1">Decision</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Walter et al. 2011]</p></td>
+<td><p class="tab1">Voice + Physiology</p></td>
+<td><p class="tab1">Decision</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Wu and Liang 2011]</p></td>
+<td><p class="tab1">Voice + Text</p></td>
+<td><p class="tab1">Decision</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Hussain et al. 2012]</p></td>
+<td><p class="tab1">Face + Physiology</p></td>
+<td><p class="tab1">Decision</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Koelstra et al. 2012]</p></td>
+<td><p class="tab1">EEG + Physiology + Content</p></td>
+<td><p class="tab1">Decision</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Lin et al. 2012]</p></td>
+<td><p class="tab1">Face + Voice</p></td>
+<td><p class="tab1">Model</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Lu and Jia 2012]</p></td>
+<td><p class="tab1">Face + Voice</p></td>
+<td><p class="tab1">Model</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Metallinou et al. 2012]</p></td>
+<td><p class="tab1">Face + Voice</p></td>
+<td><p class="tab1">Model</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Monkaresi et al. 2012]</p></td>
+<td><p class="tab1">Face + Physiology</p></td>
+<td><p class="tab1">Feature</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Park et al. 2012]</p></td>
+<td><p class="tab1">Face + Voice</p></td>
+<td><p class="tab1">Decision</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Rozgic et al. 2012]</p></td>
+<td><p class="tab1">Face + Voice + Text</p></td>
+<td><p class="tab1">Feature</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Savran et al. 2012]</p></td>
+<td><p class="tab1">Face + Voice + Text</p></td>
+<td><p class="tab1">Model</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Soleymani et al. 2012]</p></td>
+<td><p class="tab1">EEG + Gaze</p></td>
+<td><p class="tab1">Decision</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Baltrus&#774;aitis et al. 2013]</p></td>
+<td><p class="tab1">Face + Voice</p></td>
+<td><p class="tab1">Model</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Dobri&#353;ek et al. 2013]</p></td>
+<td><p class="tab1">Face + Voice</p></td>
+<td><p class="tab1">Decision</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Glodek et al. 2013]</p></td>
+<td><p class="tab1">Face + Voice</p></td>
+<td><p class="tab1">Decision</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Hommel et al. 2013]</p></td>
+<td><p class="tab1">Face + Voice</p></td>
+<td><p class="tab1">Decision</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Krell et al. 2013]</p></td>
+<td><p class="tab1">Face + Voice</p></td>
+<td><p class="tab1">Decision</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Rosas et al. 2013]</p></td>
+<td><p class="tab1">Face + Voice + Text</p></td>
+<td><p class="tab1">Feature</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Rosas et al. 2013]</p></td>
+<td><p class="tab1">Face + Voice + Text</p></td>
+<td><p class="tab1">Feature</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Wang et al. 2013]</p></td>
+<td><p class="tab1">EEG + Content</p></td>
+<td><p class="tab1">Feature</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[W&#246;llmer et al. 2013a]</p></td>
+<td><p class="tab1">Face + Voice</p></td>
+<td><p class="tab1">Model</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[W&#246;llmer et al. 2013b]</p></td>
+<td><p class="tab1">Face + Voice + Text</p></td>
+<td><p class="tab1">Hybrid</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Williamson et al. 2014]</p></td>
+<td><p class="tab1">Face + Voice</p></td>
+<td><p class="tab1">Decision</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Grafsgaard et al. 2014]</p></td>
+<td><p class="tab1">Face + Posture + Interaction</p></td>
+<td><p class="tab1">Feature</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Soleymani et al. 2014]</p></td>
+<td><p class="tab1">Face + EEG</p></td>
+<td><p class="tab1">Model</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Bosch et al. 2015a]</p></td>
+<td><p class="tab1">Face + Interaction</p></td>
+<td><p class="tab1">Decision</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Zhou et al. 2015]</p></td>
+<td><p class="tab1">Face + Interaction + Content</p></td>
+<td><p class="tab1">Feature</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Barros et al. 2015]</p></td>
+<td><p class="tab1">Face + Body</p></td>
+<td><p class="tab1">Model</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Monkaresi et al. 2017]</p></td>
+<td><p class="tab1">Face + Remote Physiology</p></td>
+<td><p class="tab1">Decision</p></td>
+</tr>
+</table>
+<p class="source">Note. Physiology refers to one or more peripheral physiological channels such as electrodermal activity, heart rate variability, etc.</p>
+<p class="bullt"><a id="page_187"/>&#8226;&#160;&#160;MMAD systems were trained on small samples. The studies had on average of 21 participants and 97% of the studies had fewer than 50 participants.</p>
+<p class="bulla">&#8226;&#160;&#160;Training data for about half the studies were obtained by actors portraying affective expressions. Affective states were induced in 28% of the studies using validated elicitation methods [Coan and Allen 2007]. Very few studies (20% of studies) used naturalistic affective states (i.e., affective states that spontaneously arise as part of an interaction).</p>
+<p class="bulla">&#8226;&#160;&#160;In terms of MMAD, bimodal systems were far more common (87%) than trimodal systems (13%).</p>
+<p class="bulla">&#8226;&#160;&#160;The face and voice (paralinguistics) were the two most frequent modalities, each occurring in over 75% of the studies. By comparison, peripheral physiology was only used in 11% of the systems and other modalities (e.g., eye tracking) were much rarer.</p>
+<p class="bulla">&#8226;&#160;&#160;About a 1/3 of the studies (37%) focused on detecting the basic emotions of anger, fear, happiness, sadness, disgust, and surprise [Ekman 1992] or core affective dimensions of valence and arousal (28%). Very few studies focused on detecting additional affect dimensions, such as dominance or certainty [Fontaine et al. 2007] or nonbasic affective states like confusion and curiosity [D&#8217;Mello and Calvo 2013].</p>
+<p class="bulla">&#8226;&#160;&#160;Feature-level (39%) and decision-level (35%) fusion were much more common than hybrid (6%) and model-level fusion (20%)</p>
+<p class="bulla">&#8226;&#160;&#160;A vast majority of studies employed instance-level validation (62%), where <i>different</i> instances from the <i>same</i> person were in both training and test sets, essentially limiting generalizability to new individuals.</p>
+<p class="h2"><a id="ch6_5_2"/><b><span class="bg2">6.5.2</span>&#160;&#160;&#160;&#160;Accuracy of MMAD Systems</b></p>
+<p class="noindent">How accurate are MMAD systems compared to their unimodal affect detection (UMAD) counterparts? D&#8217;Mello and Kory [2015] addressed this question by computing the percent improvement in classification accuracy of each MMAD system compared to the best UMAD system (called MM1 effects). They also investigated factors that moderated MM1 effects. Their key findings indicated that:</p>
+<p class="bullt">&#8226;&#160;&#160;On average, MMAD yielded a 10% improvement in affect detection accuracy over the best UMAD counterpart.</p>
+<p class="bulla">&#8226;&#160;&#160;There were negative or negligible (&#60;= 1%) MM1 effects for 14.4% of the studies, about 50% yielded small 1&#8211;5% or medium-sized (5&#8211;10%) effects, while the remaining 35% yielded impressively large effects (&#62;10%).</p>
+<p class="bulla"><a id="page_188"/>&#8226;&#160;&#160;The median MM1 effect of 7% might be a more accurate estimate given the spread of the distribution.</p>
+<p class="bulla">&#8226;&#160;&#160;There was a very robust correlation (Pearson&#8217;s <i>r</i> = .87) between best UMAD and MMAD accuracies, suggesting a high degree of redundancy; see <a href="19_Chapter07.xhtml">Chapter 7</a>.</p>
+<p class="bulla">&#8226;&#160;&#160;The mean MM1 effect for detectors trained on naturalistic data (4.6%) was three times lower compared to detectors trained on acted data (12.7%) and about half compared to detectors trained on experimentally induced affective states (8.2%).</p>
+<p class="bulla">&#8226;&#160;&#160;Model-based fusion methods resulted in a roughly twice the mean MM1 effect (15.3%) compared to feature-level (7.7%) and decision-level (6.7%) fusion. However, this result should be taken with a modicum of caution because it involves between- study comparisons where additional factors could have varied.</p>
+<p class="indentt">Importantly, the authors were able to predict MMAD accuracy from best UMAD accuracy using data type (1 for acted data; 0 for induced or naturalistic data) and fusion method (1 for model-level fusion; 0 for feature- or decision- level fusion). The regression model shown (using standardized coefficients) below explained an impressive 83.3% of the variance based on 10-fold study-level cross-validation.</p>
+<p class="center">MMAD accuracy = .900 &#215; Best UMAD accuracy + .273 &#215; Data Type Acted [1 or 0] + .312 &#215; Model Level Fusion [1 or 0] &#8722; .253</p>
+<p class="h2"><a id="ch6_5_3"/><b><span class="bg2">6.5.3</span>&#160;&#160;&#160;&#160;MMAD Systems from the 2015 Audio-Video Emotion Recognition Challenge (AV+EC 2015)</b></p>
+<p class="noindent">The Audio-Video Emotion Recognition Challenge (AVEC) series is an annual affect detection competition that was first organized as part of the 2011</p>
+<p class="noindent">Affective Computing and Intelligent Interaction (ACII) conference series [Schuller 2011]. The earlier challenges emphasized audio-visual detection of time-continuous annotations of affective dimensions [Schuller et al. 2012] based on data from the SEMAINE corpus [McKeown et al. 2012], which was designed to collect naturalistic data of humans interacting with artificial agents. The most recent challenge (at the time of writing) was the Audio-Visual+ Emotion recognition Challenge and workshop (AV+EC 2015), where the goal was to model time-continuous annotations of valence and arousal from audio, video, and physiology (electrocardiogram and electrodermal <a id="page_189"/>activity) signals collected as part of the RECOLA data set [Ringeval et al. 2013] (see walk-through 3 above).</p>
+<p class="tcaption" id="tab6_2"><b>Table 6.2</b>&#160;&#160;&#160;&#160;MMAD systems featured in the AV+EC 2015 challenge</p>
+<table class="table1">
+<tr>
+<td><p class="tab1">Reference</p></td>
+<td><p class="tab1">Fusion Method</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Cardinal et al. 2015]</p></td>
+<td><p class="tab1">Feature, Decision (random forest, linear regression)</p></td>
+</tr>
+<tr>
+<td class="t1"><p class="tab1">[Milchevski et al. 2015]</p></td>
+<td class="t1"><p class="tab1">Feature, Decision (linear regression)</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Huang et al. 2015]</p></td>
+<td><p class="tab1">Feature, Decision (linear regression), Hybrid</p></td>
+</tr>
+<tr>
+<td class="t1"><p class="tab1">[Chen and Jin 2015]</p></td>
+<td class="t1"><p class="tab1">Model (BLSTM)</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[Chao et al. 2015]</p></td>
+<td><p class="tab1">Model (LSTM)</p></td>
+</tr>
+<tr>
+<td class="t1"><p class="tab1">[He et al. 2015]</p></td>
+<td class="t1"><p class="tab1">Model (Deep BLSTM)</p></td>
+</tr>
+<tr>
+<td><p class="tab1">[K&#228;chele et al. 2015]</p></td>
+<td><p class="tab1">Feature, Decision (averaging), Model (multilayer perceptron)</p></td>
+</tr>
+</table>
+<p class="indent"><a href="#tab6_2">Table 6.2</a> presents the seven MMAD systems featured in the AV+EC 2015 challenge. Two systems adopted a UMAD approach and are not included here. We note the popularity of model-based fusion techniques, especially those using LSTMs and their variants, although feature- and decision- level fusion methods still feature quite prominently. The best result was obtained by He et al. [2015], who adopted a deep (i.e., multilayer) BLSTM for modality fusion. They achieved a concordance correlation (<i>rc</i> - see walk-through 3) of .747 for arousal and .609 for valence, both reflecting substantial improvements over the challenge baselines (<i>rc</i> = .444 for arousal and .382 for valence).</p>
+<p class="h1"><a id="ch6_6"/><b><span class="bg1">6.6</span>&#160;&#160;&#160;&#160;Discussion</b></p>
+<p class="noindent">At the time of this writing, affective computing is nearing its 20-year birthdate [Picard 1997] (see Picard [2010] for a brief history of the field). In D&#8217;Mello and Kory [2015], we summarized the state of the field of affect detection in 2003 as:</p>
+<p class="quote">&#8220;the use of basic signal processing and machine learning techniques, independently applied to still frames (but occasionally to sequences) of facial or vocal data, to detect exaggerated context-free expressions of a few basic affective states that are acted by a small number of individuals with no emphasis on generalizability.&#8221;</p>
+<p class="indent">It is clear as much progress has been made over the next 10 years as noted by our summary of the field as of 2013. The italicized items highlight key changes from 2003&#8211;2013. Most notable is the shift in emphasis from facial <i>or</i> vocal signals to <a id="page_190"/>facial <i>and</i> vocal signals, suggesting that we are finally in the age of MMAD, despite sustained progress in UMAD.</p>
+<p class="quote">&#8220;the use of basic <i>and advanced</i> signal processing and machine learning techniques, independently <i>and jointly</i> applied to <i>sequences</i> of <i>primarily</i> facial <i>and</i> vocal data, to detect exaggerated <i>and naturalistic</i> context-free <i>and context-sensitive</i> expressions of a <i>modest</i> number of basic affective states and <i>simple dimensions</i> that are acted <i>or experienced</i> by a <i>modest</i> number of individuals with <i>some</i> emphasis on generalizability.&#8221;</p>
+<p class="indent">What would be a prospective summary of the field a decade from now&#8212;say in 2027? We anticipate progress in data collection methods (sensors used, modalities considered, data collection contexts, size of data sets), the computational methods (signal processing, machine learning, fusion techniques), and the affective phenomenon itself (affective states modeled, affect representations, how &#8220;ground truth&#8221; is established).</p>
+<p class="indent">But what about the metrics of success? The metrics we utilize embody what we (as a community) <i>value</i> in affect detection systems. It is fair to say that detection (or prediction) accuracy on unseen data is the key metric of success in the field (e.g., the AV+EC challenge selects winners based on prediction accuracy on a held-out test set). Does accuracy, then, embody our values?</p>
+<p class="indent">If so, then one must ask &#8220;accurate for what purpose and in what context?&#8221; Is a highly accurate system trained on a handful of participants in a lab setting of more value than a less accurate one trained on noisy data, but from thousands of individuals in the wild? Similarly, is a highly accurate system that cannot function in the presence of missing data of more value than its less accurate counterpart that is robust to data loss? If accuracy is not the only metric that embodies our values, then what might be some alternative metrics?</p>
+<p class="indent">The answer might lie into the very nature of affect itself. Recall that affect is a construct, not a physical entity. It cannot be precisely defined or directly measured, but only approximated. This level of imprecision might be discomforting to some who might rightly ask: &#8220;How can we measure what we cannot even define?&#8221; This question has plagued researchers in the psychological sciences for several decades, who have proposed a host of metrics, each based on different criterion of success. These include different forms of reliability, convergent validity (closely related to accuracy), discriminant validity, ecological validity (related to generalizability), predictive validity, criterion validity, and so on [Rosenthal and Rosnow 1984].</p>
+<p class="indent">Herein lies the rub. Many of these criteria are in a state of tension. A system (or measure) that achieves impressive gains along one criterion likely does so at the expense <a id="page_191"/>of another. Want a highly accurate (but not very generalizable) system? Just lock a few participants in the lab and ask them to act out a couple of emotions. Want a generalizable (but not very accurate) system? Try to capture affective expressions as people go about their daily routines in the world. By considering a range of metrics, we are forced to identify the inherent weaknesses in our systems and confront out assumptions about the nature of affect and &#8220;affective ground truth.&#8221; Thus, in addition to anticipated advances in theoretical sophistication, data sources, and computational techniques, we advocate for an equitable advance in the science of validation over the next decade of multisensor-multimodal affect detection research. Only then will we have a chance of developing affect detection systems that will break through the confines of the lab and live up to their fullest potential in the real world.</p>
+<p class="h1n"><a id="ch6_7"/><b>Acknowledgments</b></p>
+<p class="noindent">This research was supported by the National Science Foundation (NSF) (DRL 1235958, IIS 1523091, and 1660877). Any opinions, findings and conclusions, or recommendations expressed in this paper are those of the authors and do not necessarily reflect the views of the NSF.</p>
+<p class="h1n"><a id="ch6_8"/><b>Focus Questions</b></p>
+<p class="noindent"><b>6.1.</b> What do we mean when we say that affect is a multicomponential conceptual phenomenon?</p>
+<p class="noindentt"><b>6.2.</b> Why is the affective experience-expression link weak and how is this related to loosely coupled uncoordinated affective responses?</p>
+<p class="noindentt"><b>6.3.</b> Popular TV shows like &#8220;Lie to Me&#8221; assume that humans can be trained to be highly accurate emotion and deception detectors. Do you agree or disagree? Why?</p>
+<p class="noindentt"><b>6.4.</b> Assume you want to develop a detector of surprise. What are three unique ways by which you could obtain affective ground truth to train your detector?</p>
+<p class="noindentt"><b>6.5.</b> Assume you have three modalities: video, audio, and electrodermal activity. How would you combine them to achieve &#8220;hybrid fusion&#8221;?</p>
+<p class="noindentt"><b>6.6.</b> Sketch four different model-level fusion designs that combine facial expressions, heart rate, eye movements, keystrokes, and user personality traits.</p>
+<p class="noindentt"><b>6.7.</b> How would you estimate bimodal classification accuracy from corresponding unimodal classification accuracies without even building the multimodal model?</p>
+<p class="noindentt"><b>6.8.</b> <a id="page_192"/>How would you go about building a multisensor-multimodal detector of <i>interest</i> while people read news articles on <a href="http://www.cnn.com">www.cnn.com</a>? What about curiosity?</p>
+<p class="noindentt"><b>6.9.</b> How would you build a robust multimodal-multisensor detector of confusion. Robust implies that the detector should operates even when some of the modalities do not provide any data.</p>
+<p class="noindentt"><b>6.10.</b> The concluding section lists several metrics of success in addition to detection accuracy? Which of these metrics do you think the affect detection community should prioritize in the near- (next 5 years) and long- (next 15 years) term?</p>
+<p class="h1n"><a id="ch6_9"/><b>References</b></p>
+<p class="ref">R. C. Baker and D. O. Guttfreund. 1993. The effects of written autobiographical recollection induction procedures on mood. <i>Journal of Clinical Psychology</i> 49:563&#8211;568. 180</p>
+<p class="ref">T. Baltrus&#774;aitis, N. Banda, and P. Robinson. 2013. Dimensional Affect Recognition using Continuous Conditional Random Fields. In <i>Proceedings of the International Conference on Multimedia and Expo (Workshop on Affective Analysis in Multimedia)</i>. DOI: 10.1109/FG.2013.6553785. 186</p>
+<p class="ref">L. Barrett. 2006. Are emotions natural kinds? <i>Perspectives on Psychological Science</i> 1:28&#8211;58. DOI: 10.1111/j.1745-6916.2006.00003.x. 170</p>
+<p class="ref">L. Barrett, B. Mesquita, K. Ochsner, and J. Gross. 2007. The experience of emotion. <i>Annual Review of Psychology</i>, 58:373&#8211;403. DOI: 10.1146/annurev.psych.58.110405.085709. 170</p>
+<p class="ref">L. F. Barrett. 2014. The conceptual act theory: A pr&#233;cis. <i>Emotion Review</i>, 6:292&#8211;297. DOI:10.1177/1754073914534479. 169</p>
+<p class="ref">P. Barros, D. Jirak, C. Weber, and S. Wermter. 2015. Multimodal emotional state recognition using sequence-dependent deep hierarchical features. <i>Neural Networks</i>, 72:140&#8211;151. DOI: 10.1016/j.neunet.2015.09.009. 186</p>
+<p class="ref">N. Bosch, H. Chen, R. Baker, V. Shute, and S. K. D&#8217;Mello. 2015a. Accuracy vs. Availability Heuristic in Multimodal Affect Detection in the Wild. In <i>Proceedings of the 17th ACM International Conference on Multimodal Interaction (ICMI 2015)</i> ACM, New York. DOI: 10.1145/2818346.2820739. 183, 186</p>
+<p class="ref">N. Bosch, S. K. D&#8217;Mello, R. Baker, J. Ocumpaugh, V. Shute, M. Ventura, and L. Wang. 2015b. Automatic Detection of Learning-Centered Affective States in the Wild. In <i>Proceedings of the 2015 International Conference on Intelligent User Interfaces (IUI 2015)</i> ACM, New York, pp. 379&#8211;388. DOI: 10.1145/2678025.2701397. 182</p>
+<p class="ref">N. Bosch, S. D&#8217;Mello, R. Baker, J. Ocumpaugh, and V. Shute. 2016. Using video to automatically detect learner affect in computer-enabled classrooms. <i>ACM Transactions on Interactive Intelligent Systems</i>, 6:17.11&#8211;17.31. DOI: 10.1145/2946837. 183</p>
+<p class="ref"><a id="page_193"/>M. M. Bradley and P. J. Lang. 1994 Measuring emotion: the self-assessment manikin and the semantic differential. <i>Journal of Behavior Therapy and Experimental Psychiatry</i>, 25:49&#8211;59. DOI: 10.1016/0005-7916(94)90063-9. 167</p>
+<p class="ref">R. Calvo, S. K. D&#8217;Mello, J. Gratch, and A. Kappas. 2015. The Oxford Handbook of Affective Computing Oxford University Press, New York. 169</p>
+<p class="ref">R. A. Calvo and S. K. D&#8217;Mello. 2010. Affect detection: An interdisciplinary review of models, methods, and their applications. <i>IEEE Transactions on Affective Computing</i>, 1:18&#8211;37. DOI: 10.1109/T-AFFC.2010.1. 169</p>
+<p class="ref">L. Camras and J. Shutter. 2010. Emotional facial expressions in infancy. <i>Emotion Review</i>, 2(2):120&#8211;129. DOI: 10.1177/1754073909352529. 170</p>
+<p class="ref">P. Cardinal, N. Dehak, A.L. Koerich, J. Alam, and P. Boucher. 2015. ETS system for AV+EC 2015 challenge. In <i>Proceedings of the 5th International Workshop on Audio/Visual Emotion Challenge</i> ACM, New York, pp. 17&#8211;23. DOI: 10.1145/2808196.2811639. 189</p>
+<p class="ref">G. Chanel, C. Rebetez, M. B&#233;trancourt, and T. Pun. 2011. Emotion assessment from physiological signals for adaptation of game difficulty. <i>IEEE Transactions on Systems, Man and Cybernetics, Part A: Systems and Humans</i>, 41:1052&#8211;1063. DOI: 10.1109/TSMCA.2011.2116000. 186</p>
+<p class="ref">L. Chao, J. Tao, M. Yang, Y. Li, and Z. Wen. 2015. Long short term memory recurrent neural network based multimodal dimensional emotion recognition. In <i>Proceedings of the 5th International Workshop on Audio/Visual Emotion Challenge</i> ACM, New York, pp. 65&#8211;72. DOI: 10.1145/2808196.2811634. 189</p>
+<p class="ref">D. Chen, D. Jiang, I. Ravyse, and H. Sahli. 2009. Audio-visual emotion recognition based on a DBN model with constrained asynchrony. In <i>Proceedings of the Fifth International Conference on Image and Graphics (ICIG 09)</i> IEEE, Washington, DC, pp. 912&#8211;916. DOI: 10.1109/ICIG.2009.120. 176</p>
+<p class="ref">S. Chen and Q. Jin. 2015. Multi-modal dimensional emotion recognition using recurrent neural networks. In <i>Proceedings of the 5th International Workshop on Audio/Visual Emotion Challenge</i> ACM, New York, pp. 49&#8211;56. DOI: 10.1145/2808196.2811638. 189</p>
+<p class="ref">J. Coan and J. Allen. Handbook of emotion elicitation and assessment Oxford University Press, New York. 167, 187</p>
+<p class="ref">J. A. Coan. 2010. Emergent ghosts of the emotion machine. <i>Emotion Review</i>, 2:274&#8211;285. DOI: 10.1177/1754073910361978. 170, 172</p>
+<p class="ref">C. Conati and H. Maclaren. 2009. Empirically building and evaluating a probabilistic model of user affect. <i>User Modeling and User-Adapted Interaction</i>, 19:267&#8211;303. DOI: 10.1007/s11257-009-9062-8. 176</p>
+<p class="ref">R. Cowie, G. McKeown, and E. Douglas-Cowie. 2012. Tracing emotion: an overview. <i>International Journal of Synthetic Emotions (IJSE)</i>, 3:1&#8211;17. DOI: 10.4018/jse.2012010101. 169</p>
+<p class="ref">S. D&#8217;Mello and R. Calvo. 2013. Beyond the Basic Emotions: What Should Affective Computing Compute? In S. Brewster, S. B&#248;dker and W. Mackay editors, <i>Extended Abstracts of the</i> <a id="page_194"/><i>ACM SIGCHI Conference on Human Factors in Computing Systems (CHI 2013)</i>, ACM, New York. DOI: 10.1145/2468356.2468751. 187</p>
+<p class="ref">S. K. D&#8217;Mello. 2016. On the influence of an iterative affect annotation approach on interobserver and self-observer reliability. <i>IEEE Transactions on Affective Computing</i>, 7:136&#8211;149. DOI: 10.1109/TAFFC.2015.2457413. 172</p>
+<p class="ref">S. K. D&#8217;Mello and J. Kory. 2015. A review and meta-analysis of multimodal affect detection systems. <i>ACM Computing Surveys</i>, 47:43:41&#8211;43:46. DOI: 10.1145/2682899. 169, 185, 186, 187, 189</p>
+<p class="ref">S. D&#8217;Mello and A. Graesser. 2011. The half-life of cognitive-affective states during complex learning. <i>Cognition &#38; Emotion</i>, 25:1299&#8211;1308. DOI: 10.1080/02699931.2011.613668. 176</p>
+<p class="ref">S. K. D&#8217;Mello, N. Dowell, and A. C. Graesser. 2013. Unimodal and multimodal human perception of naturalistic non-basic affective states during Human-Computer interactions. <i>IEEE Transactions on Affective Computing</i>, 4:452&#8211;465. DOI: 10.1109/T-AFFC.2013.19. 172</p>
+<p class="ref">A. Damasio. 2003. <i>Looking for Spinoza: Joy, sorrow, and the feeling brain</i>. Harcourt Inc., Orlando, FL. 172</p>
+<p class="ref">C. Darwin. 1872. <i>The expression of the emotions in man and animals</i>. John Murray, London. 172</p>
+<p class="ref">D. Datcu and L. Rothkrantz. 2011. Emotion recognition using bimodal data fusion. In <i>Proceedings of the 12th International Conference on Computer Systems and Technologies</i> ACM, New York, pp. 122&#8211;128. DOI: 10.1145/2023607.2023629. 186</p>
+<p class="ref">S. Dobri&#353;ek, R. Gaj&#353;ek, F. Miheli&#269;, N. Pave&#353;i&#263;, and V. &#352;truc. 2013. Towards Efficient Multi-Modal Emotion Recognition. <i>International Journal of Advanced Robotic Systems</i>, 10:1&#8211;10. DOI: 10.5772/54002. 186</p>
+<p class="ref">P. Ekman. 1992. An argument for basic emotions. <i>Cognition &#38;Emotion</i>, 6:169&#8211;200. 170, 172, 187</p>
+<p class="ref">P. Ekman. 1994. Strong Evidence for Universals in Facial Expressions - a Reply to Russells Mistaken Critique. <i>Psychological Bulletin</i>, 115:268&#8211;287. 170</p>
+<p class="ref">H. Elfenbein and N. Ambady. 2002a. Is there an ingroup advantage in emotion recognition? <i>Psychological Bulletin</i>, 128:243&#8211;249. DOI: 10.1037/0033-2909.128.2.243. 170</p>
+<p class="ref">H. Elfenbein and N. Ambady. 2002b. On the universality and cultural specificity of emotion recognition: A meta-analysis. <i>Psychological Bulletin</i>, 128:203&#8211;235. 170</p>
+<p class="ref">F. Eyben, M. W&#246;llmer, A. Graves, B. Schuller, E. Douglas-Cowie, and R. Cowie. 2010. On-line emotion recognition in a 3-D activation-valence-time continuum using acoustic and linguistic cues. <i>Journal on Multimodal User Interfaces</i>, 3:7&#8211;19. DOI: 10.1007/s12193&#8226; 009-0032-6. 178</p>
+<p class="ref">FACET. 2014. Facial Expression Recognition Software Emotient, Boston, MA. 182</p>
+<p class="ref"><a id="page_195"/>J. Fontaine, K. Scherer, E. Roesch, and P. Ellsworth. 2007. The world of emotions is not two-dimensional. <i>Psychological Science</i>, 18. DOI: 10.1111/j.1467-9280.2007.02024.x. 170, 187</p>
+<p class="ref">A. J. Fridlund, P. Ekman, and H. Oster. 1987. Facial expressions of emotion. In A. W. Siegman and S. Feldstein, editors, <i>Nonverbal behavior and communication</i>, pp. 143&#8211;223. Erlbaum, Hillsdale, NJ. 170</p>
+<p class="ref">J. M. Girard, J. F. Cohn, L. A. Jeni, M. A. Sayette, and F. De la Torre. 2015. Spontaneous facial expression in unscripted social interactions can be measured automatically. <i>Behavior Research Methods</i>, 47:1136&#8211;1147. DOI: 10.3758/s13428-014-0536-1. 167, 168</p>
+<p class="ref">M. Glodek, S. Reuter, M. Schels, K. Dietmayer, and F. Schwenker. 2013. Kalman Filter Based Classifier Fusion for Affective State Recognition. In Z.-H. Zhou, F. Roli and J. Kittler, editors, <i>Proceedings of the 11th International Workshop on Multiple Classifier Systems</i>, Springer, Berlin Heidelberg, pp. 85&#8211;94. DOI: 10.1007/978-3-642-38067-9_8. 186</p>
+<p class="ref">J. F. Grafsgaard, J. B. Wiggins, K. E. Boyer, E. N. Wiebe, and J. C. Lester. 2014. Predicting learning and affect from multimodal data streams in task-oriented tutorial dialogue. In J. Stamper, Z. Pardos, M. Mavrikis and B. M. McLaren, editors, <i>Proceedings of the 7th International Conference on Educational Data Mining</i>, International Educational Data Mining Society, pp. 122&#8211;129. 186</p>
+<p class="ref">J. J. Gross and L. F. Barrett. 2011. Emotion generation and emotion regulation: One or two depends on your point of view. <i>Emotion Review</i>, 3:8&#8211;16. DOI: 10.1177/1754073910380974. 170</p>
+<p class="ref">L. He, D. Jiang, L. Yang, E. Pei, P. Wu, and H. Sahli. 2015. Multimodal affective dimension prediction using deep bidirectional long short-term memory recurrent neural networks. In <i>Proceedings of the 5th International Workshop on Audio/Visual Emotion Challenge</i> ACM, New York, pp. 73&#8211;80. DOI: 10.1145/2808196.2811641. 189</p>
+<p class="ref">S. J. Heine, D. R. Lehman, K. Peng, and J. Greenholtz. 2002. What&#8217;s wrong with crosscultural comparisons of subjective Likert scales?: The reference-group effect. <i>Journal of Personality and Social Psychology</i>, 82:903&#8211;918. 171</p>
+<p class="ref">S. Hochreiter and J. Schmidhuber. 1997. Long short-term memory. <i>Neural computation</i>, 9:1735&#8211;1780. DOI: 10.1162/neco.1997.9.8.1735. 178</p>
+<p class="ref">S. Hommel, A. Rabie and U. Handmann. 2013. Attention and Emotion Based Adaption of Dialog Systems. In E. Pap editor, <i>Intelligent Systems: Models and Applications</i>, pp. 215&#8211;235. Springer Verlag, Berlin Heidelberg. 186</p>
+<p class="ref">Z. Huang, T. Dang, N. Cummins, B. Stasak, P. Le, V. Sethu, and J. Epps. 2015. An investigation of annotation delay compensation and output-associative fusion for multimodal continuous emotion prediction. In <i>Proceedings of the 5th International Workshop on Audio/Visual Emotion Challenge</i> ACM, New York, pp. 41&#8211;48. DOI: 10.1145/2808196.2811640. 189</p>
+<p class="ref">M. Hussain, H. Monkaresi, and R. Calvo. 2012. Combining Classifiers in Multimodal Affect Detection. In <i>Proceedings of the Australasian Data Mining Conference</i>. 186</p>
+<p class="ref"><a id="page_196"/>C. Izard. Innate and universal facial expressions: Evidence from developmental and cross-cultural research. <i>Psychological Bulletin 115</i>. DOI: 10.1037//0033-2909.115.2.288. 170</p>
+<p class="ref">C. Izard. 2010. The many meanings/aspects of emotion: Definitions, functions, activation, and regulation. <i>Emotion Review</i>, 2:363&#8211;370. DOI: 10.1177/1754073910374661. 169, 170</p>
+<p class="ref">C. E. Izard. 2007. Basic emotions, natural kinds, emotion schemas, and a new paradigm. <i>Perspectives on Psychological Science</i>, 2:260&#8211;280. DOI: 10.1111/j.1745-6916.2007.00044.x. 169, 172</p>
+<p class="ref">W. James. 1884. What is an emotion? <i>Mind</i>, 9:188&#8211;205. 172</p>
+<p class="ref">J. H. Janssen, P. Tacken, J. de Vries, E. L. van den Broek, J. H. Westerink, P. Haselager, and W. A. IJsselsteijn. 2013. Machines outperform laypersons in recognizing emotions elicited by autobiographical recollection. <i>Human&#8211;Computer Interaction</i>, 28:479&#8211;517. DOI: 10.1080/07370024.2012.755421. 180</p>
+<p class="ref">D. Jiang, Y. Cui, X. Zhang, P. Fan, I. Ganzalez, and H. Sahli. 2011. Audio visual emotion recognition based on triple-stream dynamic bayesian network models. In S. D&#8217;Mello, A. Graesser, S. B and J. Martin, editors, <i>Proceedings of the Fourth International Conference on Affective Computing and Intelligent Interaction</i>, Springer-Verlag, Berlin Heidelberg, pp. 609&#8211;618. DOI: 10.1007/978-3-642-24600-5_64. 176, 186</p>
+<p class="ref">M. K&#228;chele, P. Thiam, G. Palm, F. Schwenker, and M. Schels. 2015. Ensemble methods for continuous affect recognition: Multi-modality, temporality, and challenges. In <i>Proceedings of the 5th International Workshop on Audio/Visual Emotion Challenge</i> ACM, New York, pp. 9&#8211;16. DOI: 10.1145/2808196.2811637. 189</p>
+<p class="ref">S. E. Kahou, C. Pal, X. Bouthillier, P. Froumenty, &#199;. G&#252;l&#231;ehre, R. Memisevic, P. Vincent, A. Courville, Y. Bengio, and R. C. Ferrari. 2013. Combining modality specific deep neural networks for emotion recognition in video. In <i>Proceedings of the 15th ACM International Conference on Multimodal Interaction</i> ACM, New York, pp. 543&#8211;550. DOI: 10.1145/2522848.2531745. 179</p>
+<p class="ref">S. Koelstra, C. Muhl, M. Soleymani, J.-S. Lee, A. Yazdani, T. Ebrahimi, T. Pun, A. Nijholt, and I. Patras. 2012. Deap: A database for emotion analysis using physiological signals. <i>IEEE Transactions on Affective Computing</i> 3:18&#8211;31. DOI: 10.1109/T-AFFC.2011.15. 186</p>
+<p class="ref">J. Kory and S. K. D&#8217;Mello. 2015. Affect elicitation for affective computing. In R. Calvo, S. D&#8217;Mello, J. Gratch and A. Kappas, editors, <i>The Oxford Handbook of Affective Computing</i>, pp. 371&#8211;383. Oxford University Press, New York. DOI: 10.1093/oxfordhb/9780199942237.013.001. 171, 182</p>
+<p class="ref">J. Kory, S. K. D&#8217;Mello, and A. Olney. 2015. Motion Tracker: Camera-based Monitoring of Bodily Movements using Motion Silhouettes. <i>Plos One 10</i>, 10.1371/journal.pone.0130293. DOI: 10.1371/journal.pone.0130293.</p>
+<p class="ref">G. Krell, M. Glodek, A. Panning, I. Siegert, B. Michaelis, A. Wendemuth, and F. Schwenker. 2013. Fusion of Fragmentary Classifier Decisions for Affective State Recognition. In F. Schwenker, S. Scherer and L.-P. Morency, editors, <i>Proceedings of the The 1st <a id="page_197"/>International Workshop on Multimodal Pattern Recognition of Social Signals in Human-Computer-Interaction</i>, Springer-Verlag, Berlin Heidelberg, pp. 116&#8211;130. 186</p>
+<p class="ref">J.A. Krosnick. 1999. Survey research. <i>Annual Review of Psychology</i>, 50:537&#8211;567. 171</p>
+<p class="ref">Y. Le Cun, Y. Bengio, and G. E. Hinton. 2015. Deep learning. <i>Nature</i>, 521:436&#8211;444. 178</p>
+<p class="ref">H. C. Lench, S. W. Bench, and S. A. Flores. 2013. Searching for evidence, not a war: Reply to Lindquist, Siegel, Quigley, and Barrett (2013). <i>Psychological Bulletin</i>, 113:264&#8211;268. DOI: 10.1037/a0029296.. 169</p>
+<p class="ref">J. S. Lerner and D. Keltner. 2000. Beyond valence: Toward a model of emotion-specific influences on judgement and choice. <i>Cognition &#38; Emotion</i>, 14:473&#8211;493. DOI: 10.1080/026999300402763. 169</p>
+<p class="ref">M. D. Lewis. 2005. Bridging emotion theory and neurobiology through dynamic systems modeling. <i>Behavioral and Brain Sciences</i>, 28:169&#8211;245. DOI: 10.1017/S0140525X0500004X. 169, 172</p>
+<p class="ref">X. Li and Q. Ji. 2005. Active affective state detection and user assistance with dynamic bayesian networks. <i>IEEE Transactions on Systems, Man, and Cybernetics - Part A: Systems and Humans</i>, 35:93&#8211;105. DOI: 10.1109/TSMCA.2004.838454. 176</p>
+<p class="ref">J. Lin, C. Wu, and W. Wei. 2012. Error Weighted Semi-Coupled Hidden Markov Model for Audio-Visual Emotion Recognition. <i>IEEE Transactions on Multimedia</i>, 14:142&#8211;156. DOI: 10.1109/TMM.2011.2171334. 177, 186</p>
+<p class="ref">K. A. Lindquist, A. B. Satpute, T. D. Wager, J. Weber, and L. F. Barrett. 2016. The brain basis of positive and negative affect: evidence from a meta-analysis of the human neuroimaging literature. <i>Cerebral Cortex</i>, 26:1910&#8211;1922. DOI: 10.1093/cercor/bhv001. 172</p>
+<p class="ref">K. A. Lindquist, E. H. Siegel, K. S. Quigley and L. F. Barrett. 2013. The Hundred-Year Emotion War: Are Emotions Natural Kinds or Psychological Constructions? Comment on Lench, Flores, and Bench (2011). <i>Psychological Bulletin</i>, 139:264&#8211;268. DOI: 10.1037/a0029038. 169</p>
+<p class="ref">K. A. Lindquist, T. Wager, D. H. Kober, E. Bliss-Moreau, and L. F. Barrett. 2011. The brain basis of emotion: A meta-analytic review. <i>Behavioral and Brain Sciences</i>, 173:1&#8211;86. DOI: 10.1017/S0140525X11000446. 172</p>
+<p class="ref">F. Lingenfelser, J. Wagner and, E. Andr&#233;. 2011. A systematic discussion of fusion techniques for multi-modal affect recognition tasks. In <i>Proceedings of the 13th International Conference on Multimodal Interfaces</i> ACM, New York, pp. 19&#8211;26. DOI: 10.1145/2070481.2070487. 186</p>
+<p class="ref">M. Liu, R. Wang, S. Li, S. Shan, Z. Huang, and X. Chen. 2014. Combining multiple kernel methods on riemannian manifold for emotion recognition in the wild. In <i>Proceedings of the 16th ACM International Conference on Multimodal Interaction</i> ACM, New York, pp. 494&#8211;501. DOI: 10.1145/2663204.2666274. 176</p>
+<p class="ref">G. Loewenstein and J. S. Lerner. 2003. The role of affect in decision making. In <i>Handbook of Affective Science</i>, 619:3. DOI: 10.1016/B978-0-444-62604-2.00003-4. 169</p>
+<p class="ref"><a id="page_198"/>K. Lu and Y. Jia. 2012. Audio-visual emotion recognition with boosted coupled HMM. In <i>Proceedings of the 21st International Conference on Pattern Recognition</i> IEEE, Washington, DC, pp. 1148&#8211;1151. 177, 186</p>
+<p class="ref">J.-C. Martin, C. Clavel, M. Courgeon, M. Ammi, M.-A. Amorim, Y. Tsalamlal, and Y. Gaffary. 2018. How Do Users Perceive Multimodal Expressions of Affects? In In S. Oviatt, B. Schuller, P. Cohen, D. Sonntag, G. Potamianos, and A. Krueger, editors, <i>The Handbook of Multimodal-Multisensor Interfaces, Volume 2: Signal Processing, Architectures, and Detection of Emotion and Cognition</i>. Morgan &#38; Claypool Publishers, San Rafael, CA.</p>
+<p class="ref">G. McKeown, M. Valstar, R. Cowie, M. Pantic, and M. Schroder. 2012. The SEMAINE database: Annotated multimodal records of emotionally coloured conversations between a person and a limited agent. <i>IEEE Transactions on Affective Computing</i>, 3:5&#8211;17. DOI: 10.1109/T-AFFC.2011.20. 188</p>
+<p class="ref">M. Mehu and K. Scherer. 2012. A psycho-ethological approach to social signal processing. <i>Cognitive Processing</i>, 13:397&#8211;414. DOI: 10.1007/s10339-012-0435-2. 171</p>
+<p class="ref">B. Mesquita and M. Boiger. 2014. Emotions in context: A sociodynamic model of emotions. <i>Emotion Review</i>, 6:298&#8211;302. 169</p>
+<p class="ref">A. Metallinou, M. Wollmer, A. Katsamanis, F. Eyben, B. Schuller, and S. Narayanan. 2012. Context-Sensitive Learning for Enhanced Audiovisual Emotion Classification. <i>IEEE Transactions on Affective Computing</i>, 3:184&#8211;198. DOI: 10.1109/T-AFFC.2011.40. 186</p>
+<p class="ref">A. Milchevski, A. Rozza, and D. Taskovski. 2015. Multimodal affective analysis combining regularized linear regression and boosted regression trees. In <i>Proceedings of the 5th International Workshop on Audio/Visual Emotion Challenge</i> ACM, New York, 33&#8211;39. DOI: 10.1145/2808196.2811636. 189</p>
+<p class="ref">H. Monkaresi, N. Bosch, R. A. Calvo, and S. K. D&#8217;Mello. 2017. Automated detection of engagement using video-based estimation of facial expressions and heart rate. <i>IEEE Transactions on Affective Computing</i>, 8:15&#8211;28. DOI: 10.1109/TAFFC.2016.2515084. 186</p>
+<p class="ref">H. Monkaresi, M. S. Hussain and R. Calvo. 2012. Classification of affects using head movement, skin color features and physiological signals. In <i>Proceedings of the IEEE International Conference on Systems, Man, and Cybernetics</i> IEEE, Washington, DC, pp. 2664&#8211;2669. DOI: 10.1109/ICSMC.2012.6378149. 186</p>
+<p class="ref">H.-W. Ng, V. D. Nguyen, V. Vonikakis, and S. Winkler. 2015. Deep learning for emotion recognition on small datasets using transfer learning. In <i>Proceedings of the 2015 ACM on International Conference on Multimodal Interaction (ICMI 2015)</i> ACM, New York, pp. 443&#8211;449. DOI: 10.1145/2818346.2830593. 179</p>
+<p class="ref">M. Nicolaou, H. Gunes, and M. Pantic. 2011. Continuous Prediction of Spontaneous Affect from Multiple Cues and Modalities in Valence&#38; Arousal Space. <i>IEEE Transactions on Affective Computing</i>, 2:92&#8211;105. DOI: 10.1109/T-AFFC.2011.9. 186</p>
+<p class="ref">J. Ocumpaugh, R. S. Baker, and M. M. T. Rodrigo. 2012. Baker-Rodrigo Observation Method Protocol (BROMP) 1.0. Training Manual Version 1.0. Worcester Polytechnic Institute, <a id="page_199"/>Teachers College Columbia University, &#38; Ateneo de Manila University, New York and Manila, Philippines. DOI: 10.1007/978-3-642-39112-5_74. 182</p>
+<p class="ref">J. Ocumpaugh, R. S. Baker, and M. M. T. Rodrigo. 2015. Baker Rodrigo Ocumpaugh Monitoring Protocol (BROMP) 2.0 Technical and Training Manual Teachers College, Columbia University, and Ateneo Laboratory for the Learning Sciences, New York, and Manila, Philippines. 167</p>
+<p class="ref">J. Park, G. Jang, and Y. Seo. 2012. Music-aided affective interaction between human and service robot. <i>EURASIP Journal on Audio, Speech, and Music Processing 2012</i>, 1&#8211;13. DOI: 10.1186/1687-4722-2012-5. 186</p>
+<p class="ref">B. Parkinson, A. H. Fischer, and A. S. Manstead. <i>Emotion in social relations: Cultural, group, and interpersonal processes</i>. Psychology Press. 170</p>
+<p class="ref">R. Picard. 1997. <i>Affective Computing</i>. MIT Press, Cambridge, MA. 169, 189</p>
+<p class="ref">R. Picard. 2010. Affective Computing: From Laughter to IEEE. <i>IEEE Transactions on Affective Computing</i>, 1:11&#8211;17. DOI: 10.1109/T-AFFC.2010.10. 189</p>
+<p class="ref">R. W. Picard, S. Fedor, and Y. Ayzenberg. 2015. Multiple arousal theory and daily-life electrodermal activity asymmetry. <i>Emotion Review</i>, 8 (1), 62&#8211;75. DOI: 10.1177/1754073914565517. 174</p>
+<p class="ref">P. M. Podsakoff, S. B. MacKenzie, J. Y. Lee, and N. P. Podsakoff. 2003. Common method biases in behavioral research: A critical review of the literature and recommended remedies. <i>Journal of Applied Psychology</i>, 88:879&#8211;903. DOI: 10.1037/0021-9010.88.5.879. 171</p>
+<p class="ref">F. Ringeval, F. Eyben, E. Kroupi, A. Yuce, J.-P. Thiran, T. Ebrahimi, D. Lalanne, and B. Schuller. 2015a. Prediction of asynchronous dimensional emotion ratings from audiovisual and physiological data. <i>Pattern Recognition Letters</i>, 66:22&#8211;30. DOI: 10.1016/j.patrec.2014.11.007. 178, 183</p>
+<p class="ref">F. Ringeval, B. Schuller, M. Valstar, S. Jaiswal, E. Marchi, D. Lalanne, R. Cowie, and M. Pantic. 2015b. AV+ EC 2015: The First Affect Recognition Challenge Bridging Across Audio, Video, and Physiological Data. In <i>Proceedings of the 5th International Workshop on Audio/Visual Emotion Challenge</i> ACM, New York, pp. 3&#8211;8. 184</p>
+<p class="ref">F. Ringeval, A. Sonderegger, J. Sauer, and D. Lalanne. 2013. Introducing the RECOLA multimodal corpus of remote collaborative and affective interactions. In <i>Proceedings of the 2nd International Workshop on Emotion Representation, Analysis and Synthesis in Continuous Time and Space (EmoSPACE) in conjunction with the 10th IEEE International Conference and Workshops on Automatic Face and Gesture Recognition</i> IEEE, Washington, DC. DOI: 10.1109/FG.2013.6553805. 184, 189</p>
+<p class="ref">V. Rosas, R. Mihalcea and L. Morency. 2013. Multimodal Sentiment Analysis of Spanish Online Videos. <i>IEEE Intelligent Systems</i>, 28:38&#8211;45. DOI: 10.1109/MIS.2013.9. 186</p>
+<p class="ref">I.J. Roseman. 2011. Emotional behaviors, emotivational goals, emotion strategies: Multiple levels of organization integrate variable and consistent responses. <i>Emotion Review</i>, 3:434&#8211;443. 170, 171</p>
+<p class="ref"><a id="page_200"/>R. Rosenthal and R. Rosnow. 1984. <i>Essentials of behavioral research: Methods and data analysis</i>. McGraw-Hill, New York. 190</p>
+<p class="ref">V. Rozgic, S. Ananthakrishnan, S. Saleem, R. Kumar, and R. Prasad. 2012. Ensemble of SVM trees for multimodal emotion recognition. In <i>Proceedings of the Signal &#38; Information Processing Association Annual Summit and Conference</i> IEEE, Washington, DC, pp. 1&#8211;4. 186</p>
+<p class="ref">W. Ruch. 1995. Will the real relationship between facial expression and affective experience please stand up: The case of exhilaration. <i>Cognition &#38; Emotion</i>, 9:33&#8211;58. DOI: 10.1080/02699939508408964. 170</p>
+<p class="ref">J. Russell. 2003. Core affect and the psychological construction of emotion. <i>Psychological Review</i>, 110:145&#8211;172. 169, 170</p>
+<p class="ref">J. A. Russell, J. A. Bachorowski, and J. M. Fernandez-Dols. 2003. Facial and vocal expressions of emotion. <i>Annual Review of Psychology 54</i>, 329&#8211;349. DOI: 10.1146/annurev.psych.54.101601.145102.</p>
+<p class="ref">J. A. Russell, A. Weiss, and G. A. Mendelsohn. 1989. Affect Grid - A single-item scale of pleasure and arousal. <i>Journal of Personality and Social Psychology</i>, 57:493&#8211;502. DOI: 10.1037/0022-3514.57.3.493. 167</p>
+<p class="ref">A. Savran, H. Cao, M. Shah, A. Nenkova, and R. Verma. 2012. Combining video, audio and lexical indicators of affect in spontaneous conversation via particle filtering. In <i>Proceedings of the 14th ACM International Conference on Multimodal Interaction</i> ACM, New York, pp. 485&#8211;492. DOI: 10.1145/2388676.2388781. 186</p>
+<p class="ref">K. R. Scherer. 2009. The dynamic architecture of emotion: Evidence for the component process model. <i>Cognition &#38; Emotion</i>, 23:1307&#8211;1351. DOI: 10.1080/02699930902928969. 169</p>
+<p class="ref">B. Schuller. 2011. Recognizing Affect from Linguistic Information in 3D Continuous Space. <i>IEEE Transactions on Affective Computing</i>, 2:192&#8211;205. DOI: 10.1109/T-AFFC.2011.17.186, 188</p>
+<p class="ref">B. Schuller, M. Valster, R. Cowie, and M. Pantic. 2011. AVEC 2011: Audio/Visual Emotion Challenge and Workshop. In S. D&#8217;Mello, A. Graesser, B. Schuller and J.-C. Martin, editors, <i>Proceedings of the 4th International Conference on Affective Computing and Intelligent Interaction (ACII 2011)</i>, Springer, Berlin.</p>
+<p class="ref">B. Schuller, M. Valster, F. Eyben, R. Cowie, and M. Pantic. 2012. AVEC 2012: The continuous audio/visual emotion challenge. In <i>Proceedings of the 14th ACM international conference on Multimodal interaction</i> ACM, New York, pp. 449&#8211;456. DOI: 10.1145/2388676.2388758. 188</p>
+<p class="ref">V. J. Shute, M. Ventura, and Y. J. Kim. 2013. Assessment and learning of qualitative physics in Newton&#8217;s playground. <i>The Journal of Educational Research</i>, 106:423&#8211;430. 182</p>
+<p class="ref">M. Soleymani, S. Asghari-Esfeden, M. Pantic, and Y. Fu. 2014. Continuous emotion detection using eeg signals and facial expressions. In <i>Proceedings of the IEEE International Conference on Multimedia and Expo (ICME)</i> IEEE, Washington DC, pp. 1&#8211;6. DOI: 10.1109/ICME.2014.6890301. 186</p>
+<p class="ref"><a id="page_201"/>M. Soleymani, M. Pantic, and T. Pun. 2012. Multi-Modal Emotion Recognition in Response to Videos. <i>IEEE Transactions on Affective Computing</i>, 3:211&#8211;223. DOI: 10.1109/T-AFFC.2011.37. 186</p>
+<p class="ref">S.S. Tomkins. 1962. <i>Affect Imagery Consciousness: Volume I, The Positive Affects</i>. Tavistock, London. 172</p>
+<p class="ref">J. L. Tracy. 2014. An evolutionary approach to understanding distinct emotions. <i>Emotion Review</i>, 6:308&#8211;312. DOI: 10.1177/1754073914534478. 170</p>
+<p class="ref">A. Vinciarelli and A. Esposito. 2018. Multimodal Analysis of Social Signals. In <i>S. Oviatt, B. Schuller, P. Cohen, D. Sonntag, G. Potamianos, and A. Krueger, editors, The Handbook of Multimodal-Multisensor Interfaces, Volume 2: Signal Processing, Architectures, and Detection of Emotion and Cognition</i>. Morgan &#38; Claypool Publishers, San Rafael, CA.</p>
+<p class="ref">H. Vu, Y. Yamazaki, F. Dong, and K. Hirota. 2011. Emotion recognition based on human gesture and speech information using RT middleware. In <i>IEEE International Conference on Fuzzy Systems</i> IEEE, Washington, DC, pp. 787&#8211;791. DOI: 10.1109/FUZZY.2011.6007557. 186</p>
+<p class="ref">J. Wagner and E. Andr&#233;. 2018. Real-time sensing of affect and social signals in a multimodal context. In <i>S. Oviatt, B. Schuller, P. Cohen, D. Sonntag, G. Potamianos, and A. Krueger, editors, The Handbook of Multimodal-Multisensor Interfaces, Volume 2: Signal Processing, Architectures, and Detection of Emotion and Cognition</i>. Morgan &#38; Claypool Publishers, San Rafael, CA.</p>
+<p class="ref">J. Wagner, E. Andre, F. Lingenfelser, J. Kim, and T. Vogt. 2011. Exploring Fusion Methods for Multimodal Emotion Recognition with Missing Data. <i>IEEE Transactions on Affective Computing</i>, 2:206&#8211;218. DOI: 10.1109/T-AFFC.2011.12. 186</p>
+<p class="ref">S. Walter, S. Scherer, M. Schels, M. Glodek, D. Hrabal, M. Schmidt, R. B&#246;ck, K. Limbrecht, H. Traue, and F. Schwenker. 2011. Multimodal emotion classification in naturalistic user behavior. In J. Jacko, editor, <i>Proceedings of the International Conference on Human-Computer Interaction</i>. Springer, Berlin, pp. 603&#8211;611. DOI: 10.1007/978-3-642-21616-9_68. 186</p>
+<p class="ref">S. Wang, Y. Zhu, G. Wu, and Q. Ji. 2013. Hybrid video emotional tagging using users&#8217; EEG and video content. <i>Multimedia Tools and Applications</i>, 1&#8211;27. DOI: 10.1007/s11042-013-1450-8. 186</p>
+<p class="ref">J. R. Williamson, T. F. Quatieri, B. S. Helfer, G. Ciccarelli, and D. D. Mehta. 2014. Vocal and Facial Biomarkers of Depression Based on Motor Incoordination and Timing. In <i>Proceedings of the 4th International Workshop on Audio/Visual Emotion Challenge</i> ACM, New York, pp. 65&#8211;72. DOI: 10.1145/2661806.2661809. 186</p>
+<p class="ref">M. W&#246;llmer, M. Kaiser, F. Eyben, and B. Schuller. 2013a. LSTM modeling of continuous emotions in an audiovisual affect recognition framework. <i>Image and Vision Computing</i>, 31. DOI: 10.1016/j.imavis.2012.03.001. 186</p>
+<p class="ref">M. W&#246;llmer, F. Weninger, T. Knaup, B. Schuller, C. Sun, K. Sagae, and L. Morency. 2013b. YouTube Movie Reviews: Sentiment Analysis in an Audiovisual Context. <i>IEEE Intelligent Systems</i>, 28:46&#8211;53. DOI: 10.1109/MIS.2013.34. 186</p>
+<p class="ref"><a id="page_202"/>C. Wu and W. Liang. 2011. Emotion recognition of affective speech based on multiple classifiers using acoustic-prosodic information and semantic labels. <i>IEEE Transactions on Affective Computing</i>, 2:10&#8211;21. DOI: 10.1109/T-AFFC.2010.16. 186</p>
+<p class="ref">Z. Zeng, M. Pantic, G. Roisman, and T. Huang. 2009. A survey of affect recognition methods: Audio, visual, and spontaneous expressions. <i>IEEE Transactions on Pattern Analysis and Machine Intelligence</i>, 31:39&#8211;58. DOI: 10.1109/TPAMI.2008.52. 169, 527</p>
+<p class="ref">D. Zhou, J. Luo, V. M. Silenzio, Y. Zhou, J. Hu, G. Currier, and H. A. Kautz. 2015. Tackling Mental Health by Integrating Unobtrusive Multimodal Sensing. In <i>Proceedings of the 29th AAAI Conference on Artificial Intelligence (AAAI-2015)</i> ACM, New York, pp. 1401&#8211;1409. 186</p>
+</body>
+</html>

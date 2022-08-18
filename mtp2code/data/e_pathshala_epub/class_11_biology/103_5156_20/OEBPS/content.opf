@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="bookid" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta name="generator" content="Adobe InDesign" />
+    <dc:date>2020-05-04</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2020-08-26T17:35:06Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta name="Sigil version" content="0.9.12" />
+    <meta name="cover" content="cover.png" />
+  </metadata>
+  <manifest>
+    <item id="ch-20" href="Text/ch-20.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="toc" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="ch-20.css" href="Styles/ch-20.css" media-type="text/css"/>
+    <item id="BookmanOldStyle-Bold.TTF" href="Fonts/BookmanOldStyle-Bold.TTF" media-type="application/vnd.ms-opentype"/>
+    <item id="BookmanOldStyle-BoldItalic.TTF" href="Fonts/BookmanOldStyle-BoldItalic.TTF" media-type="application/vnd.ms-opentype"/>
+    <item id="x1004.png" href="Images/1004.png" media-type="image/png"/>
+    <item id="x1028.png" href="Images/1028.png" media-type="image/png"/>
+    <item id="x1041.png" href="Images/1041.png" media-type="image/png"/>
+    <item id="x1093.png" href="Images/1093.png" media-type="image/png"/>
+    <item id="x11080CH20_fmt.png" href="Images/11080CH20_fmt.png" media-type="image/png"/>
+    <item id="x1_fmt.png" href="Images/1_fmt.png" media-type="image/png"/>
+    <item id="x733.png" href="Images/733.png" media-type="image/png"/>
+    <item id="x825.png" href="Images/825.png" media-type="image/png"/>
+    <item id="x864.png" href="Images/864.png" media-type="image/png"/>
+    <item id="x889.png" href="Images/889.png" media-type="image/png"/>
+    <item id="x898.png" href="Images/898.png" media-type="image/png"/>
+    <item id="x947.png" href="Images/947.png" media-type="image/png"/>
+    <item id="x966.png" href="Images/966.png" media-type="image/png"/>
+    <item id="Fig.-20.8--artist-make-_fmt.png" href="Images/Fig.%2020.8%20%28artist%20make%29_fmt.png" media-type="image/png"/>
+    <item id="cover.png" href="Images/cover.png" media-type="image/png" properties="cover-image"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="ch-20"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

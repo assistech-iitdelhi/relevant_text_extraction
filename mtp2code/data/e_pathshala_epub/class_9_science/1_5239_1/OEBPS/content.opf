@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package unique-identifier="bookid" version="3.0" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign" name="generator"/>
+    <meta property="dcterms:modified">2021-02-24T10:14:13Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta content="0.9.3" name="Sigil version"/>
+    <dc:date event="">2020-04-28</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta name="cover" content="cover.PNG"/>
+  </metadata>
+  <manifest>
+    <item href="Text/Untitled-1.xhtml" id="Untitled-1" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="Text/toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
+    <item href="Styles/Untitled-1.css" id="Untitled-1.css" media-type="text/css"/>
+    <item href="Fonts/Garamond-Bold.TTF" id="Garamond-Bold.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/SymbolMT.ttf" id="SymbolMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/TimesNewRomanPSMT.ttf" id="TimesNewRomanPSMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item href="Images/0964CH01_fmt.jpeg" id="x0964CH01_fmt.jpeg" media-type="image/jpeg"/>
+    <item href="Images/1002.png" id="x1002.png" media-type="image/png"/>
+    <item href="Images/1029.png" id="x1029.png" media-type="image/png"/>
+    <item href="Images/1086.png" id="x1086.png" media-type="image/png"/>
+    <item href="Images/1100.png" id="x1100.png" media-type="image/png"/>
+    <item href="Images/1125.png" id="x1125.png" media-type="image/png"/>
+    <item href="Images/1136.png" id="x1136.png" media-type="image/png"/>
+    <item href="Images/1186.png" id="x1186.png" media-type="image/png"/>
+    <item href="Images/1242.png" id="x1242.png" media-type="image/png"/>
+    <item href="Images/1257.png" id="x1257.png" media-type="image/png"/>
+    <item href="Images/1267.png" id="x1267.png" media-type="image/png"/>
+    <item href="Images/1278.png" id="x1278.png" media-type="image/png"/>
+    <item href="Images/764.png" id="x764.png" media-type="image/png"/>
+    <item href="Images/857.png" id="x857.png" media-type="image/png"/>
+    <item href="Images/922.png" id="x922.png" media-type="image/png"/>
+    <item href="Images/938.png" id="x938.png" media-type="image/png"/>
+    <item href="Images/987.png" id="x987.png" media-type="image/png"/>
+    <item href="Images/bihudance_fmt.jpeg" id="bihudance_fmt.jpeg" media-type="image/jpeg"/>
+    <item href="Images/bose_fmt.jpeg" id="bose_fmt.jpeg" media-type="image/jpeg"/>
+    <item href="Images/einstein_fmt.jpeg" id="einstein_fmt.jpeg" media-type="image/jpeg"/>
+    <item href="Images/t.PNG" id="t.PNG" media-type="image/png"/>
+    <item href="Images/cover.PNG" id="cover.PNG" media-type="image/png"/>
+    <item href="Text/cover.xhtml" id="cover.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Untitled-1"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference href="Text/cover.xhtml" title="Cover" type="cover"></reference>
+  </guide>
+</package>

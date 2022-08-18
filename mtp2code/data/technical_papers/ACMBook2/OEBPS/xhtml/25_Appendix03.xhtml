@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>The Sparse Fourier Transform: Theory and Practice</title>
+<link rel="stylesheet" type="text/css" href="../styles/stylesheet.css"/>
+<link rel="stylesheet" type="application/vnd.adobe-page-template+xml" href="../styles/page-template.xpgt"/>
+</head>
+<body>
+<p class="chnoa"><a id="page_221"/><b>APPENDIX</b></p>
+<p class="chno"><b>C</b></p>
+<p class="chtitle"><b>Lower Bound of the Sparse Fourier Transform in the General Case</b></p>
+<p class="noindent">In this appendix, we show any algorithm satisfying <a href="13_Chapter04.xhtml#eq4_1">Equation (4.1)</a> must access <i>&#8486;</i>(<i>k</i> log(<i>n/k</i>)/log log <i>n</i>) samples of <i>x</i>.</p>
+<p class="indent">We translate this problem into the language of compressive sensing.</p>
+<p class="noindentt"><b>Theorem C.1</b> Let <i>F</i> &#8712; <span class="f1">C</span><sup><i>n</i>&#215;<i>n</i></sup> be orthonormal and satisfy <img src="../images/in221_1.png" alt="Image"/> for all <i>i, j</i>. Suppose an algorithm takes <i>m</i> adaptive samples of <i>Fx</i> and computes <i>x</i>&#8242; with</p>
+<p class="image"><img src="../images/pg221_2.png" alt="Image"/></p>
+<p class="noindent">for any <i>x</i>, with probability at least 3/4. Then it must have <i>m</i> = &#8486;(<i>k</i> log(<i>n/k</i>)/ log log <i>n</i>).</p>
+<p class="noindentt"><b>Corollary C.1</b> Any algorithm computing the approximate Fourier transform must access &#8486;(<i>k</i> log(<i>n/k</i>)/log log <i>n</i>) samples from the time domain.</p>
+<p class="indentt">If the samples were chosen non-adaptively, we would immediately have <i>m</i> = &#8486;(<i>k</i> log(<i>n/k</i>)) by Price and Woodruff [2011]. However, an algorithm could choose samples based on the values of previous samples. In the sparse recovery framework allowing general linear measurements, this adaptivity can decrease the number of measurements to <i>O</i>(<i>k</i> log log(<i>n/k</i>)) [Indyk et al. 2011]; in this section, we show that adaptivity is much less effective in our setting where adaptivity only allows the choice of Fourier coefficients.</p>
+<p class="indent">We follow the framework of Section 4 of Price and Woodruff [2011]. In this section we use standard notation from information theory, including <i>I</i>(<i>x; y</i>) for mutual information, <i>H</i>(<i>x</i>) for discrete entropy, and <i>h</i>(<i>x</i>) for continuous entropy. Consult a reference such as Cover and Thomas [1991] for details.</p>
+<p class="indent"><a id="page_222"/>Let <span class="f2">F</span> &#8834; {<i>S</i> &#8834; [<i>n</i>] : |<i>S</i>| = <i>k</i>} be a family of <i>k</i>-sparse supports such that:</p>
+<p class="bullt">&#8226;&#160;&#160;|<i>S</i> &#8853; <i>S</i>&#8242;| &#8805; <i>k</i> for <i>S</i> &#8800; <i>S</i>&#8242; &#8712; <span class="f2">F</span>, where &#8853; denotes the exclusive difference between two sets, and</p>
+<p class="bullt">&#8226; log |<span class="f2">F</span>| = &#937;(<i>k</i> log(<i>n/k</i>)).</p>
+<p class="noindentt">This is possible; for example, a random code on [<i>n/k</i>]<sup><i>k</i></sup> with relative distance 1/2 has these properties.</p>
+<p class="indent">For each <i>S</i> &#8712; <span class="f2">F</span>, let <i>X<sup>S</sup></i> = {<i>x</i> &#8712; {0, &#177;1}<sup><i>n</i></sup> | supp(<i>x<sup>S</sup></i>) = <i>S</i>}. Let <i>x</i> &#8712; <i>X<sup>S</sup></i> uniformly at random. The variables <i>x<sub>i</sub>, i</i> &#8712; <i>S</i>, are i.i.d. subgaussian random variables with parameter <i>&#963;</i><sup>2</sup> = 1, so for any row <i>F<sub>j</sub></i> of <i>F, F<sub>j</sub>x</i> is subgaussian with parameter <i>&#963;</i><sup>2</sup> = <i>k/n</i>. Therefore,</p>
+<p class="image"><img src="../images/pg222_5.png" alt="Image"/></p>
+<p class="noindent">hence for each <i>S</i>, we can choose an <i>x<sup>S</sup></i> &#8712; <i>X<sup>S</sup></i> with</p>
+<p class="image"><a id="eqC_1"/><img src="../images/eqC_1.png" alt="Image"/></p>
+<p class="noindent">Let <i>X</i> = {<i>x<sup>S</sup></i> | <i>S</i> &#8712; <span class="f2">F</span>} be the set of such <i>x<sup>S</sup></i>.</p>
+<p class="indent">Let <img src="../images/in222_7.png" alt="Image"/> be i.i.d. normal with variance <i>&#945;k/n</i> in each coordinate.</p>
+<p class="indent">Consider the following process.</p>
+<p class="noindentt"><b>Procedure.</b> First, Alice chooses <i>S</i> &#8712; <span class="f2">F</span> uniformly at random, then selects the <i>x</i> &#8714; <i>X</i> with supp(<i>x</i>) = <i>S</i>. Alice independently chooses <img src="../images/in222_7.png" alt="Image"/> for a parameter <i>&#945;</i> = &#920;(1) sufficiently small. For <i>j</i> &#8712; [<i>m</i>], Bob chooses <i>i<sub>j</sub></i> &#8712; [<i>n</i>] and observes <img src="../images/in222_10.png" alt="Image"/>. He then computes the result <i>x</i>&#8242; &#8776; <i>x</i> of sparse recovery, rounds to <i>X</i> by <img src="../images/in222_11.png" alt="Image"/>, and sets <i>S</i>&#8242; = supp(<i>x&#770;</i>). This gives a Markov chain <i>S</i> &#8594; <i>x</i> &#8594; <i>y</i> &#8594; <i>x</i>&#8242; &#8594; <i>x</i>&#770; &#8594; <i>S</i>&#8242;.</p>
+<p class="indent">We will show that deterministic sparse recovery algorithms require large <i>m</i> to succeed on this input distribution <i>x</i> + <i>w</i> with 3/4 probability. By Yao&#8217;s minimax principle, this means randomized sparse recovery algorithms also require large <i>m</i> to succeed with 3/4 probability.</p>
+<p class="indent">Our strategy is to give upper and lower bounds on <i>I</i>(<i>S; S</i>&#8242;), the mutual information between <i>S</i> and <i>S</i>&#8242;.</p>
+<p class="noindentt"><b>Lemma C.1</b> Analog of Lemma 4.3 of Price and Woodruff [2011] for <i>&#8714;</i> = <i>O</i>(1). There exists a constant <i>&#945;</i>&#8242; &#62; 0 such that if <i>&#945;</i> &#60; <i>&#945;</i>&#8242;, then <i>I</i>(<i>S; S</i>&#8242;) = &#8486;(<i>k</i> log(<i>n/k</i>)).</p>
+<p class="noindentt"><a id="page_223"/><b>Proof</b> Assuming the sparse recovery succeeds (as happens with 3/4 probability), we have <img src="../images/in223_1.png" alt="Image"/>, which implies <img src="../images/in223_2.png" alt="Image"/>. Therefore,</p>
+<p class="image"><img src="../images/in223_3.png" alt="Image"/></p>
+<p class="noindent">We also know <img src="../images/in223_4.png" alt="Image"/> for all distinct <i>x</i>&#8242;, <i>x</i>&#8243; &#8714; <i>X</i> by construction. Because <img src="../images/in223_4a.png" alt="Image"/>, with probability at least 3/4 we have <img src="../images/in223_5.png" alt="Image"/> for sufficiently small <i>&#945;</i>. But then <img src="../images/in223_6.png" alt="Image"/>, so <i>x&#770;</i> = <i>x</i> and <i>S</i> = <i>S</i>&#8242;. Thus, Pr[<i>S</i> &#8800; <i>S</i>&#8242;] &#8804; 1/2.</p>
+<p class="indent">Fano&#8217;s inequality states <img src="../images/in223_8.png" alt="Image"/>. Thus,</p>
+<p class="image"><img src="../images/in223_9.png" alt="Image"/></p>
+<p class="noindent">as desired. &#9632;</p>
+<p class="indentt">We next show an analog of their upper bound (Price and Woodruff [2011, lemma 4.1]) on <i>I</i>(<i>S; S</i>&#8242;) for adaptive measurements of bounded &#8467;<sub>&#8734;</sub> norm. The proof follows the lines of [Price and Woodruff 2011], but is more careful about dependencies and needs the &#8467;<sub>&#8734;</sub> bound on <i>Fx</i>.</p>
+<p class="noindentt"><b>Lemma C.2</b></p>
+<p class="image"><img src="../images/in223_10.png" alt="Image"/></p>
+<p class="noindent"><b>Proof</b> Let <img src="../images/in223_11.png" alt="Image"/> for <i>j</i> &#8712; [<i>m</i>], and let <i>w</i>&#8242;<sub><i>j</i></sub> = <i>A<sub>j</sub>w</i>. The <i>w</i>&#8242;<sub><i>j</i></sub> are independent normal variables with variance <img src="../images/in223_12.png" alt="Image"/>. Because the <i>A<sub>j</sub></i> are orthonormal and <i>w</i> is drawn from a rotationally invariant distribution, the <i>w</i>&#8242; are also independent of <i>x</i>.</p>
+<p class="indent">Let <i>y<sub>j</sub></i> = <i>A<sub>j</sub>x</i> + <i>w</i>&#8242;<sub><i>j</i></sub>. We know <i>I</i>(<i>S; S</i>&#8242;) &#8804; <i>I</i>(<i>x; y</i>) because <i>S</i> &#8594; <i>x</i> &#8594; <i>y</i> &#8594; <i>S</i>&#8242; is a Markov chain. Because the variables <i>A<sub>j</sub></i> are deterministic given <i>y</i><sub>1</sub>, &#8230;, <i>y</i><sub><i>j</i>&#8722;1</sub>,</p>
+<p class="image"><img src="../images/in223_14.png" alt="Image"/></p>
+<p class="noindent">By the chain rule for information,</p>
+<p class="image"><a id="page_224"/><img src="../images/pg223_15.png" alt="Image"/></p>
+<p class="noindent">Thus, it suffices to show <img src="../images/in223_16.png" alt="Image"/> for all <i>j</i>.</p>
+<p class="indent">Note that <i>A<sub>j</sub></i> depends only on <i>y</i><sub>1</sub>, &#8230;, <i>y</i><sub><i>j</i>&#8722;1</sub>, so it is independent of <i>w</i>&#8242;<i><sub>j</sub></i>. Thus,</p>
+<p class="image"><img src="../images/in223_17.png" alt="Image"/></p>
+<p class="noindent">by <a href="#eqC_1">Equation (C.1)</a>. Because the maximum entropy distribution under an &#8467;<sub>2</sub> constraint is a Gaussian, we have</p>
+<p class="image"><img src="../images/in223_18.png" alt="Image"/></p>
+<p class="noindent">as desired. &#9632;</p>
+<p class="indentt">Theorem C.1 follows from Lemma C.1 and Lemma C.2, with <i>&#945;</i> = &#920;(1).</p>
+</body>
+</html>

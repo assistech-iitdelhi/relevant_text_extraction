@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package unique-identifier="bookid" version="3.0" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign" name="generator"/>
+    <dc:date>2020-06-08</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2021-01-22T14:48:43Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta content="0.9.3" name="Sigil version"/>
+    <meta name="cover" content="lebo1cc.jpg"/>
+  </metadata>
+  <manifest>
+    <item href="Text/Chapter-16.xhtml" id="Chapter-16.xhtml" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="Styles/ch16.css" id="ch16.css" media-type="text/css"/>
+    <item href="Fonts/BookmanOldStyle-Bold.TTF" id="BookmanOldStyle-Bold.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/BookmanOldStyle-BoldItalic.TTF" id="BookmanOldStyle-BoldItalic.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/Calibri.ttf" id="Calibri.ttf" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/CenturyGothic.TTF" id="CenturyGothic.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Images/1014.png" id="x1014.png" media-type="image/png"/>
+    <item href="Images/1039.png" id="x1039.png" media-type="image/png"/>
+    <item href="Images/1046.png" id="x1046.png" media-type="image/png"/>
+    <item href="Images/1088.png" id="x1088.png" media-type="image/png"/>
+    <item href="Images/1089.png" id="x1089.png" media-type="image/png"/>
+    <item href="Images/1109.png" id="x1109.png" media-type="image/png"/>
+    <item href="Images/1118.png" id="x1118.png" media-type="image/png"/>
+    <item href="Images/1141.png" id="x1141.png" media-type="image/png"/>
+    <item href="Images/1142.png" id="x1142.png" media-type="image/png"/>
+    <item href="Images/12083CH16_fmt.png" id="x12083CH16_fmt.png" media-type="image/png"/>
+    <item href="Images/1page_fmt.png" id="x1page_fmt.png" media-type="image/png"/>
+    <item href="Images/874.png" id="x874.png" media-type="image/png"/>
+    <item href="Images/875.png" id="x875.png" media-type="image/png"/>
+    <item href="Images/884.png" id="x884.png" media-type="image/png"/>
+    <item href="Images/895.png" id="x895.png" media-type="image/png"/>
+    <item href="Images/936.png" id="x936.png" media-type="image/png"/>
+    <item href="Images/954.png" id="x954.png" media-type="image/png"/>
+    <item href="Images/976.png" id="x976.png" media-type="image/png"/>
+    <item href="Images/985.png" id="x985.png" media-type="image/png"/>
+    <item href="Images/992.png" id="x992.png" media-type="image/png"/>
+    <item href="Images/p-algal_bloom_orielton-_fmt.png" id="p-algal_bloom_orielton-_fmt.png" media-type="image/png"/>
+    <item href="Images/summery_fmt.png" id="summery_fmt.png" media-type="image/png"/>
+    <item href="Images/lebo1cc.jpg" id="lebo1cc.jpg" media-type="image/jpeg" properties="cover-image"/>
+    <item href="Text/cover.xhtml" id="cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    <item href="Styles/sgc-toc.css" id="sgc-toc.css" media-type="text/css"/>
+    <item href="Text/TOC.xhtml" id="TOC.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Chapter-16.xhtml"/>
+    <itemref idref="TOC.xhtml"/>
+  </spine>
+  <guide>
+    <reference href="Text/cover.xhtml" title="Cover" type="cover"></reference>
+    <reference href="Text/TOC.xhtml" title="Table Of Contents" type="toc"></reference>
+  </guide>
+</package>

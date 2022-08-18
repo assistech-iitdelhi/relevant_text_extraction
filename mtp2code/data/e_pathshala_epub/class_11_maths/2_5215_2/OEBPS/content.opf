@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/" unique-identifier="bookid" version="3.0" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign 12.0" name="generator"/>
+    <meta property="ibooks:specified-fonts">true</meta>
+    <dc:title>ch2</dc:title>
+    <dc:date>2017-09-11T05:23:49Z</dc:date>
+    <dc:language>en-US</dc:language>
+    <dc:language>fr-FR</dc:language>
+    <meta property="dcterms:modified">2021-02-02T11:34:51Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta content="0.9.3" name="Sigil version"/>
+    <meta name="cover" content="Cover.png"/>
+  </metadata>
+  <manifest>
+    <item href="Text/ch2.xhtml" id="ch2" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="Styles/idGeneratedStyles.css" id="idGeneratedStyles.css" media-type="text/css"/>
+    <item href="Fonts/TimesNewRomanPS-BoldItalicMT.TTF" id="TimesNewRomanPS-BoldItalicMT.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/TimesNewRomanPS-BoldMT.TTF" id="TimesNewRomanPS-BoldMT.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/TimesNewRomanPS-ItalicMT.TTF" id="TimesNewRomanPS-ItalicMT.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/TimesNewRomanPSMT.TTF" id="TimesNewRomanPSMT.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/Wingdings-Regular.TTF" id="Wingdings-Regular.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Images/1.png" id="x1.png" media-type="image/png"/>
+    <item href="Images/10.png" id="x10.png" media-type="image/png"/>
+    <item href="Images/12.png" id="x12.png" media-type="image/png"/>
+    <item href="Images/13.png" id="x13.png" media-type="image/png"/>
+    <item href="Images/14.png" id="x14.png" media-type="image/png"/>
+    <item href="Images/16.png" id="x16.png" media-type="image/png"/>
+    <item href="Images/17.png" id="x17.png" media-type="image/png"/>
+    <item href="Images/18.png" id="x18.png" media-type="image/png"/>
+    <item href="Images/19.png" id="x19.png" media-type="image/png"/>
+    <item href="Images/2.png" id="x2.png" media-type="image/png"/>
+    <item href="Images/22.png" id="x22.png" media-type="image/png"/>
+    <item href="Images/24.png" id="x24.png" media-type="image/png"/>
+    <item href="Images/25.png" id="x25.png" media-type="image/png"/>
+    <item href="Images/26.png" id="x26.png" media-type="image/png"/>
+    <item href="Images/27.png" id="x27.png" media-type="image/png"/>
+    <item href="Images/28.png" id="x28.png" media-type="image/png"/>
+    <item href="Images/29.png" id="x29.png" media-type="image/png"/>
+    <item href="Images/3.png" id="x3.png" media-type="image/png"/>
+    <item href="Images/30.png" id="x30.png" media-type="image/png"/>
+    <item href="Images/31.png" id="x31.png" media-type="image/png"/>
+    <item href="Images/32.png" id="x32.png" media-type="image/png"/>
+    <item href="Images/33.png" id="x33.png" media-type="image/png"/>
+    <item href="Images/34.png" id="x34.png" media-type="image/png"/>
+    <item href="Images/35.png" id="x35.png" media-type="image/png"/>
+    <item href="Images/36.png" id="x36.png" media-type="image/png"/>
+    <item href="Images/38.png" id="x38.png" media-type="image/png"/>
+    <item href="Images/39.png" id="x39.png" media-type="image/png"/>
+    <item href="Images/4.png" id="x4.png" media-type="image/png"/>
+    <item href="Images/5.png" id="x5.png" media-type="image/png"/>
+    <item href="Images/8.png" id="x8.png" media-type="image/png"/>
+    <item href="Images/9.png" id="x9.png" media-type="image/png"/>
+    <item href="Images/Fig2.1.png" id="Fig2.1.png" media-type="image/png"/>
+    <item href="Images/Fig2.10.png" id="Fig2.10.png" media-type="image/png"/>
+    <item href="Images/Fig2.11.png" id="Fig2.11.png" media-type="image/png"/>
+    <item href="Images/Fig2.12.png" id="Fig2.12.png" media-type="image/png"/>
+    <item href="Images/Fig2.13.png" id="Fig2.13.png" media-type="image/png"/>
+    <item href="Images/Fig2.14.png" id="Fig2.14.png" media-type="image/png"/>
+    <item href="Images/Fig2.14_eqn.png" id="Fig2.14_eqn.png" media-type="image/png"/>
+    <item href="Images/Fig2.15.png" id="Fig2.15.png" media-type="image/png"/>
+    <item href="Images/Fig2.16.png" id="Fig2.16.png" media-type="image/png"/>
+    <item href="Images/Fig2.17.png" id="Fig2.17.png" media-type="image/png"/>
+    <item href="Images/Fig2.2.png" id="Fig2.2.png" media-type="image/png"/>
+    <item href="Images/Fig2.3.png" id="Fig2.3.png" media-type="image/png"/>
+    <item href="Images/Fig2.4.png" id="Fig2.4.png" media-type="image/png"/>
+    <item href="Images/Fig2.5a.png" id="Fig2.5a.png" media-type="image/png"/>
+    <item href="Images/Fig2.6a.png" id="Fig2.6a.png" media-type="image/png"/>
+    <item href="Images/Fig2.7a.png" id="Fig2.7a.png" media-type="image/png"/>
+    <item href="Images/Fig2.8.png" id="Fig2.8.png" media-type="image/png"/>
+    <item href="Images/Fig2.9.png" id="Fig2.9.png" media-type="image/png"/>
+    <item href="Images/g_w_leibniz_2.png" id="g_w_leibniz_2.png" media-type="image/png"/>
+    <item href="Images/Screenshot%20from%202017-09-12%2010-42-52.png" id="Screenshot_from_2017-09-12_10-42-52.png" media-type="image/png"/>
+    <item href="Images/Screenshot%20from%202017-09-12%2010-43-04.png" id="Screenshot_from_2017-09-12_10-43-04.png" media-type="image/png"/>
+    <item href="Images/Screenshot%20from%202017-09-12%2010-49-45.png" id="Screenshot_from_2017-09-12_10-49-45.png" media-type="image/png"/>
+    <item href="Images/Screenshot%20from%202017-09-12%2010-49-59.png" id="Screenshot_from_2017-09-12_10-49-59.png" media-type="image/png"/>
+    <item href="Images/Screenshot%20from%202017-09-12%2010-56-43.png" id="Screenshot_from_2017-09-12_10-56-43.png" media-type="image/png"/>
+    <item href="Images/Screenshot%20from%202017-09-12%2010-56-55.png" id="Screenshot_from_2017-09-12_10-56-55.png" media-type="image/png"/>
+    <item href="Images/Screenshot%20from%202017-09-12%2012-07-46.png" id="Screenshot_from_2017-09-12_12-07-46.png" media-type="image/png"/>
+    <item href="Images/Cover.png" id="Cover.png" media-type="image/png" properties="cover-image"/>
+    <item href="Text/cover.xhtml" id="cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    <item href="Images/Mathematics-002.png" id="Mathematics-002.png" media-type="image/png"/>
+    <item href="Styles/sgc-toc.css" id="sgc-toc.css" media-type="text/css"/>
+    <item href="Text/TOC.xhtml" id="TOC.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="ch2"/>
+    <itemref idref="TOC.xhtml"/>
+  </spine>
+  <guide>
+    <reference href="Text/cover.xhtml" title="Cover" type="cover"></reference>
+    <reference href="Text/TOC.xhtml" title="Table Of Contents" type="toc"></reference>
+  </guide>
+</package>

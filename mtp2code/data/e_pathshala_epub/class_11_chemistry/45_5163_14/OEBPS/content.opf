@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/" unique-identifier="bookid" version="3.0" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign 12.0" name="generator"/>
+    <meta property="ibooks:specified-fonts">true</meta>
+    <dc:title>ch14</dc:title>
+    <dc:date>2018-06-12T05:13:53Z</dc:date>
+    <dc:language>en-GB</dc:language>
+    <dc:language>en-US</dc:language>
+    <meta property="dcterms:modified">2018-08-08T08:48:40Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta name="cover" content="cover.png"/>
+    <meta content="0.9.3" name="Sigil version"/>
+  </metadata>
+  <manifest>
+    <item href="Text/ch14.xhtml" id="ch14" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="Text/toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
+    <item href="Styles/idGeneratedStyles.css" id="idGeneratedStyles.css" media-type="text/css"/>
+    <item href="Fonts/Bookman-Demi.TTF" id="Bookman-Demi.TTF" media-type="application/x-font-ttf"/>
+    <item href="Fonts/Bookman-DemiItalic.TTF" id="Bookman-DemiItalic.TTF" media-type="application/x-font-ttf"/>
+    <item href="Fonts/Bookman-Light.TTF" id="Bookman-Light.TTF" media-type="application/x-font-ttf"/>
+    <item href="Fonts/Bookman-LightItalic.TTF" id="Bookman-LightItalic.TTF" media-type="application/x-font-ttf"/>
+    <item href="Fonts/Symbol.ttf" id="Symbol.ttf" media-type="application/x-font-ttf"/>
+    <item href="Fonts/TimesNewRomanPSMT.TTF" id="TimesNewRomanPSMT.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Images/1.png" id="x1.png" media-type="image/png"/>
+    <item href="Images/11.png" id="x11.png" media-type="image/png"/>
+    <item href="Images/12.png" id="x12.png" media-type="image/png"/>
+    <item href="Images/16.png" id="x16.png" media-type="image/png"/>
+    <item href="Images/17.png" id="x17.png" media-type="image/png"/>
+    <item href="Images/18.png" id="x18.png" media-type="image/png"/>
+    <item href="Images/19.png" id="x19.png" media-type="image/png"/>
+    <item href="Images/2.png" id="x2.png" media-type="image/png"/>
+    <item href="Images/3.png" id="x3.png" media-type="image/png"/>
+    <item href="Images/413_eps.png" id="x413_eps.png" media-type="image/png"/>
+    <item href="Images/5.png" id="x5.png" media-type="image/png"/>
+    <item href="Images/arrow-hv.png" id="arrow-hv.png" media-type="image/png"/>
+    <item href="Images/arrow-uv-rev.png" id="arrow-uv-rev.png" media-type="image/png"/>
+    <item href="Images/arrow-uv.png" id="arrow-uv.png" media-type="image/png"/>
+    <item href="Images/chemists.png" id="chemists.png" media-type="image/png"/>
+    <item href="Images/Fig14_1_nn.png" id="Fig14_1_nn.png" media-type="image/png"/>
+    <item href="Images/Fig14_2.png" id="Fig14_2.png" media-type="image/png"/>
+    <item href="Images/Fig14_3.png" id="Fig14_3.png" media-type="image/png"/>
+    <item href="Images/Image1205.png" id="Image1205.png" media-type="image/png"/>
+    <item href="Images/Image1214.png" id="Image1214.png" media-type="image/png"/>
+    <item href="Images/Image1224.png" id="Image1224.png" media-type="image/png"/>
+    <item href="Images/objectives.png" id="objectives.png" media-type="image/png"/>
+    <item href="Images/quot-3.png" id="quot-3.png" media-type="image/png"/>
+    <item href="Images/quot-31.png" id="quot-31.png" media-type="image/png"/>
+    <item href="Images/summary-1.png" id="summary-1.png" media-type="image/png"/>
+    <item href="Images/Swachh_Bharat_Logo.png" id="Swachh_Bharat_Logo.png" media-type="image/png"/>
+    <item href="Images/cover.png" id="cover.png" media-type="image/png" properties="cover-image"/>
+    <item href="Text/cover.xhtml" id="cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    <item href="Images/Capture.JPG" id="Capture.JPG" media-type="image/jpeg"/>
+    <item href="Images/table2.JPG" id="table2.JPG" media-type="image/jpeg"/>
+    <item href="Images/table3.JPG" id="table3.JPG" media-type="image/jpeg"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="ch14"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference href="Text/cover.xhtml" title="Cover" type="cover"></reference>
+  </guide>
+</package>

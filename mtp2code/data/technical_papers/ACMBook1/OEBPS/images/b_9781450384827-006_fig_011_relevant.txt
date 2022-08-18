@@ -1,0 +1,10 @@
+Figure 6.11 demonstrates the user interface of EventMiner. The basic components are:
+
+Figure 6.11Analytical dashboard of EventMiner framework.
+1.Data selection panel: Select different events and event streams from database.
+
+2.Data-driven operator panel: These operators are utilized for pattern mining from event streams.
+
+3.Hypotheses-driven operator panel: These operators are used for pattern formulation and pattern query from input events.
+
+4.Visualization panels: The results of pattern mining and pattern query are displayed visually in the form of co-occurrence matrices and histograms.

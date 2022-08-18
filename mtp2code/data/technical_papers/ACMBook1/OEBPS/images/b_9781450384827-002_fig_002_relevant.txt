@@ -1,0 +1,13 @@
+A popular class of event models often encountered in distributed event notification and data stream management systems uses simple tuples to represent events. However, an event model that establishes a common foundation for a wide diversity of applications should address several elementary aspects of event description. Westermann and Jain [2007] introduced six aspects of an event model as shown in Figure 2.2.
+Figure 2.2Basic aspects of a common event model [Westermann and Jain 2007].
+1.Temporal aspect. Events are inherently related to the concept of time. Applications might be interested in the event occurrence timestamp and duration (in the case of continuous events) or its relation to other events.
+
+2.Spatial aspect. A common event model should support different ways of capturing the spatial aspect of an event. Similar to the temporal aspect, applications might need to define an event’s location not only in an absolute manner (i.e., latitude, longitude, and altitude) but also relative to other events’ locations.
+
+3.Informational aspect. An event model should capture enough information about the events that occur, including event type, participants in an event, and their roles. It might also involve further parameters describing the event (e.g., heart rate of a person during exercise event or calorie consumption during eating event).
+
+4.Structural aspect. Event is a concept that can be defined at many different levels of abstraction, for example, a cooking event could aggregate low-level events, such as opening a cabinet and picking up a spice, into higher-level events. Thus, a common event model should support representation of sub-events that occur as part of a more complex event.
+
+1.Experiential aspect. Although a common event model needs to be independent of the media that capture the event, it should provide applications with the ability to show how the events evolve. Any kind of sensor data that is available over the course of events (i.e., image, video, audio, sensor signal, etc.) can be represented under this aspect.
+
+2.Causality aspect. In historical terms, every event has a cause and is itself the cause of subsequent events that can therefore be considered its effect(s). A common event model should offer a means to express causality and permit the explicit representation of chains of causal events for individual events.

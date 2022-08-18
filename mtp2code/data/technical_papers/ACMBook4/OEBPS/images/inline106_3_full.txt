@@ -1,0 +1,163 @@
+text_annotations {
+  locale: "und"
+  description: "Pn\n"
+  bounding_poly {
+    vertices {
+      x: 1
+      y: 1
+    }
+    vertices {
+      x: 15
+      y: 1
+    }
+    vertices {
+      x: 15
+      y: 14
+    }
+    vertices {
+      x: 1
+      y: 14
+    }
+  }
+}
+text_annotations {
+  description: "Pn"
+  bounding_poly {
+    vertices {
+      x: 1
+      y: 1
+    }
+    vertices {
+      x: 15
+      y: 1
+    }
+    vertices {
+      x: 15
+      y: 14
+    }
+    vertices {
+      x: 1
+      y: 14
+    }
+  }
+}
+full_text_annotation {
+  pages {
+    width: 17
+    height: 14
+    blocks {
+      bounding_box {
+        vertices {
+          x: 1
+          y: 1
+        }
+        vertices {
+          x: 15
+          y: 1
+        }
+        vertices {
+          x: 15
+          y: 14
+        }
+        vertices {
+          x: 1
+          y: 14
+        }
+      }
+      paragraphs {
+        bounding_box {
+          vertices {
+            x: 1
+            y: 1
+          }
+          vertices {
+            x: 15
+            y: 1
+          }
+          vertices {
+            x: 15
+            y: 14
+          }
+          vertices {
+            x: 1
+            y: 14
+          }
+        }
+        words {
+          bounding_box {
+            vertices {
+              x: 1
+              y: 1
+            }
+            vertices {
+              x: 15
+              y: 1
+            }
+            vertices {
+              x: 15
+              y: 14
+            }
+            vertices {
+              x: 1
+              y: 14
+            }
+          }
+          symbols {
+            bounding_box {
+              vertices {
+                x: 1
+                y: 1
+              }
+              vertices {
+                x: 9
+                y: 1
+              }
+              vertices {
+                x: 9
+                y: 14
+              }
+              vertices {
+                x: 1
+                y: 14
+              }
+            }
+            text: "P"
+            confidence: 0.9700000286102295
+          }
+          symbols {
+            property {
+              detected_break {
+                type_: LINE_BREAK
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 11
+                y: 1
+              }
+              vertices {
+                x: 15
+                y: 1
+              }
+              vertices {
+                x: 15
+                y: 14
+              }
+              vertices {
+                x: 11
+                y: 14
+              }
+            }
+            text: "n"
+            confidence: 0.9399999976158142
+          }
+          confidence: 0.949999988079071
+        }
+        confidence: 0.949999988079071
+      }
+      block_type: TEXT
+      confidence: 0.949999988079071
+    }
+  }
+  text: "Pn\n"
+}

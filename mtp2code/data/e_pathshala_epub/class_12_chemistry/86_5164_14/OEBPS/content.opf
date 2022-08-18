@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/" unique-identifier="bookid" version="3.0" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <dc:title>Untitled-14</dc:title>
+    <dc:language>en-GB</dc:language>
+    <dc:language>en-US</dc:language>
+    <dc:date opf:event="modification" xmlns:opf="http://www.idpf.org/2007/opf">2018-07-19</dc:date>
+    <meta content="Adobe InDesign 12.0" name="generator"/>
+    <meta property="ibooks:specified-fonts">true</meta>
+    <meta property="dcterms:modified">2018-08-06T14:25:52Z</meta>
+    <meta content="0.9.5" name="Sigil version"/>
+    <meta name="cover" content="cover.png"/>
+  </metadata>
+  <manifest>
+    <item href="Text/Untitled-14.xhtml" id="Untitled-14" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="Text/toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
+    <item href="Styles/idGeneratedStyles.css" id="idGeneratedStyles.css" media-type="text/css"/>
+    <item href="Fonts/Garamond-Bold.TTF" id="Garamond-Bold.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/SymbolMT.ttf" id="SymbolMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item href="Images/11.png" id="x11.png" media-type="image/png"/>
+    <item href="Images/13.png" id="x13.png" media-type="image/png"/>
+    <item href="Images/14.1.png" id="x14.1.png" media-type="image/png"/>
+    <item href="Images/14.2_edit.png" id="x14.2_edit.png" media-type="image/png"/>
+    <item href="Images/14.3.png" id="x14.3.png" media-type="image/png"/>
+    <item href="Images/14.4.png" id="x14.4.png" media-type="image/png"/>
+    <item href="Images/14.5.png" id="x14.5.png" media-type="image/png"/>
+    <item href="Images/14.6_edit.png" id="x14.6_edit.png" media-type="image/png"/>
+    <item href="Images/14.7_edit.png" id="x14.7_edit.png" media-type="image/png"/>
+    <item href="Images/15.png" id="x15.png" media-type="image/png"/>
+    <item href="Images/6.png" id="x6.png" media-type="image/png"/>
+    <item href="Images/7.png" id="x7.png" media-type="image/png"/>
+    <item href="Images/eqn_1.png" id="eqn_1.png" media-type="image/png"/>
+    <item href="Images/eqn_10.png" id="eqn_10.png" media-type="image/png"/>
+    <item href="Images/eqn_11.png" id="eqn_11.png" media-type="image/png"/>
+    <item href="Images/eqn_12.png" id="eqn_12.png" media-type="image/png"/>
+    <item href="Images/eqn_14.png" id="eqn_14.png" media-type="image/png"/>
+    <item href="Images/eqn_15.png" id="eqn_15.png" media-type="image/png"/>
+    <item href="Images/eqn_16.png" id="eqn_16.png" media-type="image/png"/>
+    <item href="Images/eqn_17.png" id="eqn_17.png" media-type="image/png"/>
+    <item href="Images/eqn_18.png" id="eqn_18.png" media-type="image/png"/>
+    <item href="Images/eqn_19_edit.png" id="eqn_19_edit.png" media-type="image/png"/>
+    <item href="Images/eqn_2.png" id="eqn_2.png" media-type="image/png"/>
+    <item href="Images/eqn_20.a_edit.png" id="eqn_20.a_edit.png" media-type="image/png"/>
+    <item href="Images/eqn_20.png" id="eqn_20.png" media-type="image/png"/>
+    <item href="Images/eqn_201.png" id="eqn_201.png" media-type="image/png"/>
+    <item href="Images/eqn_21.png" id="eqn_21.png" media-type="image/png"/>
+    <item href="Images/eqn_25.png" id="eqn_25.png" media-type="image/png"/>
+    <item href="Images/eqn_26.png" id="eqn_26.png" media-type="image/png"/>
+    <item href="Images/EQN_27.png" id="EQN_27.png" media-type="image/png"/>
+    <item href="Images/eqn_28_%28New%29.png" id="eqn_28_-New-.png" media-type="image/png"/>
+    <item href="Images/eqn_29.png" id="eqn_29.png" media-type="image/png"/>
+    <item href="Images/eqn_3.png" id="eqn_3.png" media-type="image/png"/>
+    <item href="Images/eqn_31.png" id="eqn_31.png" media-type="image/png"/>
+    <item href="Images/eqn_32.png" id="eqn_32.png" media-type="image/png"/>
+    <item href="Images/eqn_33.png" id="eqn_33.png" media-type="image/png"/>
+    <item href="Images/eqn_34.png" id="eqn_34.png" media-type="image/png"/>
+    <item href="Images/eqn_35.png" id="eqn_35.png" media-type="image/png"/>
+    <item href="Images/eqn_36.png" id="eqn_36.png" media-type="image/png"/>
+    <item href="Images/eqn_37.png" id="eqn_37.png" media-type="image/png"/>
+    <item href="Images/eqn_38.png" id="eqn_38.png" media-type="image/png"/>
+    <item href="Images/eqn_5.png" id="eqn_5.png" media-type="image/png"/>
+    <item href="Images/eqn_6.png" id="eqn_6.png" media-type="image/png"/>
+    <item href="Images/eqn_7.png" id="eqn_7.png" media-type="image/png"/>
+    <item href="Images/eqn_8.png" id="eqn_8.png" media-type="image/png"/>
+    <item href="Images/eqn_9.png" id="eqn_9.png" media-type="image/png"/>
+    <item href="Images/cover.png" id="cover.png" media-type="image/png" properties="cover-image"/>
+    <item href="Text/cover.xhtml" id="cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    <item href="Images/Img06.PNG" id="Img06.PNG" media-type="image/png"/>
+    <item href="Images/Img05.PNG" id="Img05.PNG" media-type="image/png"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Untitled-14"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference href="Text/cover.xhtml" title="Cover" type="cover"/>
+  </guide>
+</package>

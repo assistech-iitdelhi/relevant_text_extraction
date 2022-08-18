@@ -1,0 +1,149 @@
+text_annotations {
+  locale: "und"
+  description: "Vn\n"
+  bounding_poly {
+    vertices {
+    }
+    vertices {
+      x: 28
+    }
+    vertices {
+      x: 28
+      y: 25
+    }
+    vertices {
+      y: 25
+    }
+  }
+}
+text_annotations {
+  description: "Vn"
+  bounding_poly {
+    vertices {
+      x: 1
+    }
+    vertices {
+      x: 28
+      y: 1
+    }
+    vertices {
+      x: 27
+      y: 25
+    }
+    vertices {
+      y: 24
+    }
+  }
+}
+full_text_annotation {
+  pages {
+    width: 32
+    height: 23
+    blocks {
+      bounding_box {
+        vertices {
+          x: 1
+        }
+        vertices {
+          x: 28
+          y: 1
+        }
+        vertices {
+          x: 27
+          y: 25
+        }
+        vertices {
+          y: 24
+        }
+      }
+      paragraphs {
+        bounding_box {
+          vertices {
+            x: 1
+          }
+          vertices {
+            x: 28
+            y: 1
+          }
+          vertices {
+            x: 27
+            y: 25
+          }
+          vertices {
+            y: 24
+          }
+        }
+        words {
+          bounding_box {
+            vertices {
+              x: 1
+            }
+            vertices {
+              x: 28
+              y: 1
+            }
+            vertices {
+              x: 27
+              y: 25
+            }
+            vertices {
+              y: 24
+            }
+          }
+          symbols {
+            bounding_box {
+              vertices {
+                x: 1
+              }
+              vertices {
+                x: 15
+                y: 1
+              }
+              vertices {
+                x: 14
+                y: 25
+              }
+              vertices {
+                y: 24
+              }
+            }
+            text: "V"
+            confidence: 0.25999999046325684
+          }
+          symbols {
+            property {
+              detected_break {
+                type_: LINE_BREAK
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 20
+                y: 1
+              }
+              vertices {
+                x: 28
+                y: 1
+              }
+              vertices {
+                x: 27
+                y: 25
+              }
+              vertices {
+                x: 19
+                y: 25
+              }
+            }
+            text: "n"
+            confidence: 0.7900000214576721
+          }
+          confidence: 0.5199999809265137
+        }
+        confidence: 0.5199999809265137
+      }
+      block_type: TEXT
+      confidence: 0.5199999809265137
+    }
+  }
+  text: "Vn\n"
+}

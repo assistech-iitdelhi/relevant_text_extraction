@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/" unique-identifier="bookid" version="3.0" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <dc:title>Untitled-16</dc:title>
+    <dc:language>en-GB</dc:language>
+    <dc:language>en-US</dc:language>
+    <dc:date opf:event="modification" xmlns:opf="http://www.idpf.org/2007/opf">2018-07-04</dc:date>
+    <meta content="Adobe InDesign 12.0" name="generator"/>
+    <meta property="ibooks:specified-fonts">true</meta>
+    <meta property="dcterms:modified">2018-08-06T14:26:35Z</meta>
+    <meta content="0.9.5" name="Sigil version"/>
+    <meta name="cover" content="Cover.png"/>
+  </metadata>
+  <manifest>
+    <item href="Text/Untitled-16.xhtml" id="Untitled-16" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="Text/toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
+    <item href="Styles/idGeneratedStyles.css" id="idGeneratedStyles.css" media-type="text/css"/>
+    <item href="Fonts/Garamond-Bold.TTF" id="Garamond-Bold.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Images/eq.1.png" id="eq.1.png" media-type="image/png"/>
+    <item href="Images/eq.16.png" id="eq.16.png" media-type="image/png"/>
+    <item href="Images/eq.17.png" id="eq.17.png" media-type="image/png"/>
+    <item href="Images/eq.18%28a%29.png" id="eq.18-a-.png" media-type="image/png"/>
+    <item href="Images/eq.18.png" id="eq.18.png" media-type="image/png"/>
+    <item href="Images/eq.20%28a%29.png" id="eq.20-a-.png" media-type="image/png"/>
+    <item href="Images/eq.21.png" id="eq.21.png" media-type="image/png"/>
+    <item href="Images/eq.22.png" id="eq.22.png" media-type="image/png"/>
+    <item href="Images/eq.23%28a%29.png" id="eq.23-a-.png" media-type="image/png"/>
+    <item href="Images/eq.24.png" id="eq.24.png" media-type="image/png"/>
+    <item href="Images/eq.25.png" id="eq.25.png" media-type="image/png"/>
+    <item href="Images/eq.3.png" id="eq.3.png" media-type="image/png"/>
+    <item href="Images/eq.5.png" id="eq.5.png" media-type="image/png"/>
+    <item href="Images/eq.9.png" id="eq.9.png" media-type="image/png"/>
+    <item href="Images/F_16.1_edit.png" id="F_16.1_edit.png" media-type="image/png"/>
+    <item href="Images/F_16.2_edit.png" id="F_16.2_edit.png" media-type="image/png"/>
+    <item href="Images/F_16.3._edit.png" id="F_16.3._edit.png" media-type="image/png"/>
+    <item href="Images/F_16.4.png" id="F_16.4.png" media-type="image/png"/>
+    <item href="Images/F_16.5.png" id="F_16.5.png" media-type="image/png"/>
+    <item href="Images/yelow_box-9.png" id="yelow_box-9.png" media-type="image/png"/>
+    <item href="Images/Img01.PNG" id="Img01.PNG" media-type="image/png"/>
+    <item href="Images/Img02.PNG" id="Img02.PNG" media-type="image/png"/>
+    <item href="Images/Img03.PNG" id="Img03.PNG" media-type="image/png"/>
+    <item href="Images/Img04.PNG" id="Img04.PNG" media-type="image/png"/>
+    <item href="Images/Img05.PNG" id="Img05.PNG" media-type="image/png"/>
+    <item href="Images/Img06.PNG" id="Img06.PNG" media-type="image/png"/>
+    <item href="Images/Img07.PNG" id="Img07.PNG" media-type="image/png"/>
+    <item href="Images/Img08.PNG" id="Img08.PNG" media-type="image/png"/>
+    <item href="Images/Cover.png" id="Cover.png" media-type="image/png"/>
+    <item href="Text/cover.xhtml" id="cover.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Untitled-16"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference href="Text/cover.xhtml" title="Cover" type="cover"/>
+  </guide>
+</package>

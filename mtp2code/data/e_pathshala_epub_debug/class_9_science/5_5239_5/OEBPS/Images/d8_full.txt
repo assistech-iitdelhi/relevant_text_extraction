@@ -1,0 +1,141 @@
+text_annotations {
+  locale: "und"
+  description: "=\n"
+  bounding_poly {
+    vertices {
+      x: 88
+      y: 50
+    }
+    vertices {
+      x: 127
+      y: 50
+    }
+    vertices {
+      x: 127
+      y: 80
+    }
+    vertices {
+      x: 88
+      y: 80
+    }
+  }
+}
+text_annotations {
+  description: "="
+  bounding_poly {
+    vertices {
+      x: 128
+      y: 80
+    }
+    vertices {
+      x: 90
+      y: 81
+    }
+    vertices {
+      x: 89
+      y: 52
+    }
+    vertices {
+      x: 127
+      y: 51
+    }
+  }
+}
+full_text_annotation {
+  pages {
+    width: 288
+    height: 141
+    blocks {
+      bounding_box {
+        vertices {
+          x: 128
+          y: 80
+        }
+        vertices {
+          x: 90
+          y: 81
+        }
+        vertices {
+          x: 89
+          y: 52
+        }
+        vertices {
+          x: 127
+          y: 51
+        }
+      }
+      paragraphs {
+        bounding_box {
+          vertices {
+            x: 128
+            y: 80
+          }
+          vertices {
+            x: 90
+            y: 81
+          }
+          vertices {
+            x: 89
+            y: 52
+          }
+          vertices {
+            x: 127
+            y: 51
+          }
+        }
+        words {
+          bounding_box {
+            vertices {
+              x: 128
+              y: 80
+            }
+            vertices {
+              x: 90
+              y: 81
+            }
+            vertices {
+              x: 89
+              y: 52
+            }
+            vertices {
+              x: 127
+              y: 51
+            }
+          }
+          symbols {
+            property {
+              detected_break {
+                type_: LINE_BREAK
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 128
+                y: 80
+              }
+              vertices {
+                x: 90
+                y: 81
+              }
+              vertices {
+                x: 89
+                y: 52
+              }
+              vertices {
+                x: 127
+                y: 51
+              }
+            }
+            text: "="
+            confidence: 0.8100000023841858
+          }
+          confidence: 0.8100000023841858
+        }
+        confidence: 0.8100000023841858
+      }
+      block_type: TEXT
+      confidence: 0.8100000023841858
+    }
+  }
+  text: "=\n"
+}

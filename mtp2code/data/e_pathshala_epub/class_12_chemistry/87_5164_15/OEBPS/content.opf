@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/" unique-identifier="bookid" version="3.0" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <dc:title>Untitled-15</dc:title>
+    <dc:language>en-GB</dc:language>
+    <dc:language>en-US</dc:language>
+    <dc:date opf:event="modification" xmlns:opf="http://www.idpf.org/2007/opf">2018-07-19</dc:date>
+    <meta content="Adobe InDesign 12.0" name="generator"/>
+    <meta property="ibooks:specified-fonts">true</meta>
+    <meta property="dcterms:modified">2018-08-06T14:26:18Z</meta>
+    <meta content="0.9.5" name="Sigil version"/>
+    <meta name="cover" content="Cover.png"/>
+  </metadata>
+  <manifest>
+    <item href="Text/Untitled-15.xhtml" id="Untitled-15" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="Text/toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
+    <item href="Styles/idGeneratedStyles.css" id="idGeneratedStyles.css" media-type="text/css"/>
+    <item href="Fonts/Garamond-Bold.TTF" id="Garamond-Bold.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/SymbolMT.ttf" id="SymbolMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item href="Images/bakelite.png" id="bakelite.png" media-type="image/png"/>
+    <item href="Images/bond-1.png" id="bond-1.png" media-type="image/png"/>
+    <item href="Images/bond-10.png" id="bond-10.png" media-type="image/png"/>
+    <item href="Images/bond-12.png" id="bond-12.png" media-type="image/png"/>
+    <item href="Images/bond-13.png" id="bond-13.png" media-type="image/png"/>
+    <item href="Images/bond-14_%28New%29.png" id="bond-14_-New-.png" media-type="image/png"/>
+    <item href="Images/bond-15.png" id="bond-15.png" media-type="image/png"/>
+    <item href="Images/bond-16.png" id="bond-16.png" media-type="image/png"/>
+    <item href="Images/bond-17.png" id="bond-17.png" media-type="image/png"/>
+    <item href="Images/bond-18.png" id="bond-18.png" media-type="image/png"/>
+    <item href="Images/bond-19.png" id="bond-19.png" media-type="image/png"/>
+    <item href="Images/bond-2.png" id="bond-2.png" media-type="image/png"/>
+    <item href="Images/bond-20.png" id="bond-20.png" media-type="image/png"/>
+    <item href="Images/bond-21.png" id="bond-21.png" media-type="image/png"/>
+    <item href="Images/bond-22.png" id="bond-22.png" media-type="image/png"/>
+    <item href="Images/bond-23.png" id="bond-23.png" media-type="image/png"/>
+    <item href="Images/bond-24.png" id="bond-24.png" media-type="image/png"/>
+    <item href="Images/bond-25.png" id="bond-25.png" media-type="image/png"/>
+    <item href="Images/bond-26.png" id="bond-26.png" media-type="image/png"/>
+    <item href="Images/bond-27.png" id="bond-27.png" media-type="image/png"/>
+    <item href="Images/bond-28.png" id="bond-28.png" media-type="image/png"/>
+    <item href="Images/bond-29.png" id="bond-29.png" media-type="image/png"/>
+    <item href="Images/bond-3.png" id="bond-3.png" media-type="image/png"/>
+    <item href="Images/bond-30.png" id="bond-30.png" media-type="image/png"/>
+    <item href="Images/bond-31.png" id="bond-31.png" media-type="image/png"/>
+    <item href="Images/bond-39.png" id="bond-39.png" media-type="image/png"/>
+    <item href="Images/bond-4.png" id="bond-4.png" media-type="image/png"/>
+    <item href="Images/bond-40.png" id="bond-40.png" media-type="image/png"/>
+    <item href="Images/bond-5.png" id="bond-5.png" media-type="image/png"/>
+    <item href="Images/bond-6.png" id="bond-6.png" media-type="image/png"/>
+    <item href="Images/bond-7.png" id="bond-7.png" media-type="image/png"/>
+    <item href="Images/bond-8.png" id="bond-8.png" media-type="image/png"/>
+    <item href="Images/bond-9.png" id="bond-9.png" media-type="image/png"/>
+    <item href="Images/nelon.png" id="nelon.png" media-type="image/png"/>
+    <item href="Images/neoprene.png" id="neoprene.png" media-type="image/png"/>
+    <item href="Images/pvc.png" id="pvc.png" media-type="image/png"/>
+    <item href="Images/img01.PNG" id="img01.PNG" media-type="image/png"/>
+    <item href="Images/Cover.png" id="Cover.png" media-type="image/png"/>
+    <item href="Text/cover.xhtml" id="cover.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Untitled-15"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference href="Text/cover.xhtml" title="Cover" type="cover"/>
+  </guide>
+</package>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package unique-identifier="bookid" version="3.0" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign" name="generator"/>
+    <meta name="cover" content="lebo1cc.jpg"/>
+    <dc:date>2020-06-08</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2021-01-22T12:37:01Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta content="0.9.3" name="Sigil version"/>
+  </metadata>
+  <manifest>
+    <item href="Text/Chapter-5.xhtml" id="Chapter-5.xhtml" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="Styles/ch5.css" id="ch5.css" media-type="text/css"/>
+    <item href="Fonts/BookmanOldStyle-Bold.TTF" id="BookmanOldStyle-Bold.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/BookmanOldStyle-BoldItalic.TTF" id="BookmanOldStyle-BoldItalic.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/CenturyGothic-Bold.TTF" id="CenturyGothic-Bold.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/CenturyGothic.TTF" id="CenturyGothic.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/SymbolMT.ttf" id="SymbolMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item href="Images/12083CH05_fmt.png" id="x12083CH05_fmt.png" media-type="image/png"/>
+    <item href="Images/1417.png" id="x1417.png" media-type="image/png"/>
+    <item href="Images/1496.png" id="x1496.png" media-type="image/png"/>
+    <item href="Images/1604.png" id="x1604.png" media-type="image/png"/>
+    <item href="Images/1615.png" id="x1615.png" media-type="image/png"/>
+    <item href="Images/1622.png" id="x1622.png" media-type="image/png"/>
+    <item href="Images/1640.png" id="x1640.png" media-type="image/png"/>
+    <item href="Images/1667.png" id="x1667.png" media-type="image/png"/>
+    <item href="Images/1668.png" id="x1668.png" media-type="image/png"/>
+    <item href="Images/1683.png" id="x1683.png" media-type="image/png"/>
+    <item href="Images/1692.png" id="x1692.png" media-type="image/png"/>
+    <item href="Images/1710.png" id="x1710.png" media-type="image/png"/>
+    <item href="Images/1716.png" id="x1716.png" media-type="image/png"/>
+    <item href="Images/1743.png" id="x1743.png" media-type="image/png"/>
+    <item href="Images/1744.png" id="x1744.png" media-type="image/png"/>
+    <item href="Images/1778.png" id="x1778.png" media-type="image/png"/>
+    <item href="Images/1784.png" id="x1784.png" media-type="image/png"/>
+    <item href="Images/1825.png" id="x1825.png" media-type="image/png"/>
+    <item href="Images/1831.png" id="x1831.png" media-type="image/png"/>
+    <item href="Images/1849.png" id="x1849.png" media-type="image/png"/>
+    <item href="Images/1850.png" id="x1850.png" media-type="image/png"/>
+    <item href="Images/1869.png" id="x1869.png" media-type="image/png"/>
+    <item href="Images/1880.png" id="x1880.png" media-type="image/png"/>
+    <item href="Images/1917.png" id="x1917.png" media-type="image/png"/>
+    <item href="Images/1927.png" id="x1927.png" media-type="image/png"/>
+    <item href="Images/1934.png" id="x1934.png" media-type="image/png"/>
+    <item href="Images/1974.png" id="x1974.png" media-type="image/png"/>
+    <item href="Images/1985.png" id="x1985.png" media-type="image/png"/>
+    <item href="Images/1992.png" id="x1992.png" media-type="image/png"/>
+    <item href="Images/1page_fmt.png" id="x1page_fmt.png" media-type="image/png"/>
+    <item href="Images/2021.png" id="x2021.png" media-type="image/png"/>
+    <item href="Images/2043.png" id="x2043.png" media-type="image/png"/>
+    <item href="Images/2044.png" id="x2044.png" media-type="image/png"/>
+    <item href="Images/2111.png" id="x2111.png" media-type="image/png"/>
+    <item href="Images/2182.png" id="x2182.png" media-type="image/png"/>
+    <item href="Images/D-13.16_fmt.png" id="D-13.16_fmt.png" media-type="image/png"/>
+    <item href="Images/main_watson_crick%5B1%5D_fmt.png" id="main_watson_crick-1-_fmt.png" media-type="image/png"/>
+    <item href="Images/scientist%20page_fmt.png" id="scientist-page_fmt.png" media-type="image/png"/>
+    <item href="Images/summery_fmt.png" id="summery_fmt.png" media-type="image/png"/>
+    <item href="Images/top_right_final_fmt.png" id="top_right_final_fmt.png" media-type="image/png"/>
+    <item href="Images/unit%20page_fmt.png" id="unit-page_fmt.png" media-type="image/png"/>
+    <item href="Images/Female.png" id="Female.png" media-type="image/png"/>
+    <item href="Images/Male.png" id="Male.png" media-type="image/png"/>
+    <item href="Images/def.png" id="def.png" media-type="image/png"/>
+    <item href="Images/efg.png" id="efg.png" media-type="image/png"/>
+    <item href="Images/ghi.png" id="ghi.png" media-type="image/png"/>
+    <item href="Images/ijk.png" id="ijk.png" media-type="image/png"/>
+    <item href="Images/klm.png" id="klm.png" media-type="image/png"/>
+    <item href="Images/lebo1cc.jpg" id="lebo1cc.jpg" media-type="image/jpeg" properties="cover-image"/>
+    <item href="Text/cover.xhtml" id="cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    <item href="Styles/sgc-toc.css" id="sgc-toc.css" media-type="text/css"/>
+    <item href="Text/TOC.xhtml" id="TOC.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Chapter-5.xhtml"/>
+    <itemref idref="TOC.xhtml"/>
+  </spine>
+  <guide>
+    <reference href="Text/cover.xhtml" title="Cover" type="cover"></reference>
+    <reference href="Text/TOC.xhtml" title="Table Of Contents" type="toc"></reference>
+  </guide>
+</package>

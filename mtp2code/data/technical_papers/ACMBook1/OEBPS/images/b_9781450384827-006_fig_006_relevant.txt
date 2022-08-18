@@ -1,0 +1,2 @@
+Selection (Ei.P): As shown in Figure 6.6, this operator filters pattern expression on predicate P, where P refers to event attributes contained in the pattern P ∈ ξ, and event schema ξ describes a set of attributes a class of events can contain. Ei, 1≤i≤N is an event type where Ei⊂Σ, and Σ is the alphabet of event types.
+Figure 6.6Selection operator evaluates an ordinary state on event type Ei and and its attributes P. It can also select an event type Ei without any specific attribute.

@@ -1,0 +1,25 @@
+-------   sentence-transformers/all-mpnet-base-v2   ------------------
+ least distance cosine threshold =  0.55
+ least distance =  0.8696526719728551
+ least distnant FNR =  0.454973914973915
+ least distnant FPR =  0.833639740217075
+-------   sentence-transformers/multi-qa-MiniLM-L6-cos-v1   ------------------
+ least distance cosine threshold =  0.5
+ least distance =  0.843297466676528
+ least distnant FNR =  0.35757131757131755
+ least distnant FPR =  0.8575589706886564
+-------   sentence-transformers/all-MiniLM-L6-v2   ------------------
+ least distance cosine threshold =  0.55
+ least distance =  0.8414887500254582
+ least distnant FNR =  0.454973914973915
+ least distnant FPR =  0.833639740217075
+-------   sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2   ------------------
+ least distance cosine threshold =  0.7
+ least distance =  0.8895911677252226
+ least distnant FNR =  0.8092751692751694
+ least distnant FPR =  0.6344909733472783
+-------   sentence-transformers/bert-base-nli-mean-tokens   ------------------
+ least distance cosine threshold =  0.85
+ least distance =  0.9479293970347852
+ least distnant FNR =  0.9471195471195472
+ least distnant FPR =  0.09090909090909091

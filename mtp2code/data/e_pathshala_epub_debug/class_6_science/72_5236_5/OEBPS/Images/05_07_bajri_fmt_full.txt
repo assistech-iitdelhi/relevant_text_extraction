@@ -1,0 +1,163 @@
+text_annotations {
+  locale: "und"
+  description: "\340\256\232\340\257\210\n"
+  bounding_poly {
+    vertices {
+      x: 166
+      y: 108
+    }
+    vertices {
+      x: 186
+      y: 108
+    }
+    vertices {
+      x: 186
+      y: 121
+    }
+    vertices {
+      x: 166
+      y: 121
+    }
+  }
+}
+text_annotations {
+  description: "\340\256\232\340\257\210"
+  bounding_poly {
+    vertices {
+      x: 167
+      y: 108
+    }
+    vertices {
+      x: 186
+      y: 110
+    }
+    vertices {
+      x: 185
+      y: 121
+    }
+    vertices {
+      x: 166
+      y: 119
+    }
+  }
+}
+full_text_annotation {
+  pages {
+    width: 475
+    height: 339
+    blocks {
+      bounding_box {
+        vertices {
+          x: 167
+          y: 108
+        }
+        vertices {
+          x: 186
+          y: 110
+        }
+        vertices {
+          x: 185
+          y: 121
+        }
+        vertices {
+          x: 166
+          y: 119
+        }
+      }
+      paragraphs {
+        bounding_box {
+          vertices {
+            x: 167
+            y: 108
+          }
+          vertices {
+            x: 186
+            y: 110
+          }
+          vertices {
+            x: 185
+            y: 121
+          }
+          vertices {
+            x: 166
+            y: 119
+          }
+        }
+        words {
+          bounding_box {
+            vertices {
+              x: 167
+              y: 108
+            }
+            vertices {
+              x: 186
+              y: 110
+            }
+            vertices {
+              x: 185
+              y: 121
+            }
+            vertices {
+              x: 166
+              y: 119
+            }
+          }
+          symbols {
+            bounding_box {
+              vertices {
+                x: 167
+                y: 108
+              }
+              vertices {
+                x: 186
+                y: 110
+              }
+              vertices {
+                x: 185
+                y: 121
+              }
+              vertices {
+                x: 166
+                y: 119
+              }
+            }
+            text: "\340\256\232"
+            confidence: 0.5099999904632568
+          }
+          symbols {
+            property {
+              detected_break {
+                type_: LINE_BREAK
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 167
+                y: 108
+              }
+              vertices {
+                x: 186
+                y: 110
+              }
+              vertices {
+                x: 185
+                y: 121
+              }
+              vertices {
+                x: 166
+                y: 119
+              }
+            }
+            text: "\340\257\210"
+            confidence: 0.5099999904632568
+          }
+          confidence: 0.5099999904632568
+        }
+        confidence: 0.5099999904632568
+      }
+      block_type: TEXT
+      confidence: 0.5099999904632568
+    }
+  }
+  text: "\340\256\232\340\257\210\n"
+}

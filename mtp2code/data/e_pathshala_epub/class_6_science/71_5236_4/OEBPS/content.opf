@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="bookid" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta name="generator" content="Adobe InDesign" />
+    <dc:date>2019-05-11</dc:date>
+    <dc:language>en-US</dc:language>
+    <meta property="dcterms:modified">2019-06-03T12:41:35Z</meta>
+    <dc:identifier id="bookid">urn:uuid:1bea3b21-81c1-4dd4-a47e-c06771beefcf</dc:identifier>
+    <meta name="Sigil version" content="0.9.10" />
+    <meta name="cover" content="fesc1cc.jpg" />
+  </metadata>
+  <manifest>
+    <item id="Chapter-4" href="Text/Chapter%204.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="toc" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="Chapter-4.css" href="Styles/Chapter%204.css" media-type="text/css"/>
+    <item id="Bookman-Light.TTF" href="Fonts/Bookman-Light.TTF" media-type="application/x-font-ttf"/>
+    <item id="Bookman-LightItalic.TTF" href="Fonts/Bookman-LightItalic.TTF" media-type="application/x-font-ttf"/>
+    <item id="Wingdings-Regular.ttf" href="Fonts/Wingdings-Regular.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="x04_01_object-around-us_fmt.jpeg" href="Images/04_01_object%20around%20us_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x04_02_cloth-tumbler_fmt.jpeg" href="Images/04_02_cloth%20tumbler_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x04_03_a_fmt.jpeg" href="Images/04_03_a_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x04_03_b_fmt.jpeg" href="Images/04_03_b_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x04_04_fmt.jpeg" href="Images/04_04_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x04_05_fmt.jpeg" href="Images/04_05_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x04_06_fmt.jpeg" href="Images/04_06_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x04_07_fmt.jpeg" href="Images/04_07_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x04_08_fmt.jpeg" href="Images/04_08_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x04_09_palm-torch_fmt.jpeg" href="Images/04_09_palm%20torch_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x0652ch-04_fmt.jpeg" href="Images/0652ch%2004_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x1080.png" href="Images/1080.png" media-type="image/png"/>
+    <item id="x1090.png" href="Images/1090.png" media-type="image/png"/>
+    <item id="x1106.png" href="Images/1106.png" media-type="image/png"/>
+    <item id="x1156.png" href="Images/1156.png" media-type="image/png"/>
+    <item id="x1171.png" href="Images/1171.png" media-type="image/png"/>
+    <item id="x1186.png" href="Images/1186.png" media-type="image/png"/>
+    <item id="x1197.png" href="Images/1197.png" media-type="image/png"/>
+    <item id="x1207.png" href="Images/1207.png" media-type="image/png"/>
+    <item id="x1217.png" href="Images/1217.png" media-type="image/png"/>
+    <item id="x1227.png" href="Images/1227.png" media-type="image/png"/>
+    <item id="x756.png" href="Images/756.png" media-type="image/png"/>
+    <item id="x981.png" href="Images/981.png" media-type="image/png"/>
+    <item id="x996.png" href="Images/996.png" media-type="image/png"/>
+    <item id="baloon_1_fmt.png" href="Images/baloon_1_fmt.png" media-type="image/png"/>
+    <item id="baloon_2_fmt.png" href="Images/baloon_2_fmt.png" media-type="image/png"/>
+    <item id="paheli_3_fmt.jpeg" href="Images/paheli_3_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="sum_fmt.jpeg" href="Images/sum_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="fesc1cc.jpg" href="Images/fesc1cc.jpg" media-type="image/jpeg" properties="cover-image"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    <item id="x4.1.png" href="Images/4.1.png" media-type="image/png"/>
+    <item id="x4.2.png" href="Images/4.2.png" media-type="image/png"/>
+    <item id="x4.3.png" href="Images/4.3.png" media-type="image/png"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Chapter-4"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

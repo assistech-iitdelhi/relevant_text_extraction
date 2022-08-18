@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="bookid" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign" name="generator" />
+    <dc:date>2019-05-08</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2019-06-03T13:04:24Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta content="0.9.10" name="Sigil version" />
+    <meta name="cover" content="Capture.JPG" />
+  </metadata>
+  <manifest>
+    <item id="ch10" href="Text/ch10.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="toc" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="ch10.css" href="Styles/ch10.css" media-type="text/css"/>
+    <item id="Wingdings-Regular.ttf" href="Fonts/Wingdings-Regular.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="x0854CH10_fmt.png" href="Images/0854CH10_fmt.png" media-type="image/png"/>
+    <item id="x10_fmt.png" href="Images/10_fmt.png" media-type="image/png"/>
+    <item id="x10_4_fmt.jpeg" href="Images/10_4_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x10_05_fmt.jpeg" href="Images/10_05_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x10_6a_fmt.jpeg" href="Images/10_6a_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x10_6b_fmt.jpeg" href="Images/10_6b_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x10_6c_fmt.jpeg" href="Images/10_6c_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x10_6d_fmt.jpeg" href="Images/10_6d_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x10_6e_fmt.jpeg" href="Images/10_6e_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x10_6e_fmt1.jpeg" href="Images/10_6e_fmt1.jpeg" media-type="image/jpeg"/>
+    <item id="x1622.png" href="Images/1622.png" media-type="image/png"/>
+    <item id="x1634.png" href="Images/1634.png" media-type="image/png"/>
+    <item id="x1713.png" href="Images/1713.png" media-type="image/png"/>
+    <item id="x1717.png" href="Images/1717.png" media-type="image/png"/>
+    <item id="x1734.png" href="Images/1734.png" media-type="image/png"/>
+    <item id="x1761.png" href="Images/1761.png" media-type="image/png"/>
+    <item id="x1805.png" href="Images/1805.png" media-type="image/png"/>
+    <item id="x1840.png" href="Images/1840.png" media-type="image/png"/>
+    <item id="x1921.png" href="Images/1921.png" media-type="image/png"/>
+    <item id="x1930.png" href="Images/1930.png" media-type="image/png"/>
+    <item id="x2068.png" href="Images/2068.png" media-type="image/png"/>
+    <item id="x2073.png" href="Images/2073.png" media-type="image/png"/>
+    <item id="x2263.png" href="Images/2263.png" media-type="image/png"/>
+    <item id="adam.png" href="Images/adam.png" media-type="image/png"/>
+    <item id="age.png" href="Images/age.png" media-type="image/png"/>
+    <item id="age2.png" href="Images/age2.png" media-type="image/png"/>
+    <item id="present.png" href="Images/present.png" media-type="image/png"/>
+    <item id="tall.png" href="Images/tall.png" media-type="image/png"/>
+    <item id="Capture.JPG" href="Images/Capture.JPG" media-type="image/jpeg" properties="cover-image"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="ch10"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

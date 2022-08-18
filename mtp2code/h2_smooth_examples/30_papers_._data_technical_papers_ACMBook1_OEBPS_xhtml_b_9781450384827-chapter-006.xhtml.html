@@ -1,0 +1,758 @@
+ <!DOCTYPE html>
+                    <html>
+                    <body style="background-color:black;">
+<img src="../data/technical_papers/ACMBook1/OEBPS/images/b_9781450384827-006_fig_023.jpg" style="background-color:white;">
+<h2 style="color:white;">Fig caption sentence =  figure 6.23high-level architecture of applying eventminer to build objective self. the three main components are data ingestion, life event recognition, and pattern recognition.. this figure contains environmental sensor, wearable sensor, virtual sensor, proximity rfid, rfid tag, accelerometer gyroscope, sensor ingestion, mhed lorer nlerie, bolere, light, gps, camera, temperature, ecg tracker, sensor observations, life event, personicle, pattern recognition, life event recognition, processing, objective self. </h2>
+<img src="scatter_plots/30_papers_._data_technical_papers_ACMBook1_OEBPS_xhtml_b_9781450384827-chapter-006.xhtml.png" style="background-color:white;" width="auto" height="400">
+<p style="color:silver;"><b>Summary without labels:</b> The three main components are data ingestion, life event recognition, and pattern recognition . These data streams are temporally aligned and divided into equal time windows . Life events signifies all daily living activities that are part of daily life . The second category contains environmental information such as pollution and temperature .</p><br>
+<p style="color:silver;"><b>Summary with labels:</b> The three main components are data ingestion, life event recognition, and pattern recognition . Life events signifies all daily living activities that are a part of daily life . The second category contains environmental information such as pollution and temperature . These data streams are temporally aligned and divided into equal time windows .</p><br>
+<p>----------------- START ---------------------------</p>
+<ul><li><h3 style="color:limegreen;">True positive</h3></li>
+<li><h3 style="color:darkgreen;">False negative</h3></li>
+<li><h3 style="color:brown;">False positive</h3></li>
+<li><h3 style="color:grey;">True negative</h3></li></ul>
+<p style="color:grey;">0:  Chapter 06 </p>
+<p style="color:grey;">1:  6EventMiner Framework </p>
+<p style="color:grey;">2:  In this chapter, we introduce EventMiner, an event mining framework with two distinct phases: hypothesis formation and hypothesis testing </p>
+<p style="color:grey;">3:  Hypothesis formation requires the analysis of a good deal of event data to find strong candidate hypotheses </p>
+<p style="color:grey;">4:  Based on an expert s knowledge and judgment, one or more hypotheses are then formed for further testing via relevant data analysis </p>
+<p style="color:grey;">5:  We emphasize the framework s capabilities in fusing and analyzing temporal data to capture dynamic characteristics of complex systems </p>
+<p style="color:grey;">6:  The framework is built on a high-level descriptive pattern formulation and pattern mining language </p>
+<p style="color:grey;">7:  The language is composed of a well-defined set of operators that facilitate pattern analysis </p>
+<p style="color:grey;">8:  Hypothesis formation is achieved by data-driven operators that bring hidden interesting patterns to the surface </p>
+<p style="color:grey;">9:  Hypothesis testing is accomplished by hypothesis-driven operators that facilitate knowledge formulation and pattern query. </p>
+<p style="color:grey;">10:  Data-driven operators are used to generate a basic model and derive a preliminary insight </p>
+<p style="color:grey;">11:  Then, an analyst can seed a hypothesis and grow it step by step using hypothesis-driven operators </p>
+<p style="color:grey;">12:  A good hypothesis is one that is not necessarily correct but one that opens new paths of investigation </p>
+<p style="color:grey;">13:  This path cannot be fully perceived in advance in complex modeling tasks </p>
+<p style="color:grey;">14:  So the analyst must be provided with appropriate operators to carry out new experiments based on the original hypothesis </p>
+<p style="color:grey;">15:  6.1Data Models and Pattern Operators </p>
+<p style="color:grey;">16:  6.1.1Time Model </p>
+<p style="color:grey;">17:  In EventMiner, we use semi-intervals to represent temporal facets of an event </p>
+<p style="color:grey;">18:  We adopt a time point representation of time intervals [Wu and Chen 2007] in which intervals are represented with their start and end time point. </p>
+<p style="color:grey;">19:  Definition 6.1Time domain: A time domain T is a discrete, linearly ordered, countably infinite set of time instants t T </p>
+<p style="color:grey;">20:  We assume that T is bounded in the past, but not necessarily in the future. </p>
+<p style="color:grey;">21:  Definition 6.2Time interval: A time interval is a triple [ ,ts,te] where     is a unique symbol and ts,te T and ts te </p>
+<p style="color:grey;">22:  The finite set of all time intervals is noted I={[ts,te]|ts te} </p>
+<p style="color:grey;">23:  If [ts,te] [t s,t e]  , intervals overlap. </p>
+<p style="color:grey;">24:  Definition 6.3Semi-interval: A semi-interval is a tuple [ + / ,t] where     is a unique symbol and interval boundaries are represented with + and   signs, where  + and    correspond to the start and the end of an interval, respectively </p>
+<p style="color:grey;">25:  [ +,t] represent a semi-interval where start time is available and [  ,t] represent a semi-interval where end time is available </p>
+<p style="color:grey;">26:  Using the semi-interval definition, an interval can also be represented with its interval boundaries </p>
+<p style="color:grey;">27:  Formally in a time interval [ ,ts,te],  .ts= +, and  .te=   and duration of the interval is d ( )=    + </p>
+<p style="color:grey;">28:  Also, an instantaneous time point can be considered as an interval with zero duration where   = +. </p>
+<p style="color:grey;">29:  As explained in Section 3.2 of Chapter 3, various relationships between events can be understood in terms of (a) a sequential order between events, with an associated time lag, or else (b) in their concurrent occurrence (and the associated time span in which both events occur in parallel); here one is less interested in knowing which event started or ended earlier. </p>
+<p style="color:grey;">30:  We define two temporal relationships to capture the above requirements </p>
+<p style="color:grey;">31:  Then we use semi-interval operators to represent them </p>
+<p style="color:grey;">32:  These relationships are as follows (Table 6.1): </p>
+<p style="color:grey;">33:  Table 6.1:Definition of order and concurrency relationships based on semi-interval representations </p>
+<p style="color:grey;">34:  1.Order </p>
+<p style="color:grey;">35:  The sequential occurrence of time points or time intervals </p>
+<p style="color:grey;">36:  In Freksa s formalism younger, succeeds, survives, and born after death relationships fall into this category. </p>
+<p style="color:grey;">37:  2.Concurrency </p>
+<p style="color:grey;">38:  A non-empty time period where two or more temporal events occur in no particular order </p>
+<p style="color:grey;">39:  In Freksa s formalism head to head, tail to tail, and contemporary relationships fall into this category </p>
+<p style="color:grey;">40:  6.1.2Event Model </p>
+<p style="color:grey;">41:  An event model serves as the basis of the pattern language in EventMiner </p>
+<p style="color:grey;">42:  An event is either an instantaneous occurrence or spans over time </p>
+<p style="color:grey;">43:  The former is called a point event and the latter is called an interval event </p>
+<p style="color:grey;">44:  Sometimes, we have a semi-interval event where information about the event is not complete </p>
+<p style="color:grey;">45:  For instance, we might know when an event starts but there is no information available about when it ends, or vice versa </p>
+<p style="color:grey;">46:  The event model has a schema   that contains a set of properties a class of events must contain. </p>
+<p style="color:grey;">47:  Definition 6.4Point event: A point event (pE) is an event that occurs at an instantaneous point in time </p>
+<p style="color:grey;">48:  It is a tuple e=(v,[E,t]) that consists of the name of its type, denoted by an upper-case letter (e.g.,  E ), the time of occurrence t T, and a set of properties v  . </p>
+<p style="color:grey;">49:  Definition 6.5Interval event: An interval event (iE) is an event that spans over time </p>
+<p style="color:grey;">50:  It is a tuple e=(v,[E,ts,te]) that consists of the name of its type, start and end time [ts,te] I, and a set of properties v  . </p>
+<p style="color:grey;">51:  Definition 6.6Semi-interval event: A semi-interval event (sE) is a special case of interval event when one of the event boundaries is missing </p>
+<p style="color:grey;">52:  It is a tuple e=(v,[E+ / ,t]) that consists of the name of its type, start time or end time t T, and a set of properties v  . </p>
+<p style="color:grey;">53:  These three categories of events and their graphical illustrations are shown in Table 6.2 </p>
+<p style="color:grey;">54:  Each event has a start time ts or an end time te, or both </p>
+<p style="color:grey;">55:  Events that have a complete time interval are represented as (E,ts,te), while events with semi-interval are represented as (E+,t) when ts is available and (E ,t) when te is available </p>
+<p style="color:grey;">56:  Point events are represented as (E, t) </p>
+<p style="color:grey;">57:  The reason that we differentiate between a semi-interval event and a point event goes back to the different semantics of events in disparate applications </p>
+<p style="color:grey;">58:  A semi-interval event is an interval event when a partial knowledge or observation is available </p>
+<p style="color:grey;">59:  For example, in a healthcare application, when a patient experiences some symptoms after taking a medication, the experience is an interval event with a start and end time </p>
+<p style="color:grey;">60:  However, we might only know when the symptoms started </p>
+<p style="color:grey;">61:  So, experiencing some symptoms is recorded as a semi-interval event with a start time associated with it </p>
+<p style="color:grey;">62:  In the same context, taking a pill event is a point event </p>
+<p style="color:grey;">63:  Although we can imagine that the duration of this event is several seconds, with respect to the basic time granularity of an application (e.g., 15 minutes or 1 hour), taking a pill can be considered as a point event. </p>
+<p style="color:grey;">64:  Table 6.2:Three event categories with their data model and graphical illustration </p>
+<p style="color:grey;">65:  Definition 6.7Event stream: An event stream E S(i)={e1(i),e2(i), ,en(i)} is an ordered set of events where ek {pE,iE,sE}(1 k n). </p>
+<p style="color:grey;">66:  Definition 6.8Multi-event stream: A multi-event stream E S={E S(1),E S(2), ,E S(|I|)} is a finite set of event streams </p>
+<p style="color:grey;">67:  Events from multiple event streams have a total order based on their start time so they can be overlapped </p>
+<p style="color:grey;">68:  The alphabet of the multi-event stream is  ={ (1)  (2)    (|I|)}. </p>
+<p style="color:grey;">69:  Taking an example from Figure 6.1(a), ES(1) is an event stream with three disparate events </p>
+<p style="color:grey;">70:  E1 is an interval event represented with E1+ and E1  for the start and end points, respectively; E2 is a point event where E2+ = E2 , and E3 is a semi-interval event represented with E3+ for the start point </p>
+<p style="color:grey;">71:  The events that belong to the same event stream cannot have overlaps </p>
+<p style="color:grey;">72:  However, as shown in Figure 6.1(b), events from multiple event streams might be overlapping </p>
+<p style="color:grey;">73:  This brings us to the next question: How to encode a multi-event stream with overlapping events so the order and temporal structures between events are preserved </p>
+<p style="color:grey;">74:  As explained before, we seamlessly represent semi-interval and interval events using instantaneous time points in the interval boundaries </p>
+<p style="color:grey;">75:  As done in Shan Kam and Fu [2000], the relationships between events  start and end times can represent all of Allen s principles hence encompassing all relational ordering possibilities </p>
+<p style="color:grey;">76:  Also, all of Allen s interval relationships can be described using Freksa s semi-interval relationships </p>
+<p style="color:grey;">77:  A simple schema similar to that of Shan Kam and Fu [2000] can be used to encode a multi-event stream in a single linear data stream (Figure 6.1) without any ambiguity with respect to the temporal relationships between overlapping events </p>
+<p style="color:grey;">78:  Event E1 ends before E2 occurs (<), or event E 1 ends at the same time E3 starts (=). </p>
+<p style="color:grey;">79:  Figure 6.1(a) Example encoding of a sequence of events </p>
+<p style="color:grey;">80:  E1+ and E1  represent the start and end times of event E1, respectively </p>
+<p style="color:grey;">81:  Relational operators are used to indicate the ordered relations between start/end times </p>
+<p style="color:grey;">82:  (b) Example of encoding a multi-event stream from two sequence of events. </p>
+<p style="color:grey;">83:  6.1.3Hypotheses-driven Operators </p>
+<p style="color:grey;">84:  We formally define our language by defining an algebraic operation for pattern formulation </p>
+<p style="color:grey;">85:  These operators are aimed to be the basic operations, combinations of which can be used for arbitrarily sophisticated pattern formulation and pattern querying tasks on event streams </p>
+<p style="color:grey;">86:  To begin with, each event Ei pE iE sE is a pattern expression </p>
+<p style="color:grey;">87:  The semantics of base expressions for a point event, represented as Ei(t), is that at a given time point t, Ei(t) is true if Ei occurs at time t </p>
+<p style="color:grey;">88:  The semantics of base expressions for an interval event, represented as Ei(ts,te), is that at a given time interval T=[ts,te], Ei(ts,te) is true if Ei starts at ts and ends at te </p>
+<p style="color:grey;">89:  The semantics of base expressions for a semi-interval event, represented as Ei+/ (t), is that at a given time t, Ei+(t) is true if Ei starts at t, and Ei (t) is true if Ei ends at t. </p>
+<p style="color:grey;">90:  Arbitrary patterns can be defined by applying operators on individual event types </p>
+<p style="color:grey;">91:  So each pattern consists of a number of participating events </p>
+<p style="color:grey;">92:  Suppose pattern   has k participating events Ei, where 1 i k, the size of the pattern is denoted by | |=k, start and end timestamps of the pattern are denoted by  .ts and  .te, respectively, and defined as follows: </p>
+<p style="color:grey;">93:   += .ts=(E1.ts,E2.ts, ,Ek.ts)  = .te=(E1.te,E2.te, ,Ek.te) </p>
+<p style="color:grey;">94:  (6.1) </p>
+<p style="color:grey;">95:  Definition 6.9Pattern: A pattern   is represented as  =(X1 1X2 2  k 1Xk) where Xi is an event, Xi {pE,iE,sE}(1 i k), and  i {;,;   t,  ,|}(1 i k 1) is a binary operation. </p>
+<p style="color:grey;">96:  In case there are multiple occurrences of an Xi in a pattern, it is necessary to distinguish which two event boundaries (e.g., Xi+ and Xi ) represent the same Xi occurrence </p>
+<p style="color:grey;">97:  However, we assume that each event type has only one occurrence in a pattern and Xi+ and Xi  are coming from the same occurrence of Xi </p>
+<p style="color:grey;">98:  Our language supports a hierarchy of complex patterns by feeding the output of one operator as an input to another operator </p>
+<p style="color:grey;">99:  So a pattern operator not only connects events but also connects a number of pattern expressions to form a new expression. </p>
+<p style="color:grey;">100:  We now consider what it means to say a pattern occurs in an event stream </p>
+<p style="color:grey;">101:  Intuitively, the event types of the pattern need to have corresponding events in the event stream, such that the event types are the same and the operations between events of the pattern are respected and satisfied </p>
+<p style="color:grey;">102:  The semantics of pattern expressions, represented as  (ts,te) or  (T) at a given time interval T=[ts,te], is true if the pattern   has an occurrence in the time interval T (e.g., starts at ts and ends at te) </p>
+<p style="color:grey;">103:  Figure 6.2 shows an example of three event streams and different types of events in each stream </p>
+<p style="color:grey;">104:  Pattern 1 indicates that E2 is followed by E1 in the first event stream </p>
+<p style="color:grey;">105:  Pattern 2 indicates that E1 is followed by E 3 is followed by E  2 across the three event streams </p>
+<p style="color:grey;">106:  Frequency of a pattern is the number of occurrences of the pattern in an event stream </p>
+<p style="color:grey;">107:  As shown in Equation 6.1, a pattern has both a start and an end time </p>
+<p style="color:grey;">108:  So, two order relationships can be defined on complete time intervals. </p>
+<p style="color:grey;">109:  Definition 6.10Partial order: A partial order   is defined as  T, T  I, T T  iff te<t s </p>
+<p style="color:grey;">110:  Definition 6.11Total order: A total order relation < is defined as  T, T  I, T<T  iff ts<t s (ts=t s te<t e). </p>
+<p style="color:grey;">111:  6.1.3.1Selection Operation ( .P) </p>
+<p style="color:grey;">112:  This operator filters pattern expression on predicate P, where P refers to event attributes contained in the pattern. </p>
+<p style="color:grey;">113:  ( .P)  T=[ts,te] such that  (T) P </p>
+<p style="color:grey;">114:  For example, in Figure 3.2 one might be interested in selecting exercise activities with high intensity </p>
+<p style="color:grey;">115:  The corresponding pattern is represented as Exercise.intensity = high </p>
+<p style="color:grey;">116:  Similarly, selecting mild asthma attack events is represented by pattern Asthma_Attack.severity = mild. </p>
+<p style="color:grey;">117:  Figure 6.2Sample event streams ES(1), ES(2), and ES(3) and their corresponding event types </p>
+<p style="color:grey;">118:  Patterns 1 and 2 are conditional sequential patterns, each one with two occurrences. </p>
+<p style="color:grey;">119:  6.1.3.2Sequence Operation ( 1;  2) </p>
+<p style="color:grey;">120:  In general form, sequence operation ( 1; 2; ; k) detects if pattern expression  1 is followed by pattern expression  2, and so on </p>
+<p style="color:grey;">121:  The operator specifies a particular order in which the patterns of interest should occur </p>
+<p style="color:grey;">122:  Formally it is defined as follows:  </p>
+<p style="color:grey;">123:  ( 1; 2; ; k)  T1=[t1s,t1e],T2=[t2s,t2e], ,Tk=[tks,tke] </p>
+<p style="color:grey;">124:  such that T1<T2< <Tk,  1(T1)  2(T2)    k(Tk). </p>
+<p style="color:grey;">125:  Considering different temporal relations in Figure 3.4, the sequence operation can have four sub-categories: </p>
+<p style="color:grey;">126:   ( 2yo 1) ( 1+; 2+)  T1=[t1s,t1e], T2=[t2s,t2e] such that T1<T2,  1(T1)  2(T2) t1s<t2s. </p>
+<p style="color:grey;">127:   ( 2dab 1) ( 1+; 2 )  T1=[t1s,t1e], T2=[t2s,t2e] such that T1<T2,  1(T1)  2(T2) t1s<t2e. </p>
+<p style="color:grey;">128:   ( 2sd 1) ( 1 ; 2+)  T1=[t1s,t1e], T2=[t2s,t2e] such that T1<T2,  1(T1)  2(T2) t1e<t2s. </p>
+<p style="color:grey;">129:   ( 2sv 1) ( 1 ; 2 )  T1=[t1s,t1e], T2=[t2s,t2e] such that T1<T2,  1(T1)  2(T2) t1e<t2e. </p>
+<p style="color:grey;">130:  For example, in Figure 3.2 one might be interested in finding a pattern which indicates that after a moderate exercise activity ends an asthma attack occurs </p>
+<p style="color:grey;">131:  The pattern is represented as (Exercise.intensity  = medium) ; (Asthma_Attack)+. </p>
+<p style="color:grey;">132:  6.1.3.3Conditional Sequence Operation ( 1;   t1  2) </p>
+<p style="color:grey;">133:  In general form, conditional sequence operation ( 1;   t1  2;   t2 ;  tk 1  k) detects if pattern expression  1 is followed by pattern expression  2 within  t time units </p>
+<p style="color:grey;">134:   t is called the time lag or temporal restriction between two successive patterns </p>
+<p style="color:grey;">135:  Formally, it is defined as follows:  </p>
+<p style="color:grey;">136:  ( 1;  t1 2;  t2 ;  tk 1 k)  T1=[t1s,t1e],T2=[t2s,t2e], ,Tk=[tks,tke] </p>
+<p style="color:grey;">137:  such that </p>
+<p style="color:grey;">138:  T1<T2< <Tk, 1(T1)  2(T2)    k(Tk),T2 T1  t1 T3 T2  t2   Tk Tk 1  tk 1. </p>
+<p style="color:grey;">139:   ( 1+;  t 2+)  T1=[t1s,t1e],T2=[t2s,t2e] such that T1<T2,  1(T1)  2(T2), t2s t1s  t. </p>
+<p style="color:grey;">140:   ( 1+;  t 2 )  T1=[t1s,t1e],T2=[t2s,t2e] such that T1<T2,  1(T1)  2(T2), t2e t1s  t. </p>
+<p style="color:grey;">141:   ( 1 ;  t 2+)  T1=[t1s,t1e],T2=[t2s,t2e] such that T1<T2,  1(T1)  2(T2), t2s t1e  t. </p>
+<p style="color:grey;">142:   ( 1 ;  t 2 )  T1=[t1s,t1e],T2=[t2s,t2e] such that T1<T2,  1(T1)  2(T2), t2e t1e  t. </p>
+<p style="color:grey;">143:  For example, one might be interested in finding a pattern that indicates within 10 minutes of starting a vigorous exercises activity a severe asthma attack occurs </p>
+<p style="color:grey;">144:  The pattern is represented as (Exercise.intensity  = high)+;  10min(Asthma_Attack.severity=high)+. </p>
+<p style="color:grey;">145:  6.1.3.4Concurrency Operation ( 1   2) </p>
+<p style="color:grey;">146:  In general form, concurrency operation ( 1   2      k) detects multiple patterns occur in parallel, and succeeds only if all patterns are detected </p>
+<p style="color:grey;">147:  Unlike sequence, any order is allowed, and there has to be a non-empty overlap interval among the patterns. </p>
+<p style="color:grey;">148:  ( 1   2      k)  T1=[t1s,t1e],T2=[t2s,t2e], ,Tk=[tks,tke], 1(T1)  2(T2)    k(Tk),(T1 T2   Tk)  . </p>
+<p style="color:grey;">149:  For example, one might be interested in encoding a pattern that indicates temperature stays low while pollution increases suddenly </p>
+<p style="color:grey;">150:  The pattern is represented a Temp_StayLow     Pollution_IncSuddenly </p>
+<p style="color:grey;">151:  6.1.3.5Alternation ( 1 |  2) </p>
+<p style="color:grey;">152:  In general form, alternation ( 1| 2| | k) detects if any pattern expressions  1 to  k matches the input event stream. </p>
+<p style="color:grey;">153:  ( 1| 2| | k)  T1=[t1s,t1e],T2=[t2s,t2e], ,Tk=[tks,tke], 1(T1)  2(T2)    k(Tk). </p>
+<p style="color:grey;">154:  6.1.3.6Time (    ) </p>
+<p style="color:grey;">155:  The time operator requires a pattern   to occur within a certain time interval  =[ s, e]. </p>
+<p style="color:grey;">156:        T=[ts,te] such that  (T)  s ts  e. </p>
+<p style="color:grey;">157:  6.1.4Data-driven Operators </p>
+<p style="color:grey;">158:  The following co-occurrence operators are calculated for every pair of event types in the system </p>
+<p style="color:grey;">159:  Given two event streams ES and ES , the co-occurrence values are computed between every pair of event types in these streams </p>
+<p style="color:grey;">160:  If ES contains N event types E1 to EN, and ES  contains M event types E 1 to E M, there are N   M co-occurrence pairs without considering time lags between events. </p>
+<p style="color:grey;">161:  6.1.4.1Sequential Co-occurrence SEQ_CO[ t](ES,ES ) </p>
+<p style="color:grey;">162:  The inputs to this operator are two event streams ES and ES  and a set of pre-defined time resolutions and time lags, and the output is a matrix with the co-occurrence value between each pair of event types in these event streams. </p>
+<p style="color:grey;">163:  SEQ_CO[ t](ES,ES )=MN M  N M+ </p>
+<p style="color:grey;">164:  (6.2) </p>
+<p style="color:grey;">165:  If ES=ES , it indicates auto co-occurrence on an event stream, otherwise it indicates cross co-occurrence between two event streams. </p>
+<p style="color:grey;">166:  For a pair of events Ei and Ej, Mij=Seq_Co[ t](Ei,Ej), where sequential co-occurrence is defined as follows: </p>
+<p style="color:grey;">167:  For a pair of events Ei and Ej, sequential co-occurrence with temporal time lag  t is the frequency of Ej following Ei within  t time lag. </p>
+<p style="color:grey;">168:  Seq_Co[ t](Ei,Ej)=Count(Ei;  tEj)Count(Ei) </p>
+<p style="color:grey;">169:  (6.3) </p>
+<p style="color:grey;">170:  with Seq_Co[ t](Ei,Ej)  [0,1] </p>
+<p style="color:grey;">171:  The maximum |Seq_Co[ t](Ei,Ej)|=1 means that Ei and Ej are always co-occurring within  t time lag, while values close to zero indicate that there is no co-occurrence within the specified time lag </p>
+<p style="color:grey;">172:  To check for a significant time lag between Ei and Ej we define: </p>
+<p style="color:grey;">173:   tmax=argmax t(Seq_Co[ t](Ei,Ej)) </p>
+<p style="color:grey;">174:  with  t {1,2, , CO}, where  CO is a design parameter indicating the maximum possible time lag between events. </p>
+<p style="color:grey;">175:  6.1.4.2Concurrent Co-occurrence CON_CO(ES,ES ) </p>
+<p style="color:grey;">176:  The inputs to this operator are two event streams and the output is a matrix with the concurrent co-occurrence value between each pair of event types in these event streams </p>
+<p style="color:grey;">177:  CON_CO(ES,ES )=MN M  N M+ </p>
+<p style="color:grey;">178:  (6.4) </p>
+<p style="color:grey;">179:  For a pair of events Ei and Ej, Mij=Con_Co[ t](Ei,Ej), where concurrent co-occurrence is defined as follow: </p>
+<p style="color:grey;">180:  For a pair of events Ei and Ej, concurrent co-occurrence is the frequency count of Ei and Ej occurring with no particular order with [Ei.ts,Ei.te] [Ej.ts,Ej.te]  . </p>
+<p style="color:grey;">181:  Con_Co(Ei,Ej)=Count(Ei  Ej)12(Count(Ei)+Count(Ej)) </p>
+<p style="color:grey;">182:  (6.5) </p>
+<p style="color:grey;">183:  6.2Architecture </p>
+<p style="color:grey;">184:  EventMiner is built with the human-in-the-loop concept as its core, as explained in Section 4.4. </p>
+<p style="color:grey;">185:  The human-in-the-loop concept leverages both human and machine intelligence to create models </p>
+<p style="color:grey;">186:  EventMiner integrates the high-level expert knowledge into the event mining process by acquiring their relevance judgments regarding a set of initial retrieval results </p>
+<p style="color:grey;">187:  In this approach, humans are directly involved through hypotheses formulation and hypotheses testing </p>
+<p style="color:grey;">188:  In addition, when an analyst does not have any idea what hypothesis to formulate, pattern discovery techniques are utilized in creating an initial insight. </p>
+<p style="color:grey;">189:  The paradigm of human-in-the-loop for model building is shown in a system architecture in Figure 6.3 </p>
+<p style="color:grey;">190:  Data-driven analysis results in the visualization of co-occurrence patterns Figure 6.3(a) </p>
+<p style="color:grey;">191:  By seeding a hypothesis based on the insight derived from such analysis, an expert can incorporate their own domain knowledge and formulate a refined hypothesis quickly, systematically, and grow the hypothesis iteratively to generate a comprehensive model [Figure 6.3(b)] </p>
+<p style="color:grey;">192:  The former is called the unknown unknown problem and the latter is called the known unknown problem </p>
+<p style="color:grey;">193:  The best model building practice is to create a balance between data-driven and hypothesis-driven analyses as one complements the other, reduces the search space significantly, and helps the analyst harvest and understand descriptive patterns. </p>
+<p style="color:grey;">194:  Figure 6.3High level architecture of the EventMiner framework. </p>
+<p style="color:grey;">195:  To illustrate this process consider the following scenario: </p>
+<p style="color:grey;">196:  If one has asthma, it is important to keep track of the causes or triggers that provoke asthma attacks </p>
+<p style="color:grey;">197:  Asthma attacks have been linked to exercise, respiratory infections, and exposure to environmental factors such as allergens, tobacco smoke, and air pollution </p>
+<p style="color:grey;">198:  To understand the triggers of asthma we need to deal with increasingly large and complex sets of heterogeneous, high-dimensional data streams such as a person s physical activity, location, asthma attack history, allergens and pollutants in the environment, and so on </p>
+<p style="color:grey;">199:  As these data streams flow into EventMiner, they are transformed into meaningful events </p>
+<p style="color:grey;">200:  Life events encode a patient s activity of daily living such as exercise, jogging, walking, cycling, working, staying home, sleeping, and so on </p>
+<p style="color:grey;">201:  Environmental events encode states and state transitions in the environmental variables such as temperature, air pressure, pollution, pollen, particular matter (PM2.5), PM10, carbon dioxide (CO2), carbon monoxide (CO), nitrous oxide (NO), ozone, and so on </p>
+<p style="color:grey;">202:  An asthma specialist is using the EventMiner framework to understand what effects a patient s asthma attack, what conditions worsen patient s disease, and if the patient s asthma is under control </p>
+<p style="color:grey;">203:  In the initial stage, the specialist might apply data-driven operators to understand all event co-occurrences patterns </p>
+<p style="color:grey;">204:  Looking at the visualization, she realizes that patterns (Exercise;  [0 15]Asthma_Attack) and ((ActivityLevel_high|ActivityLevel_very_high);  [0 30]Asthma_Attach) are significant patterns based on their occurrence frequency </p>
+<p style="color:grey;">205:  She then seeds a hypothesis based on this knowledge and investigate more expressive patterns using hypothesis-driven operators to formulate the following patterns: </p>
+<p style="color:grey;">206:  ((Exercise; [0 15]Asthma_Attack)  Pollution_high)((Exercise; [0 15]Asthma_Attack)  Pollen_high)((Exercise; [0 15]Asthma_Attack)  (Pollen_high | Pollution_high))(((ActivityLevel_high | ActivityLevel_very_high); [0 30]Asthma_Attack)  Temp_low) </p>
+<p style="color:grey;">207:  EventMiner helps the specialist to narrow down the causes of an asthma attack and understand the patient s sensitivity to different allergens in a systematic and scientific way </p>
+<p style="color:grey;">208:  6.3Core Processing and Language Syntax </p>
+<p style="color:grey;">209:  From the asthma management scenario in the previous section, several requirements can be derived for a high-level language that facilitate explanatory modeling </p>
+<p style="color:grey;">210:   The language needs to be expressive enough to describe patterns of varying complexity. </p>
+<p style="color:grey;">211:   The primitive building blocks of the language need to be easily understandable and usable by the end user. </p>
+<p style="color:grey;">212:   The language needs to be implementable considering different performance goals defined by the user, such as time and space complexity. </p>
+<p style="color:grey;">213:  In this section we describe a pattern language for EventMiner that is based on the concept of finite state automaton (FSA) that is extended with the support for defining temporal relationships between the events </p>
+<p style="color:grey;">214:  Definition 6.12Automaton: An FSA is a 5-tuple (O S,T S,E d,s0,sf), consisting of a finite set of ordinary states (OS), time states (TS), transitions between states (Ed), a start state s0 O S, and a final or acceptance state sf O S. </p>
+<p style="color:grey;">215:  Figure 6.4 shows the building blocks of our FSA </p>
+<p style="color:grey;">216:  Each operator in the language translates to its corresponding automaton to detect instances of a specific pattern in the input stream </p>
+<p style="color:grey;">217:  The theory of FSA is rich and FSA techniques have been used in a wide range of domains such as pattern matching, pattern recognition, speech processing, handwriting recognition, encryption algorithm, and data compression </p>
+<p style="color:grey;">218:  Using FSA for pattern recognition and pattern matching has several advantages </p>
+<p style="color:grey;">219:  First, FSA is a well-understood computational model with relatively simple implementation that supports symbolic pattern matching over data streams </p>
+<p style="color:grey;">220:  Second, the high-level pattern language consists of a set of operators that are tailored toward formulation of complex patterns </p>
+<p style="color:grey;">221:  The characteristics of these operators can be translated to specifications of different automata </p>
+<p style="color:grey;">222:  Hence, complex patterns can easily be decomposed to multiple computational automata </p>
+<p style="color:grey;">223:  Figure 6.4Basic building blocks of FSA in a high-level pattern formulation and query language. </p>
+<p style="color:grey;">224:  The processing operators defined in Section 6.1.3 are the basic building blocks of pattern formulation recognition </p>
+<p style="color:grey;">225:  These operators need to be compiled to a processing unit </p>
+<p style="color:grey;">226:  In the EventMiner framework, the pattern recognition component employs an extended FSA that supports a time model to facilitate incorporating temporal restrictions that are an integral part of co-occurrence pattern analysis </p>
+<p style="color:grey;">227:  The automaton contains two types of states: ordinary states (OS) and time states (TS) </p>
+<p style="color:grey;">228:  An ordinary state is analogous to states in traditional finite automata </p>
+<p style="color:grey;">229:  It consumes an event from event stream, applies an EVALUATE() function and make a transition to the next state in case the evaluation is successful </p>
+<p style="color:grey;">230:  A time state on the other hand keeps track of time constraint requirements by applying a SET() function on the boundaries of a time lag ( 1, 2) that is going to be used in the evaluation function of the next ordinary state </p>
+<p style="color:grey;">231:  The ordinary state is represented by an event type Ei   and it means that the FSA is waiting for Ei to be seen in the input event stream. </p>
+<p style="color:grey;">232:  Figure 6.5 demonstrates an initialized FSA corresponding to a pattern  1=(E5; [10] E1; [3] E4) </p>
+<p style="color:grey;">233:  During run time, Ei.ts and Ei.te are substituted with start and end time of an instance of event Ei from the input event stream </p>
+<p style="color:grey;">234:  The strategy for counting occurrences of a pattern is straightforward </p>
+<p style="color:grey;">235:  For a pattern, say  , an automaton FSA  is initialized </p>
+<p style="color:grey;">236:  The initialization process includes translating event types and temporal constraints to ordinary states and time states, and allocating a buffer for EVALUATE() and SET() functions within each state </p>
+<p style="color:grey;">237:  As we read data from an event stream, by considering the output of EVALUATE(), the automaton makes the earliest possible transitions into the next successive state </p>
+<p style="color:grey;">238:  Once it reaches its final state, an occurrence of the pattern is recognized and its frequency is increased by one </p>
+<p style="color:grey;">239:  A new automaton is initialized for pattern   when an event corresponding to the pattern s first event appears again in the input event stream. </p>
+<p style="color:grey;">240:  Figure 6.5The automaton corresponding to pattern  1 with three event components </p>
+<p style="color:grey;">241:  It demonstrates three ordinary states, two time states, and EVALUATE() and SET() functions associated with each state. </p>
+<p style="color:grey;">242:  A high-level definition of a pattern with implicit structural and temporal information can be translated into an automata-based pattern specification using automaton building blocks </p>
+<p style="color:grey;">243:  Next, we present the language operators and the construction of their corresponding automaton </p>
+<p style="color:grey;">244:  For simplicity and without the loss of generality, operators are depicted between two events only </p>
+<p style="color:grey;">245:  However, these operators can be cascaded to compose more complex patterns. </p>
+<p style="color:grey;">246:  Figure 6.6Selection operator evaluates an ordinary state on event type Ei and and its attributes P </p>
+<p style="color:grey;">247:  It can also select an event type Ei without any specific attribute. </p>
+<p style="color:grey;">248:  Figure 6.7Sequence operator evaluates an ordinary state on first event type s start/end followed by second event type s start/end. </p>
+<p style="color:grey;">249:  Selection (Ei.P): As shown in Figure 6.6, this operator filters pattern expression on predicate P, where P refers to event attributes contained in the pattern P    , and event schema   describes a set of attributes a class of events can contain </p>
+<p style="color:grey;">250:  Ei, 1 i N is an event type where Ei  , and   is the alphabet of event types. </p>
+<p style="color:grey;">251:  Sequence (Ei; Ej): As shown in Figure 6.7, this operator detects if event type Ei is followed by event type Ej. </p>
+<p style="color:grey;">252:  Figure 6.8Conditional sequence operator evaluates an ordinary state on first event type s start/end followed by second event type s start/end within  t=[ 1, 2] time units </p>
+<p style="color:grey;">253:  Time state set  1 and  2 values based on the first event s timestamp in the event stream </p>
+<p style="color:grey;">254:  These values are used in the evaluation phase of the next ordinary state. </p>
+<p style="color:grey;">255:  Figure 6.9Concurrency operator evaluates an ordinary state on first event type s start/end followed by second event type s start/end and checks for a non-empty temporal overlap in the second event s evaluation phase. </p>
+<p style="color:grey;">256:  Figure 6.10Alternation operator evaluates multiple ordinary states on given event types. </p>
+<p style="color:grey;">257:  Conditional sequence (Ei; [ 1, 2] Ej): As shown in Figure 6.8, this operator detects if event type Ei is followed by event type Ej within [ 1, 2] time units </p>
+<p style="color:grey;">258:  Concurrency (Ei  Ej): As shown in Figure 6.9, this operator detects if Ei and Ej are happening in parallel </p>
+<p style="color:grey;">259:  Any order between events is acceptable. </p>
+<p style="color:grey;">260:  Alternation (Ei | Ej): As shown in Figure 6.10, this operator detects if either Ei or Ej happens. </p>
+<p style="color:grey;">261:  6.4Interactive Event Mining Process </p>
+<p style="color:grey;">262:  The user of EventMiner can import pre-processed data (i.e., event streams) and choose data-driven operators and their suitable visualizations to explore the data, generate a basic model, and derive preliminary insights </p>
+<p style="color:grey;">263:  Then, she can seed a hypothesis and grow it step by step using the hypothesis-driven pattern formulation operators </p>
+<p style="color:grey;">264:  Figure 6.11 demonstrates the user interface of EventMiner </p>
+<p style="color:grey;">265:  The basic components are: </p>
+<p style="color:grey;">266:  Figure 6.11Analytical dashboard of EventMiner framework. </p>
+<p style="color:grey;">267:  1.Data selection panel: Select different events and event streams from database </p>
+<p style="color:grey;">268:  2.Data-driven operator panel: These operators are utilized for pattern mining from event streams </p>
+<p style="color:grey;">269:  3.Hypotheses-driven operator panel: These operators are used for pattern formulation and pattern query from input events </p>
+<p style="color:grey;">270:  4.Visualization panels: The results of pattern mining and pattern query are displayed visually in the form of co-occurrence matrices and histograms </p>
+<p style="color:grey;">271:  6.5Case Studies with EventMiner </p>
+<p style="color:grey;">272:  6.5.1Asthma Risk Management </p>
+<p style="color:grey;">273:  Targeted care for those at highest risk of asthma attack is an important application that will help people all over the world </p>
+<p style="color:grey;">274:  Asthma risk prediction is growing in importance, both at an individual level and at the public health level </p>
+<p style="color:grey;">275:  Exposure to air pollution, specifically PM2.5, is linked with asthma exacerbation; however, the role played by meteorological factors such as temperature, humidity, rainfall, wind, and so on, and the complicated interrelations between these factors and asthma outbreaks are not well understood. </p>
+<p style="color:grey;">276:  A comprehensive understanding of asthma risk factors requires a framework that enables multimodal and heterogeneous data aggregation and processing </p>
+<p style="color:grey;">277:  Using this framework, medical researchers can study the interrelations between multiple risk factors and answer questions such as: </p>
+<p style="color:grey;">278:   During the fall season, how does pollution affect asthma in rainy or windy days </p>
+<p style="color:grey;">279:   After a sudden increase in PM2.5, within how many days does an asthma outbreak happens </p>
+<p style="color:grey;">280:  How does the presence of different climate conditions affect this situation </p>
+<p style="color:grey;">281:  We applied EventMiner to identify meaningful relationships between environmental factors and asthma exacerbation </p>
+<p style="color:grey;">282:  We aimed to reveal complex risk factors in asthma outbreaks that go beyond simple correlations </p>
+<p style="color:grey;">283:  Using the data-driven operators of EventMiner, interesting patterns of different sizes were revealed </p>
+<p style="color:grey;">284:  In addition, by applying hypothesis formulation and refinement, we could understand the inter-relations between meteorological factors, pollution, and asthma outbreak </p>
+<p style="color:grey;">285:  Moreover, recognizing the time lags between risk factor and outbreak is one of the most important contributions of applying EventMiner to this problem. </p>
+<p style="color:grey;">286:  6.5.1.1Motivation of the Study </p>
+<p style="color:grey;">287:  Asthma is a lifelong disease that causes wheezing, breathlessness, chest tightness, and coughing and limits a person s quality of life </p>
+<p style="color:grey;">288:  An estimated 300 million people worldwide suffer from asthma, with 250,000 annual deaths attributed to the disease </p>
+<p style="color:grey;">289:  It is estimated that the number of people with asthma will grow by more than 100 million by 2025 [Cruz et al </p>
+<p style="color:grey;">290:  2007] </p>
+<p style="color:grey;">291:  In the United States, 1 in 12 people (about 25 million, or 8% of the population) had asthma in 2009, compared with 1 in 14 (about 20 million, or 7%) in 2001 </p>
+<p style="color:grey;">292:  More than half (53%) of people with asthma had an asthma attack in 2008. </p>
+<p style="color:grey;">293:  Most people with asthma can control their symptoms and prevent asthma attacks by avoiding asthma triggers and correctly using prescribed medicines </p>
+<p style="color:grey;">294:  Asthma is a chronic disease, so managing this disease effectively is the best way to cope with it </p>
+<p style="color:grey;">295:  To manage asthma, it is important to understand the many asthma triggers </p>
+<p style="color:grey;">296:  Some major asthma triggers are: pollution, pollen, cold air, exercise, dust, smoke, pets, stress, chemical fumes, and bugs </p>
+<p style="color:grey;">297:  Once one identifies and reduces the exposure to the specific triggers, one can take an active role in controlling one s asthma and reduce the frequency of asthma attacks. </p>
+<p style="color:grey;">298:  A great body of research in medical science applies correlation detection techniques and regression models to conclude a positive or negative correlation between asthma attacks and asthma risk factors </p>
+<p style="color:grey;">299:  For example, Galan et al </p>
+<p style="color:grey;">300:  [2003] studied the relationship between asthma attack and pollutant exposure and Lee et al </p>
+<p style="color:grey;">301:  [2012] investigated the influence of weather fluctuation on asthma </p>
+<p style="color:grey;">302:  The results of these studies are mostly reported as correlation coefficients and p-values </p>
+<p style="color:grey;">303:  These results are not expressive beyond assessing strong or weak positive/negative correlations. </p>
+<p style="color:grey;">304:  Bae et al </p>
+<p style="color:grey;">305:  [2012] introduced a framework that can monitor and analyze a patient s exposure to environmental triggers of asthma attacks </p>
+<p style="color:grey;">306:  The system emphasized using the patient s location, environmental pollution, temperature, and humidity to find correlations between the patient s health condition and the negative impact of environmental factors </p>
+<p style="color:grey;">307:  Although the framework is interesting, the article is at the conceptual level only without any actual implementation or experiment </p>
+<p style="color:grey;">308:  Kaku et al </p>
+<p style="color:grey;">309:  [2012] applied an auto-regressive model on environmental temperature pressure and humidity to predict asthma attacks </p>
+<p style="color:grey;">310:  The authors defined a set of rules based on expert knowledge that reflect the vulnerability of asthma patients to the fluctuation of meteorological factors </p>
+<p style="color:grey;">311:  The study did not learn any rules from sensor data, and instead relied on a set of predefined rules to predict asthma attacks </p>
+<p style="color:grey;">312:  6.5.1.2Applying EventMiner </p>
+<p style="color:grey;">313:  In this section we present the results of applying EventMiner to identify meaningful relationships between environmental factors and asthma exacerbation </p>
+<p style="color:grey;">314:  We use messages from social networks as an indicator of asthma outbreaks; then we try to find digital footprints of potential triggers of the outbreak in the physical sensory data </p>
+<p style="color:grey;">315:  We define asthma risk factors as temporal structures and order relations between weather conditions and environmental pollution and their effect on asthma exacerbation </p>
+<p style="color:grey;">316:  Asthma risk factors are formulated and extracted with EventMiner </p>
+<p style="color:grey;">317:  For experimental evaluations, we collected environmental pollution and meteorological data from Tokyo and Osaka cities and applied EventMiner to analyze complex risk factor patterns that might have resulted in asthma outbreaks </p>
+<p style="color:grey;">318:  Figure 6.12 shows the overall framework for analyzing and modeling asthma risk factors </p>
+<p style="color:grey;">319:  Our goal is to detect the prevalence of asthma by finding complex interrelations between air pollution, meteorological factors, and asthma exacerbation </p>
+<p style="color:grey;">320:  Once a burst in asthma-related messages in a social media platform is detected, the historical physical sensory data within a one-week time window preceding the burst are analyzed to find a set of complex risk factor patterns that might have resulted in the burst </p>
+<p style="color:grey;">321:  Figure 6.12Extracting asthma risk factors by analyzing the relationship between tweets containing asthma topic data and meteorological data streams. </p>
+<p style="color:grey;">322:  6.5.1.3Data Pre-processing </p>
+<p style="color:grey;">323:  Mizunuma et al </p>
+<p style="color:grey;">324:  [2014] showed that there is a relationship between real world events and what people tweet about </p>
+<p style="color:grey;">325:  As a result, the content of tweets can be leveraged for recognizing a situation in the real world </p>
+<p style="color:grey;">326:  We use data collected for 2 years, from January 2013 to January 2015, in Osaka and Tokyo </p>
+<p style="color:grey;">327:  The data contain continuous hourly PM2.5, temperature, rain, wind, humidity, solar radiation, sunshine, and air pressure readings </p>
+<p style="color:grey;">328:  6.5.1.4Topic Modeling </p>
+<p style="color:grey;">329:  The target of topic modeling is to build a topic detector Ev that filters messages from social sensors that contain a specific topic, that is, asthma </p>
+<p style="color:grey;">330:  To build the topic detector, we used KeyGraph [Sayyadi and Raschid 2013], a topic detection approach that considers keyword co-occurrences to find the topics of interest from a large and noisy data repository </p>
+<p style="color:grey;">331:  KeyGraph is composed of a set of non-overlapped sub-graphs called communities; each community is considered as one topic or event </p>
+<p style="color:grey;">332:  To build the community Ex for a given topic X, say asthma, we first collect a set of X-related documents from the Internet (Wikipedia, medical web pages, etc.), and other scientific journal archives (e.g., ojphi.org) </p>
+<p style="color:grey;">333:  Then, we use KeyGraph to build a set of communities </p>
+<p style="color:grey;">334:  Finally, we pick a community that contains the keyword X, and collect all keywords that are directly connected to X as the Ex </p>
+<p style="color:grey;">335:  We assume that a tweet that contains at least one keyword in Ex is related to the topic X. </p>
+<p style="color:grey;">336:  6.5.1.5Environmental Event Stream Modeling </p>
+<p style="color:grey;">337:  The target of this component is to extract meaningful events from input data streams and generate the corresponding event streams </p>
+<p style="color:grey;">338:  We use an event model to create an abstraction level on top of sensory data streams </p>
+<p style="color:grey;">339:  A burst detector [Kleinberg 2003] is applied to find bursting points on the topic histogram of tweets </p>
+<p style="color:grey;">340:  Moreover, environmental data are analyzed to extract trends, and then trend information are abstracted to their symbolic aggregate approXimation (SAX) representation [Lin et al </p>
+<p style="color:grey;">341:  2007]. </p>
+<p style="color:grey;">342:  In time-series data streams, trend analysis plays a major role </p>
+<p style="color:grey;">343:  We used the seasonal-trend decomposition by Loess (STL) method, introduced in Lin et al </p>
+<p style="color:grey;">344:  [2007], to decompose original time-series data into trend, seasonal, and remainder streams </p>
+<p style="color:grey;">345:  Figure 6.13 shows such a decomposition on PM2.5 observations for a duration of 1 month in Tokyo during December 2014. </p>
+<p style="color:grey;">346:  The SAX algorithm with an alphabet size of size 3 (a, b, c symbols) is applied on the trend data to create SAX-code streams </p>
+<p style="color:grey;">347:  Given the specifications of our application, we are interested in capturing state transitions (e.g., pollution level increases or decreases), and state value maintenance for a duration of time (e.g., pollution level stays high) </p>
+<p style="color:grey;">348:  Six event types are defined for each data stream </p>
+<p style="color:grey;">349:  Table 6.3 shows a list of SAX codes and the corresponding event definitions assigned to each </p>
+<p style="color:grey;">350:  Using this encoding, each SAX-code trend data stream is converted to an event stream </p>
+<p style="color:grey;">351:  These event streams are used as the input to the pattern mining component of EventMiner </p>
+<p style="color:grey;">352:  Figure 6.13Seasonal-trend decomposition by Loess on PM2.5 data stream. </p>
+<p style="color:grey;">353:  Table 6.3:Definition of events assigned to each SAX-code </p>
+<p style="color:grey;">354:  Symbol </p>
+<p style="color:grey;">355:  SAX-code </p>
+<p style="color:grey;">356:  Event definition </p>
+<p style="color:grey;">357:  Low value level=a </p>
+<p style="color:grey;">358:  ab/bc </p>
+<p style="color:grey;">359:  Increase </p>
+<p style="color:grey;">360:  Suddenly increase </p>
+<p style="color:grey;">361:  Medium value level=b </p>
+<p style="color:grey;">362:  Suddenly decrease </p>
+<p style="color:grey;">363:  cb/ba </p>
+<p style="color:grey;">364:  Decrease </p>
+<p style="color:grey;">365:  High value level=c </p>
+<p style="color:grey;">366:  Stay low </p>
+<p style="color:grey;">367:  Stay high </p>
+<p style="color:grey;">368:  6.5.1.6Data-driven Risk Factor Recognition </p>
+<p style="color:grey;">369:  We are interested in finding the relationships between multiple asthma triggers, mainly PM2.5 and meteorological factors </p>
+<p style="color:grey;">370:  An asthma risk factor is a pattern characterized by structural order and temporal constraints between multiple events that have resulted in an asthma outbreak </p>
+<p style="color:grey;">371:  An outbreak is an increase in the frequency of a disease above what is expected in a given population </p>
+<p style="color:grey;">372:  For example the pattern   = ((rain_stays_high     temperature_stays_high); asthma_outberak) is considered to be a risk factor if   occurs frequently. </p>
+<p style="color:grey;">373:  Figures 6.14 to 6.19 display six dominant risk factors based on their frequency counts in the city of Osaka </p>
+<p style="color:grey;">374:  Significant risk factors are detected for each season separately because the risk factors are quite different from one season to another </p>
+<p style="color:grey;">375:  RF1 shows that in summer, when solar radiation is high, the combination of low wind and high pollution causes asthma outbreaks </p>
+<p style="color:grey;">376:  RF2 shows that without considering the effect of solar radiation, high wind and high pollution have a significant impact on asthma outbreaks </p>
+<p style="color:grey;">377:  RF3 implies that low humidity in the presence of pollution plays an important role in outbreaks during spring, while temperature fluctuation is a major factor during the fall and winter </p>
+<p style="color:grey;">378:  Also, a lack of wind while air pressure and humidity are high causes major outbreaks during winter </p>
+<p style="color:grey;">379:  Figure 6.14RF1 = ((Wind_stays_low; PM2.5_stays_high)     SolarRadiation_stays_high). </p>
+<p style="color:grey;">380:  Figure 6.15RF2 = (PM2.5_stays_high;   [0-1 days] Wind_stays_high). </p>
+<p style="color:grey;">381:  Figure 6.16RF3 = (Wind_stays_low; (PM2.5_stays_high     Humidity_stays_low)). </p>
+<p style="color:grey;">382:  Figure 6.17RF4 = (Temperature_dec_steadily; Humidity_stays_low). </p>
+<p style="color:grey;">383:  Figure 6.18RF5 = (PM2.5_stays_high     Sunshine_stays_high     Wind_stays_low). </p>
+<p style="color:grey;">384:  Figure 6.19RF6 = ((Wind_stays_low;  [0-1 days] Humidity_stays_low)     Airpressure_stays_high). </p>
+<p style="color:grey;">385:  Figure 6.20 demonstrates the most significant asthma risk factors of size 2 with their occurrence frequency for each season and in total in Tokyo </p>
+<p style="color:grey;">386:  A description of each pattern is shown in Table 6.4 </p>
+<p style="color:grey;">387:  From this analysis we realized that although PM2.5 has the most impact on asthma outbreaks in general, its effect is not noteworthy in the fall and winter seasons </p>
+<p style="color:grey;">388:  In addition, temperature fluctuations have the most impact on outbreaks in the fall and winter seasons and it is not a major risk factor during the spring or summer </p>
+<p style="color:grey;">389:  Another interesting observation is that significant rainfall during the spring and summer makes an asthma outbreak more probable </p>
+<p style="color:grey;">390:  At first, this observation might be counterintuitive because rain should not affect asthma, unless it is combined with some other factors that we did not capture in our model </p>
+<p style="color:grey;">391:  To shed light on this matter, we consulted with asthma experts and realized that thunderstorms in general are associated with an increase in asthma exacerbation </p>
+<p style="color:grey;">392:  This is because high concentrations of allergens, specially pollen, are found to coincide with thunderstorms </p>
+<p style="color:grey;">393:  Our experiments did not account for the effect of pollen since pollen data were not available. </p>
+<p style="color:grey;">394:  Figure 6.20Frequency of asthma risk factors of size 2. </p>
+<p style="color:grey;">395:  Table 6.4:Risk factor patterns and their corresponding pattern number from Figure 6.20 </p>
+<p style="color:grey;">396:  (e.g., (PM2.5_inc  ;  [0-4days]Asthma_outbreak) reads: once PM2.5 increases, an asthma outbreak happens within 4 days) </p>
+<p style="color:grey;">397:  Pattern number </p>
+<p style="color:grey;">398:  Risk factor pattern </p>
+<p style="color:grey;">399:  PM2.5_inc ;  [0 4days] Asthma_outbreak </p>
+<p style="color:grey;">400:  Temp_stays_high ;  [0 4days] Asthma_outbreak </p>
+<p style="color:grey;">401:  Rain_inc_suddenly ;  [0 5days] Asthma_outbreak </p>
+<p style="color:grey;">402:  Temperature_stay_low ;  [0 3days] Asthma_outbreak </p>
+<p style="color:grey;">403:  PM2.5_inc_suddenly ;  [0 2days] Asthma_outbreak </p>
+<p style="color:grey;">404:  Wind_dec ;  [0 3days] Asthma_outbreak </p>
+<p style="color:grey;">405:  Wind_inc ;  [0 4days] Asthma_outbreak </p>
+<p style="color:grey;">406:  PM2.5_stays_high ;  [0 5days] Asthma_outbreak </p>
+<p style="color:grey;">407:  Figure 6.21 shows 16 significant patterns of size 3, and 5 significant patterns of size 4 in Tokyo </p>
+<p style="color:grey;">408:  These patterns demonstrate the relationships between two or three events as well as the time lag between them and asthma exacerbation </p>
+<p style="color:grey;">409:  For example, when rain decreases followed by PM2.5 increases within 4 days, then asthma outbreaks happen </p>
+<p style="color:grey;">410:  The total number of occurrences of size-3 patterns declined compared to size-2 patterns </p>
+<p style="color:grey;">411:  The same is true between size-4 patterns and size-5 patterns </p>
+<p style="color:grey;">412:  By increasing the size of a pattern it becomes more specific, and the more specific a pattern is the less frequent it occurs in the data. </p>
+<p style="color:grey;">413:  The results suggest some interesting patterns: </p>
+<p style="color:grey;">414:  1.When PM2.5 increases followed by temperature staying high within 3 days, an asthma outbreak is probable. </p>
+<p style="color:grey;">415:  2.When wind decreases followed by a PM2.5 increase within 5 days, then an asthma outbreak is probable. </p>
+<p style="color:grey;">416:  Recognizing the time lags between the events is a major contribution of applying EventMiner to the asthma risk factor recognition problem </p>
+<p style="color:grey;">417:  To the best of our knowledge, explanatory modeling of risk factors has never before been studied systematically in a healthcare application. </p>
+<p style="color:grey;">418:  In a different experiment, we investigated the effect of meteorological factors combined with other environmental conditions in asthma outbreaks in Osaka </p>
+<p style="color:grey;">419:  We focused on hypothesis refinement in EventMiner </p>
+<p style="color:grey;">420:  Multiple studies have shown a correlation between PM2.5 and asthma outbreaks [Cakmak et al </p>
+<p style="color:grey;">421:  2012, D Amato et al </p>
+<p style="color:grey;">422:  2002] </p>
+<p style="color:grey;">423:  However, we found that PM2.5_inc_steadily cause asthma outbreaks with only 54% probability </p>
+<p style="color:grey;">424:  When air pollution increases while air pressure is high, the possibility of an outbreak reaches 59% </p>
+<p style="color:grey;">425:  Therefore, the increase of air pressure is shown to be a surrogate for accumulation of PM2.5, and is more strongly associated with asthma outbreaks than any other combination of meteorological factors and air pollution </p>
+<p style="color:grey;">426:  Some of these interesting findings are shown in Table 6.5 </p>
+<p style="color:grey;">427:  For example, P21 is not a risk factor by itself because the chances of an outbreak is only 9%, but when it is combined with high temperature the outbreak possibility increases significantly </p>
+<p style="color:grey;">428:  Figure 6.21Frequency of asthma risk factors of sizes 3 and 4. </p>
+<p style="color:grey;">429:  6.5.2Objective Self: One Step Beyond Quantified Self </p>
+<p style="color:grey;">430:  Self is a fascinating subject </p>
+<p style="color:grey;">431:  It is what we know intuitively but it is hard to define </p>
+<p style="color:grey;">432:  When we ask psychologists what self is, they might say it is indefinable, should not be defined, will be limited if we define it, or it is a placeholder for something we do not understand </p>
+<p style="color:grey;">433:  When we define self, it changes the definition of a healthy self and, in a practical way, the approaches one can take to strengthen the self </p>
+<p style="color:grey;">434:  When we try to enhance self, the first step is to measure it </p>
+<p style="color:grey;">435:  We need to measure and monitor the things that we want to control </p>
+<p style="color:grey;">436:  Monitoring and modifying are two essential components of our journey to a healthy self </p>
+<p style="color:grey;">437:  Once we define self, we can have a better idea of how to create a stronger self, or, at the least, how to model self </p>
+<p style="color:grey;">438:  There are many ways to describe feelings, activities, emotions, and so on </p>
+<p style="color:grey;">439:  However, the ability to observe those feelings and activities and understand the relationships between those will take our understanding of self to a whole new level. </p>
+<p style="color:grey;">440:  Table 6.5:Potential risk factors and the probability of asthma outbreaks before and after hypothesis refinement </p>
+<p style="color:grey;">441:  In this section, we discuss how to objectively measure self from diverse sources of information; how to use EventMiner for building objective self as an explanatory model of a person, and how to use this model in a behavior assessment application. </p>
+<p style="color:grey;">442:  6.5.2.1Quantified Self </p>
+<p style="color:grey;">443:  The 21st century has witnessed significant advances in storage, processing, sensing, and communication technologies </p>
+<p style="color:grey;">444:  All these have resulted in the popularization of strong data-dependent approaches, leading to the rise in popularity of scientism [Peterson 2003] in almost all disciplines where data is available </p>
+<p style="color:grey;">445:  Because scientific approaches emphasize observation and systematic experimentation, the availability of sensors to observe different aspects of physical reality has encouraged the collection of such data as well as their analysis in order to develop laws of nature </p>
+<p style="color:grey;">446:  As the availability of data has become widespread, it is possible to fulfill the desire of understanding physical reality at different levels in different applications. </p>
+<p style="color:grey;">447:  Inspired by the growth in data and their applicability in disparate areas, many people have started collecting data about themselves </p>
+<p style="color:grey;">448:  This popular and rapidly spreading movement is called quantified self </p>
+<p style="color:grey;">449:  Now that different types of sensors are available and new types of sensors could be developed, people who are sensitive to their health have started recording health-related information using sensors ranging from simple wearable accelerometers to other measurements such as body temperature, heart rate, perspiration rate, glucose level, and many other parameters. </p>
+<p style="color:grey;">450:  With the trend of activity recognition, Gurrin et al </p>
+<p style="color:grey;">451:  [2014] emphasized the importance of lifelogging as a phenomenon whereby people can digitally record their own daily lives in varying amounts of detail, for a variety of purposes </p>
+<p style="color:grey;">452:  They considered the application of lifelogging in different domains including medical (i.e., memory support), behavioral science (i.e., analysis of quality of life), and work-related tasks [Qiu et al </p>
+<p style="color:grey;">453:  2016] </p>
+<p style="color:grey;">454:  They suggested an end-to-end lifelogging solution with cutting edge components (i.e., gathering, enriching, segmenting, keyframe, annotation, and narrative) for extracting meaningful knowledge from one s lifelog data </p>
+<p style="color:grey;">455:  Lifelogs or eChronicles could be considered the predecessors of the quantified self </p>
+<p style="color:grey;">456:  With these systems, people record their life activities using wearable and other sensors </p>
+<p style="color:grey;">457:  Their activities are detected using classification techniques and then visualized or analyzed to extract meaningful information from the data </p>
+<p style="color:grey;">458:  A good deal of research was done in the context of individuals and for the US Department of Defense </p>
+<p style="color:grey;">459:  A popular project in this area called MyLifeBits [Gemmell et al </p>
+<p style="color:grey;">460:  2002] was championed by Gordon Bell at Microsoft. </p>
+<p style="color:grey;">461:  It is commonly believed that recording data from wearable devices and having access to it may result in many personal benefits for people </p>
+<p style="color:grey;">462:  With the availability of better quality data, not only will the quality of an individual s models improve but it will also facilitate real-time guidance and recommendation </p>
+<p style="color:grey;">463:  6.5.2.2Objective Self Has Arrived </p>
+<p style="color:grey;">464:  The quantified self movement is an important step in introducing a scientific framework to help understand an individual based on continuously collected data </p>
+<p style="color:grey;">465:  The early stages of scientific framework based on sustained observations of controlled and natural experiments are being converted to laws related to the physical, social, and spiritual systems representing an individual </p>
+<p style="color:grey;">466:  We define Objective Self as follow:  </p>
+<p style="color:grey;">467:  The process of objectively measuring physical, physiological, and mental activities of a person and explaining the associations between these activities. </p>
+<p style="color:grey;">468:  Wearable sensors and smartphones collect considerable contextual data about a user, ranging from physical activity and visited places to app usage and sleep patterns </p>
+<p style="color:grey;">469:  Considerable research has been devoted to analyzing raw location and accelerometer measurements to infer user activities such as walking, running, driving, and cycling </p>
+<p style="color:grey;">470:  However, combining individual multimodal streams to recognize higher-level life events (sleeping, working, commuting, etc.) has remained a challenge </p>
+<p style="color:grey;">471:  Figure 6.22 shows two broad categories of data streams </p>
+<p style="color:grey;">472:  The first category includes sensors that collect heterogeneous personal data such as accelerometers and GPS </p>
+<p style="color:brown;">473:  These data streams are temporally aligned and divided into equal time windows Tw </p>
+<p style="color:brown;">474:  Within each time window one or multiple probable life events and relevant attributes of these life events might be recognized </p>
+<p style="color:brown;">475:  Life events signifies all daily living activities that are a part of daily life </p>
+<p style="color:brown;">476:  Thus, we can effectively obtain a chronicle of the person s life events called Personicle [Oh and Jain 2017, 2019]. </p>
+<p style="color:brown;">477:  The second category contains environmental information such as pollution and temperature </p>
+<p style="color:brown;">478:  These time series data can be converted to time series of discrete labels through discretization, and meaningful events can be defined on top of these data streams (e.g., pollution increases suddenly) </p>
+<p style="color:brown;">479:  As data is collected through time, recognized events create a chronicle </p>
+<p style="color:brown;">480:  Such event chronicles introduce a new structure over timeline dimension where explanatory modeling can be performed at this abstracted level rather than on low-level time series </p>
+<p style="color:brown;">481:  6.5.2.3An Architecture for Objective Self </p>
+<p style="color:limegreen;">482:  Figure 6.23 shows the high-level architecture of the objective self platform </p>
+<p style="color:limegreen;">483:  This architecture has three main components: data ingestion, life event recognition, and EventMiner data-driven and hypothesis-driven operators </p>
+<p style="color:limegreen;">484:  Data ingestion uses various sensors and pre-processing modules to extract appropriate attributes from raw sensor measurements </p>
+<p style="color:brown;">485:  Life event recognition assigns the most appropriate life event and populates event s properties from a set of predefined event classes based on attributes of the data </p>
+<p style="color:brown;">486:  Life events are independent atomic elements of explanatory modeling for building objective self </p>
+<p style="color:brown;">487:  EventMiner is applied on personicle to detect recurring co-occurrence patterns and derive insights </p>
+<p style="color:brown;">488:  6.5.2.4Life Event Recognition </p>
+<p style="color:brown;">489:  We use smartphones as the main source of personal information </p>
+<p style="color:brown;">490:  The technological and social characteristics of smartphones make them very useful in behavioral analysis </p>
+<p style="color:brown;">491:  The device is willingly carried by a large number of people and allows unobtrusive and cost-effective access to previously inaccessible sources of data on everyday activities </p>
+<p style="color:brown;">492:  We developed an Android-based lifelog app that collects data continuously without user intervention </p>
+<p style="color:grey;">493:  Table 6.6 demonstrates the type of sensors utilized in this study and the information derived from them </p>
+<p style="color:grey;">494:  Location data has venue_name and venue_type attributes for a specific latitude and longitude coordinate (e.g., name: Panini; type: restaurant) </p>
+<p style="color:grey;">495:  Venue type information is obtained from Google place API by using latitude and longitude data from Google Play service API </p>
+<p style="color:grey;">496:  Media is a binary attribute that monitors whether the user listens to music or watches video </p>
+<p style="color:brown;">497:  Transition is a binary attribute that determines whether the user s location has changed from a certain venue type to another between two contiguous 5-minute intervals </p>
+<p style="color:brown;">498:  These attributes are collected for each 5-minute interval </p>
+<p style="color:brown;">499:  Interval segments are then fed to the life event recognition module. </p>
+<p style="color:brown;">500:  Figure 6.22Chronicle of life events are derived from heterogeneous mobile multimedia content </p>
+<p style="color:brown;">501:  Chronicle of environmental events are shown as segmented time series data </p>
+<p style="color:brown;">502:  Each colored segment corresponds to a specific event. </p>
+<p style="color:limegreen;">503:  Figure 6.23High-level architecture of applying EventMiner to build objective self </p>
+<p style="color:limegreen;">504:  The three main components are data ingestion, life event recognition, and pattern recognition. </p>
+<p style="color:brown;">505:  Table 6.7 shows a selected group of life events and their corresponding recognition method </p>
+<p style="color:brown;">506:  The life event recognition module can either recognize one of the events in the first category with a context fusion technique, or return an unknown event </p>
+<p style="color:brown;">507:  Contextual information related to application usage on a smartphone can be utilized to determine one of the events in the second category of life events </p>
+<p style="color:brown;">508:  We assume that life events in the first category are mutually exclusive in a sense that two (or more) of them cannot happen simultaneously in a 5-minute interval </p>
+<p style="color:grey;">509:  However, they can happen in parallel with life events in the second category, for example, a user might check her email while attending a class. </p>
+<p style="color:grey;">510:  Table 6.6:Data streams from a smartphone and the list of derived attributes from each stream </p>
+<p style="color:grey;">511:  Data stream </p>
+<p style="color:grey;">512:  Attribute </p>
+<p style="color:grey;">513:  time </p>
+<p style="color:grey;">514:  time_window, unix_timestamp, weekday/weekend </p>
+<p style="color:grey;">515:  activity </p>
+<p style="color:grey;">516:  activity_type   {standing still, tilting, walking, running, bicycling, and in vehicle}, activity_level  [0,4] </p>
+<p style="color:grey;">517:  location </p>
+<p style="color:grey;">518:  latitude, longitude venue_name, venue_type </p>
+<p style="color:grey;">519:  step </p>
+<p style="color:grey;">520:  step_count </p>
+<p style="color:grey;">521:  application </p>
+<p style="color:grey;">522:  app_name </p>
+<p style="color:grey;">523:  photo </p>
+<p style="color:grey;">524:  photo_count </p>
+<p style="color:grey;">525:  light </p>
+<p style="color:grey;">526:  light_value  [0,1000] </p>
+<p style="color:grey;">527:  phone status </p>
+<p style="color:grey;">528:  screen_on, screen_off </p>
+<p style="color:grey;">529:  media </p>
+<p style="color:grey;">530:  play_time </p>
+<p style="color:grey;">531:  sound </p>
+<p style="color:grey;">532:  sound_setting  {(silence, vibration, or bell)} </p>
+<p style="color:grey;">533:  call </p>
+<p style="color:grey;">534:  call_type  {(missed, rejected, incoming or outgoing)} </p>
+<p style="color:grey;">535:  transition </p>
+<p style="color:grey;">536:  changes in venue type </p>
+<p style="color:grey;">537:  Table 6.7:Selected list of life events </p>
+<p style="color:grey;">538:  Category (a) shows life events derived from sensor fusion and category (b) shows life events results from smartphone raw context data </p>
+<p style="color:grey;">539:  Category </p>
+<p style="color:grey;">540:  Method </p>
+<p style="color:grey;">541:  Life events </p>
+<p style="color:grey;">542:  Context fusion with FCA </p>
+<p style="color:grey;">543:  Studying, sleeping, vehicle transportation, dining, attending class, walking, running, cycling, exercise, leaving home, arriving home </p>
+<p style="color:grey;">544:  Raw context </p>
+<p style="color:grey;">545:  Interacting with phone, surfing web, social networking, checking email, sending SMS, phone call, watching video, Skype call </p>
+<p style="color:grey;">546:  Considering Figure 6.22, suppose we have M data streams DS1, DS2, DSM, coming from heterogeneous sources of information </p>
+<p style="color:grey;">547:  These data streams are divided into chunks of equal length called time window Ti  </p>
+<p style="color:grey;">548:  The information obtained from the sensors varies in many respects </p>
+<p style="color:grey;">549:  Methods to convert data to information and the reliability of information could be entirely different for different sensors </p>
+<p style="color:grey;">550:  To convert measurements to attributes, complex approaches involving inverse mapping can be used </p>
+<p style="color:grey;">551:  Thus, we can say that ai= (mi), where ai is the attribute derived from a measurement mi using the function   for this attribute within a specific time window Ti </p>
+<p style="color:grey;">552:  The functions that are utilized to convert measurements to attributes could be a simple mapping or an extremely complex machine learning model </p>
+<p style="color:grey;">553:  The following are some examples of these functions: </p>
+<p style="color:grey;">554:   Mathematical and statistical techniques: Extract basic signal information from raw sensor data, such as mean, variance, standard deviation, median, maximum, minimum, signal correlation and correlation-coefficient, zero-crossing, DC component, spectral energy, entropy, and wavelet analysis </p>
+<p style="color:grey;">555:   Mapping techniques: Invert geo-coding to extract place categories </p>
+<p style="color:grey;">556:   Natural-language processing: Process calendar entries, computer activity logs, and so forth </p>
+<p style="color:grey;">557:   Machine learning techniques: Include a variety of algorithms using classifiers for activity recognition </p>
+<p style="color:grey;">558:  Also, it is possible to classify ambient environment by analyzing light sensor measurements, Wi-Fi access points, or GPS signals </p>
+<p style="color:grey;">559:  Table 6.8 shows some sensor modalities and functions that extract attributes from sensor measurements </p>
+<p style="color:grey;">560:  This table is indicative and not exhaustive </p>
+<p style="color:grey;">561:  More sensors and functions can be added based on the specific requirements of an application. </p>
+<p style="color:grey;">562:  Recognizing life events from physical activities and surrounding contexts is a challenging problem </p>
+<p style="color:grey;">563:  Learning-based approaches are good at recognizing low-level physical activities (e.g., walking, jogging, etc.) from a limited number of wearable sensors </p>
+<p style="color:grey;">564:  However, it is difficult to incorporate domain knowledge in their learning process and extract more high-level semantics related to life events </p>
+<p style="color:grey;">565:  Moreover, the collected observational data is noisy and there is not enough labeled data available for training in supervised classification since labeling human activities is a very tedious task </p>
+<p style="color:grey;">566:  Hence, we propose using formal concept analysis (FCA) for data fusion and life event recognition </p>
+<p style="color:grey;">567:  Concept lattices are very effective when enough labeled data samples are not accessible for supervised machine learning algorithms but human knowledge is available as an additional source of context </p>
+<p style="color:grey;">568:  Table 6.8:Sensor modalities, measurements, and attributes </p>
+<p style="color:grey;">569:  FCA studies how objects can be hierarchically grouped together according to their common attributes </p>
+<p style="color:grey;">570:  One of the aspects of FCA is the logic behind possible attribute combinations </p>
+<p style="color:grey;">571:  This logic is contextual, which means we are interested in the logical structure of data and how attributes and objects are contextually related. </p>
+<p style="color:grey;">572:  In the next section we explain how FCA can be utilized as an unsupervised learning technique to fuse noisy multimodal data and assign an event tag to each 5-minute interval in time series data </p>
+<p style="color:grey;">573:  In the second pass, these 5-minute intervals are merged based on their event label and the resulting event stream is fed as an input to the pattern recognition module </p>
+<p style="color:grey;">574:  6.5.2.5Formal Concept Analysis </p>
+<p style="color:grey;">575:  FCA was introduced by Ganter and Wille [2012] in 1982 </p>
+<p style="color:grey;">576:  FCA is a way of deriving partially ordered set (poset) from pairs of objects and attributes </p>
+<p style="color:grey;">577:  With all possible poset of pairs, it builds a concept lattice, which is a graphical representation of the partially ordered knowledge, to find the most similar structure to an input pair </p>
+<p style="color:grey;">578:  Therefore, FCA does not need to use any statistical calculations but rather uses the structural similarities to produce results, even under uncertainty. </p>
+<p style="color:grey;">579:  The theoretical foundation of concept lattice relies on the mathematical lattice theory [Birkhoff 1948] </p>
+<p style="color:grey;">580:  Here we only mention some of the high level concepts about lattice construction </p>
+<p style="color:grey;">581:  Interested readers can refer to a comprehensive article by Ganter et al </p>
+<p style="color:grey;">582:  [2003] about the methods and applications of FCA in computer science. </p>
+<p style="color:grey;">583:  Definition 6.13A formal context is defined by a triple (G, M, R), where G and M are two sets, and R is the relation between them </p>
+<p style="color:grey;">584:  The elements of G are called objects while the elements of M are called attributes. </p>
+<p style="color:grey;">585:  The simplest format for writing a formal context is a table with one row for each object and one column for each attribute </p>
+<p style="color:grey;">586:  The crosses in the table highlights the relationship R between G and M, which means an object verifies an attribute </p>
+<p style="color:grey;">587:  For example, Figure 6.24 represents a context in the form of a cross table </p>
+<p style="color:grey;">588:  G (o1, o2, o3, o4, o5, o6, o7) is the object set and M(a1, a2, a3, a4, a5, a6, a7, a8, a9) is the attribute set. </p>
+<p style="color:grey;">589:  Figure 6.24An example of context (G, M, R) and its equivalent concept lattice </p>
+<p style="color:grey;">590:  (a) Sample cross table defining the relation between a set of objects and attributes </p>
+<p style="color:grey;">591:  (b) Concept lattice derived from cross table by applying the NextClosure algorithm. </p>
+<p style="color:grey;">592:  To map FCA definitions to life event recognition problems, we consider life events as objects and sensor measurements as attributes </p>
+<p style="color:grey;">593:  Table 6.9 shows the contextual relationships between life events and their common attributes such as time, location, ambient light, activity level involved in the event, and so on </p>
+<p style="color:grey;">594:  Table 6.9:Cross table of generalized relationship between life events and their attributes </p>
+<p style="color:grey;">595:  Many algorithms have been developed for generating concept lattices, for example, NextClosure by Ganter [Ganter 2010], the Gerhand algorithm [Oosthuizen 1992], the Nourine algorithm [Nourine and Raynaud 1999], and the Galois algorithm [Valtchev et al </p>
+<p style="color:grey;">596:  2002] </p>
+<p style="color:grey;">597:  Kuznetsov and Obiedkov [2002] carried out a performance analysis of these algorithms and concluded that the choice of an algorithm for construction of the concept lattice should be based on the properties of input data </p>
+<p style="color:grey;">598:  We apply the NextClosure algorithm to build a comprehensive lattice from our pre-defined cross table (as shown in Figure 6.24) that captures the relationship between life events and their common attributes </p>
+<p style="color:grey;">599:  Considering |L| = number of life events, and |A| = number of attributes, the time complexity of building the lattice is O(|L|2 |A|). </p>
+<p style="color:grey;">600:  Once the lattice is constructed from a pre-defined set of concepts, the next step is to recognize life events using the constructed lattice from observational sensor data </p>
+<p style="color:grey;">601:  We use a backtracking depth first search algorithm for this purpose </p>
+<p style="color:grey;">602:  To identify a life event, the system collects all the perceptible context information and feeds them to the lattice </p>
+<p style="color:grey;">603:  If the context satisfies all the conditions of a life event, then that event is recognized </p>
+<p style="color:grey;">604:  For example, an incoming life-log information of Slifelog = {00:00   03:59, week, standing_still, sedentary, home, enviornmental_light_low, media_false, app_no_use, photo_no_use, sound bell, call_no_calling} will navigate the concept lattice by following the backtracking algorithm and the sleeping life event is recognized. </p>
+<p style="color:grey;">605:  6.5.2.6Co-occurrence Behavior Patterns </p>
+<p style="color:grey;">606:  We define co-occurrence behavior patterns that encode temporal and structural relationships between life events </p>
+<p style="color:grey;">607:  There are two types of co-occurrence between events:  </p>
+<p style="color:grey;">608:  Sequential co-occurrence: For a pair of events Ei and Ej, if Ej usually occurs after Ei (within a specific time lag  t), these two events are considered to be co-occurring </p>
+<p style="color:grey;">609:  For Objective Self application we represent sequential co-occurrence behavior as an association rule Ei  tEj that reads Ei is followed by Ej within  t </p>
+<p style="color:grey;">610:  For example VehicleCommuting 1hourMeeting means that within an hour of commuting with a car the person attends a meeting. </p>
+<p style="color:grey;">611:  The confidence of a size-2 pattern is defined as:  </p>
+<p style="color:grey;">612:  Confidence(Ei  tEj)=Count(Ei  tEj)Count(Ei) </p>
+<p style="color:grey;">613:  The confidence score of a sequential pattern means: from all the time that the first event (Ei) occurs, how many times was it followed by the second event (Ej) within  t. </p>
+<p style="color:grey;">614:  Concurrent co-occurrence: Two events are considered co-occurring if they have a temporal overlap </p>
+<p style="color:grey;">615:  Concurrent co-occurrence pattern is represented as Ei  Ej and reads Ei happens while Ej </p>
+<p style="color:grey;">616:  For example CheckingEmail  Meeting means the user is checking her email while attending a meeting </p>
+<p style="color:grey;">617:  The confidence of this pattern is defined as: </p>
+<p style="color:grey;">618:  Confidence(Ei  Ej)=Count(Ei  Ej)12(Count(Ei)+Count(Ej)) </p>
+<p style="color:grey;">619:  6.5.2.7Processing Co-occurrence Patterns </p>
+<p style="color:grey;">620:  For data-driven co-occurrence analysis we implemented an algorithm that process multiple patterns with only one pass through the data </p>
+<p style="color:grey;">621:  Life events create an event stream ES(1)={e1(1),e2(1), ,eN(1)}, where each life event ek(1) {pE,iE,sE}(1 k N), and N is the number of life event types in the application </p>
+<p style="color:grey;">622:  We also have an environmental event stream ES(2)={e1(2),e2(2), ,eM(2)}, where each environmental event ek(2) {pE,iE,sE}(1 k M) can be a point event or an interval event to a capture state and state transition in the environmental data </p>
+<p style="color:grey;">623:  We create a multi-event stream ES={ES(1),ES(2)} to serialize all event types in the system. </p>
+<p style="color:grey;">624:  With N life events, N2 patterns need to be analyzed to compute the co-occurrence value between each pair of life events </p>
+<p style="color:grey;">625:  Considering different possible time lags, the total number of potential candidate patterns increase exponentially </p>
+<p style="color:grey;">626:  Each candidate pattern is derived as follow: </p>
+<p style="color:grey;">627:   ei(1),ej(1) such that ei(1),ej(1) ES(1), sequential candidate pattern  =ei(1)  tej(1), and concurrent candidate pattern   =ei(1)  ej(1). </p>
+<p style="color:grey;">628:  Given M environmental events, N   M patterns need to be analyzed to compute co-occurrence between a life event and an environmental event </p>
+<p style="color:grey;">629:  In this case, the candidate patterns are derived as: </p>
+<p style="color:grey;">630:   ei(1),ej(2) such that ei(1) ES(1),ej(2) ES(2), sequential candidate pattern  =ei(1)  tej(2), sequential candidate pattern   =ej(2)  tei(1), and concurrent candidate pattern    =ei(1)  ej(2). </p>
+<p style="color:grey;">631:  Table 6.10 shows some samples of the sequential and concurrent candidate patterns </p>
+<p style="color:grey;">632:  We analyzed different time lags with multiple temporal resolutions from minutes and hours to days and weeks </p>
+<p style="color:grey;">633:  As mentioned in Table 6.7, life events of category (a) can only happen in parallel with life events of category (b). </p>
+<p style="color:grey;">634:  Table 6.10:Sample sequential and concurrent candidate patterns </p>
+<p style="color:grey;">635:  Sequential candidate pattern </p>
+<p style="color:grey;">636:  Concurrent candidate pattern </p>
+<p style="color:grey;">637:  Studying   t Vehicle Transportation </p>
+<p style="color:grey;">638:  SMS     Attending Class </p>
+<p style="color:grey;">639:  Arriving Home   t Sleeping </p>
+<p style="color:grey;">640:  Web Surfing     Attending Class </p>
+<p style="color:grey;">641:  Vehicle Transportation   t Attending Class </p>
+<p style="color:grey;">642:  Interacting with Phone     Studying </p>
+<p style="color:grey;">643:  Vehicle Transportation   t Dining </p>
+<p style="color:grey;">644:  Dining     Social Networking </p>
+<p style="color:grey;">645:  Dining   t Arriving Home </p>
+<p style="color:grey;">646:  Interacting with Phone     Exercise </p>
+<p style="color:grey;">647:  Leaving Home   t Exercise </p>
+<p style="color:grey;">648:  Social Networking     Attending Class </p>
+<p style="color:grey;">649:  Leaving Home   t Walking </p>
+<p style="color:grey;">650:  Walking     Phone Call </p>
+<p style="color:grey;">651:  Leaving Home   t Cycling </p>
+<p style="color:grey;">652:  Vehicle Transportation     SMS </p>
+<p style="color:grey;">653:  Cycling   t Attending Class </p>
+<p style="color:grey;">654:  Activity_level Low     Temperature stays_high </p>
+<p style="color:grey;">655:  Vehicle Transportation   t Temperature stays_high </p>
+<p style="color:grey;">656:  Vehicle Transportation     Pollution stays_high </p>
+<p style="color:grey;">657:  6.5.2.8Data Collection </p>
+<p style="color:grey;">658:  In the previous sections we explained how multiple sources of information (e.g., location, motion, etc.) can be semantically fused to recognize life events and how explanatory models can be built by finding significant sequential or concurrent co-occurrence patterns </p>
+<p style="color:grey;">659:  In this section we evaluate the applicability of EventMiner in understanding the behavior of smartphone-using individuals </p>
+<p style="color:grey;">660:  We developed an Android-based lifelog app that collects data continuously without user intervention </p>
+<p style="color:grey;">661:  Table 6.6 demonstrates the type of sensors utilized in this study and the information derived from them </p>
+<p style="color:grey;">662:  All participants in the study were voluntarily recruited from a mobile programming class, a computer science programming class offered to both undergraduate and graduate students </p>
+<p style="color:grey;">663:  A total of 65 students enrolled in the class and 31 joined the study </p>
+<p style="color:grey;">664:  As the quarter progressed, eight users dropped out of the study </p>
+<p style="color:grey;">665:  Of the 23 remaining users, 12 were undergraduate and 11 were graduate students </p>
+<p style="color:grey;">666:  Users used their own Android devices to run the lifelog app and carried the phones with them throughout the day </p>
+<p style="color:grey;">667:  Data were collected without any user interaction and uploaded to the cloud daily </p>
+<p style="color:grey;">668:  The data collection phase lasted for four weeks for the class </p>
+<p style="color:grey;">669:  However, data continued to be collected from four users for another month </p>
+<p style="color:grey;">670:  GPS tracking generates large sets of geographical data that need to be transformed to be useful for life event recognition and behavior analysis </p>
+<p style="color:grey;">671:  We are interested in the type of location/venue that a user visits rather than its coordinates </p>
+<p style="color:grey;">672:  The reverse geo-coding is done by using Google Places API </p>
+<p style="color:grey;">673:  In other words, the system distinguishes between locations only if it helps determine what the user is doing </p>
+<p style="color:grey;">674:  The following venue categories are considered: arts and entertainment, collage and university, academic building, gym, nightlife spot, outdoors and recreation, store, mall, shop, food, cafe, and restaurant </p>
+<p style="color:grey;">675:  Also, the app stores the user s home address </p>
+<p style="color:grey;">676:  Figure 6.25 shows location distribution for seven users based on the percentage of time they spent at each location </p>
+<p style="color:grey;">677:  The amount of time spent at different places reveals a lot of information about a user </p>
+<p style="color:grey;">678:  For instance, Figure 6.25 suggests that user 1 spent majority of her time at home while user 3 spent considerable time at school </p>
+<p style="color:grey;">679:  User 2 visits the gym frequently while food places and malls are of interest for users 7 and 4, respectively. </p>
+<p style="color:grey;">680:  Next, we visualize sample co-occurrence patterns generated from the lifelogs of over 23 users with the goal of finding interesting behavior patterns at individual as well as public/group levels </p>
+<p style="color:grey;">681:  6.5.2.9Sequential Co-occurrence: Commute Behavior and Activity Trends </p>
+<p style="color:grey;">682:  The objective of this experiment is to find patterns of commute behavior from life events data </p>
+<p style="color:grey;">683:  By generating sequential co-occurrence matrices with different temporal offsets, co-occurrences between leaving home, arriving home, and different commute events such as walking, vehicle commute, and cycling are studied </p>
+<p style="color:grey;">684:  Figure 6.26 demonstrates the results for three different users </p>
+<p style="color:grey;">685:  Figure 6.26(a) indicates commute pattern LeavingHome [15mins]VehicleCommute with a confidence value of 0.87, which means with 87% probability the user drove a vehicle within 15 minutes after leaving home </p>
+<p style="color:grey;">686:  By increasing the temporal offset to one hour, the probability reaches 98% </p>
+<p style="color:grey;">687:  Leaving home followed by cycling, and cycling followed by attending a class are commute patterns observable for another user in Figures 6.26(b) and 6.26(c) </p>
+<p style="color:grey;">688:  Finally, Figure 6.26(d) shows walking commute behavior to/from school for the third user. </p>
+<p style="color:grey;">689:  Figure 6.25Percentage of hours multiple subjects spent at different locations. </p>
+<p style="color:grey;">690:  Figure 6.26Sequential co-occurrence matrices </p>
+<p style="color:grey;">691:  Unknown events are shown with a red box surrounding them </p>
+<p style="color:grey;">692:  Each cell shows the confidence value of pattern Ei  tEj. </p>
+<p style="color:grey;">693:  Since the study was conducted for 4 to 8 weeks, we could analyze the change of commute behaviors and activity levels in some participants </p>
+<p style="color:grey;">694:  Figures 6.27 and 6.28 illustrate the sequential co-occurrence frequency of multiple patterns for two different users </p>
+<p style="color:grey;">695:  The occurrence frequency of a pattern accumulates over time </p>
+<p style="color:grey;">696:  Therefore, a sharp increasing slope within a limited time interval in the line graph indicates that the pattern was repeated often during that time </p>
+<p style="color:grey;">697:  In addition, an almost flat line in the graph suggests the pattern did not occur frequently </p>
+<p style="color:grey;">698:  Figure 6.27 implies that for one participant activity level trend and vehicle commute trend did not show any changes between subsequent weeks </p>
+<p style="color:grey;">699:  However, a clear decrease in using a bicycle for commute purposes is visible in Figure 6.28 during the third and fourth weeks, which results in a decrease in activity level </p>
+<p style="color:grey;">700:  6.5.2.10Concurrent Co-occurrence: Multitasking Behavior </p>
+<p style="color:grey;">701:  Concurrent co-occurrence examines the co-occurrence relationship between events that have temporally overlapped </p>
+<p style="color:grey;">702:  Some of the life events might happen in parallel </p>
+<p style="color:grey;">703:  For instance dining might be concurrent with sending a text or making a phone call </p>
+<p style="color:grey;">704:  In this experiment we used concurrent co-occurrence matrix to investigate users  interactions with their phones while they are engaged in other activities </p>
+<p style="color:grey;">705:  Figure 6.29 displays an interesting result for one of the users </p>
+<p style="color:grey;">706:  There is a clear co-occurrence between surfing the web, checking emails, and using social networking apps while the person is attending class </p>
+<p style="color:grey;">707:  This analysis indicates multitasking in the classroom and suggests the user was bored or distracted during her classes </p>
+<p style="color:grey;">708:  Figure 6.27Vehicle commute and activity-level patterns </p>
+<p style="color:grey;">709:  No major change is observed in the commute behavior. </p>
+<p style="color:grey;">710:  Figure 6.28Vehicle commute and activity-level patterns </p>
+<p style="color:grey;">711:  Commute behavior has changed during the second half of the study. </p>
+<p style="color:grey;">712:  Figure 6.29Concurrent co-occurrence matrix visualizing co-occurrence of life events </p>
+<p style="color:grey;">713:  For a pair of events, each cell shows the confidence value of pattern Ei  Ej. </p>
+<p style="color:grey;">714:  6.5.2.11Patterns Across a Group of Users </p>
+<p style="color:grey;">715:  In the third experiment, we analyzed commonly occurring co-occurrence patterns across all users </p>
+<p style="color:grey;">716:  Figure 6.30 shows common sequential co-occurrence patterns across multiple users </p>
+<p style="color:grey;">717:  Each cell indicates the percentage of users with a specific pattern in their personicle </p>
+<p style="color:grey;">718:  We only show those patterns with at least 60confidence </p>
+<p style="color:grey;">719:  Figure 6.30(a) shows sequential co-occurrence patterns (event types in x axes follow event types in y axes within an hour) </p>
+<p style="color:grey;">720:  The most frequent pattern that occurs in 78% of users is phone call followed by SMS within an hour </p>
+<p style="color:grey;">721:  Other common patterns are: attending class followed by studying, using phone followed by sleeping, and vehicle commute followed by arriving home </p>
+<p style="color:grey;">722:  Figure 6.30(b) shows concurrent co-occurrence patterns </p>
+<p style="color:grey;">723:  The most frequent pattern in this case is using social networking apps while dining </p>
+<p style="color:grey;">724:  The next common patterns are: checking email while studying and sending text while studying. </p>
+<p style="color:grey;">725:  Figure 6.30Common co-occurrence patterns </p>
+<p style="color:grey;">726:  For each pattern, we show the percentage of users the pattern occurs in </p>
+<p style="color:grey;">727:  (a) Sequential co-occurrence patterns Ei  tEj across all users, where  t=1 hour </p>
+<p style="color:grey;">728:  (b) Concurrent co-occurrence patterns Ei  Ej. </p>
+<p style="color:grey;">729:  6.5.2.12The Effect of Environmental Factors on Behavior </p>
+<p style="color:grey;">730:  Exposure to some air pollutants has consequences for human health and life expectancy [Russell and Brunekreef 2009] </p>
+<p style="color:grey;">731:  Exposure to fine particulate matter is particularly dangerous since these small particles penetrate deep into the lungs and may also affect other aspects of an individual s life </p>
+<p style="color:grey;">732:  In the last experiment we aim to examine the associations between certain environmental conditions and human behavior </p>
+<p style="color:grey;">733:  The main question is whether short-term exposure to PM2.5 or certain climate conditions has any bearing on an individual s physical activity, and does it cause any deviation in daily routines </p>
+<p style="color:grey;">734:  By tracking users  locations, the closest pollution and weather stations to a user s current location are extracted </p>
+<p style="color:grey;">735:  Ambient temperature and PM2.5 data are collected from those stations </p>
+<p style="color:grey;">736:  Unified event streams are then constructed by abstracting trends of time series data using the SAX algorithm [Lin et al </p>
+<p style="color:grey;">737:  2007] with alphabet of size 3 (a,b,c symbols) </p>
+<p style="color:grey;">738:  For each data stream, seven event types (ab/bc=increase, ac=suddenly increase, ca=suddenly decrease, cb/ba=decrease, aaa=stay low, bbb=medium, ccc=stay high) are defined </p>
+<p style="color:grey;">739:  After processing sequential co-occurrences and concurrent co-occurrences between life event stream and PM2.5 and temperature event streams, we found a few occurrences of the following patterns for multiple users: </p>
+<p style="color:grey;">740:  ActivityLevel stays low  Temperature increasingPM2.5 suddenly increases 3hrsVehichle commuteWalking  PM2.5 stay low </p>
+<p style="color:grey;">741:  Although the above patterns might be an indication of how users commute or how active they are in different environmental situations, a longitudinal study with longer duration shall be performed to asses more reliable patterns. </p>
+<p>----------------- END ---------------------------</p>
+</body>
+                    </html>

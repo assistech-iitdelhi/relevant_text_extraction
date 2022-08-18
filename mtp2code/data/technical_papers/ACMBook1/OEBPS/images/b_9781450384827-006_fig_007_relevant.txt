@@ -1,0 +1,2 @@
+Figure 6.7Sequence operator evaluates an ordinary state on first event type’s start/end followed by second event type’s start/end.
+Sequence (Ei; Ej): As shown in Figure 6.7, this operator detects if event type Ei is followed by event type Ej.

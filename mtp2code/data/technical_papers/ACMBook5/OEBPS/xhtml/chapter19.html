@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+<title>The VR Book</title>
+<link rel="stylesheet" type="text/css" href="../styles/9781970001143.css"/>
+</head>
+<body>
+<h2 class="h2"><a id="page_215"></a><a id="ch19"></a><span class="blue1">19</span></h2>
+<h2 class="h2b"><span class="blue">Adverse Health Effects: Design Guidelines</span></h2>
+<p class="noindent">The potential for adverse health effects of VR is the greatest risk for individuals as well as for VR achieving mainstream acceptance. It is up to each of us to take any adverse health effects seriously and do everything possible to minimize problems. The future of VR depends on it.</p>
+<p class="indent">Practitioner guidelines that summarize chapters from Part <a href="part03.html#part3"><span class="blue">III</span></a> are organized below as hardware, system calibration, latency reduction, general design, motion design, interaction design, usage, and measuring sickness.</p>
+<h3 class="h3"><a id="lev19.1"></a><strong><span class="font">19.1</span> Hardware</strong></h3>
+<p class="indentbullett">&#8226; Choose HMDs that have no perceptible flicker (Section <a href="chapter13.html#lev13.3"><span class="blue">13.3</span></a>).</p>
+<p class="indentbullet">&#8226; Choose HMDs that are light, have the weight centered just above the center of the head, and are comfortable (Section <a href="chapter14.html#lev14.1"><span class="blue">14.1</span></a>).</p>
+<p class="indentbullet">&#8226; Choose HMDs without internal video buffers, with a fast pixel response time, and with low persistence (Section <a href="chapter15.html#lev15.4.4"><span class="blue">15.4.4</span></a>).</p>
+<p class="indentbullet">&#8226; Choose trackers with high update rates (Section <a href="chapter15.html#lev15.4.1"><span class="blue">15.4.1</span></a>).</p>
+<p class="indentbullet">&#8226; Choose HMDs with tracking that is accurate, precise, and does not drift (Section <a href="chapter17.html#lev17.1"><span class="blue">17.1</span></a>).</p>
+<p class="indentbullet">&#8226; Use HMD position tracking if the hardware supports it (Section <a href="chapter17.html#lev17.1"><span class="blue">17.1</span></a>). If position tracking is not available, estimate the sensor-to-eye offset so motion parallax can be estimated as users rotate their heads.</p>
+<p class="indentbullet">&#8226; If the HMD does not convey binocular cues well, then use biocular cues, as they can be more comfortable even though not technically correct (Section <a href="chapter17.html#lev17.1"><span class="blue">17.1</span></a>).</p>
+<p class="indentbullet">&#8226; Use wireless systems if possible. If not, consider hanging the wires from the ceiling to reduce tripping and entanglement (Section <a href="chapter14.html#lev14.3"><span class="blue">14.3</span></a>).</p>
+<p class="indentbullet">&#8226; <a id="page_216"></a>Choose haptic devices that are not able to exceed some maximum force and/or that have safety mechanisms (Section <a href="chapter14.html#lev14.3"><span class="blue">14.3</span></a>).</p>
+<p class="indentbullet">&#8226; Add code to prevent audio gain from exceeding a maximum value (Section <a href="chapter14.html#lev14.3"><span class="blue">14.3</span></a>).</p>
+<p class="indentbullet">&#8226; For multiple users, use larger earphones instead of earbuds (Section <a href="chapter14.html#lev14.4"><span class="blue">14.4</span></a>).</p>
+<p class="indentbullet">&#8226; Use motion platforms whenever possible in a way that vestibular cues correspond to visual motion (Section <a href="chapter18.html#lev18.8"><span class="blue">18.8</span></a>).</p>
+<p class="indentbullet">&#8226; Choose hand controllers that do not have line-of-sight requirements so that users can work with their hands comfortably to their sides or in their laps with only occasional need to reach up high above the waist (Section <a href="chapter18.html#lev18.9"><span class="blue">18.9</span></a>).</p>
+<h3 class="h3"><a id="lev19.2"></a><strong><span class="font">19.2</span> System Calibration</strong></h3>
+<p class="indentbullet">&#8226; Calibrate the system and confirm often that calibration is precise and accurate (Section <a href="chapter17.html#lev17.1"><span class="blue">17.1</span></a>) in order to reduce unintended scene motion (Section <a href="chapter12.html#lev12.1"><span class="blue">12.1</span></a>).</p>
+<p class="indentbullet">&#8226; Always have the virtual field of view match actual field of view of the HMD (Section <a href="chapter17.html#lev17.1"><span class="blue">17.1</span></a>).</p>
+<p class="indentbullet">&#8226; Measure for interpupillary distance and use that information for calibrating the system (Section <a href="chapter17.html#lev17.2"><span class="blue">17.2</span></a>).</p>
+<p class="indentbullet">&#8226; Implement options for different users to configure their settings differently. Different users are prone to different sources of adverse effects (e.g., new users might use a smaller field of view and experienced users may not mind more complex motions) (Section <a href="chapter17.html#lev17.2"><span class="blue">17.2</span></a>).</p>
+<h3 class="h3"><a id="lev19.3"></a><strong><span class="font">19.3</span> Latency Reduction</strong></h3>
+<p class="indentbullet">&#8226; Minimize overall end-to-end delay as much as possible (Section <a href="chapter15.html#lev15.4"><span class="blue">15.4</span></a>).</p>
+<p class="indentbullet">&#8226; Study the various types of delay in order to optimize/reduce latency (Section <a href="chapter15.html#lev15.4"><span class="blue">15.4</span></a>) and measure the different components that contribute to latency to know where optimization is most needed (Section <a href="chapter15.html#lev15.5"><span class="blue">15.5</span></a>).</p>
+<p class="indentbullet">&#8226; Do not depend on filtering algorithms to smooth out noisy tracking data (i.e., choose trackers that are precise so there is no tracker jitter). Smoothing tracker data comes at the cost of latency (Section <a href="chapter15.html#lev15.4.1"><span class="blue">15.4.1</span></a>).</p>
+<p class="indentbullet">&#8226; Use displays with fast response time and low persistence to minimize motion blur and judder (Section <a href="chapter15.html#lev15.4.4"><span class="blue">15.4.4</span></a>).</p>
+<p class="indentbullet">&#8226; <a id="page_217"></a>Consider not waiting on vertical sync (note that this is not appropriate for all HMDs) as reducing latency can be more important than removing tearing artifacts (Section <a href="chapter15.html#lev15.4.4"><span class="blue">15.4.4</span></a>). If the rendering card and scene content allow it, render at an ultra-high rate that approaches just-in-time pixels to reduce tearing.</p>
+<p class="indentbullet">&#8226; Reduce pipelining as much as possible as pipelining can add significant latency (Sections <a href="chapter15.html#lev15.4"><span class="blue">15.4</span></a> and <a href="chapter15.html#lev15.5"><span class="blue">15.5</span></a>). Likewise, beware of multi-pass rendering as some multi-pass implementations can add delay.</p>
+<p class="indentbullet">&#8226; Be careful of occasional dropped frames and increases in latency. Inconsistent latency can be as bad as or worse than long latency and can make adaptation difficult (Section <a href="chapter18.html#lev18.1"><span class="blue">18.1</span></a>).</p>
+<p class="indentbullet">&#8226; Use latency compensation techniques to reduce effective/perceived latency, but do not rely on such techniques to compensate for large latencies (Section <a href="chapter18.html#lev18.7"><span class="blue">18.7</span></a>).</p>
+<p class="indentbullet">&#8226; Use prediction to compensate for latencies up to ~30 ms (Section <a href="chapter18.html#lev18.7.1"><span class="blue">18.7.1</span></a>).</p>
+<p class="indentbullet">&#8226; After predicting, correct for prediction error with a post-rendering technique (e.g., 2D image warping; Section <a href="chapter18.html#lev18.7.2"><span class="blue">18.7.2</span></a>).</p>
+<h3 class="h3"><a id="lev19.4"></a><strong><span class="font">19.4</span> General Design</strong></h3>
+<p class="indentbullet">&#8226; Minimize visual stimuli close to the eyes as this can cause vergence/accommodation conflict (Section <a href="chapter13.html#lev13.1"><span class="blue">13.1</span></a>).</p>
+<p class="indentbullet">&#8226; For binocular displays, do not use 2D overlays/heads-up displays. Position overlays/text in 3D at some distance from the user (Section <a href="chapter13.html#lev13.2"><span class="blue">13.2</span></a>).</p>
+<p class="indentbullet">&#8226; Consider making scenes dark to reduce the perception of flicker (Section <a href="chapter13.html#lev13.3"><span class="blue">13.3</span></a>).</p>
+<p class="indentbullet">&#8226; Avoid flashing lights 1 Hz or above anywhere in the scene (Section <a href="chapter13.html#lev13.3"><span class="blue">13.3</span></a>).</p>
+<p class="indentbullet">&#8226; To reduce risk of injury, design experiences for sitting. If standing or walking is used, provide protective physical barriers (Section <a href="chapter14.html#lev14.3"><span class="blue">14.3</span></a>).</p>
+<p class="indentbullet">&#8226; For long walking or standing experiences, also provide a physical place to sit, with visual representation in the virtual world so users can find it (Section <a href="chapter14.html#lev14.1"><span class="blue">14.1</span></a>).</p>
+<p class="indentbullet">&#8226; Design for short experiences (Section <a href="chapter17.html#lev17.3"><span class="blue">17.3</span></a>).</p>
+<p class="indentbullet">&#8226; Fade in a warning grid when the user approaches the edge of tracking, a real-world physical object not visually represented in the virtual world, or the edge of a safe zone (Section <a href="chapter18.html#lev18.10"><span class="blue">18.10</span></a>).</p>
+<p class="indentbullet">&#8226; Fade out the visual scene if latency increases or head-tracking quality decreases (Section <a href="chapter18.html#lev18.10"><span class="blue">18.10</span></a>).</p>
+<h3 class="h3"><a id="page_218"></a><a id="lev19.5"></a><strong><span class="font">19.5</span> Motion Design</strong></h3>
+<p class="indentbullet">&#8226; If the highest-priority goal is to minimize VR sickness (e.g., when the intended audience is non-experienced VR users), then do not move the viewpoint in any way whatsoever that deviates from actual head motion of the user (Chapter <a href="chapter12.html#ch12"><span class="blue">12</span></a>).</p>
+<p class="indentbullet">&#8226; If latency is high, do not design tasks that require fast head movements (Section <a href="chapter18.html#lev18.1"><span class="blue">18.1</span></a>).</p>
+<h5 class="h5"><strong>Both Active and Passive Motion</strong></h5>
+<p class="indentbullet">&#8226; Be careful of adding visual motion that results in users trying to incorrectly physically balance themselves in order to compensate for the visual motion (Section <a href="chapter12.html#lev12.3.3"><span class="blue">12.3.3</span></a>).</p>
+<p class="indentbullet">&#8226; Design for the user to be seated or lying down to reduce postural instability (Section <a href="chapter12.html#lev12.3.3"><span class="blue">12.3.3</span></a>).</p>
+<p class="indentbullet">&#8226; Focus on making rest frame cues consistent with vestibular cues rather than being overly concerned with making all orientation and all motion consistent (Section <a href="chapter12.html#lev12.3.4"><span class="blue">12.3.4</span></a>).</p>
+<p class="indentbullet">&#8226; Consider dividing visuals into two components, one component that represents content and one component that represents the rest frame (Section <a href="chapter12.html#lev12.3.4"><span class="blue">12.3.4</span></a>).</p>
+<p class="indentbullet">&#8226; When a large portion of the background is visible and realism is not required, consider making the entire background a real-world stabilized rest frame that matches vestibular cues (Section <a href="chapter12.html#lev12.3.4"><span class="blue">12.3.4</span></a>).</p>
+<p class="indentbullet">&#8226; Use a stable cockpit for vehicle experiences or consider using non-realistic world-stabilized cues for non-vehicle experiences (Section <a href="chapter18.html#lev18.2"><span class="blue">18.2</span></a>).</p>
+<p class="indentbullet">&#8226; Perform extensive testing across multiple users (particularly users new to VR) to determine what motions are comfortable with the specific implementation or experience (Chapter <a href="chapter16.html#ch16"><span class="blue">16</span></a>).</p>
+<p class="indentbullet">&#8226; Do not put the viewpoint near the ground when the viewpoint moves in any way other than from direct head motion (Section <a href="chapter17.html#lev17.3"><span class="blue">17.3</span></a>).</p>
+<h5 class="h5"><strong>Passive Motion Design</strong></h5>
+<p class="indentbullet">&#8226; Only passively change the viewpoint when absolutely required (Section <a href="chapter12.html#lev12.4.6"><span class="blue">12.4.6</span></a>).</p>
+<p class="indentbullet">&#8226; If passive motion is required, then minimize any motion other than linear velocity (Sections <a href="chapter12.html#lev12.2"><span class="blue">12.2</span></a> and <a href="chapter18.html#lev18.5"><span class="blue">18.5</span></a>).</p>
+<p class="indentbullet">&#8226; Never add visual head bobbing (Section <a href="chapter12.html#lev12.2"><span class="blue">12.2</span></a>).</p>
+<p class="indentbullet"><a id="page_219"></a>&#8226; Do not attach the viewpoint to the user&#8217;s own avatar head if the system can affect the pose of the avatar&#8217;s head (Section <a href="chapter18.html#lev18.5"><span class="blue">18.5</span></a>).</p>
+<p class="indentbullet">&#8226; For real-world panoramic capture, unless the camera can be carefully controlled and tested for small comfortable motions, the camera should only be moved with constant linear velocity, if moved at all (Section <a href="chapter18.html#lev18.5"><span class="blue">18.5</span></a>).</p>
+<p class="indentbullet">&#8226; Slower orientation changes are not as much of a problem as faster orientation changes (Section <a href="chapter18.html#lev18.5"><span class="blue">18.5</span></a>).</p>
+<p class="indentbullet">&#8226; If virtual acceleration is required, ramp up to a constant velocity quickly (e.g., instantaneous acceleration is better than gradual change in velocity) and minimize the occurrence of these accelerations (Section <a href="chapter18.html#lev18.5"><span class="blue">18.5</span></a>).</p>
+<p class="indentbullet">&#8226; Use leading indicators so the user can know what motion is about to occur (Section <a href="chapter18.html#lev18.4"><span class="blue">18.4</span></a>).</p>
+<h5 class="h5"><strong>Active Motion Design</strong></h5>
+<p class="indentbullet">&#8226; Visual accelerations are less of a problem when the user actively controls the viewpoint (Section <a href="chapter12.html#lev12.4.6"><span class="blue">12.4.6</span></a>) but can still be nauseating.</p>
+<p class="indentbullet">&#8226; When using analog sticks on a gamepad to navigate or when using other steering technique, it is best to have discrete speeds and the transition between those speeds to occur quickly (Section <a href="chapter18.html#lev18.5"><span class="blue">18.5</span></a>).</p>
+<p class="indentbullet">&#8226; Design for physical rotation instead of virtual rotation whenever possible (Section <a href="chapter12.html#lev12.2"><span class="blue">12.2</span></a>). Consider using a swivel chair (although this can be troublesome for wired systems).</p>
+<p class="indentbullet">&#8226; Considering offering a non-realistic ratchet mode for angular rotations (Section <a href="chapter18.html#lev18.6"><span class="blue">18.6</span></a>).</p>
+<p class="indentbullet">&#8226; Be careful of the viewpoint moving up and/or down due to hilly terrain, stairs, etc. (Section <a href="chapter12.html#lev12.2"><span class="blue">12.2</span></a>).</p>
+<p class="indentbullet">&#8226; For 3D Multi-Touch, add cues that imply the world is an object to be manipulated instead of moving oneself through the environment (Section <a href="chapter18.html#lev18.3"><span class="blue">18.3</span></a>).</p>
+<h3 class="h3"><a id="lev19.6"></a><strong><span class="font">19.6</span> Interaction Design</strong></h3>
+<p class="indentbullet">&#8226; Design interfaces so users can work with their hands comfortably at their sides or in their laps with only occasional need to reach up high above the waist (Section <a href="chapter18.html#lev18.9"><span class="blue">18.9</span></a>).</p>
+<p class="indentbullet">&#8226; Design interactions to be non-repetitive to reduce repetitive strain injuries (Section <a href="chapter14.html#lev14.3"><span class="blue">14.3</span></a>).</p>
+<h3 class="h3"><a id="page_220"></a><a id="lev19.7"></a><strong><span class="font">19.7</span> Usage</strong></h3>
+<h5 class="h5a">Safety</h5>
+<p class="indentbullet">&#8226; Consider forcing users to stay within safe areas via physical constraints such as padded circular railing (Section <a href="chapter14.html#lev14.3"><span class="blue">14.3</span></a>).</p>
+<p class="indentbullet">&#8226; For standing or walking users, have a human spotter carefully watch the users and help stabilize them when necessary (Section <a href="chapter14.html#lev14.3"><span class="blue">14.3</span></a>).</p>
+<h5 class="h5">Hygiene</h5>
+<p class="indentbullet">&#8226; Consider providing to users a clean cap to wear underneath the HMD and removable/cleanable padding that sits between the face and the HMD (Section <a href="chapter14.html#lev14.4"><span class="blue">14.4</span></a>).</p>
+<p class="indentbullet">&#8226; Wipe down equipment and clean the lenses after use and between users (Section <a href="chapter14.html#lev14.4"><span class="blue">14.4</span></a>).</p>
+<p class="indentbullet">&#8226; Keep sick bags, plastic gloves, mouthwash, drinks, light snacks, and cleaning products nearby, but keep these items hidden so they don&#8217;t suggest to users that they might get sick (Section <a href="chapter14.html#lev14.4"><span class="blue">14.4</span></a>).</p>
+<h5 class="h5">New Users</h5>
+<p class="indentbullet">&#8226; For new users, be especially conservative with presenting any cues that can induce sickness.</p>
+<p class="indentbullet">&#8226; Consider decreasing the field of view for new users (Section <a href="chapter17.html#lev17.2"><span class="blue">17.2</span></a>).</p>
+<p class="indentbullet">&#8226; Unless using gaze-directed steering (Section <a href="chapter28.html#lev28.3.2"><span class="blue">28.3.2</span></a>), tell gamers something like &#8220;Forget your video games. If you think you&#8217;re going to move where your head is pointing, then think again. This isn&#8217;t Call of Duty.&#8221; (Section <a href="chapter17.html#lev17.3"><span class="blue">17.3</span></a>).</p>
+<p class="indentbullet">&#8226; Encourage users to start with only slow head motions (Section <a href="chapter18.html#lev18.1"><span class="blue">18.1</span></a>).</p>
+<p class="indentbullet">&#8226; Begin with short sessions and/or use timeouts/breaks excessively. Do not allow prolonged sessions until the user has adapted (Sections <a href="chapter17.html#lev17.2"><span class="blue">17.2</span></a> and <a href="chapter17.html#lev17.3"><span class="blue">17.3</span></a>).</p>
+<h5 class="h5">Sickness</h5>
+<p class="indentbullet">&#8226; Do not allow anyone to use a VR system that is not in their usual state of health (Section <a href="chapter17.html#lev17.2"><span class="blue">17.2</span></a>).</p>
+<p class="indentbullet">&#8226; Inform users in a casual way that some users experience discomfort and warn them to stop at the first sign of discomfort, rather than &#8220;tough it out.&#8221; Do not overemphasize adverse effects (Sections <a href="chapter16.html#lev16.1"><span class="blue">16.1</span></a> and <a href="chapter17.html#lev17.2"><span class="blue">17.2</span></a>).</p>
+<p class="indentbullet">&#8226; Respect a user&#8217;s choice to not participate or to stop the experience at any time (Section <a href="chapter17.html#lev17.2"><span class="blue">17.2</span></a>).</p>
+<p class="indentbullet"><a id="page_221"></a>&#8226; Do not present visuals while the user is putting on or taking off the HMD (Section <a href="chapter17.html#lev17.2"><span class="blue">17.2</span></a>).</p>
+<p class="indentbullet">&#8226; Do not freeze, stop the application, or switch to the desktop without first having the screen go blank or having the user close her eyes (Section <a href="chapter17.html#lev17.3"><span class="blue">17.3</span></a>).</p>
+<p class="indentbullet">&#8226; Carefully pay attention for early warning signs of VR sickness, such as pallor and sweating (Chapter <a href="chapter12.html#ch12"><span class="blue">12</span></a>).</p>
+<h6 class="h6"><strong>Adaptation and Readaptation</strong></h6>
+<p class="indentbullet">&#8226; For faster readaptation to the real world after VR usage, use active readaptation by providing activities targeted at recalibrating the user&#8217;s sensory systems (Section <a href="chapter13.html#lev13.4.1"><span class="blue">13.4.1</span></a>).</p>
+<p class="indentbullet">&#8226; For reducing readaptation discomfort after VR usage, use natural decay by having the user gradually readapt to the real world&#8212;encourage the user to sit and relax with little movement and eyes closed (Section <a href="chapter13.html#lev13.4.1"><span class="blue">13.4.1</span></a>).</p>
+<p class="indentbullet">&#8226; After VR usage, inform users not to drive, operate heavy machinery, or participate in high-risk behavior for at least 30&#8211;45 min and after all aftereffects have passed (Section <a href="chapter13.html#lev13.4"><span class="blue">13.4</span></a>).</p>
+<p class="indentbullet">&#8226; To maximize adaptation, use VR at spaced intervals of 2&#8211;5 days (Section <a href="chapter18.html#lev18.1"><span class="blue">18.1</span></a>).</p>
+<h3 class="h3"><a id="lev19.8"></a><span class="font">19.8</span> <strong>Measuring Sickness</strong></h3>
+<p class="indentbullet">&#8226; For easiest data collection, use symptom checklists or questionnares. The Kennedy Simulator Sickness Questionnaire is the standard (Section <a href="chapter16.html#lev16.1"><span class="blue">16.1</span></a>).</p>
+<p class="indentbullet">&#8226; Postural stability tests are also quite easy to use if the person administrating the test is trained (Section <a href="chapter16.html#lev16.2"><span class="blue">16.2</span></a>).</p>
+<p class="indentbullet">&#8226; For objectively measuring sickness, consider using physiological measures (Section <a href="chapter16.html#lev16.3"><span class="blue">16.3</span></a>).</p>
+</body>
+</html>

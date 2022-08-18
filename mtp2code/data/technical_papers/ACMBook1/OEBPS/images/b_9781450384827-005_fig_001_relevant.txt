@@ -1,0 +1,3 @@
+In order to solve this problem, the authors defined three main tasks: (1) Frequent pattern mining and association rules for chronic diseases and related treatments. (2) Frequent sequence mining to analyze complex sequences of events with different time spans between them. (3) Periodic event mining for finding periodical sequences of certain diseases.
+Figure 5.1High-level architecture of a pattern mining system for understanding comorbidities of multiple chronic diseases. Reproduced from Boytcheva et al. [2019].
+Although the authors did not provide any specific algorithm for each task, they applied their system to find associations among schizophrenia, diabetes mellitus type 2, and hyperprolactinemia. Figure 5.1 shows their proposed high-level architecture.

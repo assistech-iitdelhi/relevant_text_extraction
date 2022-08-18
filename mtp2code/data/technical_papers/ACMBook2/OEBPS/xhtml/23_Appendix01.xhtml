@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>The Sparse Fourier Transform: Theory and Practice</title>
+<link rel="stylesheet" type="text/css" href="../styles/stylesheet.css"/>
+<link rel="stylesheet" type="application/vnd.adobe-page-template+xml" href="../styles/page-template.xpgt"/>
+</head>
+<body>
+<p class="chnoa"><a id="page_195"/>APPENDIX</p>
+<p class="chno">A</p>
+<p class="chtitle"><b>Proofs</b></p>
+<p class="h1a"><b><a id="appA_1"/><span class="big">A.1</span>&#160;&#160;&#160;&#160;Proof of Lemma 3.1</b></p>
+<p class="noindent"><b>Lemma 3.1</b> Let <i>S</i> be the support of the largest <i>k</i> coefficients of <i>x&#770;</i>, and <i>x&#770;</i><sub>&#8211;<i>S</i></sub> contain the rest. Then for any &#8714; &#8804; 1,</p>
+<p class="image"><img src="../images/pg195_1.png" alt="image"/></p>
+<p class="noindent"><b>Proof</b> By the definitions in <a href="11_Chapter02.xhtml#ch2_2">Section 2.2</a>,</p>
+<p class="image"><img src="../images/pg195_2.png" alt="image"/></p>
+<p class="noindent">Consider the case that <i>x&#770;</i> is zero everywhere but at <i>i</i>, so <img src="../images/in195_1.png" alt="image"/>. Then <i>y&#770;</i> is the convolution of <img src="../images/gccap.png" alt="image"/> and <img src="../images/in195_2.png" alt="image"/>, and <img src="../images/gccap.png" alt="image"/> is symmetric, so</p>
+<p class="image"><img src="../images/pg195_3.png" alt="image"/></p>
+<p class="noindent">which shows that <img src="../images/in195_3.png" alt="image"/> in this case. But <img src="../images/in195_3.png" alt="image"/> is linear in <i>x&#770;</i>, so in general we can assume <i>x&#770;<sub>i</sub></i> = 0 and bound <img src="../images/in195_4.png" alt="image"/>. Since <img src="../images/in195_5.png" alt="image"/>, it is sufficient to bound <img src="../images/in195_6.png" alt="image"/>.</p>
+<p class="indent"><a id="page_196"/>Define <i>T</i> = {<i>j</i> &#8714; [<i>n</i>] | <i>&#963;</i>(<i>i</i> &#8211; <i>b</i> &#8211; <i>j</i>) &#8714; [&#8211;2<i>n/B</i>, 2<i>n/B</i>]}. We have that</p>
+<p class="image"><img src="../images/pg196_1.png" alt="image"/></p>
+<p class="noindent">In the last step, the left term follows from <img src="../images/in196_1.png" alt="image"/> for all <i>a</i>. The right term is because for <img src="../images/in196_2.png" alt="image"/>, and <img src="../images/in196_3.png" alt="image"/>. By Claim 2.3, this becomes:</p>
+<p class="image"><img src="../images/pg196_2.png" alt="image"/></p>
+<p class="noindent">Define <img src="../images/in196_4.png" alt="image"/>. As a choice over <i>&#964;, V</i> is the energy of a random Fourier coefficient of the vector <i>x&#770;<sub>T</sub></i> so we can bound the expectation over <i>&#964;</i>:</p>
+<p class="image"><img src="../images/pg196_3.png" alt="image"/></p>
+<p class="noindent">Now, for each coordinate <i>j</i> &#8800; <i>i</i> &#8211; <i>b</i>, Pr<sub><i>&#963;,b</i></sub>[<i>j</i> &#8714; <i>T</i>] &#8804; 8/<i>B</i> by Lemma 2.1. Thus, <img src="../images/in196_5.png" alt="image"/>, so with probability 1 &#8211; 8<i>k/B</i> over <i>&#963;</i> and <i>b</i> we have</p>
+<p class="image"><img src="../images/pg196_4.png" alt="image"/></p>
+<p class="noindent">Let <i>E</i> be the event that this occurs, so <i>E</i> is 0 with probability 8<i>k/B</i> and 1 otherwise. We have</p>
+<p class="image"><img src="../images/pg196_5.png" alt="image"/></p>
+<p class="noindent">Furthermore, we know</p>
+<p class="image"><a id="page_197"/><img src="../images/pg197_1.png" alt="image"/></p>
+<p class="noindent">by Lemma 2.1. Therefore, by Markov&#8217;s inequality and a union bound, we have for any <i>C</i> &#62; 0 that</p>
+<p class="image"><img src="../images/pg197_2.png" alt="image"/></p>
+<p class="noindent">Hence,</p>
+<p class="image"><img src="../images/pg197_3.png" alt="image"/></p>
+<p class="noindent">Replacing <i>C</i> with <i>&#8714;B</i>/(32<i>k</i>) and using <img src="../images/in197_1.png" alt="image"/> gives</p>
+<p class="image"><img src="../images/pg197_4.png" alt="image"/></p>
+<p class="noindent">which implies the result. &#9632;</p>
+<p class="h1a"><b><a id="appA_2"/><span class="big">A.2</span>&#160;&#160;&#160;&#160;Proof of Lemma 3.2</b></p>
+<p class="noindent"><b>Lemma 3.2</b> Define <img src="../images/in197_2.png" alt="image"/> to be the error tolerated in Lemma 3.1. Then for any <i>i</i> &#8714; [<i>n</i>] with |<i>x&#770;<sub>i</sub></i>| &#8805; 4<i>E</i>,</p>
+<p class="image"><img src="../images/pg197_5.png" alt="image"/></p>
+<p class="noindent"><b>Proof</b> With probability at least <img src="../images/in197_3.png" alt="image"/>. In this case, <img src="../images/in197_4.png" alt="image"/>. Thus, it is sufficient to show that, with probability at least <img src="../images/in197_5.png" alt="image"/>, there are at most <i>dk</i> locations <i>j</i> &#8714; [<i>B</i>] with |<i>z&#770;<sub>j</sub></i>| &#8805; 3(1 &#8211; <i>&#948;</i>)<i>E</i>. Since each <i>z&#770;<sub>j</sub></i> corresponds to <i>n/B</i> locations in [<i>n</i>], we will show that with probability at least <img src="../images/in197_5.png" alt="image"/>, there are at most <i>dkn/B</i> locations <i>j</i> &#8714; [<i>n</i>] with <img src="../images/pg197_6a.png" alt="image"/>.</p>
+<p class="indent">Let <i>U</i> = {<i>j</i> &#8714; [<i>n</i>] | |<i>x&#770;<sub>j</sub></i>| &#8805; <i>E</i>}, and <img src="../images/in197_7.png" alt="image"/>. Therefore, <img src="../images/in197_8.png" alt="image"/>. Since 2 &#8804; 3(1 &#8211; <i>&#948;</i>)<sup>2</sup>, we have</p>
+<p class="image"><img src="../images/pg197_6.png" alt="image"/></p>
+<p class="noindent"><a id="page_198"/>We also know</p>
+<p class="image"><img src="../images/pg198_1.png" alt="image"/></p>
+<p class="noindent">and by Lemma 3.1,</p>
+<p class="image"><img src="../images/pg198_2.png" alt="image"/></p>
+<p class="noindent">Thus, by Markov&#8217;s inequality <img src="../images/in198_1.png" alt="image"/>, or</p>
+<p class="image"><img src="../images/pg198_3.png" alt="image"/></p>
+<p class="noindent">Since the RHS is only meaningful for <i>d</i> = &#937;(1/<i>&#8714;</i>) we can assume <img src="../images/in198_2.png" alt="image"/>. Therefore,</p>
+<p class="image"><img src="../images/pg198_4.png" alt="image"/></p>
+<p class="noindent">and thus</p>
+<p class="image"><img src="../images/pg198_5.png" alt="image"/></p>
+<p class="noindent">Hence, a union bound over this and the probability that <img src="../images/in198_3.png" alt="image"/> gives</p>
+<p class="image"><img src="../images/pg198_6.png" alt="image"/></p>
+<p class="noindent">as desired. &#9632;</p>
+<p class="h1a"><b><a id="appA_3"/><span class="big">A.3</span>&#160;&#160;&#160;&#160;Proof of Lemma 4.1</b></p>
+<p class="noindent"><b>Lemma 4.1</b> Suppose <i>B</i> divides <i>n</i>. The output <i>u&#770;</i> of H<small>ASH</small>T<small>O</small>B<small>INS</small> satisfies</p>
+<p class="image"><img src="../images/pg198_7.png" alt="image"/></p>
+<p class="noindent">Let <img src="../images/in198_4.png" alt="image"/>. The running time of H<small>ASH</small>T<small>O</small>B<small>INS</small> is <img src="../images/in198_5.png" alt="image"/>.</p>
+<p class="noindentt"><b>Proof</b> Define the flat window functions <i>G</i> = <i>G<sub>B, &#948;, &#945;</sub></i> and <img src="../images/in198_6.png" alt="image"/>. We have</p>
+<p class="image"><img src="../images/pg198_8.png" alt="image"/></p>
+<p class="noindent"><a id="page_199"/>By Claim 2.3, the coordinates of <img src="../images/in199_1.png" alt="image"/> and <i>x&#770;</i> have the same magnitudes, just different ordering and phase. Therefore</p>
+<p class="image"><img src="../images/pg199_1.png" alt="image"/></p>
+<p class="noindent">and hence</p>
+<p class="image"><img src="../images/pg199_2.png" alt="image"/></p>
+<p class="noindent">as desired.</p>
+<p class="indent">We can compute H<small>ASH</small>T<small>O</small>B<small>INS</small> via the following method.</p>
+<p class="numlistt">1.&#160;&#160;Compute <i>y</i> with <img src="../images/in199_2.png" alt="image"/> time.</p>
+<p class="numlist">2.&#160;&#160;Compute <i>&#957;</i> &#8714; <span class="f1">C</span><sup><i>B</i></sup> given by <img src="../images/in199_3.png" alt="image"/>.</p>
+<p class="numlist">3.&#160;&#160;Because <i>B</i> divides <i>n</i>, by the definition of the Fourier transform (see also Claim 2.4 from <a href="12_Chapter03.xhtml">Chapter 3</a>) we have <i>y&#770;<sub>jn/B</sub></i> = <i>&#957;&#770;<sub>j</sub></i> for all <i>j</i>. Hence, we can compute it with a <i>B</i>-dimensional FFT in <i>O</i>(<i>B</i> log <i>B</i>) time.</p>
+<p class="numlist">4.&#160;&#160;For each coordinate <i>i</i> &#8714; supp(<i>z&#770;</i>), decrease <img src="../images/in199_4.png" alt="image"/>. This takes <i>O</i>(||<i>z&#770;</i>||<sub>0</sub> + <i>&#958;</i> log(<i>n/&#948;</i>)) time, since computing <img src="../images/in199_5.png" alt="image"/> takes <i>O</i>(log(<i>n/&#948;</i>)) time if <i>E</i><sub>off</sub>(<i>i</i>) holds and <i>O</i>(1) otherwise. &#9632;</p>
+<p class="h1a"><b><a id="appA_4"/><span class="big">A.4</span>&#160;&#160;&#160;&#160;Proof of Lemma 4.2</b></p>
+<p class="noindent"><b>Lemma 4.2</b> Consider any <i>i</i> &#8714; <i>S</i> such that neither <i>E</i><sub>coll</sub>(<i>i</i>) nor <i>E</i><sub>off</sub> (<i>i</i>) holds. Let <i>j</i> = <i>h<sub>&#963;,b</sub></i>(<i>i</i>). Then</p>
+<p class="image"><img src="../images/pg199_3.png" alt="image"/></p>
+<p class="noindentt"><b>Proof</b> We know that <img src="../images/in199_6.png" alt="image"/>. Then by Lemma 4.1 and <i>E</i><sub>coll</sub>(<i>i</i>) not holding,</p>
+<p class="image"><img src="../images/pg199_4.png" alt="image"/></p>
+<p class="noindent"><a id="page_200"/>Because <i>E</i><sub>off</sub>(<i>i</i>) does not hold, <img src="../images/in200_1.png" alt="image"/>, so</p>
+<p class="eqn"><a id="eqA_1"/><img src="../images/eqA_1.png" alt="image"/></p>
+<p class="noindent">Similarly</p>
+<p class="image"><img src="../images/pg200_1.png" alt="image"/></p>
+<p class="noindent">Then because <img src="../images/in200_2.png" alt="image"/>, the phase is</p>
+<p class="image"><img src="../images/pg200_2.png" alt="image"/></p>
+<p class="noindent">and <img src="../images/in200_3.png" alt="image"/>. Thus, <img src="../images/in200_4.png" alt="image"/> by the choice of <i>&#948;</i>. Therefore</p>
+<p class="image"><img src="../images/pg200_3.png" alt="image"/></p>
+<p class="indent">Also, by <a href="#eqA_1">Equation (A.1)</a>, round(<i>u&#770;<sub>j</sub></i>) = <i>x&#770;<sub>i</sub></i> &#8211; <i>z&#770;<sub>i</sub></i>. Finally, |round(<i>u&#770;<sub>j</sub></i>)| = |<i>x&#770;<sub>i</sub></i> &#8211; <i>z&#770;<sub>i</sub></i>| &#8805; 1, so |<i>u&#770;<sub>j</sub></i>| &#8805; 1/2. Thus, <i>j</i> &#8714; <i>J</i>. &#9632;</p>
+<p class="h1a"><b><a id="appA_5"/><span class="big">A.5</span>&#160;&#160;&#160;&#160;Proof of Lemma 4.5</b></p>
+<p class="noindent"><b>Lemma 4.5</b> Let <i>a</i> &#8714; [<i>n</i>] uniformly at random, <i>B</i> divide <i>n</i>, and the other parameters be arbitrary in</p>
+<p class="image"><img src="../images/pg200_4.png" alt="image"/></p>
+<p class="noindent">Then for any <i>i</i> &#8714; [<i>n</i>] with <i>j</i> = <i>h<sub>&#945;,b</sub></i>(<i>i</i>) and none of <i>E</i><sub>coll</sub>(<i>i</i>), <i>E</i><sub>off</sub>(<i>i</i>), or <i>E</i><sub>noise</sub>(<i>i</i>) holding,</p>
+<p class="image"><img src="../images/pg200_5.png" alt="image"/></p>
+<p class="noindent"><b>Proof</b> Let <img src="../images/in200_5.png" alt="image"/>. Let <img src="../images/in200_6.png" alt="image"/>. We have that <i>T</i> &#8745; <i>S</i> = {} and <img src="../images/in200_7.png" alt="image"/>. By Lemma 4.1,</p>
+<p class="image"><img src="../images/pg200_6.png" alt="image"/></p>
+<p class="noindent">Because the <i>&#945;i</i>&#8242; are distinct for <i>i</i>&#8242; &#8714; <i>T</i>, we have by Parseval&#8217;s theorem</p>
+<p class="image"><img src="../images/pg200_7.png" alt="image"/></p>
+<p class="noindent"><a id="page_201"/>Since |<i>X</i> + <i>Y</i>|<sup>2</sup> &#8804; 2 |<i>X</i>|<sup>2</sup> + 2 |<i>Y</i>|<sup>2</sup> for any <i>X, Y</i>, we get</p>
+<p class="image"><img src="../images/pg201_1.png" alt="image"/></p>
+<p class="h1a"><b><a id="appA_6"/><span class="big">A.6</span>&#160;&#160;&#160;&#160;Proof of Lemma 4.7</b></p>
+<p class="noindent"><b>Lemma 4.7</b> Let <i>i</i> &#8714; <i>S</i>. Suppose none of <i>E</i><sub>coll</sub>(<i>i</i>), <i>E</i><sub>off</sub>(<i>i</i>), and <i>E</i><sub>noise</sub>(<i>i</i>) hold, and let <i>j</i> = <i>h<sub>&#963;,b</sub></i>(<i>i</i>). Consider any run of L<small>OCATE</small>I<small>NNER</small> with <i>&#960;<sub>&#963;,b</sub></i>(<i>i</i>) &#8714; [<i>l<sub>j</sub>, l<sub>j</sub></i> + <i>&#969;</i>]. Let <i>f</i> &#62; 0 be a parameter such that</p>
+<p class="image"><img src="../images/pg201_2.png" alt="image"/></p>
+<p class="noindent">for <i>C</i> larger than some fixed constant. Then <img src="../images/in201_1.png" alt="image"/> with probability at least <img src="../images/in201_2.png" alt="image"/>.</p>
+<p class="noindentt"><b>Proof</b> Let <i>&#964;</i> = <i>&#960;<sub>&#963;,b</sub></i>(<i>i</i>) &#8801; <i>&#963;</i>(<i>i</i> &#8211; <i>b</i>) (mod <i>n</i>), and for any <i>j</i> &#8714; [<i>n</i>] define</p>
+<p class="image"><img src="../images/pg201_3.png" alt="image"/></p>
+<p class="noindent">so <img src="../images/in201_3.png" alt="image"/>. Let <i>g</i> = &#920;(<i>f</i><sup>1/3</sup>), and <img src="../images/in201_4.png" alt="image"/>.</p>
+<p class="indent">To get the result, we divide [<i>l<sub>j</sub>, l<sub>j</sub></i> + <i>&#969;</i>] into <i>t</i> &#8220;regions,&#8221; <img src="../images/in201_5.png" alt="image"/> for <i>q</i> &#8714; [<i>t</i>]. We will first show that in each round <i>r, c<sub>j</sub></i> is close to <img src="../images/in201_6.png" alt="image"/> with 1 &#8211; <i>g</i> probability. This will imply that <i>Q<sub>q</sub></i> gets a &#8220;vote,&#8221; meaning <i>&#957;<sub>j,q</sub></i> increases, with 1 &#8211; <i>g</i> probability for the <i>q</i>&#8242; with <i>&#964;</i> &#8714; <i>Q<sub>q</sub></i>&#8242;. It will also imply that <i>&#957;<sub>j,q</sub></i> increases with only <i>g</i> probability when |<i>q</i> &#8211; <i>q</i>&#8242; &#62; 3. Then <i>R<sub>loc</sub></i> rounds will suffice to separate the two with <img src="../images/in201_7.png" alt="image"/> probability. We get that with <img src="../images/in201_8.png" alt="image"/> probability, the recovered <i>Q</i>* has |<i>q</i> &#8211; <i>q</i>&#8242;| &#8804; 3 for all <i>q</i> &#8714; <i>Q</i>*. If we take the minimum <i>q</i> &#8714; <i>Q</i>* and the next three subregions, we find <i>&#964;</i> to within 4 regions, or 4<i>&#969;/t</i> locations, as desired.</p>
+<p class="indent">In any round <i>r</i>, define <i>u&#770;</i> = <i>u&#770;</i><sup>(<i>r</i>)</sup> and <i>a</i> = <i>a<sub>r</sub></i>. We have by Lemma 4.5 and that <i>i</i> &#8714; <i>S</i> that</p>
+<p class="image"><img src="../images/pg201_4.png" alt="image"/></p>
+<p class="noindent"><a id="page_202"/>Note that <img src="../images/in202_1.png" alt="image"/>. Thus, for any <i>p</i> &#62; 0, with probability 1 &#8211; <i>p</i> we have</p>
+<p class="image"><img src="../images/pg202_1.png" alt="image"/></p>
+<p class="noindent">where <img src="../images/in202_2.png" alt="image"/> denotes the &#8220;circular distance&#8221; between <i>x</i> and <i>y</i>. The analogous fact holds for <img src="../images/in202_3.png" alt="image"/> relative to <img src="../images/in202_4.png" alt="image"/>. Therefore, with at least 1 &#8211; 2<i>p</i> probability</p>
+<p class="image"><img src="../images/pg202_2.png" alt="image"/></p>
+<p class="noindent">by the triangle inequality. Thus, for any <i>s</i> = &#920;(<i>g</i>) and <i>p</i> = &#920;(<i>g</i>), we can set <img src="../images/in202_5.png" alt="image"/> so that</p>
+<p class="eqn"><a id="eqA_2"/><img src="../images/eqA_2.png" alt="image"/></p>
+<p class="noindent">with probability at least 1 &#8211; 2<i>p</i>.</p>
+<p class="indent"><a href="#eqA_2">Equation (A.2)</a> shows that <i>c<sub>j</sub></i> is a good estimate for <i>i</i> with good probability. We will now show that this means the appropriate &#8220;region&#8221; <i>Q<sub>q</sub></i>&#8242; gets a &#8220;vote&#8221; with &#8220;large&#8221; probability.</p>
+<p class="indent">For the <i>q</i>&#8242; with <img src="../images/in202_6.png" alt="image"/>, we have that <img src="../images/in202_7.png" alt="image"/> satisfies</p>
+<p class="image"><img src="../images/pg202_3.png" alt="image"/></p>
+<p class="noindent">so</p>
+<p class="image"><img src="../images/pg202_4.png" alt="image"/></p>
+<p class="noindent">Hence, by <a href="#eqA_2">Equation (A.2)</a>, the triangle inequality, and the choice of <img src="../images/in202_8.png" alt="image"/>,</p>
+<p class="image"><a id="page_203"/><img src="../images/pg203_1.png" alt="image"/></p>
+<p class="noindent">Thus, <i>&#957;<sub>j,q</sub></i>&#8242; will increase in each round with probability at least 1 &#8211; 2<i>p</i>.</p>
+<p class="indent">Now, consider <i>q</i> with |<i>q</i> &#8211; <i>q</i>&#8242;| &#62; 3. Then <img src="../images/in203_1.png" alt="image"/>, and (from the definition of <img src="../images/in203_2.png" alt="image"/> we have</p>
+<p class="eqn"><a id="eqA_3"/><img src="../images/eqA_3.png" alt="image"/></p>
+<p class="indent">We now consider two cases. First, suppose that <img src="../images/in203_3.png" alt="image"/>. In this case, from the definition of <i>&#946;</i> it follows that</p>
+<p class="image"><img src="../images/pg203_2.png" alt="image"/></p>
+<p class="indent">Together with <a href="#eqA_3">Equation (A.3)</a> this implies</p>
+<p class="image"><img src="../images/pg203_3.png" alt="image"/></p>
+<p class="indent">On the other hand, suppose that <img src="../images/in203_4.png" alt="image"/>. In this case, we use Lemma 4.6 with parameters <img src="../images/in203_5.png" alt="image"/> and <i>n</i> = <i>n</i>, to conclude that</p>
+<p class="image"><img src="../images/pg203_4.png" alt="image"/></p>
+<p class="noindent">where we used that |<i>i</i>| &#8804; <i>&#969;</i> &#8804; <i>n/B</i>, the assumption <img src="../images/in203_6.png" alt="image"/>, and that <i>s</i><sup>2</sup> &#62; 6/<i>B</i> (because <i>s</i> = &#920;(<i>g</i>) and <i>B</i> = <i>&#969;</i>(1/<i>g</i><sup>3</sup>)).</p>
+<p class="indent">Thus, in either case, with probability at least 1 &#8211; 10<i>s</i> we have</p>
+<p class="image"><img src="../images/pg203_5.png" alt="image"/></p>
+<p class="noindent">for any <i>q</i> with |<i>q</i>| &#8211; <i>q</i>&#8242;| &#62; 3. Therefore, we have</p>
+<p class="image"><a id="page_204"/><img src="../images/pg204_1.png" alt="image"/></p>
+<p class="noindent">with probability at least 1 &#8211; 10<i>s</i> &#8211; 2<i>p</i>, and <i>&#957;<sub>j,q</sub></i> is not incremented.</p>
+<p class="indent">To summarize: in each round, <i>&#957;<sub>j,q&#8242;</sub></i> is incremented with probability at least 1 &#8211; 2<i>p</i> and <i>&#957;<sub>j,q&#8242;</sub></i> is incremented with probability at most 10<i>s</i> + 2<i>p</i> for |<i>q</i> &#8211; <i>q</i>&#8242;| &#62; 3. The probabilities corresponding to different rounds are independent.</p>
+<p class="indent">Set <i>s</i> = <i>g</i>/20 and <i>p</i> = <i>g</i>/4. Then <i>&#957;<sub>j,q&#8242;</sub></i> is incremented with probability at least 1 &#8211; <i>g</i> and <i>&#957;<sub>j,q</sub></i> is incremented with probability less than <i>g</i>. Then after <i>R<sub>loc</sub></i> rounds, if |<i>q</i> &#8211; <i>q</i>&#8242;| &#62; 3,</p>
+<p class="image"><img src="../images/pg204_2.png" alt="image"/></p>
+<p class="noindent">for <i>g</i> = <i>f</i><sup>1/3</sup>/4. Similarly,</p>
+<p class="image"><img src="../images/pg204_3.png" alt="image"/></p>
+<p class="noindent">Hence, with probability at least <img src="../images/in204_1.png" alt="image"/> we have <i>q</i>&#8242; &#8714; <i>Q</i>* and |<i>q</i> &#8211; <i>q</i>&#8242;| &#8804; 3 for all <i>q</i> &#8714; <i>Q</i>*. But then <img src="../images/in204_2.png" alt="image"/> as desired.</p>
+<p class="indent">Because <img src="../images/in204_3.png" alt="image"/>, the expected running time is <img src="../images/in204_4.png" alt="image"/>. &#9632;</p>
+<p class="h1a"><b><a id="appA_7"/><span class="big">A.7</span>&#160;&#160;&#160;&#160;Proof of Lemma 4.8</b></p>
+<p class="noindent"><b>Lemma 4.8</b> Suppose <img src="../images/in204_5.png" alt="image"/> for <i>C</i> larger than some fixed constant. The procedure L<small>OCATE</small>S<small>IGNAL</small> returns a set <i>L</i> of size |<i>L</i>| &#8804; <i>B</i> such that for any <i>i</i> &#8714; <i>S</i>, Pr[<i>i</i> &#8714; <i>L</i>] &#8805; 1 &#8211; <i>O</i>(<i>&#945;</i>). Moreover the procedure runs in expected time</p>
+<p class="image"><img src="../images/pg204_4.png" alt="image"/></p>
+<p class="noindent"><b>Proof</b> Consider any <i>i</i> &#8714; <i>S</i> such that none of <i>E</i><sub>coll</sub>(<i>i</i>), <i>E</i><sub>off</sub> (<i>i</i>), and <i>E</i><sub>noise</sub>(<i>i</i>) hold, as happens with probability 1 &#8211; <i>O</i>(<i>&#945;</i>).</p>
+<p class="indent">Set <i>t</i> = log <i>n, t</i>&#8242; = <i>t</i>/4 and <i>R<sub>loc</sub></i> = <i>O</i>(log<sub>1/<i>&#945;</i></sub>(<i>t/&#945;</i>)). Let <i>&#969;<sub>D</sub></i> = <i>n/B</i> and <img src="../images/in204_6.png" alt="image"/>. In each round <i>D</i>, Lemma 4.7 implies that if <img src="../images/in204_7.png" alt="image"/> then <img src="../images/in204_8.png" alt="image"/> with probability at least <img src="../images/in204_9.png" alt="image"/>. By a union bound, with probability at least 1 &#8211; <i>&#945;</i> we have <img src="../images/in204_10.png" alt="image"/>. Thus, <img src="../images/in204_11.png" alt="image"/>.</p>
+<p class="indent">Since <img src="../images/in204_12.png" alt="image"/>, the running time is</p>
+<p class="image"><a id="page_205"/><img src="../images/pg205_1.png" alt="image"/></p>
+<p class="h1a"><b><a id="appA_8"/><span class="big">A.8</span>&#160;&#160;&#160;&#160;Proof of Lemma 4.9</b></p>
+<p class="noindent"><b>Lemma 4.9</b> For any <i>i</i> &#8714; <i>L</i>,</p>
+<p class="image"><img src="../images/pg205_2.png" alt="image"/></p>
+<p class="noindent">if <img src="../images/in205_1.png" alt="image"/> for some constant <i>C</i>.</p>
+<p class="noindentt"><b>Proof</b> Define <img src="../images/in205_2.png" alt="image"/> in each round <i>r</i>. Suppose none of <img src="../images/in205_3.png" alt="image"/>, and <img src="../images/in205_4.png" alt="image"/> hold, as happens with probability 1 &#8211; <i>O</i>(<i>&#945;</i>). Then by Lemma 4.5,</p>
+<p class="image"><img src="../images/pg205_3.png" alt="image"/></p>
+<p class="noindent">Hence, with 3/4 &#8211; <i>O</i>(<i>&#945;</i>) &#62; 5/8 probability in total,</p>
+<p class="image"><img src="../images/pg205_4.png" alt="image"/></p>
+<p class="noindent">for sufficiently large <i>C</i>. Then with probability at least <img src="../images/in205_5.png" alt="image"/>, both of the following occur:</p>
+<p class="image"><img src="../images/pg205_5.png" alt="image"/></p>
+<p class="noindent">If this is the case, then <img src="../images/in205_6.png" alt="image"/>. Since <img src="../images/in205_7.png" alt="image"/>, the result follows. &#9632;</p>
+<p class="h1a"><b><a id="appA_9"/><span class="big">A.9</span>&#160;&#160;&#160;&#160;Proof of Lemma 4.10</b></p>
+<p class="noindent"><b>Lemma 4.10</b> Let <img src="../images/in205_8.png" alt="image"/> for some constant <i>C</i> and parameters <i>&#947;, f</i> &#62; 0. Then if E<small>STIMATE</small>V<small>ALUES</small> is run with input <i>k</i>&#8242; = 3<i>k</i>, it returns <img src="../images/in205_9.png" alt="image"/> for |<i>J</i>| = 3<i>k</i> satisfying</p>
+<p class="image"><img src="../images/pg205_6.png" alt="image"/></p>
+<p class="noindent">with probability at least 1 &#8211; <i>&#947;</i>.</p>
+<p class="noindentt"><a id="page_206"/><b>Proof</b> By Lemma 4.9, each index <i>i</i> &#8714; <i>L</i> has</p>
+<p class="image"><img src="../images/pg206_1.png" alt="image"/></p>
+<p class="noindent">Let <img src="../images/in206_1.png" alt="image"/>. With probability <img src="../images/in206_2.png" alt="image"/>, assume this happens. Then</p>
+<p class="eqn"><a id="eqA_4"/><img src="../images/eqA_4.png" alt="image"/></p>
+<p class="noindent">Let <i>T</i> contain the top 2<i>k</i> coordinates of <i>&#969;<sub>L\U</sub></i>. By the analysis of Count-Sketch (most specifically, Price and Woodruff [2011, theorem 3.1]), the &#8467;<sub>&#8734;</sub> guarantee in <a href="#eqA_4">Equation (A.4)</a> means that</p>
+<p class="eqn"><a id="eqA_5"/><img src="../images/eqA_5.png" alt="image"/></p>
+<p class="noindent">Because <i>J</i> is the top 3<i>k</i> &#62; (2 + <i>f</i>)<i>k</i> coordinates of <img src="../images/in206_3.png" alt="image"/>. Let <img src="../images/in206_4.png" alt="image"/>, so |<i>J</i>&#8242;| &#8804; <i>k</i>. Then</p>
+<p class="image"><img src="../images/pg206_2.png" alt="image"/></p>
+<p class="noindent">where we used Equations A.4 and A.5. &#9632;</p>
+<p class="h1a"><b><a id="appA_10"/><span class="big">A.10</span>&#160;&#160;Proof of Lemma 4.11</b></p>
+<p class="noindent"><b>Lemma 4.11</b> Define <img src="../images/in206_5.png" alt="image"/>. Consider any one loop <i>r</i> of S<small>PARSE</small>FFT, running with parameters (<i>B, k, &#945;</i>) = (<i>B<sub>r</sub>, k<sub>r</sub>, &#945;<sub>r</sub></i>) such that <img src="../images/in206_6.png" alt="image"/> for some <i>C</i> larger than some fixed constant. Then for any <i>f</i> &#62; 0,</p>
+<p class="image"><img src="../images/pg206_3.png" alt="image"/></p>
+<p class="noindent">with probability 1 <i>O</i>(<i>&#945;/f</i>), and the running time is</p>
+<p class="image"><img src="../images/pg206_4.png" alt="image"/></p>
+<p class="noindentt"><a id="page_207"/><b>Proof</b> We use <img src="../images/in207_1.png" alt="image"/> rounds inside E<small>STIMATE</small>V<small>ALUES</small>.</p>
+<p class="indent">The running time for L<small>OCATE</small>S<small>IGNAL</small> is</p>
+<p class="image"><img src="../images/pg207_1.png" alt="image"/></p>
+<p class="noindent">and for E<small>STIMATE</small>V<small>ALUES</small> is</p>
+<p class="image"><img src="../images/pg207_2.png" alt="image"/></p>
+<p class="noindent">for a total running time as given.</p>
+<p class="indent">Recall that in round <img src="../images/in207_2.png" alt="image"/> and <img src="../images/in207_3.png" alt="image"/>. By Lemma 4.8, each <i>i</i> &#8714; <i>S</i> lies in <i>L<sub>r</sub></i> with probability at least 1 &#8211; <i>O</i>(<i>&#945;</i>). Hence, |<i>S \ L</i>| &#60; <i>fk</i> with probability at least 1 &#8211; <i>O</i>(<i>&#945;/f</i>). Then</p>
+<p class="eqn"><a id="eqA_6"/><img src="../images/eqA_6.png" alt="image"/></p>
+<p class="noindent">Let <img src="../images/in207_4.png" alt="image"/> by the vector recovered by E<small>STIMATE</small>V<small>ALUES</small>. Then supp(<i>&#969;&#770;</i>) &#8834; <i>L</i>, so</p>
+<p class="image"><img src="../images/pg207_3.png" alt="image"/></p>
+<p class="noindent">by Lemma 4.10. But by <a href="#eqA_6">Equation (A.6)</a>, this gives</p>
+<p class="image"><img src="../images/pg207_4.png" alt="image"/></p>
+<p class="noindent">The result follows from rescaling <i>f</i> and <i>&#8714;</i> by constant factors. &#9632;</p>
+<p class="h1a"><a id="page_208"/><b><a id="appA_11"/><span class="big">A.11</span>&#160;&#160;Proof of Theorem 4.2</b></p>
+<p class="noindent"><b>Theorem 4.2</b> With 2/3 probability, S<small>PARSE</small>FFT recovers <i>z&#770;</i><sup>(<i>R</i>+1)</sup> such that</p>
+<p class="image"><img src="../images/pg208_1.png" alt="image"/></p>
+<p class="noindent">in <img src="../images/in208_1.png" alt="image"/> time.</p>
+<p class="noindentt"><b>Proof</b> Define <img src="../images/in208_2.png" alt="image"/>. Choose <i>R</i> so <img src="../images/in208_3.png" alt="image"/>. Then <img src="../images/in208_4.png" alt="image"/>, since <img src="../images/in208_5.png" alt="image"/>.</p>
+<p class="indent">Set <img src="../images/in208_6.png" alt="image"/>. Then <img src="../images/in208_7.png" alt="image"/>, so for sufficiently large constant the constraint of Lemma 4.11 is satisfied. For appropriate constants, Lemma 4.11 says that in each round <i>r</i>,</p>
+<p class="eqn"><a id="eqA_7"/><img src="../images/eqA_7.png" alt="image"/></p>
+<p class="noindent">with probability at least 1 &#8722; <i>f<sub>r</sub></i>. The error accumulates, so in round <i>r</i> we have</p>
+<p class="image"><img src="../images/pg208_2.png" alt="image"/></p>
+<p class="noindent">with probability at least <img src="../images/in208_8.png" alt="image"/>. Hence, in the end, since <img src="../images/in208_9.png" alt="image"/>,</p>
+<p class="image"><img src="../images/pg208_3.png" alt="image"/></p>
+<p class="noindent">with probability at least 3/4. We also have</p>
+<p class="image"><img src="../images/pg208_4.png" alt="image"/></p>
+<p class="noindent">making</p>
+<p class="image"><img src="../images/pg208_5.png" alt="image"/></p>
+<p class="noindent">Thus, we get the approximation factor</p>
+<p class="image"><img src="../images/pg208_6.png" alt="image"/></p>
+<p class="noindent">with at least 3/4 probability. Rescaling <i>&#948;</i> by poly(<i>n</i>), using <img src="../images/in208_10.png" alt="image"/>, and taking the square root gives the desired</p>
+<p class="image"><a id="page_209"/><img src="../images/pg209_1.png" alt="image"/></p>
+<p class="noindent">Now we analyze the running time. The update <img src="../images/in209_1.png" alt="image"/> in round <i>r</i> has support size 3<i>k<sub>r</sub></i>, so in round <i>r</i></p>
+<p class="image"><img src="../images/pg209_2.png" alt="image"/></p>
+<p class="noindent">Thus, the expected running time in round <i>r</i> is</p>
+<p class="image"><img src="../images/pg209_3.png" alt="image"/></p>
+<p class="noindent">We split the terms multiplying <i>k</i> and <img src="../images/in209_2.png" alt="image"/>, and sum over <i>r</i>. First,</p>
+<p class="image"><img src="../images/pg209_4.png" alt="image"/></p>
+<p class="noindent">Next,</p>
+<p class="image"><img src="../images/pg209_5.png" alt="image"/></p>
+<p class="noindent">Thus, the total running time is</p>
+<p class="image"><img src="../images/pg209_6.png" alt="image"/></p>
+<p class="h1a"><b><a id="appA_12"/><span class="big">A.12</span>&#160;&#160;Proof of Lemma 5.2</b></p>
+<p class="noindent"><b>Lemma 5.2</b> The probability that any 1-sparsity test invoked by the algorithm is incorrect is at most <i>O</i>(1/<i>n</i><sup>(<i>c</i>&#8211;5)/2</sup>).</p>
+<p class="indentt">To prove Lemma 5.2, we first need the following lemma.</p>
+<p class="noindentt"><a id="page_210"/><b>Lemma A.12</b> Let <i>y</i> &#8714; <span class="f1">C</span><sup><i>m</i></sup> be drawn from a permutation invariant distribution with <i>r</i> &#8805; 2 nonzero values. Let <i>T</i> = [2<i>c</i>]. Then the probability that there exists a <i>y</i>&#8242; such that ||<i>y</i>&#8242;||<sub>0</sub> &#8804; 1 and (<i>y&#770;</i> &#8211; <i>y&#770;</i>&#8242;)<sub><i>T</i></sub> = 0 is at most <img src="../images/in210_1.png" alt="image"/>.</p>
+<p class="noindentt"><b>Proof</b> Let <i>A</i> = <i>F<sub>T</sub></i> be the first 2<i>c</i> rows of the inverse Fourier matrix. Because any 2<i>c</i> &#215; 2<i>c</i> submatrix of <i>A</i> is Vandermonde and hence non-singular, the system of linear equations</p>
+<p class="image"><img src="../images/pg210_1.png" alt="image"/></p>
+<p class="noindent">has at most one <i>c</i>-sparse solution in <i>z</i>, for any <i>b</i>.</p>
+<p class="indent">If <i>r</i> &#8804; <i>c</i> &#8211; 1, then ||<i>y</i> &#8211; <i>y</i>&#8242;||<sub>0</sub> &#8804; <i>c</i> so <i>A</i>(<i>y</i> &#8211; <i>y</i>&#8242;) = 0 implies <i>y</i> &#8211; <i>y</i>&#8242; = 0. But <i>r</i> &#8805; 2 so ||<i>y</i> &#8211; <i>y</i>&#8242;||<sub>0</sub> &#62; 0. This is a contradiction, so if <i>r</i> &#60; <i>c</i> then the probability that (<i>y&#770;</i> &#8211; <i>y&#770;</i>&#8242;)<sub><i>T</i></sub> = 0 is zero. Henceforth, we assume <i>r</i> &#8805; <i>c</i>.</p>
+<p class="indent">When drawing <i>y</i>, first place <i>r</i> &#8211; (<i>c</i> &#8211; 1) coordinates into <i>u</i> then place the other <i>c</i> &#8211; 1 values into <i>&#957;</i>, so that <i>y</i> = <i>u</i> + <i>&#957;</i>. Condition on <i>u</i>, so <i>&#957;</i> is a permutation distribution over <i>m</i> &#8211; <i>r</i> + <i>c</i> &#8211; 1 coordinates. We know there exists at most one <i>c</i>-sparse vector <i>&#969;</i> with <i>A&#969;</i> = &#8211;<i>Au</i>. Then,</p>
+<p class="image"><img src="../images/pg210_2.png" alt="image"/></p>
+<p class="noindent">where the penultimate inequality follows from considering the cases ||<i>w</i>||<sub>0</sub> &#8714; {<i>c</i> &#8211; 2, <i>c</i> &#8211; 1, <i>c</i>} separately. &#9632;</p>
+<p class="indentt">We now proceed with the proof of Lemma 5.2.</p>
+<p class="noindentt"><b>Proof</b> Without loss of generality, consider the row case. Let <i>y</i> be the <i>j</i>th row of <i>x&#770;</i>. Note that <img src="../images/in210_2.png" alt="image"/>. Observe that with probability at least 1 &#8211; 1/<i>n<sup>c</sup></i> we have ||<i>y</i>||<sub>0</sub> &#8804; <i>r</i> for <i>r</i> = <i>c</i> log <i>n</i>. Moreover, the distribution of <i>y</i> is permutation-invariant, and the test in B<small>ASIC</small>E<small>ST</small>F<small>REQ</small> corresponds to checking whether (<i>y&#770;</i> &#8211; <i>y&#770;</i>&#8242;)<sub><i>T</i></sub> = 0 for some 1-sparse <i>y</i>&#8242; = <i>ae<sub>i</sub></i>. Hence, Lemma A.12 with <img src="../images/in210_3.png" alt="image"/> implies the probability that any specific test fails is less than <img src="../images/in210_4.png" alt="image"/>. Taking a union bound over the <img src="../images/in210_5.png" alt="image"/> total tests gives a failure probability of <img src="../images/in210_6.png" alt="image"/>. &#9632;</p>
+<p class="h1a"><a id="page_211"/><b><a id="appA_13"/><span class="big">A.13</span>&#160;&#160;Proof of Lemma 5.4</b></p>
+<p class="noindent"><b>Lemma 5.4</b> Consider the recovery of a column/row <i>j</i> in R<small>OBUST</small>E<small>STIMATE</small>C<small>OL</small>, where <i>u&#770;</i> and <i>&#957;&#770;</i> are the results of F<small>OLD</small>T<small>O</small>B<small>INS</small> on <i>x&#770;</i>. Let <img src="../images/in211_1.png" alt="image"/> denote the <i>j</i>th column/row of <i>x&#770;</i>. Suppose <i>y</i> is drawn from a permutation invariant distribution <i>y</i> = <i>y</i><sup>head</sup> + <i>y</i><sup>residue</sup> + <i>y</i><sup>gauss</sup>, where <img src="../images/in211_2.png" alt="image"/>, and <i>y</i><sup>gauss</sup> is drawn from the <img src="../images/in211_3.png" alt="image"/>-dimensional normal distribution <img src="../images/in211_4.png" alt="image"/> with standard deviation <i>&#948;</i> = <i>&#8714;L/n</i><sup>1/4</sup> in each coordinate on both real and imaginary axes. We do not require that <i>y</i><sup>head</sup>, <i>y</i><sup>residue</sup>, and <i>y</i><sup>gauss</sup> are independent except for the permutation invariance of their sum.</p>
+<p class="indent">Consider the following bad events.</p>
+<p class="hang"><b>False negative.</b> supp(<i>y</i><sup>head</sup>) = {<i>i</i>} and R<small>OBUST</small>E<small>STIMATE</small>C<small>OL</small> does not update coordinate <i>i</i>.</p>
+<p class="hang"><b>False positive.</b> R<small>OBUST</small>E<small>STIMATE</small>C<small>OL</small> updates some coordinate <i>i</i> but supp(<i>y</i><sup>head</sup>) &#8800; {<i>i</i>}.</p>
+<p class="hang"><b>Bad update.</b> supp(<i>y</i><sup>head</sup>) = {<i>i</i>} and coordinate <i>i</i> is estimated by <i>b</i> with <img src="../images/in211_5.png" alt="image"/>.</p>
+<p class="indent">For any constant <i>c</i> and <i>&#8714;</i> below a sufficiently small constant, there exists a distribution over sets <i>T, T</i>&#8242; of size <i>O</i>(log <i>n</i>), such that as a distribution over <i>y</i> and <i>T, T</i>&#8242; we have the following.</p>
+<p class="bull">&#8226;&#160;&#160;The probability of a false negative is 1/ log<sup><i>c</i></sup> <i>n</i>.</p>
+<p class="bull">&#8226;&#160;&#160;The probability of a false positive is 1/<i>n<sup>c</sup></i>.</p>
+<p class="bull">&#8226;&#160;&#160;The probability of a bad update is 1/ log<i><sup>c</sup> n</i>.</p>
+<p class="noindentt"><b>Proof</b> Let <i>y&#780;</i> denote the 1-dimensional inverse DFT of <i>y</i>. Note that</p>
+<p class="image"><img src="../images/pg211_1.png" alt="image"/></p>
+<p class="noindent">by definition. Therefore, the goal of R<small>OBUST</small>E<small>STIMATE</small>C<small>OL</small> is simply to perform reliable 1-sparse recovery with <i>O</i>(log <i>n</i>) queries. Fortunately, Algorithm 4.3 solved basically the same problem, although with more false positives than we want here.</p>
+<p class="indent">We choose <i>T</i>&#8242; according to the L<small>OCATE</small>I<small>NNER</small> procedure from Algorithm 4.3; the set <i>T</i> is chosen uniformly at random from <img src="../images/in211_6.png" alt="image"/>. We have that</p>
+<p class="image"><img src="../images/pg211_2.png" alt="image"/></p>
+<p class="noindent"><a id="page_212"/>This is exactly what the procedure H<small>ASH</small>T<small>O</small>B<small>INS</small> of Algorithm 4.3 approximates up to a small error term. Therefore, the same analysis goes through (Lemma 4.8) to get that L<small>OCATE</small>S<small>IGNAL</small> returns <i>i</i> with 1 &#8211; 1/ log<sup><i>c</i></sup> <i>n</i> probability if <img src="../images/in212_1.png" alt="image"/>, where we define <img src="../images/in212_2.png" alt="image"/>.</p>
+<p class="indent">Define <img src="../images/in212_3.png" alt="image"/> to be the rows of the inverse Fourier matrix indexed by <i>T</i>, normalized so |<i>A<sub>i,j</sub></i>| = 1. Then <img src="../images/in212_4.png" alt="image"/>.</p>
+<p class="indent">First, we prove</p>
+<p class="eqn"><a id="eqA_8"/><img src="../images/eqA_8.png" alt="image"/></p>
+<p class="noindent">with all but <i>n</i><sup>&#8211;<i>c</i></sup> probability. We have that <img src="../images/in212_5.png" alt="image"/> with all but <img src="../images/in212_6.png" alt="image"/> probability by concentration of chi-square variables. We also have that <img src="../images/in212_7.png" alt="image"/>.</p>
+<p class="indent">Next, we show</p>
+<p class="eqn"><a id="eqA_9"/><img src="../images/eqA_9.png" alt="image"/></p>
+<p class="noindent">with all but <i>n</i><sup>&#8211;<i>c</i></sup> probability. We have that <i>Ay</i><sup>gauss</sup> is drawn from <img src="../images/in212_8.png" alt="image"/> by the rotation invariance of Gaussians, so</p>
+<p class="eqn"><a id="eqA_10"/><img src="../images/eqA_10.png" alt="image"/></p>
+<p class="noindent">with all but <img src="../images/in212_9.png" alt="image"/> probability. Furthermore, <i>A</i> has entries of magnitude 1 so <img src="../images/in212_10.png" alt="image"/>.</p>
+<p class="indent">Consider the case where supp(<i>y</i><sup>head</sup>) = {<i>i</i>}. From <a href="#eqA_8">Equation (A.8)</a> we have</p>
+<p class="eqn"><a id="eqA_11"/><img src="../images/eqA_11.png" alt="image"/></p>
+<p class="noindent">so <i>i</i> is located with 1 &#8211; 1/ log<sup><i>c</i></sup> <i>n</i> probability by L<small>OCATE</small>S<small>IGNAL</small>.</p>
+<p class="indent">Next, we note that for any <i>i</i>, as a distribution over <img src="../images/in212_11.png" alt="image"/>,</p>
+<p class="image"><img src="../images/pg212_1.png" alt="image"/></p>
+<p class="noindent">and so (analogously to Lemma 4.9 from <a href="13_Chapter04.xhtml">Chapter 4</a> and for any <i>i</i>), since <img src="../images/in212_12.png" alt="image"/> we have</p>
+<p class="eqn"><a id="eqA_12"/><img src="../images/eqA_12.png" alt="image"/></p>
+<p class="noindent">with probability <img src="../images/in212_13.png" alt="image"/> for some constant <i>c</i>. Hence, if {<i>i</i>} = supp(<i>y</i><sup>head</sup>), we have <img src="../images/in212_14.png" alt="image"/> and therefore |<i>a</i>| &#62; <i>L</i>/2, passing the first check on whether <i>i</i> is valid.</p>
+<p class="indent"><a id="page_213"/>For the other check, we have that with 1 &#8211; 1/<i>n<sup>c</sup></i> probability</p>
+<p class="image"><img src="../images/pg213_1.png" alt="image"/></p>
+<p class="noindent">where the last step uses <a href="#eqA_9">Equation (A.9)</a>. This gives</p>
+<p class="image"><img src="../images/pg213_2.png" alt="image"/></p>
+<p class="noindent">so the true coordinate <i>i</i> passes both checks. Hence, the probability of a false negative is 1/ log<i><sup>c</sup> n</i> as desired.</p>
+<p class="indent">Now we bound the probability of a false positive. First consider what happens to any other coordinate <i>i</i>&#8242; &#8800; <i>i</i> when <img src="../images/in213_1.png" alt="image"/>. We get some estimate <i>a</i>&#8242; of its value. Since <img src="../images/in213_2.png" alt="image"/> satisfies an RIP of order 2 and constant 1/4, by the triangle inequality and <a href="#eqA_9">Equation (A.9)</a> we have that with 1 &#8211; <i>n</i><sup>&#8211;<i>c</i></sup> probability,</p>
+<p class="image"><img src="../images/pg213_3.png" alt="image"/></p>
+<p class="noindent">Hence, the second condition will be violated, and <i>i</i>&#8242; will not pass. Thus, if <img src="../images/in213_3.png" alt="image"/>, the probability of a false positive is at most <i>n</i><sup>&#8211;<i>c</i></sup>.</p>
+<p class="indent">Next, consider what happens to the result <i>i</i> of L<small>OCATE</small>S<small>IGNAL</small> when <img src="../images/in213_4.png" alt="image"/>. From <a href="#eqA_8">Equation (A.8)</a> and <a href="#eqA_9">Equation (A.9)</a> we have that with 1 &#8211; <i>n</i><sup>&#8211;<i>c</i></sup> probability</p>
+<p class="image"><img src="../images/pg213_4.png" alt="image"/></p>
+<p class="noindent">Therefore, from <a href="#eqA_8">Equation (A.8)</a>,</p>
+<p class="image"><img src="../images/pg213_5.png" alt="image"/></p>
+<p class="noindent">so the first check is not passed and <i>i</i> is not recovered.</p>
+<p class="indent"><a id="page_214"/>Now suppose <img src="../images/in214_1.png" alt="image"/>. Lemma 5.5 says that with 1 &#8211; <i>n</i><sup>&#8211;<i>c</i></sup> probability over the permutation, no (<i>i, a</i>) satisfies</p>
+<p class="image"><img src="../images/pg214_1.png" alt="image"/></p>
+<p class="noindent">But then, from <a href="#eqA_10">Equation (A.10)</a></p>
+<p class="image"><img src="../images/pg214_2.png" alt="image"/></p>
+<p class="noindent">so no <i>i</i> will pass the second check. Thus, the probability of a false positive is 1/<i>n<sup>c</sup></i>.</p>
+<p class="indent">Finally, consider the probability of a bad update. We have that</p>
+<p class="image"><img src="../images/pg214_3.png" alt="image"/></p>
+<p class="noindent">and so</p>
+<p class="image"><img src="../images/pg214_4.png" alt="image"/></p>
+<p class="noindent">We have that</p>
+<p class="image"><img src="../images/pg214_5.png" alt="image"/></p>
+<p class="indent">We know that <img src="../images/in214_2.png" alt="image"/>. Hence, its mean is a complex Gaussian with standard deviation <img src="../images/in214_3.png" alt="image"/> in both the real and imaginary axes. This means the probability that</p>
+<p class="image"><img src="../images/pg214_6.png" alt="image"/></p>
+<p class="noindent">is at most <img src="../images/in214_4.png" alt="image"/>. Setting <img src="../images/in214_5.png" alt="image"/> gives a 1/ log<sup><i>c</i></sup> <i>n</i> chance of a bad update, for sufficiently large |<i>T</i>| = <i>O</i>(log <i>n</i>). &#9632;</p>
+<p class="h1a"><b><a id="appA_14"/><span class="big">A.14</span>&#160;&#160;Proof of Lemma 5.5</b></p>
+<p class="noindent"><b>Lemma 5.5</b> Let <i>y</i> &#8714; <span class="f1">C</span><sup><i>m</i></sup> be drawn from a permutation invariant distribution with <i>r</i> &#8805; 2 nonzero values. Suppose that all the nonzero entries of <i>y</i> have absolute value at least <i>L</i>. Choose <i>T</i> &#8834; [<i>m</i>] uniformly at random with <i>t</i> &#8788; |<i>T</i>| <i>O</i>(<i>c</i><sup>3</sup> log <i>m</i>).</p>
+<p class="indent">Then, the probability that there exists a <i>y</i>&#8242; with ||<i>y</i>&#8242;||<sub>0</sub> &#8804; 1 and</p>
+<p class="image"><img src="../images/pg214_7.png" alt="image"/></p>
+<p class="noindent">is at most <img src="../images/in214_6.png" alt="image"/> whenever <i>&#8714;</i> &#60; 1/8.</p>
+<p class="noindentt"><a id="page_215"/><b>Proof</b> Let <img src="../images/in215_1.png" alt="image"/> times the submatrix of the Fourier matrix with rows from <i>T</i>, so</p>
+<p class="image"><img src="../images/pg215_1.png" alt="image"/></p>
+<p class="noindent">By a coherence bound (see <a href="14_Chapter05.xhtml#ch5_3">Section 5.3</a>), with 1 &#8211; 1/<i>m<sup>c</sup></i> probability <i>A</i> satisfies the RIP of order 2<i>c</i> with constant 0.5. We would like to bound</p>
+<p class="image"><img src="../images/pg215_2.png" alt="image"/></p>
+<p class="indent">If <i>r</i> &#8804; <i>c</i> &#8211; 1, then <i>y</i> &#8211; <i>y</i>&#8242; is c-sparse and</p>
+<p class="image"><img src="../images/pg215_3.png" alt="image"/></p>
+<p class="noindent">as long as <i>&#8714;</i> &#60; 1/2, giving <i>P</i> = 0. Henceforth, we can assume <i>r</i> &#8805; <i>c</i>. When drawing <i>y</i>, first place <i>r</i> &#8211; (<i>c</i> &#8211; 1) coordinates into <i>u</i> then place the other <i>c</i> &#8211; 1 values into <i>&#957;</i>, so that <i>y</i> = <i>u</i> + <i>&#957;</i>. Condition on <i>u</i>, so <i>&#957;</i> is a permutation distribution over <i>m</i> &#8211; <i>r</i> + <i>c</i> &#8211; 1 coordinates. We would like to bound</p>
+<p class="image"><img src="../images/pg215_4.png" alt="image"/></p>
+<p class="indent">Let <i>&#969;</i> be any <i>c</i>-sparse vector such that <img src="../images/in215_2.png" alt="image"/> (and note that if no such <i>&#969;</i> exists, then since <i>&#957;</i> &#8211; <i>y</i>&#8242; is <i>c</i>-sparse, <i>P</i> = 0). Then recalling that for any norm <img src="../images/in215_3.png" alt="image"/> and hence <img src="../images/in215_4.png" alt="image"/>,</p>
+<p class="image"><img src="../images/pg215_5.png" alt="image"/></p>
+<p class="noindent">Hence,</p>
+<p class="image"><img src="../images/pg215_6.png" alt="image"/></p>
+<p class="noindent">Furthermore, we know that <img src="../images/in215_5.png" alt="image"/>. Thus, if <i>&#8714;</i> &#60; 1/8,</p>
+<p class="image"><img src="../images/pg215_7.png" alt="image"/></p>
+<p class="noindent">as desired. &#9632;</p>
+<p class="h1a"><a id="page_216"/><b><a id="appA_15"/><span class="big">A.15</span>&#160;&#160;Proof of Lemma 5.7</b></p>
+<p class="noindent"><b>Lemma 5.7</b> Let R<small>OBUST2</small>DSFFT&#8217; be a modified R<small>OBUST2</small>DSFFT that avoids false negatives or bad updates: whenever a false negative or bad update would occur, an oracle corrects the algorithm. With large constant probability, R<small>OBUST2</small>DSFFT&#8217; recovers <i>z&#770;</i> such that there exists a (<i>k</i>/ log<sup><i>c</i></sup> <i>n</i>)-sparse <i>z&#770;</i>&#8242; satisfying</p>
+<p class="image"><img src="../images/pg216_1.png" alt="image"/></p>
+<p class="noindent">Furthermore, only <i>O</i>(<i>k</i>/ log<sup><i>c</i></sup> <i>n</i>) false negatives or bad updates are caught by the oracle.</p>
+<p class="noindentt"><b>Proof</b> One can choose the random <img src="../images/in216_1.png" alt="image"/> by first selecting the topology of the graph <i>G</i>, and then selecting the random ordering of the columns and rows of the matrix. Note that reordering the vertices only affects the ideal ordering by a permutation within each stage of recovery; the set of edges recovered at each stage in the ideal ordering depends only on the topology of <i>G</i>. Suppose that the choice of the topology of the graph satisfies the thesis of Lemma 5.6 (which occurs with large constant probability). We will show that with large constant probability (over the space of random permutations of the rows and columns), R<small>OBUST2</small>DSFFT&#8217; follows the ideal ordering and the requirements of Lemma 5.4 are satisfied at every stage.</p>
+<p class="indent">For a recovered edge e, we define the &#8220;residue&#8221; <img src="../images/in216_2.png" alt="image"/>. We will show that if <i>e</i> has rank <i>r</i>, then <img src="../images/in216_3.png" alt="image"/>.</p>
+<p class="indent">During attempted recovery at any vertex <i>&#957;</i> during the ideal ordering (including attempts on vertices which do not have exactly one incident edge), let <img src="../images/in216_4.png" alt="image"/> be the associated column/row of <i>x&#770;</i> &#8211; <i>z&#770;</i>. We split <i>y</i> into three parts <i>y</i> = <i>y</i><sup>head</sup> + <i>y</i><sup>residue</sup> + <i>y</i><sup>gauss</sup>, where <i>y</i><sup>head</sup> contains the elements of <img src="../images/in216_1.png" alt="image"/> not in supp(<i>z&#770;</i>), <i>y</i><sup>residue</sup> contains <img src="../images/in216_5.png" alt="image"/> over the support of <i>z</i>, and <i>y</i><sup>gauss</sup> contains <i>&#969;&#770;</i> (all restricted to the column/row corresponding to <i>&#957;</i>). Let <i>S</i> = supp(<i>y</i><sup>residue</sup>) contain the set of edges incident on <i>&#957;</i> that have been recovered so far. We have by the inductive hypothesis that <img src="../images/in216_6.png" alt="image"/>. Since the algorithm verifies that <img src="../images/in216_7.png" alt="image"/>, we have</p>
+<p class="image"><img src="../images/pg216_2.png" alt="image"/></p>
+<p class="indent">Furthermore, <i>y</i> is permutation invariant: if we condition on the values and permute the rows and columns of the matrix, the algorithm will consider the permuted <i>y</i> in the same stage of the algorithm.</p>
+<p class="indent"><a id="page_217"/>Therefore, the conditions for Lemma 5.4 hold. This means that the chance of a false positive is 1/<i>n<sup>c</sup></i>, so by a union bound, this never occurs. Because false negatives never occur by assumption, this means we continue following the ideal ordering. Because bad updates never occur, new residuals have magnitude at most</p>
+<p class="image"><img src="../images/pg217_1.png" alt="image"/></p>
+<p class="noindent">Because <img src="../images/in217_1.png" alt="image"/>, each new residual has magnitude at most</p>
+<p class="eqn"><a id="eqA_13"/><img src="../images/eqA_13.png" alt="image"/></p>
+<p class="noindent">as needed to complete the induction.</p>
+<p class="indent">Given that we follow the ideal ordering, we recover every edge of rank at most log log <i>n</i>. Furthermore, the residue on every edge we recover is at most <i>&#8714;L</i>. By Lemma 5.6, there are at most <i>k</i>/ log<i><sup>c</sup> n</i> edges that we do not recover. From <a href="#eqA_13">Equation (A.13)</a>, the squared &#8467;<sub>2</sub> norm of the residues is at most <img src="../images/in217_2.png" alt="image"/> for <i>&#8714;</i> small enough. Since <img src="../images/in217_3.png" alt="image"/> with overwhelming probability, there exists a <i>z&#770;</i>&#8242; so that</p>
+<p class="image"><img src="../images/pg217_2.png" alt="image"/></p>
+<p class="indent">Finally, we need to bound the number of times the oracle catches false negatives or bad updates. The algorithm applies Lemma 5.4 only <img src="../images/in217_4.png" alt="image"/> times. Each time has a 1/ log<i><sup>c</sup> n</i> chance of a false negatives or bad update. Hence, the expected number of false negatives or bad updates is <i>O</i>(<i>k</i>/ log<i><sup>c</sup> n</i>). &#9632;</p>
+</body>
+</html>

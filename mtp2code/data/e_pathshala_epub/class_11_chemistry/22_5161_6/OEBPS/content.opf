@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package unique-identifier="bookid" version="3.0" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign" name="generator"/>
+    <dc:date>2020-05-05</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2021-01-28T10:47:21Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta content="0.9.3" name="Sigil version"/>
+    <meta name="cover" content="cover.jpg"/>
+  </metadata>
+  <manifest>
+    <item href="Text/Unit-6.xhtml" id="Unit-6" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="Styles/Unit-6.css" id="Unit-6.css" media-type="text/css"/>
+    <item href="Fonts/Smart-Delhi-Hindi-Bold.ttf" id="Smart-Delhi-Hindi-Bold.ttf" media-type="application/x-font-ttf"/>
+    <item href="Fonts/Smart-Delhi-Hindi.ttf" id="Smart-Delhi-Hindi.ttf" media-type="application/x-font-ttf"/>
+    <item href="Fonts/SmartDelhiHindi-BoldItalic.ttf" id="SmartDelhiHindi-BoldItalic.ttf" media-type="application/x-font-ttf"/>
+    <item href="Fonts/SmartDelhiHindi-Italic.ttf" id="SmartDelhiHindi-Italic.ttf" media-type="application/x-font-ttf"/>
+    <item href="Fonts/SymbolMT.ttf" id="SymbolMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/TimesNewRomanPSMT.ttf" id="TimesNewRomanPSMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/Webdings.ttf" id="Webdings.ttf" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/Wingdings-Regular.ttf" id="Wingdings-Regular.ttf" media-type="application/vnd.ms-opentype"/>
+    <item href="Images/1316.png" id="x1316.png" media-type="image/png"/>
+    <item href="Images/1348.png" id="x1348.png" media-type="image/png"/>
+    <item href="Images/1357.png" id="x1357.png" media-type="image/png"/>
+    <item href="Images/1379.png" id="x1379.png" media-type="image/png"/>
+    <item href="Images/1387.png" id="x1387.png" media-type="image/png"/>
+    <item href="Images/1397.png" id="x1397.png" media-type="image/png"/>
+    <item href="Images/1440.png" id="x1440.png" media-type="image/png"/>
+    <item href="Images/1468.png" id="x1468.png" media-type="image/png"/>
+    <item href="Images/1493.png" id="x1493.png" media-type="image/png"/>
+    <item href="Images/1509.png" id="x1509.png" media-type="image/png"/>
+    <item href="Images/1542.png" id="x1542.png" media-type="image/png"/>
+    <item href="Images/1610.png" id="x1610.png" media-type="image/png"/>
+    <item href="Images/1626.png" id="x1626.png" media-type="image/png"/>
+    <item href="Images/1646.png" id="x1646.png" media-type="image/png"/>
+    <item href="Images/1684.png" id="x1684.png" media-type="image/png"/>
+    <item href="Images/1714.png" id="x1714.png" media-type="image/png"/>
+    <item href="Images/1745.png" id="x1745.png" media-type="image/png"/>
+    <item href="Images/1816.png" id="x1816.png" media-type="image/png"/>
+    <item href="Images/1822.png" id="x1822.png" media-type="image/png"/>
+    <item href="Images/1828.png" id="x1828.png" media-type="image/png"/>
+    <item href="Images/1834.png" id="x1834.png" media-type="image/png"/>
+    <item href="Images/1840.png" id="x1840.png" media-type="image/png"/>
+    <item href="Images/1841.png" id="x1841.png" media-type="image/png"/>
+    <item href="Images/1842.png" id="x1842.png" media-type="image/png"/>
+    <item href="Images/1843.png" id="x1843.png" media-type="image/png"/>
+    <item href="Images/1844.png" id="x1844.png" media-type="image/png"/>
+    <item href="Images/1845.png" id="x1845.png" media-type="image/png"/>
+    <item href="Images/1846.png" id="x1846.png" media-type="image/png"/>
+    <item href="Images/1847.png" id="x1847.png" media-type="image/png"/>
+    <item href="Images/1848.png" id="x1848.png" media-type="image/png"/>
+    <item href="Images/1849.png" id="x1849.png" media-type="image/png"/>
+    <item href="Images/1925.png" id="x1925.png" media-type="image/png"/>
+    <item href="Images/1926.png" id="x1926.png" media-type="image/png"/>
+    <item href="Images/1946.png" id="x1946.png" media-type="image/png"/>
+    <item href="Images/1983.png" id="x1983.png" media-type="image/png"/>
+    <item href="Images/2014.png" id="x2014.png" media-type="image/png"/>
+    <item href="Images/2036.png" id="x2036.png" media-type="image/png"/>
+    <item href="Images/2047.png" id="x2047.png" media-type="image/png"/>
+    <item href="Images/2059.png" id="x2059.png" media-type="image/png"/>
+    <item href="Images/2172.png" id="x2172.png" media-type="image/png"/>
+    <item href="Images/2182.png" id="x2182.png" media-type="image/png"/>
+    <item href="Images/2192.png" id="x2192.png" media-type="image/png"/>
+    <item href="Images/2212.png" id="x2212.png" media-type="image/png"/>
+    <item href="Images/2215.png" id="x2215.png" media-type="image/png"/>
+    <item href="Images/2219.png" id="x2219.png" media-type="image/png"/>
+    <item href="Images/2238.png" id="x2238.png" media-type="image/png"/>
+    <item href="Images/2241.png" id="x2241.png" media-type="image/png"/>
+    <item href="Images/2248.png" id="x2248.png" media-type="image/png"/>
+    <item href="Images/2255.png" id="x2255.png" media-type="image/png"/>
+    <item href="Images/2261.png" id="x2261.png" media-type="image/png"/>
+    <item href="Images/2266.png" id="x2266.png" media-type="image/png"/>
+    <item href="Images/2271.png" id="x2271.png" media-type="image/png"/>
+    <item href="Images/2276.png" id="x2276.png" media-type="image/png"/>
+    <item href="Images/2288.png" id="x2288.png" media-type="image/png"/>
+    <item href="Images/2298.png" id="x2298.png" media-type="image/png"/>
+    <item href="Images/2309.png" id="x2309.png" media-type="image/png"/>
+    <item href="Images/2320.png" id="x2320.png" media-type="image/png"/>
+    <item href="Images/2330.png" id="x2330.png" media-type="image/png"/>
+    <item href="Images/2339.png" id="x2339.png" media-type="image/png"/>
+    <item href="Images/2347.png" id="x2347.png" media-type="image/png"/>
+    <item href="Images/2352.png" id="x2352.png" media-type="image/png"/>
+    <item href="Images/2357.png" id="x2357.png" media-type="image/png"/>
+    <item href="Images/2361.png" id="x2361.png" media-type="image/png"/>
+    <item href="Images/2373.png" id="x2373.png" media-type="image/png"/>
+    <item href="Images/2385.png" id="x2385.png" media-type="image/png"/>
+    <item href="Images/2390.png" id="x2390.png" media-type="image/png"/>
+    <item href="Images/2395.png" id="x2395.png" media-type="image/png"/>
+    <item href="Images/2410.png" id="x2410.png" media-type="image/png"/>
+    <item href="Images/2422.png" id="x2422.png" media-type="image/png"/>
+    <item href="Images/2431.png" id="x2431.png" media-type="image/png"/>
+    <item href="Images/2439.png" id="x2439.png" media-type="image/png"/>
+    <item href="Images/2450.png" id="x2450.png" media-type="image/png"/>
+    <item href="Images/2461.png" id="x2461.png" media-type="image/png"/>
+    <item href="Images/2472.png" id="x2472.png" media-type="image/png"/>
+    <item href="Images/2482.png" id="x2482.png" media-type="image/png"/>
+    <item href="Images/2492.png" id="x2492.png" media-type="image/png"/>
+    <item href="Images/2503.png" id="x2503.png" media-type="image/png"/>
+    <item href="Images/2515.png" id="x2515.png" media-type="image/png"/>
+    <item href="Images/2530.png" id="x2530.png" media-type="image/png"/>
+    <item href="Images/2543.png" id="x2543.png" media-type="image/png"/>
+    <item href="Images/2553.png" id="x2553.png" media-type="image/png"/>
+    <item href="Images/2563.png" id="x2563.png" media-type="image/png"/>
+    <item href="Images/2574.png" id="x2574.png" media-type="image/png"/>
+    <item href="Images/2586.png" id="x2586.png" media-type="image/png"/>
+    <item href="Images/2595.png" id="x2595.png" media-type="image/png"/>
+    <item href="Images/2603.png" id="x2603.png" media-type="image/png"/>
+    <item href="Images/2608.png" id="x2608.png" media-type="image/png"/>
+    <item href="Images/2621.png" id="x2621.png" media-type="image/png"/>
+    <item href="Images/2632.png" id="x2632.png" media-type="image/png"/>
+    <item href="Images/2644.png" id="x2644.png" media-type="image/png"/>
+    <item href="Images/2658.png" id="x2658.png" media-type="image/png"/>
+    <item href="Images/2670.png" id="x2670.png" media-type="image/png"/>
+    <item href="Images/2678.png" id="x2678.png" media-type="image/png"/>
+    <item href="Images/2686.png" id="x2686.png" media-type="image/png"/>
+    <item href="Images/2695.png" id="x2695.png" media-type="image/png"/>
+    <item href="Images/2704.png" id="x2704.png" media-type="image/png"/>
+    <item href="Images/2713.png" id="x2713.png" media-type="image/png"/>
+    <item href="Images/2724.png" id="x2724.png" media-type="image/png"/>
+    <item href="Images/2735.png" id="x2735.png" media-type="image/png"/>
+    <item href="Images/2746.png" id="x2746.png" media-type="image/png"/>
+    <item href="Images/2751.png" id="x2751.png" media-type="image/png"/>
+    <item href="Images/2763.png" id="x2763.png" media-type="image/png"/>
+    <item href="Images/2777.png" id="x2777.png" media-type="image/png"/>
+    <item href="Images/2789.png" id="x2789.png" media-type="image/png"/>
+    <item href="Images/2799.png" id="x2799.png" media-type="image/png"/>
+    <item href="Images/2809.png" id="x2809.png" media-type="image/png"/>
+    <item href="Images/2820.png" id="x2820.png" media-type="image/png"/>
+    <item href="Images/2831.png" id="x2831.png" media-type="image/png"/>
+    <item href="Images/2843.png" id="x2843.png" media-type="image/png"/>
+    <item href="Images/2854.png" id="x2854.png" media-type="image/png"/>
+    <item href="Images/2863.png" id="x2863.png" media-type="image/png"/>
+    <item href="Images/2874.png" id="x2874.png" media-type="image/png"/>
+    <item href="Images/2887.png" id="x2887.png" media-type="image/png"/>
+    <item href="Images/2901.png" id="x2901.png" media-type="image/png"/>
+    <item href="Images/2913.png" id="x2913.png" media-type="image/png"/>
+    <item href="Images/2923.png" id="x2923.png" media-type="image/png"/>
+    <item href="Images/2931.png" id="x2931.png" media-type="image/png"/>
+    <item href="Images/2942.png" id="x2942.png" media-type="image/png"/>
+    <item href="Images/2952.png" id="x2952.png" media-type="image/png"/>
+    <item href="Images/2961.png" id="x2961.png" media-type="image/png"/>
+    <item href="Images/2969.png" id="x2969.png" media-type="image/png"/>
+    <item href="Images/2977.png" id="x2977.png" media-type="image/png"/>
+    <item href="Images/2986.png" id="x2986.png" media-type="image/png"/>
+    <item href="Images/2998.png" id="x2998.png" media-type="image/png"/>
+    <item href="Images/3009.png" id="x3009.png" media-type="image/png"/>
+    <item href="Images/3019.png" id="x3019.png" media-type="image/png"/>
+    <item href="Images/3029.png" id="x3029.png" media-type="image/png"/>
+    <item href="Images/3039.png" id="x3039.png" media-type="image/png"/>
+    <item href="Images/3051.png" id="x3051.png" media-type="image/png"/>
+    <item href="Images/3063.png" id="x3063.png" media-type="image/png"/>
+    <item href="Images/3074.png" id="x3074.png" media-type="image/png"/>
+    <item href="Images/3085.png" id="x3085.png" media-type="image/png"/>
+    <item href="Images/3095.png" id="x3095.png" media-type="image/png"/>
+    <item href="Images/3107.png" id="x3107.png" media-type="image/png"/>
+    <item href="Images/3120.png" id="x3120.png" media-type="image/png"/>
+    <item href="Images/3133.png" id="x3133.png" media-type="image/png"/>
+    <item href="Images/3145.png" id="x3145.png" media-type="image/png"/>
+    <item href="Images/3155.png" id="x3155.png" media-type="image/png"/>
+    <item href="Images/3161.png" id="x3161.png" media-type="image/png"/>
+    <item href="Images/3171.png" id="x3171.png" media-type="image/png"/>
+    <item href="Images/3182.png" id="x3182.png" media-type="image/png"/>
+    <item href="Images/3193.png" id="x3193.png" media-type="image/png"/>
+    <item href="Images/3204.png" id="x3204.png" media-type="image/png"/>
+    <item href="Images/3214.png" id="x3214.png" media-type="image/png"/>
+    <item href="Images/3225.png" id="x3225.png" media-type="image/png"/>
+    <item href="Images/3236.png" id="x3236.png" media-type="image/png"/>
+    <item href="Images/3249.png" id="x3249.png" media-type="image/png"/>
+    <item href="Images/3265.png" id="x3265.png" media-type="image/png"/>
+    <item href="Images/3277.png" id="x3277.png" media-type="image/png"/>
+    <item href="Images/3285.png" id="x3285.png" media-type="image/png"/>
+    <item href="Images/3295.png" id="x3295.png" media-type="image/png"/>
+    <item href="Images/3307.png" id="x3307.png" media-type="image/png"/>
+    <item href="Images/3318.png" id="x3318.png" media-type="image/png"/>
+    <item href="Images/3329.png" id="x3329.png" media-type="image/png"/>
+    <item href="Images/3339.png" id="x3339.png" media-type="image/png"/>
+    <item href="Images/3348.png" id="x3348.png" media-type="image/png"/>
+    <item href="Images/3357.png" id="x3357.png" media-type="image/png"/>
+    <item href="Images/3369.png" id="x3369.png" media-type="image/png"/>
+    <item href="Images/3382.png" id="x3382.png" media-type="image/png"/>
+    <item href="Images/3388.png" id="x3388.png" media-type="image/png"/>
+    <item href="Images/3397.png" id="x3397.png" media-type="image/png"/>
+    <item href="Images/3406.png" id="x3406.png" media-type="image/png"/>
+    <item href="Images/3417.png" id="x3417.png" media-type="image/png"/>
+    <item href="Images/3426.png" id="x3426.png" media-type="image/png"/>
+    <item href="Images/3436.png" id="x3436.png" media-type="image/png"/>
+    <item href="Images/3444.png" id="x3444.png" media-type="image/png"/>
+    <item href="Images/Fig%206.2_fmt.png" id="Fig-6.2_fmt.png" media-type="image/png"/>
+    <item href="Images/Image2614_fmt.png" id="Image2614_fmt.png" media-type="image/png"/>
+    <item href="Images/QR11082C6_fmt.png" id="QR11082C6_fmt.png" media-type="image/png"/>
+    <item href="Images/cover.jpg" id="cover.jpg" media-type="image/jpeg" properties="cover-image"/>
+    <item href="Text/cover.xhtml" id="cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    <item href="Images/bar.JPG" id="bar.JPG" media-type="image/jpeg"/>
+    <item href="Images/201.JPG" id="x201.JPG" media-type="image/jpeg"/>
+    <item href="Images/202.JPG" id="x202.JPG" media-type="image/jpeg"/>
+    <item href="Images/203.JPG" id="x203.JPG" media-type="image/jpeg"/>
+    <item href="Images/204.JPG" id="x204.JPG" media-type="image/jpeg"/>
+    <item href="Images/205.JPG" id="x205.JPG" media-type="image/jpeg"/>
+    <item href="Images/206.JPG" id="x206.JPG" media-type="image/jpeg"/>
+    <item href="Images/207.JPG" id="x207.JPG" media-type="image/jpeg"/>
+    <item href="Images/208.JPG" id="x208.JPG" media-type="image/jpeg"/>
+    <item href="Images/209.JPG" id="x209.JPG" media-type="image/jpeg"/>
+    <item href="Images/210.JPG" id="x210.JPG" media-type="image/jpeg"/>
+    <item href="Styles/sgc-toc.css" id="sgc-toc.css" media-type="text/css"/>
+    <item href="Text/TOC.xhtml" id="TOC.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Unit-6"/>
+    <itemref idref="TOC.xhtml"/>
+  </spine>
+  <guide>
+    <reference href="Text/cover.xhtml" title="Cover" type="cover"></reference>
+    <reference href="Text/TOC.xhtml" title="Table Of Contents" type="toc"></reference>
+  </guide>
+</package>

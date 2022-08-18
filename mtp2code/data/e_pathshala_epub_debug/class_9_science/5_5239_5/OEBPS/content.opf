@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package unique-identifier="bookid" version="3.0" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign" name="generator"/>
+    <meta property="dcterms:modified">2021-02-25T16:21:07Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta content="0.9.3" name="Sigil version"/>
+    <dc:date event="">2020-04-29</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta name="cover" content="cover.PNG"/>
+  </metadata>
+  <manifest>
+    <item href="Text/Untitled-3.xhtml" id="Untitled-3" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="Text/toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
+    <item href="Styles/Untitled-5.css" id="Untitled-5.css" media-type="text/css"/>
+    <item href="Fonts/ArialMT.ttf" id="ArialMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/Garamond-Bold.TTF" id="Garamond-Bold.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/SymbolMT.ttf" id="SymbolMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item href="Images/0964CH05_fmt.jpeg" id="x0964CH05_fmt.jpeg" media-type="image/jpeg"/>
+    <item href="Images/1150.png" id="x1150.png" media-type="image/png"/>
+    <item href="Images/1151.png" id="x1151.png" media-type="image/png"/>
+    <item href="Images/1172.png" id="x1172.png" media-type="image/png"/>
+    <item href="Images/1173.png" id="x1173.png" media-type="image/png"/>
+    <item href="Images/1179.png" id="x1179.png" media-type="image/png"/>
+    <item href="Images/1180.png" id="x1180.png" media-type="image/png"/>
+    <item href="Images/1230.png" id="x1230.png" media-type="image/png"/>
+    <item href="Images/1383.png" id="x1383.png" media-type="image/png"/>
+    <item href="Images/1496.png" id="x1496.png" media-type="image/png"/>
+    <item href="Images/1531.png" id="x1531.png" media-type="image/png"/>
+    <item href="Images/1575.png" id="x1575.png" media-type="image/png"/>
+    <item href="Images/5.1_fmt.jpeg" id="x5.1_fmt.jpeg" media-type="image/jpeg"/>
+    <item href="Images/5.2_fmt.jpeg" id="x5.2_fmt.jpeg" media-type="image/jpeg"/>
+    <item href="Images/5.4_fmt.jpeg" id="x5.4_fmt.jpeg" media-type="image/jpeg"/>
+    <item href="Images/5.7_fmt.png" id="x5.7_fmt.png" media-type="image/png"/>
+    <item href="Images/5.8_fmt.png" id="x5.8_fmt.png" media-type="image/png"/>
+    <item href="Images/Fig_16%20b_fmt.jpeg" id="Fig_16-b_fmt.jpeg" media-type="image/jpeg"/>
+    <item href="Images/GOLGI_fmt.jpeg" id="GOLGI_fmt.jpeg" media-type="image/jpeg"/>
+    <item href="Images/d1.PNG" id="d1.PNG" media-type="image/png"/>
+    <item href="Images/d2.PNG" id="d2.PNG" media-type="image/png"/>
+    <item href="Images/d3.PNG" id="d3.PNG" media-type="image/png"/>
+    <item href="Images/d4.PNG" id="d4.PNG" media-type="image/png"/>
+    <item href="Images/d5.PNG" id="d5.PNG" media-type="image/png"/>
+    <item href="Images/d6.PNG" id="d6.PNG" media-type="image/png"/>
+    <item href="Images/d7.PNG" id="d7.PNG" media-type="image/png"/>
+    <item href="Images/d8.PNG" id="d8.PNG" media-type="image/png"/>
+    <item href="Images/d9.PNG" id="d9.PNG" media-type="image/png"/>
+    <item href="Images/cover.PNG" id="cover.PNG" media-type="image/png"/>
+    <item href="Text/cover.xhtml" id="cover.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Untitled-3"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference href="Text/cover.xhtml" title="Cover" type="cover"></reference>
+  </guide>
+</package>

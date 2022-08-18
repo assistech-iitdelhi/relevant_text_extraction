@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="bookid" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign" name="generator" />
+    <dc:date>2019-05-08</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2019-06-03T13:03:24Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta content="0.9.10" name="Sigil version" />
+    <meta name="cover" content="Capture.JPG" />
+  </metadata>
+  <manifest>
+    <item id="ch16" href="Text/ch16.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="toc" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="ch16.css" href="Styles/ch16.css" media-type="text/css"/>
+    <item id="SymbolMT.ttf" href="Fonts/SymbolMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="Wingdings-Regular.ttf" href="Fonts/Wingdings-Regular.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="x0854CH16_fmt.png" href="Images/0854CH16_fmt.png" media-type="image/png"/>
+    <item id="x16_fmt.png" href="Images/16_fmt.png" media-type="image/png"/>
+    <item id="x16_1_fmt.jpeg" href="Images/16_1_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x16_02_fmt.jpeg" href="Images/16_02_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x16_4a_fmt.jpeg" href="Images/16_4a_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x16_4b_fmt.png" href="Images/16_4b_fmt.png" media-type="image/png"/>
+    <item id="x16_9_fmt.jpeg" href="Images/16_9_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x16_10_coins_fmt.jpeg" href="Images/16_10_coins_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x16_11b_candles_fmt.jpeg" href="Images/16_11b_candles_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x16_13_fmt.jpeg" href="Images/16_13_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x16_17_fmt.png" href="Images/16_17_fmt.png" media-type="image/png"/>
+    <item id="x16_21_Helen_Keller_fmt.jpeg" href="Images/16_21_Helen_Keller_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x871.PNG" href="Images/871.PNG" media-type="image/png"/>
+    <item id="x2071.png" href="Images/2071.png" media-type="image/png"/>
+    <item id="x2081.png" href="Images/2081.png" media-type="image/png"/>
+    <item id="x2097.png" href="Images/2097.png" media-type="image/png"/>
+    <item id="x2117.png" href="Images/2117.png" media-type="image/png"/>
+    <item id="x2497.png" href="Images/2497.png" media-type="image/png"/>
+    <item id="x2609.png" href="Images/2609.png" media-type="image/png"/>
+    <item id="x2630.png" href="Images/2630.png" media-type="image/png"/>
+    <item id="x2640.png" href="Images/2640.png" media-type="image/png"/>
+    <item id="abc11.png" href="Images/abc11.png" media-type="image/png"/>
+    <item id="ciliary.png" href="Images/ciliary.png" media-type="image/png"/>
+    <item id="Louis_Braille_fmt.jpeg" href="Images/Louis%20Braille_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="ray.png" href="Images/ray.png" media-type="image/png"/>
+    <item id="table161.png" href="Images/table161.png" media-type="image/png"/>
+    <item id="xo.png" href="Images/xo.png" media-type="image/png"/>
+    <item id="Capture.JPG" href="Images/Capture.JPG" media-type="image/jpeg" properties="cover-image"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="ch16"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

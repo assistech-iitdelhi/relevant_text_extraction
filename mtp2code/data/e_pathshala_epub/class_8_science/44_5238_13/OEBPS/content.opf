@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="bookid" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign" name="generator" />
+    <dc:date>2019-05-08</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2019-06-03T13:04:08Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta content="0.9.10" name="Sigil version" />
+    <meta name="cover" content="Capture.JPG" />
+  </metadata>
+  <manifest>
+    <item id="ch13" href="Text/ch13.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="toc" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="ch13.css" href="Styles/ch13.css" media-type="text/css"/>
+    <item id="Wingdings-Regular.ttf" href="Fonts/Wingdings-Regular.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="x0854CH13_fmt.png" href="Images/0854CH13_fmt.png" media-type="image/png"/>
+    <item id="x13_fmt.png" href="Images/13_fmt.png" media-type="image/png"/>
+    <item id="x13_2_fmt.jpeg" href="Images/13_2_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x13_3_fmt.jpeg" href="Images/13_3_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x13_4_fmt.jpeg" href="Images/13_4_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x13_5_fmt.jpeg" href="Images/13_5_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x13_6_1_fmt.jpeg" href="Images/13_6_1_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x13_6_2_fmt.jpeg" href="Images/13_6_2_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x13_6_fmt.jpeg" href="Images/13_6_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x13_7_fmt.jpeg" href="Images/13_7_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x13_9a_fmt.jpeg" href="Images/13_9a_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x13_9b_new_fmt.jpeg" href="Images/13_9b_new_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x13_10_fmt.jpeg" href="Images/13_10_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x13_11_fmt.jpeg" href="Images/13_11_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x13_12_fmt.jpeg" href="Images/13_12_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x13_14a_fmt.jpeg" href="Images/13_14a_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x13_14b_fmt.jpeg" href="Images/13_14b_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x13_16_fmt.jpeg" href="Images/13_16_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x168.PNG" href="Images/168.PNG" media-type="image/png"/>
+    <item id="x869.PNG" href="Images/869.PNG" media-type="image/png"/>
+    <item id="x1319.png" href="Images/1319.png" media-type="image/png"/>
+    <item id="x1320.png" href="Images/1320.png" media-type="image/png"/>
+    <item id="breathing.png" href="Images/breathing.png" media-type="image/png"/>
+    <item id="frequency.png" href="Images/frequency.png" media-type="image/png"/>
+    <item id="golkonda.png" href="Images/golkonda.png" media-type="image/png"/>
+    <item id="tabla.png" href="Images/tabla.png" media-type="image/png"/>
+    <item id="toyTelephone.png" href="Images/toyTelephone.png" media-type="image/png"/>
+    <item id="vocalCord.png" href="Images/vocalCord.png" media-type="image/png"/>
+    <item id="Capture.JPG" href="Images/Capture.JPG" media-type="image/jpeg" properties="cover-image"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="ch13"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

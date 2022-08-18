@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+<title>The VR Book</title>
+<link rel="stylesheet" type="text/css" href="../styles/9781970001143.css"/>
+</head>
+<body>
+<h2 class="h2"><a id="page_355"></a><a id="ch29"></a><span class="blue1">29</span></h2>
+<h2 class="h2b"><span class="blue">Interaction: Design Guidelines</span></h2>
+<p class="noindent">Just as there is no single tool in the real world that solves every problem, there is no single input device, concept, interaction pattern, or interaction technique that is best for all VR applications. Although it is generally better to use the same interaction metaphor across different types of tasks, that is not always possible or appropriate. Interaction designers should take into account the specific task when choosing, modifying, or creating new interactions.</p>
+<h3 class="h3"><a id="lev29.1"></a><strong><span class="font"><span class="blue">29.1</span></span> Human-Centered Interaction (Chapter <a href="chapter25.html#ch25"><span class="blue">25</span></a>)</strong></h3>
+<h4 class="h4"><strong>Intuitiveness (Section <a href="chapter25.html#lev25.1"><span class="blue">25.1</span></a>)</strong></h4>
+<p class="indentbullet">&#8226; Focus on making interfaces intuitive&#8212;that is, design interfaces that can quickly be understood, accurately predicted, and easily used.</p>
+<p class="indentbullet">&#8226; Use interaction metaphors (concepts that exploit specific knowledge that users already have of other domains) to help users quickly develop a mental model of how an interface works.</p>
+<p class="indentbullet">&#8226; Include within the virtual world everything that is needed to help users form a consistent conceptual model of how things work (e.g., within world tutorials). Users should not have to rely on any external explanation.</p>
+<h4 class="h4"><strong>Norman&#8217;s Principles of Interaction Design (Section <a href="chapter25.html#lev25.2"><span class="blue">25.2</span></a>)</strong></h4>
+<p class="indentbullet">&#8226; Practice human-centered design and follow well-known general principles to help users create simplified mental models of how the interactions work. These include consistent affordances, unambiguous signifiers, constraints to guide actions and ease interpretation, obvious and understandable mappings, and immediate and useful feedback.</p>
+<h6 class="h6"><a id="page_356"></a><strong>Affordances (Section <a href="chapter25.html#lev25.2.1"><span class="blue">25.2.1</span></a>)</strong></h6>
+<p class="indentbullet">&#8226; Remember that an affordance is not a property of an object, but is a relationship between an object and a user. Affordances don&#8217;t only depend on the object being afforded, but also depend on the user; affordances may be different for users with different capabilities.</p>
+<h6 class="h6"><strong>Signifiers (Section <a href="chapter25.html#lev25.2.2"><span class="blue">25.2.2</span></a>)</strong></h6>
+<p class="indentbullet">&#8226; Make affordance perceivable through signifiers. A good signifier informs users what is possible before interacting.</p>
+<p class="indentbullet">&#8226; Make obvious to the user the state of the current interaction mode.</p>
+<h6 class="h6"><strong>Constraints (Section <a href="chapter25.html#lev25.2.3"><span class="blue">25.2.3</span></a>)</strong></h6>
+<p class="indentbullet">&#8226; Where appropriate, add constraints to limit possible actions and to improve accuracy and efficiency.</p>
+<p class="indentbullet">&#8226; Use constraints to add realism (e.g., do not allow users to travel through walls).</p>
+<p class="indentbullet">&#8226; Do not assume real-world rules such as gravity are always appropriate. For example, hanging tools in the space around the user makes them easier to grab.</p>
+<p class="indentbullet">&#8226; Use signifiers wisely to prevent users from making the wrong assumptions about constraints. If a user doesn&#8217;t know what to do, she is effectively constrained.</p>
+<p class="indentbullet">&#8226; Make constraints consistent so learning can be transferred across tasks.</p>
+<p class="indentbullet">&#8226; Consider allowing expert users to remove constraints for advanced interactions.</p>
+<h6 class="h6"><strong>Feedback (Section <a href="chapter25.html#lev25.2.4"><span class="blue">25.2.4</span></a>)</strong></h6>
+<p class="indentbullet">&#8226; Use feedback substitution when haptics are not available. For example, use audio and highlighting to signify touching of objects.</p>
+<p class="indentbullet">&#8226; Do not overwhelm users with too much feedback.</p>
+<p class="indentbullet">&#8226; Consider putting information in front of the user in the torso reference frame near the waist rather than on a heads-up display in the head reference frame.</p>
+<p class="indentbullet">&#8226; If a heads-up display in the head reference frame must be used, only present minimal information on the display.</p>
+<p class="indentbullet">&#8226; Provide the capability to turn on/off (or make visible/invisible) widgets, tools, and interface cues.</p>
+<h6 class="h6"><a id="page_357"></a><strong>Mappings (Section <a href="chapter25.html#lev25.2.5"><span class="blue">25.2.5</span></a>)</strong></h6>
+<p class="indentbullet">&#8226; To maximize performance and satisfaction, maintain directional compliance, nulling compliance, and temporal compliance.</p>
+<p class="indentbullet">&#8226; Focus first on creating mappings that have directional compliance (the direction of sensory feedback should match the direction of the interface device) so users can anticipate motion in response to their physical input.</p>
+<p class="indentbullet">&#8226; For fully direct interactions, maintain position compliance (i.e., make the virtual position of objects match the physical position of the device).</p>
+<p class="indentbullet">&#8226; If position compliance is not appropriate, use nulling compliance (the virtual object should return to its original location when the device returns to its original location).</p>
+<p class="indentbullet">&#8226; Use nulling compliance to take advantage of muscle memory.</p>
+<p class="indentbullet">&#8226; Choose absolute input devices over relative input devices in order to maintain compliance.</p>
+<p class="indentbullet">&#8226; If the results of an interaction cannot be immediately computed (i.e., a lack of temporal compliance), then provide some form of immediate feedback to inform the user the problem is being worked on.</p>
+<p class="indentbullet">&#8226; For non-spatial mappings, use commonly accepted metaphors (e.g., up is more, down is less).</p>
+<h4 class="h4"><strong>Direct vs. Indirect Interaction (Section <a href="chapter25.html#lev25.3"><span class="blue">25.3</span></a>)</strong></h4>
+<p class="indentbullet">&#8226; Use tools to extend one&#8217;s reach so users feel like they are directly interacting.</p>
+<p class="indentbullet">&#8226; Use direct, semi-direct, and indirect interactions where appropriate and not where not appropriate. Do not try to force everything to be direct.</p>
+<h4 class="h4"><strong>The Cycle of Interaction (Section <a href="chapter25.html#lev25.4"><span class="blue">25.4</span></a>)</strong></h4>
+<p class="indentbullet">&#8226; To design or improve interactions, use Norman&#8217;s seven stages of interaction to break up typically subconscious processes into explicit steps.</p>
+<p class="indentbullet">&#8226; Think about what stages are missing or what stages do not work well that make interaction difficult. Then add or modify signifiers, constraints, mappings, and feedback as appropriate for each stage.</p>
+<p class="indentbullet">&#8226; Use the seven stages of interaction with task analysis as a stepping stone toward implementation.</p>
+<h4 class="h4"><a id="page_358"></a><strong>The Human Hands (Section <a href="chapter25.html#lev25.5"><span class="blue">25.5</span></a>)</strong></h4>
+<p class="indentbullet">&#8226; Support interactions with two hands where appropriate.</p>
+<p class="indentbullet">&#8226; Do not assume just because two hands are used for an interface that the interface will be better. Two-handed interfaces can be difficult to use if designed inappropriately.</p>
+<p class="indentbullet">&#8226; Feedback from users is even more essential for two-handed interaction than one-handed interaction.</p>
+<p class="indentbullet">&#8226; Have the non-dominant hand maintain the reference frame so the dominant hand can work precisely without having to work in a locked position.</p>
+<p class="indentbullet">&#8226; Design bimanual interactions to work together in a fluid manner, switching between symmetric and asymmetric modes as appropriate for the task.</p>
+<h3 class="h3"><a id="lev29.2"></a><strong><span class="font"><span class="blue">29.2</span></span> VR Interaction Concepts (Chapter <a href="chapter26.html#ch26"><span class="blue">26</span></a>)</strong></h3>
+<h4 class="h4"><strong>Interaction Fidelity (Section <a href="chapter26.html#lev26.1"><span class="blue">26.1</span></a>)</strong></h4>
+<p class="indentbullet">&#8226; Consider using realistic interactions for training applications, simulations, surgical applications, therapy, and human-factors evaluations.</p>
+<p class="indentbullet">&#8226; Consider using non-realistic interactions for increasing performance and minimizing fatigue.</p>
+<p class="indentbullet">&#8226; Use magical interactions to enhance the user experience, circumvent the limitations of the real world, and teach abstract concepts.</p>
+<p class="indentbullet">&#8226; Consider interaction metaphors as a source of inspiration. Unless realistic interaction is a primary goal, use intuitive and useful magical techniques.</p>
+<h4 class="h4"><strong>Proprioceptive and Egocentric Interaction (Section <a href="chapter26.html#lev26.2"><span class="blue">26.2</span></a>)</strong></h4>
+<p class="indentbullet">&#8226; Exploit the one real object every user has&#8212;the human body.</p>
+<p class="indentbullet">&#8226; Use torso tracking in addition to head and hands tracking whenever possible to maximize proprioception. Alternatively, chair rotation can be tracked to estimate torso rotation.</p>
+<p class="indentbullet">&#8226; Place commonly used tools relative to the body to take advantage of muscle memory so users do not have to take visual attention away from that which is being worked on (tools do not even have to be within the user&#8217;s field of view).</p>
+<p class="indentbullet"><a id="page_359"></a>&#8226; Don&#8217;t assume exocentric perspectives preclude egocentric perspectives. Take advantage of egocentric intuition even when designing an exocentric experience.</p>
+<h4 class="h4"><strong>Reference Frames (Section <a href="chapter26.html#lev26.3"><span class="blue">26.3</span></a>)</strong></h4>
+<p class="indentbullet">&#8226; Provide the capability for users to think and interact in an exocentric virtual-world reference frame when the intent is for users to create content over a wide area, form a cognitive map of the environment, determine their own global position, or plan travel on a large scale.</p>
+<p class="indentbullet">&#8226; Be careful of placing direct interfaces in virtual-world reference frames as they can be awkward to reach without easy and precise navigation capability.</p>
+<p class="indentbullet">&#8226; Draw rest frames (e.g., an automobile interior, a cockpit, or non-realistic cues) in the real-world reference frame for users to feel stabilized in space and to reduce motion sickness.</p>
+<p class="indentbullet">&#8226; Provide a place for users to set physical devices when not needed and render those objects in the real-world reference frame so they can easily be seen and picked up.</p>
+<p class="indentbullet">&#8226; Place information, interfaces, and tools relative to the body by placing them in the torso reference frame.</p>
+<p class="indentbullet">&#8226; Allow advanced users to turn on/off or make invisible (but still usable) items in the torso, hand, and head reference frames.</p>
+<p class="indentbullet">&#8226; Place a visual representation of hand controllers in the torso reference frame for non-tracked controllers and in the hand reference frame for tracked hand-held controllers.</p>
+<p class="indentbullet">&#8226; Place signifiers in the hand reference frame pointing to buttons, analog sticks, and/or fingers so it is obvious what they do. Provide the capability for users to turn them on and off.</p>
+<p class="indentbullet">&#8226; Minimize cues in the head reference frame for anything other than a pointer if head tracking is used for input.</p>
+<h4 class="h4"><strong>Speech and Gestures (Section <a href="chapter26.html#lev26.4"><span class="blue">26.4</span></a>)</strong></h4>
+<p class="indentbullet">&#8226; Use explicit visual signifiers (e.g., a list of words or hand icons) to portray what speech or gesture commands are available. Provide feedback by highlighting the selected option.</p>
+<p class="indentbullet">&#8226; Have users verify important commands to prevent major errors.</p>
+<p class="indentbullet"><a id="page_360"></a>&#8226; Use a small number of words or gestures that are well defined, natural, easy for the user to remember, and easy for the system to recognize.</p>
+<p class="indentbullet">&#8226; When more than one person will be present in the same space, use push-to-talk and/or push-to-gesture to prevent accidental unintended commands.</p>
+<p class="indentbullet">&#8226; Use direct structural gestures for immediate system response.</p>
+<p class="indentbullet">&#8226; When users have their own unique system, use speaker-dependent recognition if they are willing to train the system and adaptive recognition if they are not.</p>
+<p class="indentbullet">&#8226; Reduce the potential for error by only allowing a subset of vocabulary to be recognized depending upon the context.</p>
+<h4 class="h4"><strong>Modes and Flow (Section <a href="chapter26.html#lev26.5"><span class="blue">26.5</span></a>)</strong></h4>
+<p class="indentbullet">&#8226; When multiple interaction modes are used, make it clear to the user what the current mode is.</p>
+<p class="indentbullet">&#8226; Use object-action (or selection-manipulation) sequences over action-object sequences.</p>
+<p class="indentbullet">&#8226; Enable smooth and easy transition between selecting an object and manipulating or using that object.</p>
+<p class="indentbullet">&#8226; Minimize distractions to enhance the flow of interactions and allow for full attention to the primary task.</p>
+<p class="indentbullet">&#8226; Design interactions so users do not have to physically (whether the eyes, head, or hands) or cognitively move between tasks.</p>
+<p class="indentbullet">&#8226; Use lightweight mode switching, physical props, and multimodal techniques to help maintain the flow of interaction.</p>
+<h4 class="h4"><strong>Multimodal Interaction (Section <a href="chapter26.html#lev26.6"><span class="blue">26.6</span></a>)</strong></h4>
+<p class="indentbullet">&#8226; Use a single specialized input modality when it is clear that single modality is best for the task and there is no reason to include other modalities. Do not add a modality just for the sake of adding a modality.</p>
+<p class="indentbullet">&#8226; Consider using equivalent input modalities when user preferences are strongly divided.</p>
+<p class="indentbullet">&#8226; Use redundant input modalities to reduce noise and ambiguous signals.</p>
+<p class="indentbullet">&#8226; Use concurrent input modalities to improve efficiency by enabling the user to perform two interactions simultaneously.</p>
+<p class="indentbullet">&#8226; Use complementarity input modalities for &#8220;put-that-there&#8221; or &#8220;that-moves-there&#8221; types of interfaces.</p>
+<p class="indentbullet"><a id="page_361"></a>&#8226; Allow transfer of input modalities when one modality device is unreliable so users will not have to start over if there is a failure.</p>
+<h4 class="h4"><strong>Beware of Sickness and Fatigue (Section <a href="chapter26.html#lev26.7"><span class="blue">26.7</span></a>)</strong></h4>
+<p class="indentbullet">&#8226; Be extra careful of viewpoint control techniques that can induce motion sickness. Study Part <a href="part03.html#part3"><span class="blue">III</span></a> and follow the guidelines in Chapter <a href="chapter19.html#ch19"><span class="blue">19</span></a> to minimize adverse health effects.</p>
+<p class="indentbullet">&#8226; When motion sickness is a primary concern (e.g., for users new to VR or a general audience), only use one-to-one mapping of real head motion or teleportation.</p>
+<p class="indentbullet">&#8226; Avoid using and creating interactions that require the user to hold the hands up high or in front of the body for more than a few seconds at a time. Use devices that do not require line of sight so interactions can be performed comfortably in the lap or from the sides of the body.</p>
+<h4 class="h4"><strong>Visual-Physical Conflict and Sensory Substitution (Section <a href="chapter26.html#lev26.8"><span class="blue">26.8</span></a>)</strong></h4>
+<p class="indentbullet">&#8226; Enforce physics constraints when hand penetration into objects is shallow so the hand does not pass through the object surface. Do not enforce physics constraints when penetration is deep; instead allow the hand to pass through virtual objects.</p>
+<p class="indentbullet">&#8226; Consider drawing two virtual hands for a single physical hand&#8212;one that penetrates objects and one that doesn&#8217;t.</p>
+<p class="indentbullet">&#8226; Use highlighting to convey an object is selectable when the hand is close to the object.</p>
+<p class="indentbullet">&#8226; Use audio to convey collisions.</p>
+<p class="indentbullet">&#8226; Use passive haptics or vibrotactile haptics whenever possible.</p>
+<p class="indentbullet">&#8226; If training transfer is not important, use ghosting to signify a new potential position until the user confirms placement.</p>
+<h3 class="h3"><a id="lev29.3"></a><span class="blue"><span class="font"><strong>29.3</strong></span></span> <strong>Input Devices (Chapter <a href="chapter27.html#ch27"><span class="blue">27</span></a>)</strong></h3>
+<h4 class="h4"><strong>Input Device Characteristics (Section <a href="chapter27.html#lev27.1"><span class="blue">27.1</span></a>)</strong></h4>
+<p class="indentbullet">&#8226; Match the interaction technique with the device and match the device with the interaction technique. Understand the different device characteristics and classes in order to determine what is best for the project.</p>
+<p class="indentbullet"><a id="page_362"></a>&#8226; Use 6 DoF devices whenever possible and then decrease DoFs in software where appropriate.</p>
+<p class="indentbullet">&#8226; Choose input devices that work in a user&#8217;s entire personal space, do not require line of sight, are robust to various lighting conditions, and work for all hand orientations.</p>
+<p class="indentbullet">&#8226; Use buttons for tasks that are binary, when the action needs to occur often, when immediate response and reliability are required, when abstract interactions are appropriate, and when physical feedback of feeling the button pressed/released is important.</p>
+<p class="indentbullet">&#8226; Do not overwhelm users with too many buttons.</p>
+<p class="indentbullet">&#8226; Use bare-hand systems, gloves, and/or haptic devices that correspond to virtual objects when a high sense of realism and presence is important.</p>
+<h4 class="h4"><strong>Classes of Hand Input Devices (Section <a href="chapter27.html#lev27.2"><span class="blue">27.2</span></a>)</strong></h4>
+<p class="indentbullet">&#8226; If not sure what to use or there is no strong preference, then start with tracked hand-held controllers. They are currently the best option for a majority of interactive VR experiences.</p>
+<p class="indentbullet">&#8226; For public location-based entertainment, consider building customized interfaces such as world-grounded devices that are optimized for the particular experience.</p>
+<p class="indentbullet">&#8226; Attach labels to virtual representations of controllers to signify what the controls do.</p>
+<p class="indentbullet">&#8226; Use tracked hand-held controllers when the user commonly holds virtual devices to enhance presence through physical touch.</p>
+<p class="indentbullet">&#8226; Don&#8217;t assume gloves are only for full hand tracking. Consider using pinch gloves that don&#8217;t require holding a physical controller but have the advantages of buttons via pressing the fingers together.</p>
+<h4 class="h4"><strong>Classes of Non-hand Input Devices (Section <a href="chapter27.html#lev27.3"><span class="blue">27.3</span></a>)</strong></h4>
+<p class="indentbullet">&#8226; If eye tracking is available, do not overuse it. Instead use eye gaze for specialized tasks and in subtle ways (e.g., have virtual characters respond when looked at).</p>
+<p class="indentbullet">&#8226; When designing eye gaze interactions, maintain the natural function of the eyes, augment rather than replace, focus on interaction design, improve the <a id="page_363"></a>interpretation of eye movements, choose appropriate tasks, use passive gaze over active gaze, and leverage gaze information for other interactions.</p>
+<p class="indentbullet">&#8226; Use microphones that are specially designed for speech recognition.</p>
+<h3 class="h3"><a id="lev29.4"></a><span class="blue"><span class="font"><strong>29.4</strong></span></span> <strong>Interaction Patterns and Techniques (Chapter <a href="chapter28.html#ch28"><span class="blue">28</span></a>)</strong></h3>
+<h4 class="h4"><strong>Selection Patterns (Section <a href="chapter28.html#lev28.1"><span class="blue">28.1</span></a>)</strong></h4>
+<p class="indentbullet">&#8226; When interactions do not need to be realistic, use the Pointing Pattern or the Image-Plane Selection Pattern.</p>
+<h6 class="h6"><strong>Hand Selection Pattern (Section <a href="chapter28.html#lev28.1.1"><span class="blue">28.1.1</span></a>)</strong></h6>
+<p class="indentbullet">&#8226; Use the Hand Selection Pattern when interactions need to be realistic.</p>
+<p class="indentbullet">&#8226; For high interaction fidelity, use a realistic virtual hand to select objects.</p>
+<p class="indentbullet">&#8226; For mid-interaction fidelity, use hands without arms to reach just beyond personal space (i.e., near action space).</p>
+<p class="indentbullet">&#8226; Consider the go-go technique for personal space and midrange action space.</p>
+<h6 class="h6"><strong>Pointing Pattern (Section <a href="chapter28.html#lev28.1.2"><span class="blue">28.1.2</span></a>)</strong></h6>
+<p class="indentbullet">&#8226; For more controlled pointing, consider using a precision mode.</p>
+<p class="indentbullet">&#8226; For selecting objects that are small, consider using pointing with object snapping.</p>
+<p class="indentbullet">&#8226; Do not use dwell selection unless there is no other good way to provide a signal or there is another good reason to do so.</p>
+<p class="indentbullet">&#8226; Do not use eye tracking for selecting objects unless there is a good reason to do so.</p>
+<h6 class="h6"><strong>Image-Plane Selection Pattern (Section <a href="chapter28.html#lev28.1.3"><span class="blue">28.1.3</span></a>)</strong></h6>
+<p class="indentbullet">&#8226; For easy-to-use touch at a distance, use image-plane selection. However, do not use when the user must frequently select objects as gorilla arm can result.</p>
+<h6 class="h6"><strong>Volume-Based Selection Pattern (Section <a href="chapter28.html#lev28.1.4"><span class="blue">28.1.4</span></a>)</strong></h6>
+<p class="indentbullet">&#8226; Use the Volume-Based Selection Pattern when selecting data/space that has no geometric surfaces.</p>
+<p class="indentbullet">&#8226; Be careful of requiring volume-based selection for novice users.</p>
+<h4 class="h4"><a id="page_364"></a><strong>Manipulation Patterns (Section <a href="chapter28.html#lev28.2"><span class="blue">28.2</span></a>)</strong></h4>
+<h6 class="h6a"><strong>Direct Hand Manipulation Pattern (Section <a href="chapter28.html#lev28.2.1"><span class="blue">28.2.1</span></a>)</strong></h6>
+<p class="indentbullet">&#8226; Use the Direct Hand Manipulation Pattern unless there is a reason not to as it is more efficient and satisfying than other manipulation patterns.</p>
+<p class="indentbullet">&#8226; For high interaction fidelity, use a virtual hand for both selection and manipulation.</p>
+<p class="indentbullet">&#8226; Consider using non-isomorphic rotations to reduce clutching and to increase performance and precision.</p>
+<h6 class="h6"><strong>Proxy Pattern (Section <a href="chapter28.html#lev28.2.2"><span class="blue">28.2.2</span></a>)</strong></h6>
+<p class="indentbullet">&#8226; Use the Proxy Pattern to intuitively manipulate remote objects or when the user scales himself or the world.</p>
+<p class="indentbullet">&#8226; Use tracked physical props for direct action-task correspondence. Such props result in an easy-to-use interface that does not require any training, facilitate natural two-handed interactions, and provide tactile feedback to the user.</p>
+<h6 class="h6"><strong>3D Tool Pattern (Section <a href="chapter28.html#lev28.2.3"><span class="blue">28.2.3</span></a>)</strong></h6>
+<p class="indentbullet">&#8226; Use the 3D Tool Pattern to enhance the capability of the hands to manipulate objects.</p>
+<p class="indentbullet">&#8226; Use signifiers for object-attached tools to make it obvious how to use those tools to manipulate the object.</p>
+<p class="indentbullet">&#8226; To enable precise modeling and reduce complexity, use jigs that enable user-controlled constraints, snapping, and discrete manipulations.</p>
+<h4 class="h4"><strong>Viewpoint Control Patterns (Section <a href="chapter28.html#lev28.3"><span class="blue">28.3</span></a>)</strong></h4>
+<p class="indentbullet">&#8226; Be especially careful of sickness and injury when choosing, designing, and implementing viewpoint control techniques, especially for users new to VR. See Part <a href="part03.html#part3"><span class="blue">III</span></a>.</p>
+<h6 class="h6"><strong>Walking Pattern (Section <a href="chapter28.html#lev28.3.1"><span class="blue">28.3.1</span></a>)</strong></h6>
+<p class="indentbullet">&#8226; Use the Walking Pattern when high biomechanical symmetry and high presence is desired, fatigue is not a concern, and safety measures to prevent tripping, physical collisions, and falling are covered.</p>
+<p class="indentbullet">&#8226; Use real walking when the physically tracked space is as large as or larger than the virtual walkable space, and both spatial understanding and minimizing sickness are important.</p>
+<p class="indentbullet"><a id="page_365"></a>&#8226; Use redirected walking when the physically tracked space is smaller than the virtual walkable space.</p>
+<p class="indentbullet">&#8226; Use walking in place when the physically tracked space is small or safety is a concern.</p>
+<p class="indentbullet">&#8226; Use a treadmill when walking/running vast distances is required.</p>
+<h6 class="h6"><strong>Steering Pattern (Section <a href="chapter28.html#lev28.3.2"><span class="blue">28.3.2</span></a>)</strong></h6>
+<p class="indentbullet">&#8226; Use the Steering Pattern when sickness is not a primary concern, interaction fidelity is not important, acceleration/deceleration can be minimized, and real-world stabilized cues can be provided.</p>
+<p class="indentbullet">&#8226; Make steering as simple as possible to minimize cognitive load so the user can focus on spatial knowledge acquisition and information gathering.</p>
+<p class="indentbullet">&#8226; Provide visual cues to help users know what direction is forward.</p>
+<p class="indentbullet">&#8226; Consider not using virtual rotations if torso/chair tracking is available and the system is wireless.</p>
+<p class="indentbullet">&#8226; If virtual rotations are required and the user can be constrained to the ground, use dual analog sticks.</p>
+<h6 class="h6"><strong>3D Multi-Touch Pattern (Section <a href="chapter28.html#lev28.3.3"><span class="blue">28.3.3</span></a>)</strong></h6>
+<p class="indentbullet">&#8226; For applications not requiring high interaction fidelity, use the 3D Multi-Touch Pattern when creating assets, manipulating abstract data, viewing scientific datasets, or rapidly exploring large and small areas of interest from arbitrary viewpoints.</p>
+<p class="indentbullet">&#8226; Consider adding constraints (e.g., force uprightness, limit scale, and/or disable rotations) for novice users.</p>
+<p class="indentbullet">&#8226; Provide a visual indication of the center of rotation/scale.</p>
+<h6 class="h6"><strong>Automated Pattern (Section <a href="chapter28.html#lev28.3.4"><span class="blue">28.3.4</span></a>)</strong></h6>
+<p class="indentbullet">&#8226; Use the Automated Pattern when free exploration of the environment is not desired or not possible.</p>
+<p class="indentbullet">&#8226; Use teleportation when traveling large distances, or between worlds, when efficiency is important, or when motion sickness must be minimized. Do not use if spatial orientation must be maintained.</p>
+<p class="indentbullet">&#8226; Use smooth transitions when maintaining spatial orientation is the primary concern.</p>
+<p class="indentbullet"><a id="page_366"></a>&#8226; When passively moving the user, reduce motion sickness by keeping visual velocity as constant as possible, providing stable real-world reference cues (e.g., a cockpit), and/or providing a leading indicator.</p>
+<h4 class="h4"><strong>Indirect Control Patterns (Section <a href="chapter28.html#lev28.4"><span class="blue">28.4</span></a>)</strong></h4>
+<p class="indentbullet">&#8226; Use an Indirect Control Pattern when spatial mappings are not appropriate or details of how something is done are not important to the user. Uses include controlling the overall system, issuing commands, changing modes, and changing non-spatial parameters.</p>
+<p class="indentbullet">&#8226; For indirect control, make signifiers obvious, such as the shape and size of controls, their visual representation and labeling, and apparent affordances of their underlying control structure.</p>
+<h6 class="h6"><strong>Widgets and Panels Pattern (Section <a href="chapter28.html#lev28.4.1"><span class="blue">28.4.1</span></a>)</strong></h6>
+<p class="indentbullet">&#8226; Use the Widgets and Panels Pattern when it is difficult to directly interact with an object.</p>
+<p class="indentbullet">&#8226; Where appropriate, use well-known 2D interaction metaphors such as pull-down/pop-up menus, radio buttons, and checkboxes.</p>
+<p class="indentbullet">&#8226; Use gestalt concepts of perceptual organization when designing a panel&#8212;use position, color, and shape to emphasize relationships between widgets. For example, put widgets with similar functions close together.</p>
+<p class="indentbullet">&#8226; Place widgets and panels in a way that is easy for users to access (e.g., on the non-dominant hand or in the torso reference frame).</p>
+<p class="indentbullet">&#8226; For commonly used commands, use pie/marking menus to teach gestures and to embed those gestures into muscle memory.</p>
+<p class="indentbullet">&#8226; For pie/marking menus, use pointing over projection or roll.</p>
+<p class="indentbullet">&#8226; If pinch gestures are available, place menu options on the fingers.</p>
+<p class="indentbullet">&#8226; Consider placing panels or widgets above the head so users can pull them down when needed.</p>
+<p class="indentbullet">&#8226; Consider placing a panel in the non-dominant hand that can be turned on or off, and where widgets on the panel are controlled by the dominant hand.</p>
+<p class="indentbullet">&#8226; For 2D tasks that require precision, consider using a physical panel the user holds in the non-dominant hand or that is attached to the forearm.</p>
+<h6 class="h6"><a id="page_367"></a><strong>Non-Spatial Control Pattern (Section <a href="chapter28.html#lev28.4.2"><span class="blue">28.4.2</span></a>)</strong></h6>
+<p class="indentbullet">&#8226; Use the Non-Spatial Control Pattern for global action performed through description instead of a spatial relationship.</p>
+<p class="indentbullet">&#8226; Use real-world words and gestures that are intuitive and easy to remember. Keep the number of options small and simple.</p>
+<p class="indentbullet">&#8226; Provide signifiers (e.g., icons for gestures or a list of words for voice) to remind non-expert users what options are available.</p>
+<p class="indentbullet">&#8226; Always provide some form of feedback.</p>
+<p class="indentbullet">&#8226; When accuracy is more important than speed, verify commands. Make the confirmation process fast and do not require precision. Examples include clicking a physical button or saying &#8220;confirm.&#8221;</p>
+<p class="indentbullet">&#8226; Use push-to-talk or push-to-gesture to prevent accidental unintended commands.</p>
+<p class="indentbullet">&#8226; Use voice control when moving the hands or the head would interrupt a task.</p>
+<p class="indentbullet">&#8226; Be careful of depending on voice recognition when multiple people are in the same physical environment or there is a lot of noise.</p>
+<h4 class="h4"><strong>Compound Patterns (Section <a href="chapter28.html#lev28.5"><span class="blue">28.5</span></a>)</strong></h4>
+<h6 class="h6a"><strong>Pointing Hand Pattern (Section <a href="chapter28.html#lev28.5"><span class="blue">28.5.1</span></a>)</strong></h6>
+<p class="indentbullet">&#8226; When high interaction fidelity is not required, use the Pointing Hand Pattern to select objects at a distance but to manipulate them as if held in the hand.</p>
+<h6 class="h6"><strong>World-in-Miniature Pattern (Section <a href="chapter28.html#lev28.5.2"><span class="blue">28.5.2</span></a>)</strong></h6>
+<p class="indentbullet">&#8226; Use the World-In-Miniature Pattern to provide situational awareness, to quickly define user-defined proxies, or to quickly move oneself.</p>
+<p class="indentbullet">&#8226; Consider using the equivalent of a forward-up map for the world-in-miniature so that the orientation of the map matches the orientation of the larger world. When appropriate, provide the capability to turn this feature off.</p>
+<p class="indentbullet">&#8226; To reduce sickness, do not directly map the user&#8217;s doll in the world-in-miniature to the user&#8217;s movement. Instead, animate/navigate or teleport the viewpoint into the doll when commanded by the user.</p>
+<h6 class="h6"><strong>Multimodal Pattern (Section <a href="chapter28.html#lev28.5.3"><span class="blue">28.5.3</span></a>)</strong></h6>
+<p class="indentbullet">&#8226; Use the Multimodal Pattern when multiple facets of a task are required, when reduction in input error is needed, or when no single modality can convey what is needed.</p>
+<p class="indentbullet"><a id="page_368"></a>&#8226; Only use a multimodal technique when there is a good reason to do so. When used, keep interactions as simple as possible.</p>
+<p class="indentbullet">&#8226; Consider using automatic mode switching when each technique is only usable in specific situations and those situations are clear to the user.</p>
+</body>
+</html>

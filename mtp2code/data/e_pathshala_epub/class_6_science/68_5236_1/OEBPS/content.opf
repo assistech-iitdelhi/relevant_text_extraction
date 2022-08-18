@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="bookid" prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta name="generator" content="Adobe InDesign 13.1" />
+    <meta property="ibooks:specified-fonts">true</meta>
+    <dc:title>Chapter1</dc:title>
+    <dc:date>2019-05-10T10:12:48Z</dc:date>
+    <dc:language>en-US</dc:language>
+    <meta property="dcterms:modified">2019-06-03T12:40:43Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta name="Sigil version" content="0.9.10" />
+    <meta name="cover" content="fesc1cc.jpg" />
+  </metadata>
+  <manifest>
+    <item id="Chapter_1" href="Text/Chapter_1.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="toc" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="idGeneratedStyles.css" href="Styles/idGeneratedStyles.css" media-type="text/css"/>
+    <item id="Bookman-Light.TTF" href="Fonts/Bookman-Light.TTF" media-type="application/x-font-ttf"/>
+    <item id="Bookman-LightItalic.TTF" href="Fonts/Bookman-LightItalic.TTF" media-type="application/x-font-ttf"/>
+    <item id="Wingdings-Regular.ttf" href="Fonts/Wingdings-Regular.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="x01_01_rice.png" href="Images/01_01_rice.png" media-type="image/png"/>
+    <item id="x01_02_idli.png" href="Images/01_02_idli.png" media-type="image/png"/>
+    <item id="x01_03_dish_of_fish.png" href="Images/01_03_dish_of_fish.png" media-type="image/png"/>
+    <item id="x01_04_mix_veg.png" href="Images/01_04_mix_veg.png" media-type="image/png"/>
+    <item id="x01_05_fruits.png" href="Images/01_05_fruits.png" media-type="image/png"/>
+    <item id="x01_06_dal.png" href="Images/01_06_dal.png" media-type="image/png"/>
+    <item id="x01_07_hen.png" href="Images/01_07_hen.png" media-type="image/png"/>
+    <item id="x01_08.png" href="Images/01_08.png" media-type="image/png"/>
+    <item id="x01_09.png" href="Images/01_09.png" media-type="image/png"/>
+    <item id="x01_11_paheli_n_boojho.png" href="Images/01_11_paheli_n_boojho.png" media-type="image/png"/>
+    <item id="x01_12_moong_dal.png" href="Images/01_12_moong_dal.png" media-type="image/png"/>
+    <item id="x01_13_moong_dal_sprouted.png" href="Images/01_13_moong_dal_sprouted.png" media-type="image/png"/>
+    <item id="x01_14_Chana.png" href="Images/01_14_Chana.png" media-type="image/png"/>
+    <item id="x01_15_sprouted_channa.png" href="Images/01_15_sprouted_channa.png" media-type="image/png"/>
+    <item id="x01_17_squirrel_eating.png" href="Images/01_17_squirrel_eating.png" media-type="image/png"/>
+    <item id="x0652ch01.png" href="Images/0652ch01.png" media-type="image/png"/>
+    <item id="x1.7b.png" href="Images/1.7b.png" media-type="image/png"/>
+    <item id="baloon_1.png" href="Images/baloon_1.png" media-type="image/png"/>
+    <item id="baloon_11.png" href="Images/baloon_11.png" media-type="image/png"/>
+    <item id="exrcse.png" href="Images/exrcse.png" media-type="image/png"/>
+    <item id="fig_5-1.png" href="Images/fig_5-1.png" media-type="image/png"/>
+    <item id="KW.png" href="Images/KW.png" media-type="image/png"/>
+    <item id="paheli_1.png" href="Images/paheli_1.png" media-type="image/png"/>
+    <item id="paheli_2.png" href="Images/paheli_2.png" media-type="image/png"/>
+    <item id="paheli_3.png" href="Images/paheli_3.png" media-type="image/png"/>
+    <item id="smry.png" href="Images/smry.png" media-type="image/png"/>
+    <item id="sum.png" href="Images/sum.png" media-type="image/png"/>
+    <item id="Table1_1.png" href="Images/Table1_1.png" media-type="image/png"/>
+    <item id="Table1_2.png" href="Images/Table1_2.png" media-type="image/png"/>
+    <item id="Table1_3.png" href="Images/Table1_3.png" media-type="image/png"/>
+    <item id="Table1_4.png" href="Images/Table1_4.png" media-type="image/png"/>
+    <item id="Table1_5.png" href="Images/Table1_5.png" media-type="image/png"/>
+    <item id="Table1_6.png" href="Images/Table1_6.png" media-type="image/png"/>
+    <item id="Table_ex1.png" href="Images/Table_ex1.png" media-type="image/png"/>
+    <item id="Table_keyW.png" href="Images/Table_keyW.png" media-type="image/png"/>
+    <item id="x1.1.png" href="Images/1.1.png" media-type="image/png"/>
+    <item id="x1.2.png" href="Images/1.2.png" media-type="image/png"/>
+    <item id="x1.3.png" href="Images/1.3.png" media-type="image/png"/>
+    <item id="x1.4.png" href="Images/1.4.png" media-type="image/png"/>
+    <item id="x1.6.png" href="Images/1.6.png" media-type="image/png"/>
+    <item id="x1.5.png" href="Images/1.5.png" media-type="image/png"/>
+    <item id="x1.7.png" href="Images/1.7.png" media-type="image/png"/>
+    <item id="fesc1cc.jpg" href="Images/fesc1cc.jpg" media-type="image/jpeg" properties="cover-image"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    <item id="x1.11.png" href="Images/1.11.png" media-type="image/png"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Chapter_1"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

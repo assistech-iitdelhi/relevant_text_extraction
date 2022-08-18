@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package unique-identifier="bookid" version="3.0" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign" name="generator"/>
+    <dc:date>2020-06-08</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2021-01-22T12:34:32Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta content="0.9.3" name="Sigil version"/>
+    <meta name="cover" content="lebo1cc.jpg"/>
+  </metadata>
+  <manifest>
+    <item href="Text/Chapter-2.xhtml" id="Chapter-2.xhtml" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="Styles/ch2.css" id="ch2.css" media-type="text/css"/>
+    <item href="Fonts/BookmanOldStyle-Bold.TTF" id="BookmanOldStyle-Bold.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/BookmanOldStyle-BoldItalic.TTF" id="BookmanOldStyle-BoldItalic.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/CenturyGothic.TTF" id="CenturyGothic.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Images/12083CH02_fmt.png" id="x12083CH02_fmt.png" media-type="image/png"/>
+    <item href="Images/1503.png" id="x1503.png" media-type="image/png"/>
+    <item href="Images/1509.png" id="x1509.png" media-type="image/png"/>
+    <item href="Images/1561.png" id="x1561.png" media-type="image/png"/>
+    <item href="Images/1576.png" id="x1576.png" media-type="image/png"/>
+    <item href="Images/1580.png" id="x1580.png" media-type="image/png"/>
+    <item href="Images/1622.png" id="x1622.png" media-type="image/png"/>
+    <item href="Images/1623.png" id="x1623.png" media-type="image/png"/>
+    <item href="Images/1642.png" id="x1642.png" media-type="image/png"/>
+    <item href="Images/1693.png" id="x1693.png" media-type="image/png"/>
+    <item href="Images/1702.png" id="x1702.png" media-type="image/png"/>
+    <item href="Images/1727.png" id="x1727.png" media-type="image/png"/>
+    <item href="Images/1744.png" id="x1744.png" media-type="image/png"/>
+    <item href="Images/1758.png" id="x1758.png" media-type="image/png"/>
+    <item href="Images/1779.png" id="x1779.png" media-type="image/png"/>
+    <item href="Images/1785.png" id="x1785.png" media-type="image/png"/>
+    <item href="Images/1794.png" id="x1794.png" media-type="image/png"/>
+    <item href="Images/1803.png" id="x1803.png" media-type="image/png"/>
+    <item href="Images/1813.png" id="x1813.png" media-type="image/png"/>
+    <item href="Images/1819.png" id="x1819.png" media-type="image/png"/>
+    <item href="Images/1825.png" id="x1825.png" media-type="image/png"/>
+    <item href="Images/1836.png" id="x1836.png" media-type="image/png"/>
+    <item href="Images/1893.png" id="x1893.png" media-type="image/png"/>
+    <item href="Images/1907.png" id="x1907.png" media-type="image/png"/>
+    <item href="Images/1950.png" id="x1950.png" media-type="image/png"/>
+    <item href="Images/1963.png" id="x1963.png" media-type="image/png"/>
+    <item href="Images/1988.png" id="x1988.png" media-type="image/png"/>
+    <item href="Images/1page_fmt.png" id="x1page_fmt.png" media-type="image/png"/>
+    <item href="Images/1_fmt.png" id="x1_fmt.png" media-type="image/png"/>
+    <item href="Images/2.8b_fmt.png" id="x2.8b_fmt.png" media-type="image/png"/>
+    <item href="Images/2.9_fmt.png" id="x2.9_fmt.png" media-type="image/png"/>
+    <item href="Images/2035.png" id="x2035.png" media-type="image/png"/>
+    <item href="Images/2045.png" id="x2045.png" media-type="image/png"/>
+    <item href="Images/2064.png" id="x2064.png" media-type="image/png"/>
+    <item href="Images/2086.png" id="x2086.png" media-type="image/png"/>
+    <item href="Images/2095.png" id="x2095.png" media-type="image/png"/>
+    <item href="Images/2106.png" id="x2106.png" media-type="image/png"/>
+    <item href="Images/2121.png" id="x2121.png" media-type="image/png"/>
+    <item href="Images/2179.png" id="x2179.png" media-type="image/png"/>
+    <item href="Images/2195.png" id="x2195.png" media-type="image/png"/>
+    <item href="Images/2204.png" id="x2204.png" media-type="image/png"/>
+    <item href="Images/2217.png" id="x2217.png" media-type="image/png"/>
+    <item href="Images/2227.png" id="x2227.png" media-type="image/png"/>
+    <item href="Images/2265.png" id="x2265.png" media-type="image/png"/>
+    <item href="Images/2275.png" id="x2275.png" media-type="image/png"/>
+    <item href="Images/2_fmt.png" id="x2_fmt.png" media-type="image/png"/>
+    <item href="Images/3_fmt.png" id="x3_fmt.png" media-type="image/png"/>
+    <item href="Images/4_fmt.png" id="x4_fmt.png" media-type="image/png"/>
+    <item href="Images/chapter%202%207_fmt.png" id="chapter-2-7_fmt.png" media-type="image/png"/>
+    <item href="Images/polon1_fmt.png" id="polon1_fmt.png" media-type="image/png"/>
+    <item href="Images/polon_fmt.png" id="polon_fmt.png" media-type="image/png"/>
+    <item href="Images/summery_fmt.png" id="summery_fmt.png" media-type="image/png"/>
+    <item href="Images/summery_fmt1.png" id="summery_fmt1.png" media-type="image/png"/>
+    <item href="Images/top_right_final_fmt.png" id="top_right_final_fmt.png" media-type="image/png"/>
+    <item href="Images/abc.png" id="abc.png" media-type="image/png"/>
+    <item href="Images/lebo1cc.jpg" id="lebo1cc.jpg" media-type="image/jpeg" properties="cover-image"/>
+    <item href="Text/cover.xhtml" id="cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    <item href="Styles/sgc-toc.css" id="sgc-toc.css" media-type="text/css"/>
+    <item href="Text/TOC.xhtml" id="TOC.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Chapter-2.xhtml"/>
+    <itemref idref="TOC.xhtml"/>
+  </spine>
+  <guide>
+    <reference href="Text/cover.xhtml" title="Cover" type="cover"></reference>
+    <reference href="Text/TOC.xhtml" title="Table Of Contents" type="toc"></reference>
+  </guide>
+</package>

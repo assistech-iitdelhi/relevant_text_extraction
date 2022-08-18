@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="bookid" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign" name="generator" />
+    <dc:date>2020-05-04</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2020-08-26T16:43:20Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta content="0.9.12" name="Sigil version" />
+    <meta name="cover" content="cover.png" />
+  </metadata>
+  <manifest>
+    <item id="ch-1" href="Text/ch-1.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="toc" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="ch-1.css" href="Styles/ch-1.css" media-type="text/css"/>
+    <item id="BookmanOldStyle-Bold.TTF" href="Fonts/BookmanOldStyle-Bold.TTF" media-type="application/vnd.ms-opentype"/>
+    <item id="BookmanOldStyle-BoldItalic.TTF" href="Fonts/BookmanOldStyle-BoldItalic.TTF" media-type="application/vnd.ms-opentype"/>
+    <item id="CenturyGothic.TTF" href="Fonts/CenturyGothic.TTF" media-type="application/vnd.ms-opentype"/>
+    <item id="x1028.png" href="Images/1028.png" media-type="image/png"/>
+    <item id="x11080CH01_fmt.png" href="Images/11080CH01_fmt.png" media-type="image/png"/>
+    <item id="x1117.png" href="Images/1117.png" media-type="image/png"/>
+    <item id="x1128.png" href="Images/1128.png" media-type="image/png"/>
+    <item id="x1131.png" href="Images/1131.png" media-type="image/png"/>
+    <item id="x1134.png" href="Images/1134.png" media-type="image/png"/>
+    <item id="x1137.png" href="Images/1137.png" media-type="image/png"/>
+    <item id="x1140.png" href="Images/1140.png" media-type="image/png"/>
+    <item id="x1144.png" href="Images/1144.png" media-type="image/png"/>
+    <item id="x1147.png" href="Images/1147.png" media-type="image/png"/>
+    <item id="x1150.png" href="Images/1150.png" media-type="image/png"/>
+    <item id="x958.png" href="Images/958.png" media-type="image/png"/>
+    <item id="x976.png" href="Images/976.png" media-type="image/png"/>
+    <item id="x987.png" href="Images/987.png" media-type="image/png"/>
+    <item id="x988.png" href="Images/988.png" media-type="image/png"/>
+    <item id="x989.png" href="Images/989.png" media-type="image/png"/>
+    <item id="x990.png" href="Images/990.png" media-type="image/png"/>
+    <item id="x991.png" href="Images/991.png" media-type="image/png"/>
+    <item id="x992.png" href="Images/992.png" media-type="image/png"/>
+    <item id="x993.png" href="Images/993.png" media-type="image/png"/>
+    <item id="x994.png" href="Images/994.png" media-type="image/png"/>
+    <item id="x995.png" href="Images/995.png" media-type="image/png"/>
+    <item id="x996.png" href="Images/996.png" media-type="image/png"/>
+    <item id="chapter_top_fmt.png" href="Images/chapter_top_fmt.png" media-type="image/png"/>
+    <item id="Fig_1-1_fmt.png" href="Images/Fig_1-1_fmt.png" media-type="image/png"/>
+    <item id="Fig_1-2_fmt.png" href="Images/Fig_1-2_fmt.png" media-type="image/png"/>
+    <item id="Fig_1-3_fmt.png" href="Images/Fig_1-3_fmt.png" media-type="image/png"/>
+    <item id="Fig_1-4_fmt.png" href="Images/Fig_1-4_fmt.png" media-type="image/png"/>
+    <item id="Mayr_fmt.png" href="Images/Mayr_fmt.png" media-type="image/png"/>
+    <item id="unit-btm_fmt.png" href="Images/unit-btm_fmt.png" media-type="image/png"/>
+    <item id="UNIT1_fmt.png" href="Images/UNIT1_fmt.png" media-type="image/png"/>
+    <item id="Screenshot_from_2020-08-26_09-46-39.png" href="Images/Screenshot%20from%202020-08-26%2009-46-39.png" media-type="image/png"/>
+    <item id="Screenshot_from_2020-08-26_09-52-23.png" href="Images/Screenshot%20from%202020-08-26%2009-52-23.png" media-type="image/png"/>
+    <item id="Screenshot_from_2020-08-26_10-01-25.png" href="Images/Screenshot%20from%202020-08-26%2010-01-25.png" media-type="image/png"/>
+    <item id="Screenshot_from_2020-08-26_10-02-10.png" href="Images/Screenshot%20from%202020-08-26%2010-02-10.png" media-type="image/png"/>
+    <item id="cover.png" href="Images/cover.png" media-type="image/png" properties="cover-image"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="ch-1"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

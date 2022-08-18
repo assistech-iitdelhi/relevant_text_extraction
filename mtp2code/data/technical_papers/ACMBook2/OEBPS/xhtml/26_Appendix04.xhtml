@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>The Sparse Fourier Transform: Theory and Practice</title>
+<link rel="stylesheet" type="text/css" href="../styles/stylesheet.css"/>
+<link rel="stylesheet" type="application/vnd.adobe-page-template+xml" href="../styles/page-template.xpgt"/>
+</head>
+<body>
+<p class="chnoa"><a id="page_225"/>APPENDIX</p>
+<p class="chno">D</p>
+<p class="chtitle"><b>Efficient Constructions of Window Functions</b></p>
+<p class="noindent">In this appendix, we show how to efficiently implement our flat window functions which we used in <a href="12_Chapter03.xhtml">Chapters 3</a> and <a href="13_Chapter04.xhtml">4</a>.</p>
+<p class="noindentt"><b>Claim D.1</b> Let cdf denote the standard Gaussian cumulative distribution function. Then:</p>
+<p class="numlistt">1.&#160;&#160;cdf(<i>t</i>) = 1 &#8211; cdf(&#8722;<i>t</i>).</p>
+<p class="numlist">2.&#160;&#160;<img src="../images/in225_1.png" alt="image"/></p>
+<p class="numlist">3.&#160;&#160;<img src="../images/in225_2.png" alt="image"/></p>
+<p class="numlist">4.&#160;&#160;<img src="../images/in225_3.png" alt="image"/></p>
+<p class="numlist">5.&#160;&#160;For any <i>&#948;</i>, there exists a function <img src="../images/in225_4.png" alt="image"/> computable in <i>O</i>(log(1/<i>&#948;</i>)) time such that <img src="../images/in225_5.png" alt="image"/></p>
+<p class="noindentt"><b>Proof</b></p>
+<p class="numlist">1.&#160;&#160;Follows from the symmetry of Gaussian distribution.</p>
+<p class="numlist">2.&#160;&#160;Follows from standard moment generating function bound on Gaussian random variables.</p>
+<p class="numlist">3.&#160;&#160;Follows from (2).</p>
+<p class="numlist">4.&#160;&#160;Property (2) implies that cdf (<i>t</i>) is at most <img src="../images/in225_6.png" alt="image"/> times larger than the Gaussian pdf. Then apply (3).</p>
+<p class="numlist">5.&#160;&#160;By (1) and (3), cdf(<i>t</i>) can be computed as &#177;<i>&#948;</i> or 1&#177;<i>&#948;</i> unless <img src="../images/in225_7.png" alt="image"/>. But then an efficient expansion around 0 only requires <i>O</i>(log(1/<i>&#948;</i>)) terms to achieve precision &#177;<i>&#948;</i>. For example, we can truncate the representation [Marsaglia 2004].</p>
+<p class="image"><img src="../images/pg225_1.png" alt="image"/></p>
+<p class="numlista">at <i>O</i>(log(1/<i>&#948;</i>)) terms.</p>
+<p class="noindentt"><a id="page_226"/><b>Claim D.2</b> Define the continuous Fourier transform of <i>f</i>(<i>t</i>) by</p>
+<p class="image"><img src="../images/pg226_1.png" alt="image"/></p>
+<p class="noindent">For <i>t</i> &#8714; [<i>n</i>], define</p>
+<p class="image"><img src="../images/pg226_2.png" alt="image"/></p>
+<p class="noindent">and</p>
+<p class="image"><img src="../images/pg226_3.png" alt="image"/></p>
+<p class="noindent">Then <img src="../images/in226_1.png" alt="image"/>, where <img src="../images/gcap.png" alt="image"/> is the <i>n</i>-dimensional DFT of <i>g</i>.</p>
+<p class="noindentt"><b>Proof</b> Let &#916;<sub>1</sub>(<i>t</i>) denote the Dirac comb of period 1: &#916;<sub>1</sub>(<i>t</i>) is a Dirac delta function when <i>t</i> is an integer and zero elsewhere. Then <img src="../images/in226_2.png" alt="image"/>. For any <i>t</i> &#8714; [<i>n</i>], we have</p>
+<p class="image"><img src="../images/pg226_4.png" alt="image"/></p>
+<p class="noindentt"><a id="page_227"/><b>Lemma D.1</b> For any parameters <i>B</i> &#8805; 1, <i>&#948;</i> &#62; 0, and <i>&#945;</i> &#62; 0, there exist flat window functions <i>G</i> and <img src="../images/in227_1.png" alt="image"/> such that <i>G</i> can be computed in <img src="../images/in227_2.png" alt="image"/> time, and for each <img src="../images/in227_3.png" alt="image"/> can be evaluated in <i>O</i>(log(<i>n/&#948;</i>)) time.</p>
+<p class="noindentt"><b>Proof</b> We will show this for a function <img src="../images/in227_1.png" alt="image"/> that is a Gaussian convolved with a box-car filter. First we construct analogous window functions for the continuous Fourier transform. We then show that discretizing these functions gives the desired result.</p>
+<p class="indent">Let <i>D</i> be the pdf of a Gaussian with standard deviation <i>&#963;</i> &#62; 1 to be determined later, so <img src="../images/dcap.png" alt="image"/> is the pdf of a Gaussian with standard deviation 1/<i>&#963;</i>. Let <img src="../images/fcap.png" alt="image"/> be a boxcar filter of length 2<i>C</i> for some parameter <i>C</i> &#60; 1; that is, let <img src="../images/in227_4.png" alt="image"/> for |<i>t</i>| &#60; <i>C</i> and <i>F</i>(<i>t</i>) = 0 otherwise, so <i>F</i>(<i>t</i>) = 2<i>C</i> sinc(<i>t</i>/(2<i>C</i>)). Let <i>G</i>* = <i>D</i> &#183; <i>F</i>, so <img src="../images/in227_5.png" alt="image"/>.</p>
+<p class="indent">Then |<i>G</i>*(<i>t</i>)| &#8804; 2<i>C</i> |<i>D</i>(<i>t</i>)| &#60; 2<i>C&#948;</i> for <img src="../images/in227_6.png" alt="image"/>. Furthermore, <i>G</i>* is computable in <i>O</i>(1) time.</p>
+<p class="indent">Its Fourier transform is <img src="../images/in227_7.png" alt="image"/>. By Claim D.1 we have for <img src="../images/in227_8.png" alt="image"/> that <img src="../images/in227_9.png" alt="image"/>. We also have, for <img src="../images/in227_10.png" alt="image"/>, that <img src="../images/in227_11.png" alt="image"/>.</p>
+<p class="indent">Now, for <i>i</i> &#8714; [<i>n</i>] let <img src="../images/in227_12.png" alt="image"/>. By Claim D.2 it has DFT <img src="../images/in227_13.png" alt="image"/>. Furthermore,</p>
+<p class="image"><img src="../images/pg227_1.png" alt="image"/></p>
+<p class="noindent">Thus, if we let</p>
+<p class="image"><img src="../images/pg227_2.png" alt="image"/></p>
+<p class="noindent">for <img src="../images/in227_14.png" alt="image"/> and <i>G<sub>i</sub></i> = 0 otherwise, then <img src="../images/in227_15.png" alt="image"/>.</p>
+<p class="indent"><a id="page_228"/>Now, note that for integer <i>i</i> with |<i>i</i>| &#8804; <i>n</i>/2,</p>
+<p class="image"><img src="../images/pg228_1.png" alt="image"/></p>
+<p class="noindent">by Claim D.1, as long as</p>
+<p class="eqn"><a id="eqD_1"/><img src="../images/eqD_1.png" alt="image"/></p>
+<p class="noindent">Let</p>
+<p class="image"><img src="../images/pg228_2.png" alt="image"/></p>
+<p class="noindent">where <img src="../images/in228_1.png" alt="image"/> computes cdf (<i>t</i>) to precision &#177;<i>&#948;</i> in <i>O</i>(log(1/<i>&#948;</i>)) time, as per Claim D.1. Then <img src="../images/in228_2.png" alt="image"/>. Hence,</p>
+<p class="image"><img src="../images/pg228_3.png" alt="image"/></p>
+<p class="noindent">Replacing <i>&#948;</i> by <i>&#948;/n</i> and plugging in <img src="../images/in228_3.png" alt="image"/> and <i>C</i> = (1 &#8722; <i>&#945;</i>/2)/(2<i>B</i>) &#60; 1, we have the required properties of flat window functions:</p>
+<p class="bullt">&#8226;&#160;&#160;<img src="../images/in228_4.png" alt="image"/></p>
+<p class="bull">&#8226;&#160;&#160;<img src="../images/in228_5.png" alt="image"/></p>
+<p class="bull">&#8226;&#160;&#160;<img src="../images/in228_6.png" alt="image"/></p>
+<p class="bull"><a id="page_229"/>&#8226;&#160;&#160;<img src="../images/in229_1.png" alt="image"/> for all <i>i</i>.</p>
+<p class="bull">&#8226;&#160;&#160;<img src="../images/in229_1a.png" alt="image"/></p>
+<p class="bull">&#8226;&#160;&#160;We can compute <i>G</i> over its entire support in <img src="../images/in229_2.png" alt="image"/> total time.</p>
+<p class="bull">&#8226;&#160;&#160;For any <img src="../images/in229_3.png" alt="image"/> can be computed in <i>O</i>(log(<i>n/&#948;</i>)) time for |<i>i</i>| &#8714; [(1 &#8211; <i>&#945;</i>)<i>n</i>/(2<i>B</i>), <i>n</i>/(2<i>B</i>)] and <i>O</i>(1) time otherwise.</p>
+<p class="noindentt">The only requirement was Equation (D.1), which is that</p>
+<p class="image"><img src="../images/pg229_1.png" alt="image"/></p>
+<p class="noindent">This holds if <i>B</i> &#8805; 2. The <i>B</i> = 1 case is trivial using the constant function <img src="../images/in229_4.png" alt="image"/>. &#9632;</p>
+</body>
+</html>

@@ -1,0 +1,163 @@
+text_annotations {
+  locale: "und"
+  description: "La\n"
+  bounding_poly {
+    vertices {
+      x: 299
+      y: 54
+    }
+    vertices {
+      x: 311
+      y: 54
+    }
+    vertices {
+      x: 311
+      y: 63
+    }
+    vertices {
+      x: 299
+      y: 63
+    }
+  }
+}
+text_annotations {
+  description: "La"
+  bounding_poly {
+    vertices {
+      x: 312
+      y: 64
+    }
+    vertices {
+      x: 300
+      y: 64
+    }
+    vertices {
+      x: 300
+      y: 56
+    }
+    vertices {
+      x: 312
+      y: 56
+    }
+  }
+}
+full_text_annotation {
+  pages {
+    width: 600
+    height: 135
+    blocks {
+      bounding_box {
+        vertices {
+          x: 312
+          y: 64
+        }
+        vertices {
+          x: 300
+          y: 64
+        }
+        vertices {
+          x: 300
+          y: 56
+        }
+        vertices {
+          x: 312
+          y: 56
+        }
+      }
+      paragraphs {
+        bounding_box {
+          vertices {
+            x: 312
+            y: 64
+          }
+          vertices {
+            x: 300
+            y: 64
+          }
+          vertices {
+            x: 300
+            y: 56
+          }
+          vertices {
+            x: 312
+            y: 56
+          }
+        }
+        words {
+          bounding_box {
+            vertices {
+              x: 312
+              y: 64
+            }
+            vertices {
+              x: 300
+              y: 64
+            }
+            vertices {
+              x: 300
+              y: 56
+            }
+            vertices {
+              x: 312
+              y: 56
+            }
+          }
+          symbols {
+            bounding_box {
+              vertices {
+                x: 312
+                y: 64
+              }
+              vertices {
+                x: 307
+                y: 64
+              }
+              vertices {
+                x: 307
+                y: 56
+              }
+              vertices {
+                x: 312
+                y: 56
+              }
+            }
+            text: "L"
+            confidence: 0.6600000262260437
+          }
+          symbols {
+            property {
+              detected_break {
+                type_: LINE_BREAK
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 305
+                y: 64
+              }
+              vertices {
+                x: 300
+                y: 64
+              }
+              vertices {
+                x: 300
+                y: 56
+              }
+              vertices {
+                x: 305
+                y: 56
+              }
+            }
+            text: "a"
+            confidence: 0.11999999731779099
+          }
+          confidence: 0.38999998569488525
+        }
+        confidence: 0.38999998569488525
+      }
+      block_type: TEXT
+      confidence: 0.38999998569488525
+    }
+  }
+  text: "La\n"
+}

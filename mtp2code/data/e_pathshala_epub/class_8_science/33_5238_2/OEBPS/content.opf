@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="bookid" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta name="generator" content="Adobe InDesign" />
+    <dc:date>2019-05-08</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2019-06-03T13:01:31Z</meta>
+    <dc:identifier id="bookid">urn:uuid:ebd35ca9-4faf-4218-8844-934b46cd651d</dc:identifier>
+    <meta name="Sigil version" content="0.9.10" />
+    <meta name="cover" content="Capture.JPG" />
+  </metadata>
+  <manifest>
+    <item id="ch2" href="Text/ch2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="toc" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="ch2.css" href="Styles/ch2.css" media-type="text/css"/>
+    <item id="Wingdings-Regular.ttf" href="Fonts/Wingdings-Regular.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="x02_fmt.png" href="Images/02_fmt.png" media-type="image/png"/>
+    <item id="x0854CH2_fmt.png" href="Images/0854CH2_fmt.png" media-type="image/png"/>
+    <item id="x2_5_a_fmt.png" href="Images/2_5_a_fmt.png" media-type="image/png"/>
+    <item id="x2_5_b_fmt.png" href="Images/2_5_b_fmt.png" media-type="image/png"/>
+    <item id="x2-010.jpg" href="Images/2-010.jpg" media-type="image/jpeg"/>
+    <item id="x2-011.jpg" href="Images/2-011.jpg" media-type="image/jpeg"/>
+    <item id="x2-029.jpg" href="Images/2-029.jpg" media-type="image/jpeg"/>
+    <item id="x3.3.PNG" href="Images/3.3.PNG" media-type="image/png"/>
+    <item id="x8.png" href="Images/8.png" media-type="image/png"/>
+    <item id="x2416.png" href="Images/2416.png" media-type="image/png"/>
+    <item id="Capture8.PNG" href="Images/Capture8.PNG" media-type="image/png"/>
+    <item id="column.png" href="Images/column.png" media-type="image/png"/>
+    <item id="Edward_Jenner_fmt.jpeg" href="Images/Edward%20Jenner_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="img.png" href="Images/img.png" media-type="image/png"/>
+    <item id="Louis_Pasteur_fmt.png" href="Images/Louis%20Pasteur_fmt.png" media-type="image/png"/>
+    <item id="mosquito_NEW_fmt.jpeg" href="Images/mosquito_NEW_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="robert_koch_fmt.jpeg" href="Images/robert%20koch_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="tb21.png" href="Images/tb21.png" media-type="image/png"/>
+    <item id="Capture.JPG" href="Images/Capture.JPG" media-type="image/jpeg" properties="cover-image"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="ch2"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="bookid" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign" name="generator" />
+    <dc:date>2019-05-12</dc:date>
+    <dc:language>en-US</dc:language>
+    <meta property="dcterms:modified">2019-06-03T12:45:51Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta content="0.9.10" name="Sigil version" />
+    <meta name="cover" content="fesc1cc.jpg" />
+  </metadata>
+  <manifest>
+    <item id="Chapter-11" href="Text/Chapter-11.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="toc" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="Chapter-11.css" href="Styles/Chapter-11.css" media-type="text/css"/>
+    <item id="Bookman-Light.TTF" href="Fonts/Bookman-Light.TTF" media-type="application/x-font-ttf"/>
+    <item id="Bookman-LightItalic.TTF" href="Fonts/Bookman-LightItalic.TTF" media-type="application/x-font-ttf"/>
+    <item id="Wingdings-Regular.ttf" href="Fonts/Wingdings-Regular.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="x0652-ch-11_fmt.jpeg" href="Images/0652%20ch%2011_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x11.12_fmt.png" href="Images/11.12_fmt.png" media-type="image/png"/>
+    <item id="x1181.png" href="Images/1181.png" media-type="image/png"/>
+    <item id="x1195.png" href="Images/1195.png" media-type="image/png"/>
+    <item id="x11_01_observing-object_fmt.jpeg" href="Images/11_01_observing%20object_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x11_02_shadow-of-a-obje_fmt.jpeg" href="Images/11_02_shadow%20of%20a%20obje_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x11_03_screen_shadow_fmt.jpeg" href="Images/11_03_screen_shadow_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x11_04_Shadow_hidden-in_fmt.jpeg" href="Images/11_04_Shadow_hidden%20in_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x11_04_Shadow_hidden-i_fmt1.jpeg" href="Images/11_04_Shadow_hidden%20i_fmt1.jpeg" media-type="image/jpeg"/>
+    <item id="x11_05_a_sliding-pinhol_fmt.jpeg" href="Images/11_05_a_sliding%20pinhol_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x11_05_b_sliding-pinhol_fmt.jpeg" href="Images/11_05_b_sliding%20pinhol_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x11_05_c_sliding-pinhol_fmt.jpeg" href="Images/11_05_c_sliding%20pinhol_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x11_06_natural_pinhole__fmt.jpeg" href="Images/11_06_natural_pinhole__fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x11_07_a_looking_throug_fmt.jpeg" href="Images/11_07_a_looking_throug_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x11_07_b_looking_throug_fmt.jpeg" href="Images/11_07_b_looking_throug_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x11_09_light_travelling_fmt.jpeg" href="Images/11_09_light_travelling_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x11_10_fmt.jpeg" href="Images/11_10_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x1212.png" href="Images/1212.png" media-type="image/png"/>
+    <item id="x1272.png" href="Images/1272.png" media-type="image/png"/>
+    <item id="x12_08_mirror_reflectio_fmt.jpeg" href="Images/12_08_mirror_reflectio_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x1367.png" href="Images/1367.png" media-type="image/png"/>
+    <item id="boojho_paheli_02_fmt.jpeg" href="Images/boojho_paheli_02_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="periscope_1_fmt.jpeg" href="Images/periscope_1_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="sum_fmt.jpeg" href="Images/sum_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="fesc1cc.jpg" href="Images/fesc1cc.jpg" media-type="image/jpeg" properties="cover-image"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    <item id="x11.1.png" href="Images/11.1.png" media-type="image/png"/>
+    <item id="x11.2.png" href="Images/11.2.png" media-type="image/png"/>
+    <item id="x11.3.png" href="Images/11.3.png" media-type="image/png"/>
+    <item id="x11.4.png" href="Images/11.4.png" media-type="image/png"/>
+    <item id="x11.5.png" href="Images/11.5.png" media-type="image/png"/>
+    <item id="x11.6.png" href="Images/11.6.png" media-type="image/png"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Chapter-11"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

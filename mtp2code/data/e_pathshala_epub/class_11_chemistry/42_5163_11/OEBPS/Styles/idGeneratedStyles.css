@@ -1,0 +1,494 @@
+html, body {
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body {
+font-size:100%;
+line-height:150%;
+padding:2%;
+text-align:justify;
+}
+
+* {
+margin:0;
+padding:0;
+}
+/* Chapter Name */
+h2
+{
+color:#fff;
+font-size:1.5em;
+background:rgb(47,49,146);
+padding:10px;
+}
+/* Chapter number */
+.Chapter number, h1
+{
+color:#FF0000;
+font-size:1.3em;
+}
+/* Concept Heading */
+.ConceptHeading, h3
+{
+color:#00AEEF;
+font-size:1.3em;
+font-weight:bold;
+margin-top:20px;
+text-transform:uppercase;
+}
+.ConceptHeading1
+{
+color:#00AEEF;
+font-size:1.3em;
+font-weight:bold;
+margin-top:20px;
+}
+/* Sub Heading */
+.SubHeading, h4
+{
+color:#00AEEF;
+font-size:1.1em;
+font-weight:bold;
+}
+.table_head {
+color:#00AEEF;
+font-size:1em;
+font-weight:bold;
+}
+/* Sub Heading 2*/
+.SubHeading2
+{
+color:#d1640f;
+font-size:1em;
+font-weight:bold;
+}
+/* if Mathematics or science book use */
+#MathSc img
+{
+	position:relative;
+	top:15px;
+}
+#MathSc .img1
+{
+	position:relative;
+	top:-4px;
+}
+#MathSc .img2
+{
+	position:relative;
+	top:-2px;
+}
+#MathSc .img3
+{
+	position:relative;
+	top:10px;
+}
+#MathSc .img4
+{
+	position:relative;
+	top:10px;
+}
+#MathSc .img5
+{
+	position:relative;
+	top:10px;
+}
+#MathSc .img6
+{
+	position:relative;
+	top:9px;
+}
+#MathSc .img7
+{
+	position:relative;
+	top:10px;
+}
+#MathSc .img8
+{
+	position:relative;
+	top:20px;
+}
+#MathSc .img9
+{
+	position:relative;
+	top:10px;
+}
+#MathSc .img_wid
+{
+	margin-left: auto;
+    margin-right: auto;
+	display: block;
+	width:95%;
+}
+img{
+max-width:100%;
+}
+.tdpurple{
+background-color:rgb(224,222,239);
+}
+.tdyellow{
+background-color:rgb(255,228,184);
+}
+.clear
+{
+	clear:both;
+}
+.Obj{
+color:rgb(47,49,146);
+font-size:1.3em;
+}
+.blue{
+	color: #00AEEF;
+}
+
+.englishMeaningblue{
+	font-size:0.9em;
+	font-family:Arial, Helvetica, sans-serif;
+	color: #fff;
+}
+.red{
+	color: #FF0000;
+}
+/* Hightlisght Boxes */
+.NewWordBox{
+background-color:#F7E7BD;
+padding: 15px;
+font-size:0.9em;
+line-height:120%;
+}
+.activityBox{
+background-color:#cce7d3;
+padding: 15px;
+font-size:0.9em;
+line-height:120%;
+border:2px solid rgb(0,166,80);
+}
+.activityBox1{
+background-color:#F8C1D9;
+padding: 15px;
+line-height:120%;
+border-top:2px solid rgb(147,149,152);
+border-bottom:2px solid rgb(147,149,152);
+}
+.activityBox2{
+background-color:#cce7d3;
+padding: 15px;
+line-height:120%;
+border:2px solid rgb(0,166,80);
+}
+.activityBox3{
+background-color:#cce7d3;
+padding: 15px;
+line-height:120%;
+border-top:2px solid rgb(0,166,80);
+border-bottom:2px solid rgb(0,166,80);
+}
+.activityBox4{
+background-color:#cce7d3;
+padding: 15px;
+line-height:120%;
+border:2px solid #000;
+}
+/* Hightlight Boxes Heading : CSS given directly to <b> tag*/
+.NewWordBox b, .activityBox b, .box b 
+{
+	font-weight:bold;
+	font-size:1.2em;
+}
+/* Hightlight Boxes Sub Heading */
+.NewWordBox .Subheading, .activityBox .Subheading, .box .Subheading 
+{
+	font-weight:bold;
+	font-size:1em;
+}
+
+.img_lft{
+float:left;
+clear:both;
+}
+.img_rt{
+float:right;
+clear:both;
+}
+table
+{
+    width:100%;
+    border:1px solid #000;
+    border-collapse:collapse;
+}
+td
+{
+    padding:10px;
+    border:1px solid #000;
+    border-collapse:collapse;
+}
+span.char-style-override-1 {
+	color:#2e3192;
+}
+span.char-style-override-2{
+	color:#00aeef;
+}
+  .line{
+border-bottom:5px solid #00AEEF;
+}
+
+.char-style-override-7{
+	color:#00aeef;
+	font-weight:bold;
+}
+
+p.para-style-override-10, p.para-style-override-16, .char-style-override-44, .char-style-override-39{
+	color:#00aeef;
+}
+.char-style-override-43{
+	color:#00aeef;
+	font-style:italic;
+}
+.char-style-override-14{
+font-style:italic;
+font-weight:bold;
+}
+.char-style-override-4, .char-style-override-6, .char-style-override-48
+{
+	font-weight:bold;
+}
+span.char-style-override-12, span.char-style-override-27, span.char-style-override-31, span.char-style-override-33, span.char-style-override-40, span.char-style-override-49, span.char-style-override-50, span.char-style-override-59 , span.char-style-override-60, span.char-style-override-62, span.char-style-override-68, .char-style-override-31 {
+	font-size:0.8em;
+	vertical-align:super;
+}
+span.char-style-override-20, span.char-style-override-26, span.char-style-override-35, span.char-style-override-39, span.char-style-override-52, span.char-style-override-56, span.char-style-override-61, span.char-style-override-63, span.char-style-override-8  {
+	font-size:0.8em;
+	vertical-align:sub;
+}
+.char-style-override-8, .char-style-override-20
+{
+	font-style:italic;
+}
+.char-style-override-13
+{
+	font-weight:bold;
+}
+.image {
+text-align:center;
+}
+
+.subjectHead {
+text-align:right;
+text-transform:uppercase;
+font-size:150%;
+margin-bottom:3%;
+color:rgb(222,118,28);
+}
+
+.chapterText {
+font-size:130%;
+}
+
+.mainHead {
+font-size:120%;
+font-weight:bold;
+margin:2% 0;
+}
+
+.activity {
+font-size:120%;
+color:rgb(0, 174, 239);
+margin:2% 0;
+}
+
+.endnote {
+font-size:95%;
+padding:2%;
+}
+
+.questions {
+font-size:125%;
+margin:2% 0;
+color:rgb(222,118,28);
+}
+
+.exercises {
+color:rgb(46, 49, 146);
+font-size:115%;
+margin:2% 0;
+}
+.center {
+	text-align: center;
+}
+
+.excercise {
+text-transform:uppercase;
+font-weight:bold;
+margin:1% 0%;
+}
+
+
+.img
+{
+	margin-left: auto;
+    margin-right: auto;
+	display: block;
+	width:60%;
+}
+ul
+{
+	margin-left:45px;
+}
+.caption, .figure
+{
+	font-style: italic; 
+	font-size: 0.83em; 
+	color: #4D4D4D;
+	text-align:center;
+}
+.note
+{
+	font-style: italic; 
+	font-size: 0.83em; 
+	color: #4D4D4D;
+}
+p
+{
+	margin-top:10px;
+}
+
+.footer
+{
+	display:none;
+}
+table td
+{
+	padding:10px;
+}
+.conc
+{
+	color:#006699;
+}
+div.layout
+{
+  text-align: center;
+}
+div.chapter_pos
+
+{
+
+text-align: center;
+
+width: 96%;
+
+position:absolute;
+
+top:40%;
+
+font-weight:bold;
+
+font-size:28px;
+
+color:#fff;
+
+}
+
+div.chapter_pos div
+
+{
+
+background:#9A3334;
+
+padding:10px;
+
+width:40%;
+
+margin:auto;
+opacity:0.9;
+
+}
+
+div.chapter_pos div span
+
+{
+
+font-size:0.7em;
+
+color:#eaeaea;
+
+font-weight:normal;
+
+}
+
+.bold
+{
+	font-weight:bold;
+}
+.cover_img_small
+
+{
+
+width:50%;
+
+}
+@media only screen and (max-width: 767px) {
+
+
+div.chapter_pos
+
+
+{
+
+top:20%;
+
+font-size:1em;
+
+}
+
+div.chapter_pos div
+
+
+{
+
+width:70%;
+
+}
+
+.cover_img_small
+
+{
+
+width:90%;
+
+}
+
+  
+ 
+}
+body {
+font-family:"Arial";
+font-size:100%;
+line-height:150%;
+padding:2%;
+text-align:justify;
+}
+#prelims
+{
+	line-height:200%;
+}
+#prelims .char-style-override-18
+{
+	font-weight:bold;
+}
+#prelims .heading
+{
+	font-size: 1.667em; 
+	color:#00aeef;
+}
+#prelims .char-style-override-201
+{
+	font-style:italic;
+}
+#prelims .subheading
+{
+	
+	color:#00aeef;
+}
+
+
+

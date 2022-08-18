@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package unique-identifier="bookid" version="3.0" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign" name="generator"/>
+    <dc:date>2020-06-08</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2021-01-22T12:40:14Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta content="0.9.3" name="Sigil version"/>
+    <meta name="cover" content="lebo1cc.jpg"/>
+  </metadata>
+  <manifest>
+    <item href="Text/Chapter-9.xhtml" id="Chapter-9.xhtml" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="Styles/ch9.css" id="ch9.css" media-type="text/css"/>
+    <item href="Fonts/BookmanOldStyle-Bold.TTF" id="BookmanOldStyle-Bold.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/BookmanOldStyle-BoldItalic.TTF" id="BookmanOldStyle-BoldItalic.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/CenturyGothic.TTF" id="CenturyGothic.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Images/1047.png" id="x1047.png" media-type="image/png"/>
+    <item href="Images/1068.png" id="x1068.png" media-type="image/png"/>
+    <item href="Images/1069.png" id="x1069.png" media-type="image/png"/>
+    <item href="Images/1070.png" id="x1070.png" media-type="image/png"/>
+    <item href="Images/1071.png" id="x1071.png" media-type="image/png"/>
+    <item href="Images/1072.png" id="x1072.png" media-type="image/png"/>
+    <item href="Images/1073.png" id="x1073.png" media-type="image/png"/>
+    <item href="Images/1074.png" id="x1074.png" media-type="image/png"/>
+    <item href="Images/1075.png" id="x1075.png" media-type="image/png"/>
+    <item href="Images/1090.png" id="x1090.png" media-type="image/png"/>
+    <item href="Images/1091.png" id="x1091.png" media-type="image/png"/>
+    <item href="Images/1098.png" id="x1098.png" media-type="image/png"/>
+    <item href="Images/1099.png" id="x1099.png" media-type="image/png"/>
+    <item href="Images/12083CH09_fmt.png" id="x12083CH09_fmt.png" media-type="image/png"/>
+    <item href="Images/1page_fmt.png" id="x1page_fmt.png" media-type="image/png"/>
+    <item href="Images/820.png" id="x820.png" media-type="image/png"/>
+    <item href="Images/821.png" id="x821.png" media-type="image/png"/>
+    <item href="Images/822.png" id="x822.png" media-type="image/png"/>
+    <item href="Images/823.png" id="x823.png" media-type="image/png"/>
+    <item href="Images/824.png" id="x824.png" media-type="image/png"/>
+    <item href="Images/851.png" id="x851.png" media-type="image/png"/>
+    <item href="Images/9.3a_fmt.png" id="x9.3a_fmt.png" media-type="image/png"/>
+    <item href="Images/9.3b_fmt.png" id="x9.3b_fmt.png" media-type="image/png"/>
+    <item href="Images/9.3c_fmt.png" id="x9.3c_fmt.png" media-type="image/png"/>
+    <item href="Images/908.png" id="x908.png" media-type="image/png"/>
+    <item href="Images/909.png" id="x909.png" media-type="image/png"/>
+    <item href="Images/919.png" id="x919.png" media-type="image/png"/>
+    <item href="Images/960.png" id="x960.png" media-type="image/png"/>
+    <item href="Images/mulea_fmt.png" id="mulea_fmt.png" media-type="image/png"/>
+    <item href="Images/summery_fmt.png" id="summery_fmt.png" media-type="image/png"/>
+    <item href="Images/lebo1cc.jpg" id="lebo1cc.jpg" media-type="image/jpeg" properties="cover-image"/>
+    <item href="Text/cover.xhtml" id="cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    <item href="Styles/sgc-toc.css" id="sgc-toc.css" media-type="text/css"/>
+    <item href="Text/TOC.xhtml" id="TOC.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Chapter-9.xhtml"/>
+    <itemref idref="TOC.xhtml"/>
+  </spine>
+  <guide>
+    <reference href="Text/cover.xhtml" title="Cover" type="cover"></reference>
+    <reference href="Text/TOC.xhtml" title="Table Of Contents" type="toc"></reference>
+  </guide>
+</package>

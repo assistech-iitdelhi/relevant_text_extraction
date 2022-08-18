@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="en-US">
+<head>
+<meta name="dtb:uid" content="978-1-4503-8484-1"/>
+<meta name="dtb:depth" content="2"/>
+<meta name="dtb:totalPageCount" content="164"/>
+<meta name="dtb:maxPageNumber" content="164"/>
+</head>
+<docTitle><text>Event Mining for Explanatory Modeling</text></docTitle>
+<docAuthor><text>Laleh Jalali and Ramesh Jain</text></docAuthor>
+<navMap>
+<navPoint id="nav1" playOrder="1"><navLabel><text>Cover</text></navLabel><content src="xhtml/cover.xhtml"/></navPoint>
+<navPoint id="nav2" playOrder="2"><navLabel><text>Halftitle</text></navLabel><content src="xhtml/front.xhtml"/></navPoint>
+<navPoint id="nav3" playOrder="3"><navLabel><text>Title Page</text></navLabel><content src="xhtml/title.xhtml"/></navPoint>
+<navPoint id="nav4" playOrder="4"><navLabel><text>Copyright Page</text></navLabel><content src="xhtml/copy.xhtml"/></navPoint>
+<navPoint id="nav5" playOrder="5"><navLabel><text>Contents</text></navLabel><content src="xhtml/toc.xhtml"/></navPoint>
+<navPoint id="nav6" playOrder="6"><navLabel><text>Preface</text></navLabel><content src="xhtml/preface.xhtml"/></navPoint>
+<navPoint id="nav7" playOrder="7"><navLabel><text>Chapter 1 Introduction</text></navLabel><content src="xhtml/b_9781450384827-chapter-001.xhtml"/>
+<navPoint id="nav8" playOrder="8"><navLabel><text>1.1 Correlation is the Mother of Causality</text></navLabel><content src="xhtml/b_9781450384827-chapter-001.xhtml#b_9781450384827-001_s_001"/></navPoint>
+<navPoint id="nav9" playOrder="9"><navLabel><text>1.2 Explanatory Modeling versus Predictive Modeling</text></navLabel><content src="xhtml/b_9781450384827-chapter-001.xhtml#b_9781450384827-001_s_002"/></navPoint>
+<navPoint id="nav10" playOrder="10"><navLabel><text>1.3 Logs are the Source of Knowledge</text></navLabel><content src="xhtml/b_9781450384827-chapter-001.xhtml#b_9781450384827-001_s_003"/></navPoint>
+<navPoint id="nav11" playOrder="11"><navLabel><text>1.4 From Logs to Chronicles to Models</text></navLabel><content src="xhtml/b_9781450384827-chapter-001.xhtml#b_9781450384827-001_s_004"/></navPoint>
+<navPoint id="nav12" playOrder="12"><navLabel><text>1.5 The Importance of an Event Language for Explanatory Modeling</text></navLabel><content src="xhtml/b_9781450384827-chapter-001.xhtml#b_9781450384827-001_s_005"/></navPoint>
+</navPoint>
+<navPoint id="nav13" playOrder="13"><navLabel><text>Chapter 2 Think Events: From Signals to Events</text></navLabel><content src="xhtml/b_9781450384827-chapter-002.xhtml"/>
+<navPoint id="nav14" playOrder="14"><navLabel><text>2.1 Events in the Human World</text></navLabel><content src="xhtml/b_9781450384827-chapter-002.xhtml#b_9781450384827-002_s_001"/></navPoint>
+<navPoint id="nav15" playOrder="15"><navLabel><text>2.2 Events in the Cyber World</text></navLabel><content src="xhtml/b_9781450384827-chapter-002.xhtml#b_9781450384827-002_s_002"/></navPoint>
+<navPoint id="nav16" playOrder="16"><navLabel><text>2.3 Why an Event Model?</text></navLabel><content src="xhtml/b_9781450384827-chapter-002.xhtml#b_9781450384827-002_s_003"/></navPoint>
+<navPoint id="nav17" playOrder="17"><navLabel><text>2.4 An Overview of Event Models</text></navLabel><content src="xhtml/b_9781450384827-chapter-002.xhtml#b_9781450384827-002_s_004"/></navPoint>
+</navPoint>
+<navPoint id="nav18" playOrder="18"><navLabel><text>Chapter 3 Event Mining and Pattern Discovery</text></navLabel><content src="xhtml/b_9781450384827-chapter-003.xhtml"/>
+<navPoint id="nav19" playOrder="19"><navLabel><text>3.1 An Example of Asthma Risk Factor Patterns</text></navLabel><content src="xhtml/b_9781450384827-chapter-003.xhtml#b_9781450384827-003_s_001"/></navPoint>
+<navPoint id="nav20" playOrder="20"><navLabel><text>3.2 Temporal Knowledge Representation</text></navLabel><content src="xhtml/b_9781450384827-chapter-003.xhtml#b_9781450384827-003_s_002"/></navPoint>
+<navPoint id="nav21" playOrder="21"><navLabel><text>3.3 Temporal Data Prediction</text></navLabel><content src="xhtml/b_9781450384827-chapter-003.xhtml#b_9781450384827-003_s_003"/></navPoint>
+<navPoint id="nav22" playOrder="22"><navLabel><text>3.4 Pattern Discovery</text></navLabel><content src="xhtml/b_9781450384827-chapter-003.xhtml#b_9781450384827-003_s_004"/></navPoint>
+<navPoint id="nav23" playOrder="23"><navLabel><text>3.5 Different Types of Patterns</text></navLabel><content src="xhtml/b_9781450384827-chapter-003.xhtml#b_9781450384827-003_s_005"/></navPoint>
+<navPoint id="nav24" playOrder="24"><navLabel><text>3.6 Revisiting Asthma Risk Factor Patterns</text></navLabel><content src="xhtml/b_9781450384827-chapter-003.xhtml#b_9781450384827-003_s_006"/></navPoint>
+</navPoint>
+<navPoint id="nav25" playOrder="25"><navLabel><text>Chapter 4 Design Principles of Event Mining Systems</text></navLabel><content src="xhtml/b_9781450384827-chapter-004.xhtml"/>
+<navPoint id="nav26" playOrder="26"><navLabel><text>4.1 Data Fusion and Transformation</text></navLabel><content src="xhtml/b_9781450384827-chapter-004.xhtml#b_9781450384827-004_s_001"/></navPoint>
+<navPoint id="nav27" playOrder="27"><navLabel><text>4.2 Extensibility and Reusability</text></navLabel><content src="xhtml/b_9781450384827-chapter-004.xhtml#b_9781450384827-004_s_002"/></navPoint>
+<navPoint id="nav28" playOrder="28"><navLabel><text>4.3 Interactive Process</text></navLabel><content src="xhtml/b_9781450384827-chapter-004.xhtml#b_9781450384827-004_s_003"/></navPoint>
+<navPoint id="nav29" playOrder="29"><navLabel><text>4.4 Human-centered Analysis</text></navLabel><content src="xhtml/b_9781450384827-chapter-004.xhtml#b_9781450384827-004_s_004"/></navPoint>
+<navPoint id="nav30" playOrder="30"><navLabel><text>4.5 Event Mining Architecture</text></navLabel><content src="xhtml/b_9781450384827-chapter-004.xhtml#b_9781450384827-004_s_005"/></navPoint>
+</navPoint>
+<navPoint id="nav31" playOrder="31"><navLabel><text>Chapter 5 Event Mining Applications</text></navLabel><content src="xhtml/b_9781450384827-chapter-005.xhtml"/>
+<navPoint id="nav32" playOrder="32"><navLabel><text>5.1 Healthcare and Medicine</text></navLabel><content src="xhtml/b_9781450384827-chapter-005.xhtml#b_9781450384827-005_s_001"/></navPoint>
+<navPoint id="nav33" playOrder="33"><navLabel><text>5.2 Biological Data Analysis</text></navLabel><content src="xhtml/b_9781450384827-chapter-005.xhtml#b_9781450384827-005_s_002"/></navPoint>
+<navPoint id="nav34" playOrder="34"><navLabel><text>5.3 Predictive Maintenance</text></navLabel><content src="xhtml/b_9781450384827-chapter-005.xhtml#b_9781450384827-005_s_003"/></navPoint>
+<navPoint id="nav35" playOrder="35"><navLabel><text>5.4 Business Intelligence</text></navLabel><content src="xhtml/b_9781450384827-chapter-005.xhtml#b_9781450384827-005_s_004"/></navPoint>
+<navPoint id="nav36" playOrder="36"><navLabel><text>5.5 Computer Networks</text></navLabel><content src="xhtml/b_9781450384827-chapter-005.xhtml#b_9781450384827-005_s_005"/></navPoint>
+</navPoint>
+<navPoint id="nav37" playOrder="37"><navLabel><text>Chapter 6 EventMiner Framework</text></navLabel><content src="xhtml/b_9781450384827-chapter-006.xhtml"/>
+<navPoint id="nav38" playOrder="38"><navLabel><text>6.1 Data Models and Pattern Operators</text></navLabel><content src="xhtml/b_9781450384827-chapter-006.xhtml#b_9781450384827-006_s_001"/></navPoint>
+<navPoint id="nav39" playOrder="39"><navLabel><text>6.2 Architecture</text></navLabel><content src="xhtml/b_9781450384827-chapter-006.xhtml#b_9781450384827-006_s_002"/></navPoint>
+<navPoint id="nav40" playOrder="40"><navLabel><text>6.3 Core Processing and Language Syntax</text></navLabel><content src="xhtml/b_9781450384827-chapter-006.xhtml#b_9781450384827-006_s_003"/></navPoint>
+<navPoint id="nav41" playOrder="41"><navLabel><text>6.4 Interactive Event Mining Process</text></navLabel><content src="xhtml/b_9781450384827-chapter-006.xhtml#b_9781450384827-006_s_004"/></navPoint>
+<navPoint id="nav42" playOrder="42"><navLabel><text>6.5 Case Studies with EventMiner</text></navLabel><content src="xhtml/b_9781450384827-chapter-006.xhtml#b_9781450384827-006_s_005"/>
+</navPoint>
+</navPoint>
+<navPoint id="nav43" playOrder="43"><navLabel><text>Chapter 7 Conclusion and Future Direction</text></navLabel><content src="xhtml/b_9781450384827-chapter-007.xhtml"/>
+
+</navPoint><navPoint id="nav44" playOrder="44"><navLabel><text>Bibliography</text></navLabel><content src="xhtml/bib.xhtml"/></navPoint>
+<navPoint id="nav45" playOrder="45"><navLabel><text>Authors&#x2019; Biographies</text></navLabel><content src="xhtml/auth.xhtml"/></navPoint>
+<navPoint id="nav46" playOrder="46"><navLabel><text>Index</text></navLabel><content src="xhtml/index.xhtml"/></navPoint>
+</navMap>
+</ncx>

@@ -1,0 +1,507 @@
+html, body {
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body {
+font-size:100%;
+line-height:150%;
+padding:2%;
+text-align:justify;
+}
+
+* {
+margin:0;
+padding:0;
+}
+
+.image {
+text-align:center;
+}
+
+.subjectHead {
+text-align:right;
+text-transform:uppercase;
+font-size:150%;
+margin-bottom:3%;
+color:rgb(222,118,28);
+}
+
+.chapterText {
+font-size:130%;
+}
+
+.mainHead {
+font-size:120%;
+font-weight:bold;
+
+}
+
+.activity {
+font-size:1.2em;
+color:rgb(0, 174, 239);
+
+}
+.activity1 {
+font-size:1.0em;
+color:rgb(0, 174, 239);
+font-weight:bold;
+}
+.endnote {
+font-size:95%;
+padding:2%;
+}
+
+.questions {
+font-size:125%;
+margin:2% 0;
+color:rgb(222,118,28);
+}
+
+.exercises {
+color:rgb(46, 49, 146);
+font-size:115%;
+margin:2% 0;
+}
+.center {
+	text-align: center;
+}
+
+.excercise {
+text-transform:uppercase;
+font-weight:bold;
+margin:1% 0%;
+}
+.pink_text
+{
+color:#FF0080;
+}
+.ul
+{
+	margin-left:45px;
+}
+.caption
+{
+	font-style: italic; 
+	font-size: 0.83em; 
+	color: #4D4D4D;
+	text-align:center;
+}
+/* Hightlisght Boxes */
+.NewWordBox{
+background-color:#F7E7BD;
+padding: 15px;
+font-size:0.9em;
+line-height:120%;
+}
+.activityBox{
+background-color:#C7EAFB;
+padding: 15px;
+font-size:0.9em;
+line-height:120%;
+}
+.box_b
+{
+background-color:#00AEEF;
+color:#fff;
+padding: 15px;
+font-size:1.2em;
+line-height:120%;
+}
+.box_y{
+background-color:#FFF9AE;
+padding: 15px;
+font-size:1.2em;
+line-height:120%;
+}
+.box_p{
+background-color:#D9C0DD;
+padding: 15px;
+font-size:1.2em;
+line-height:120%;
+border:2px solid #AA0078;
+}
+.lining_boxp
+{
+border:2px solid #AA0078;
+border-top:0px solid #AA0078;
+padding:15px;
+}
+.lining_boxo
+{
+background-color:#FFE4B8;
+border:2px solid #FF9900;
+border-radius:15px;
+padding:15px;
+font-size:0.9em;
+}
+.blue_box
+{
+background-color:#C7EAFB;
+padding:15px;
+font-size:0.9em;
+}
+.orange_text
+{
+font-size:1.2em;
+color:#FF9900;
+}
+.pinky_text
+{
+color:#fff;
+font-size:1.2em;
+background:#F5A3C7;
+padding:10px;
+border-radius:10px;
+z-index:1000;
+position:absolute;
+top:-10px;
+
+}
+.lining_boxpink
+{
+background-color:#FCDFEC;
+border:2px solid #FF0080;
+border-radius:15px;
+padding:15px;
+position:relative;
+z-index:100;
+padding-top:30px;
+}
+#exercise_green .pinky_text
+{
+background:#67C18C;
+
+}
+#exercise_green .lining_boxpink
+{
+background-color:#CCE7D3;
+border:2px solid #000;
+}
+#exercise_orange .pinky_text
+{
+background:#FF9900;
+
+}
+#exercise_orange .lining_boxpink
+{
+background-color:#FFE4B8;
+border:2px solid #FF9900;
+}
+/* Hightlight Boxes Heading : CSS given directly to <b> tag*/
+.NewWordBox b, .activityBox b, .box b 
+{
+	font-weight:bold;
+	font-size:1.2em;
+}
+/* Hightlight Boxes Sub Heading */
+.NewWordBox .Subheading, .activityBox .Subheading, .box .Subheading 
+{
+	font-weight:bold;
+	font-size:1em;
+}
+p{
+text-align:justify;
+}
+img
+{
+	margin-left: auto;
+    margin-right: auto;
+	display: block;
+	max-width:100%;
+}
+ul
+{
+	margin-left:45px;
+}
+.caption
+{
+	font-style: italic; 
+	font-size: 0.83em; 
+	color: #4D4D4D;
+	text-align:center;
+}
+/* Chapter Name */
+h2
+{
+color:#fff;
+font-size:1.5em;
+background:#00AEEF;
+padding:10px;
+}
+/* Chapter number */
+h4
+{
+color:#AA0078;
+font-size:1.3em;
+}
+/* Concept Heading */
+.ConceptHeading
+{
+color:#AA0078;
+font-size:1.3em;
+font-weight:bold;
+margin-top:20px;
+line-height:150%;
+text-transform:uppercase;
+}
+/* Sub Heading */
+.SubHeading
+{
+color:#666666;
+font-size:1.1em;
+line-height:150%;
+font-weight:bold;
+}
+/* Sub Heading 2*/
+.SubHeading2
+{
+color:#d1640f;
+font-size:1em;
+font-weight:bold;
+}
+/* if Mathematics or science book use */
+#MathSc img
+{
+	position:relative;
+	top:15px;
+}
+#MathSc .img1
+{
+	position:relative;
+	top:15px;
+}
+#MathSc .img2
+{
+	position:relative;
+	top:20px;
+}
+#MathSc .img3
+{
+	position:relative;
+	top:0px;
+}
+#MathSc .img_wid
+{
+	margin-left: auto;
+    margin-right: auto;
+	display: block;
+	width:95%;
+}
+.clear
+{
+	clear:both;
+}
+
+.lining_box
+{
+border:2px solid #000;
+padding:15px;
+border-radius:15px;
+}
+.note
+{
+	font-style: italic; 
+	font-size: 0.83em; 
+	color: #4D4D4D;
+}
+p
+{
+	margin-top:10px;
+}
+
+.footer
+{
+	display:none;
+}
+table td
+{
+	padding:10px;
+}
+.conc
+{
+	color:#006699;
+}
+div.layout
+{
+  text-align: center;
+}
+div.chapter_pos
+
+{
+
+text-align: center;
+
+width: 96%;
+
+position:absolute;
+line-height:150%;
+top:40%;
+
+font-weight:bold;
+
+font-size:1.5em;
+
+color:#fff;
+
+}
+
+div.chapter_pos div
+
+{
+
+background:#421C52;
+
+padding:10px;
+
+width:40%;
+
+margin:auto;
+opacity:0.9;
+
+}
+
+div.chapter_pos div span
+
+{
+
+font-size:0.7em;
+
+color:#eaeaea;
+
+font-weight:normal;
+
+}
+
+.cover_img_small
+
+{
+
+width:50%;
+
+}
+@media only screen and (max-width: 767px) {
+
+
+div.chapter_pos
+
+
+{
+
+top:30%;
+
+font-size:1em;
+
+}
+
+div.chapter_pos div
+
+
+{
+
+width:70%;
+
+
+
+}
+
+.cover_img_small
+
+{
+
+width:90%;
+
+}
+
+}
+.underline_txt
+
+{
+
+font-decoration:underline;
+
+}
+
+.bold_txt
+
+{
+
+font-weight:bold;
+
+}
+
+.center_element
+
+{
+
+margin:auto;
+
+}
+
+.italics_txt
+
+{
+
+font-style:italic;
+
+}
+
+.block_element
+
+{
+
+display:block;
+
+}
+
+.img_rt
+
+{
+
+float:right;
+
+clear:both;
+
+}
+
+.img_lft
+
+{
+
+float:left;
+
+}
+table
+{
+    width:100%;
+    border:1px solid #000;
+    border-collapse:collapse;
+}
+td
+{
+    padding:10px;
+    border:1px solid #000;
+    border-collapse:collapse;
+}
+
+#prelims
+{
+	line-height:200%;
+}
+#prelims .char-style-override-16
+{
+	font-weight:bold;
+}
+#prelims .heading
+{
+	font-size: 1.667em; 
+	color:#00aeef;
+}
+#prelims .char-style-override-2
+{
+	font-style:italic;
+}
+#prelims .subheading
+{
+	
+	color:#00aeef;
+}

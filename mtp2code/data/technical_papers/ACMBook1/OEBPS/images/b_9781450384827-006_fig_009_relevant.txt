@@ -1,0 +1,2 @@
+Figure 6.9Concurrency operator evaluates an ordinary state on first event type’s start/end followed by second event type’s start/end and checks for a non-empty temporal overlap in the second event’s evaluation phase.
+Concurrency (Ei⊥⊥Ej): As shown in Figure 6.9, this operator detects if Ei and Ej are happening in parallel. Any order between events is acceptable.

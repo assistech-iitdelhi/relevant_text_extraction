@@ -1,0 +1,173 @@
+/*------------This is for font Call ----------------- */
+html, body {
+font-family:Arial, Helvetica, sans-serif;
+}
+/*------------This is for body Call ----------------- */
+body {
+font-size:100%;
+line-height:150%;
+padding:2%;
+text-align:justify;
+}
+/*------------This is for heading Call ----------------- */
+h1
+{
+color:#fff;
+font-size:1.5em;
+background:#00BDF4;
+padding:10px;
+}
+h2
+{
+color:#00B8F1;
+font-size:1.3em;
+}
+h3
+{
+color:#00B8F1;
+font-size:1.3em;
+font-weight:bold;
+margin-top:20px;
+}
+h4
+{
+color:#00BDF4;
+font-weight:bold;
+}
+h5
+{
+color:#CC0000;
+font-size:1.1em;
+font-weight:bold;
+}
+/*------------This is for box Call ----------------- */
+.lining_box2
+{
+border:0px solid;
+background:#BEE6F3;
+padding:15px;
+border-radius:5px;
+}
+.blue-bg{
+background:#00BDF4;
+color:#FFFFFF;
+padding:5px;
+}
+/*------------This is for text decoration Call ----------------- */
+.sf1
+{
+color:#00B8F1;
+}
+.sf2
+{
+vertical-align:sub;
+font-size:0.8em;
+}
+.sf3
+{
+color: #00aeef;
+font-size: 1em;
+font-weight: bold;
+}
+.sf4
+{
+font-style:italic;
+font-weight: bold;
+color:#00B8F1;
+}
+
+.sf5
+{
+font-weight:bold;
+font-style:italic;
+}
+
+.clear
+{
+clear:both;
+}
+p
+{
+margin-top:10px;
+}
+/*------------This is for image Call ----------------- */
+img
+{
+max-width:100%;
+}
+img
+{
+vertical-align:middle;
+position:relative;
+top:-2px;
+}
+/*------------This is for table Call ----------------- */
+table
+{
+width:100%;
+border:1px solid #000;
+border-collapse:collapse;
+background: #addcf5 ;
+}
+td
+{
+padding:10px;
+border:1px solid #000;
+border-collapse:collapse;
+}
+/*------------This is for cover page Call ----------------- */
+div.layout
+{
+text-align: center;
+}
+div.chapter_pos
+{
+text-align: center;
+width: 96%;
+position:absolute;
+top:70%;
+font-weight:bold;
+font-size:28px;
+color:#fff;
+}
+div.chapter_pos div
+{
+background:#115D81;
+padding:10px;
+width:40%;
+margin:auto;
+opacity:0.9;
+}
+div.chapter_pos div span
+{
+font-size:0.7em;
+color:#eaeaea;
+font-weight:normal;
+}
+@media only screen and (max-width: 767px) {
+div.chapter_pos
+{
+font-size:0.8em;
+line-height:120%;
+top:50%;
+}
+div.chapter_pos div span
+{
+font-size:0.7em;
+}
+}
+/*------------This is for qr  Call ----------------- */
+.clear
+{
+clear:both;
+}
+img.right-img
+{
+text-align: right;
+display:inline-block;
+float:right;
+width:177px;
+}
+/*------------
+Written By Mohd Salman
+----------------- */

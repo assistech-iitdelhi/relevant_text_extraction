@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>The Sparse Fourier Transform: Theory and Practice</title>
+<link rel="stylesheet" type="text/css" href="../styles/stylesheet.css"/>
+<link rel="stylesheet" type="application/vnd.adobe-page-template+xml" href="../styles/page-template.xpgt"/>
+</head>
+<body>
+<p class="chno"><a id="page_23"/><b>2</b></p>
+<p class="chtitle"><b>Preliminaries</b></p>
+<p class="noindent">This chapter will introduce the notation and basic definitions that we will use throughout <a href="10_Part01.xhtml">Part I</a> of this book.</p>
+<p class="h1"><b><a id="ch2_1"/><span class="big">2.1</span>&#160;&#160;&#160;&#160;Notation</b></p>
+<p class="noindent">We use <i>&#969;</i> = <i>e</i><sup>&#8722;2<i>&#960;</i>i/<i>n</i></sup> as the <i>n</i>-th root of unity and <img src="../images/in23_1.png" alt="image"/> as the <img src="../images/in23_2.png" alt="image"/>-th root of unity. For any complex number <i>a</i>, we use <i>&#981;</i>(<i>a</i>) &#8714; [0, 2<i>&#960;</i>]to denote the <i>phase</i> of <i>a</i>. For a complex number <i>a</i> and a real positive number <i>b</i>, the expression <i>a</i> &#177; <i>b</i> denotes a complex number <i>a</i>&#8242; such that |<i>a</i> &#8722; <i>a</i>&#8242;| &#8804; <i>b</i>.</p>
+<p class="indent">For a vector <i>x</i> &#8714; &#8450;<sup><i>n</i></sup>, its support is denoted by supp(<i>x</i>) &#8834; [<i>n</i>]. We use ||<i>x</i>||<sub>0</sub> to denote |supp(<i>x</i>)|, the number of non-zero coordinates of <i>x</i>. Its Fourier spectrum is denoted by <i>x&#770;</i>, with</p>
+<p class="image"><img src="../images/pg23_1.png" alt="image"/></p>
+<p class="noindent">For a vector of length <i>n</i>, indices should be interpreted modulo <i>n</i>, so <i>x</i><sub>&#8722;<i>i</i></sub> = <i>x<sub>n</sub></i><sub>&#8722;<i>i</i></sub>. This allows us to define <i>convolution</i></p>
+<p class="image"><img src="../images/pg23_2.png" alt="image"/></p>
+<p class="noindent">and the <i>coordinate-wise product</i> (<i>x</i> &#183; <i>y</i>)<sub><i>i</i></sub> = <i>x<sub>i</sub>y<sub>i</sub></i>, so <img src="../images/in23_3.png" alt="image"/>.</p>
+<p class="indent">We use [<i>n</i>] to denote the set {1,&#8230;, <i>n</i>}. All operations on indices in are taken modulo <i>n</i>. Therefore we might refer to an <i>n</i>-dimensional vector as having coordinates {0, 1,&#8230;, <i>n</i> &#8722; 1} or {0, 1,&#8230;, <i>n</i>/2, &#8722; <i>n</i>/2 + 1, &#8230;, &#8722;1} interchangeably. When <i>i</i> &#8712; &#8484; is an index into an <i>n</i>-dimensional vector, sometimes we use |<i>i</i>| to denote min<sub><i>j</i>&#8801;<i>i</i> (mod <i>n</i>)</sub> |<i>j</i>|. Finally, we assume that <i>n</i> is an integer power of 2.</p>
+<p class="indent">For the case of 2D Fourier transforms which will appear in <a href="14_Chapter05.xhtml">Chapter 5</a>, we assume that <i><img src="../images/in23_2.png" alt="image"/></i> is a power of 2. We use [<i>m</i>] &#215; [<i>m</i>] = [<i>m</i>]<sup>2</sup> to denote the <i>m</i> &#215; <i>m</i> grid {(<i>i, j</i>) : <i>i</i> &#8714; [<i>m</i>], <i>j</i> &#8714; [<i>m</i>]}. For a 2D matrix <img src="../images/in23_4.png" alt="image"/>, its support is denoted by <img src="../images/in23_5.png" alt="image"/>.<a id="page_24"/>We also use ||<i>x</i>||<sub>0</sub> to denote |supp(<i>x</i>)|. Its 2D Fourier spectrum is denoted by <i>x&#770;</i>, with</p>
+<p class="image"><img src="../images/pg24_1.png" alt="image"/></p>
+<p class="noindent">Finally, if <i>y</i> is in frequency-domain, its inverse is denoted by <i>y&#780;</i>.</p>
+<p class="h1"><b><a id="ch2_2"/><span class="big">2.2</span>&#160;&#160;&#160;&#160;Basics</b></p>
+<p class="h2"><a id="ch2_2_1"/><b><span class="big1">2.2.1</span>&#160;&#160;&#160;&#160;Window Functions</b></p>
+<p class="noindent">In digital signal processing [Oppenheim et al. 1999] one defines <i>window functions</i> in the following manner.</p>
+<p class="noindentt"><b>Definition 2.1</b> We define a (<i>&#8714;, &#948;, w</i>) <i>standard window function</i> to be a symmetric vector <i>F</i> &#8712; &#8477;<sup><i>n</i></sup> with supp(<i>F</i>) &#8838; [&#8722;<i>w</i>/2, <i>w</i>/2] such that <img src="../images/in24_1.png" alt="image"/> for all <i>i</i> &#8714; [&#8722;<i>&#8714;n, &#8714;n</i>], and <img src="../images/in24_2.png" alt="image"/> for all <i>i</i> &#8713; [&#8722;<i>&#8714;n, &#8714;n</i>].</p>
+<p class="noindentt"><b>Claim 2.1</b> For any <i>&#8714;</i> and <i>&#948;</i>, there exists an <img src="../images/in24_3.png" alt="image"/> standard window function.</p>
+<p class="noindentt"><b>Proof</b> This is a well-known fact [Smith 2011]. For example, for any <i>&#8714;</i> and <i>&#948;</i>, one can obtain a standard window by taking a Gaussian with standard deviation <img src="../images/in24_4.png" alt="image"/> and truncating it at <img src="../images/in24_5.png" alt="image"/>. The Dolph-Chebyshev window function also has the claimed property but with minimal big-Oh constant [Smith 2011] (in particular, half the constant of the truncated Gaussian). &#9632;</p>
+<p class="indentt">The above definition shows that a standard window function acts like a filter, allowing us to focus on a subset of the Fourier coefficients. Ideally, however, we would like the pass region of our filter to be as flat as possible.</p>
+<p class="noindentt"><b>Definition 2.2</b> We define a (<i>&#8714;, &#8714;</i>&#8242;, <i>&#948;, &#969;</i>) <i>flat window function</i> to be a symmetric vector <i>F</i> &#8712; &#8477;<sup><i>n</i></sup> with supp(<i>F</i>) &#8838; [&#8722;<i>w</i>/2, <i>w</i>/2] such that <img src="../images/in24_6.png" alt="image"/> for all <i>i</i> &#8712; [&#8722;<i>&#8714;</i>&#8242;<i>n, &#8714;</i>&#8242;<i>n</i>] and <img src="../images/in24_2.png" alt="image"/> for all <i>i</i> &#8713; [&#8722;<i>&#8714;n, &#8714;n</i>].</p>
+<p class="indentt">A flat window function (like the one in <a href="#fig2_1">Figure 2.1</a>) can be obtained from a standard window function by convolving it with a &#8220;box car&#8221; window function, i.e., an interval. Specifically, we have the following.</p>
+<p class="noindentt"><b>Claim 2.2</b> For any <i>&#8714;, &#8714;</i>&#8242;, and <i>&#948;</i> with <i>&#8714;</i>&#8242; &#60; <i>&#8714;</i>, there exists an <img src="../images/in24_7.png" alt="image"/> flat window function.</p>
+<p class="indentt">Note that in our applications we have <i>&#948;</i> &#60; 1/<i>n</i><sup><i>O</i>((1)</sup> and <i>&#8714;</i> = 2<i>&#8714;</i>&#8242;. Thus the window lengths <i>w</i> of the flat window function and the standard window function are the same up to a constant factor.</p>
+<div class="cap">
+<p class="image"><a id="page_25"/><a id="fig2_1"/><img src="../images/fig2_1.png" alt="image"/></p>
+<p class="figcaption"><b>Figure 2.1</b> An example flat window function for <i>n</i> = 256. This is the sum of 31 adjacent (1/22, 10<sup>&#8722;8</sup>, 133) Dolph-Chebyshev window functions, giving a (0.11, 0.06, 2 &#215; 10<sup>&#8722;9</sup>, 133) flat window function (although our proof only guarantees a tolerance <i>&#948;</i> = 29 &#215; 10<sup>&#8722;8</sup>, the actual tolerance is better). The top row shows <i>G</i> and <img src="../images/in25_1.png" alt="image"/> in a linear scale, and the bottom row shows the same with a log scale.</p>
+</div>
+<p class="noindentt"><b>Proof</b> Let <i>f</i> = (<i>&#8714;</i> &#8722; <i>&#8714;</i>&#8242;)/2, and let <i>F</i> be an <img src="../images/in25_7.png" alt="image"/> standard window function with minimal <img src="../images/in25_2.png" alt="image"/>. We can assume <i>&#8714;, &#8714;</i>&#8242; &#62; 1/(2<i>n</i>) (because [&#8722;<i>&#8714;n, &#8714;n</i>] = {0} otherwise), so <img src="../images/in25_3.png" alt="image"/>. Let <img src="../images/in25_4.png" alt="image"/> be the sum of 1 + 2(<i>&#8714;</i>&#8242; + <i>f</i>)<i>n</i> adjacent copies of <img src="../images/in25_5.png" alt="image"/>, normalized to <img src="../images/in25_6.png" alt="image"/>. That is, we define</p>
+<p class="image"><img src="../images/pg25_1.png" alt="image"/></p>
+<p class="noindent"><a id="page_26"/>so by the shift theorem, in the time domain</p>
+<p class="image"><img src="../images/pg26_1.png" alt="image"/></p>
+<p class="indent">Since <img src="../images/in26_1.png" alt="image"/> for |<i>i</i>| &#8804; <i>fn</i>, the normalization factor <img src="../images/in26_2.png" alt="image"/> is at least 1. For each <i>i</i> &#8712; [&#8722;<i>&#8714;</i>&#8242;<i>n, &#8714;</i>&#8242;<i>n</i>], the sum on top contains all the terms from the sum on bottom. The other 2<i>&#8714;</i>&#8242;<i>n</i> terms in the top sum have magnitude at most <i>&#948;</i>/((<i>&#8714;</i>&#8242; + <i>&#8714;</i>)<i>n</i>) = <i>&#948;</i>/(2(<i>&#8714;</i>&#8242; + <i>f</i>)<i>n</i>), so <img src="../images/in26_3.png" alt="image"/>. For |<i>i</i>| &#62; <i>&#8714;n</i>, however, <img src="../images/in26_4.png" alt="image"/>. Thus <i>F</i>&#8242; is an (<i>&#8714;, &#8714;</i>&#8242;, <i>&#948;, w</i>) flat window function, with the correct <i>w</i>. &#9632;</p>
+<p class="h2"><a id="ch2_2_2"/><b><span class="big1">2.2.2</span>&#160;&#160;&#160;&#160;Permutation of Spectra</b></p>
+<p class="noindent">Following Gilbert et al. [2005a], we can permute the Fourier spectrum as follows by permuting the time domain:</p>
+<p class="noindentt"><b>Definition 2.3</b> Suppose <i>&#963;</i><sup>&#8722;1</sup> exists mod <i>n</i>. We define the <i>permutation P</i><sub><i>&#963;, a, b</i></sub> by</p>
+<p class="image"><img src="../images/pg26_2.png" alt="image"/></p>
+<p class="indent">We also define <i>&#960;<sub>&#963;</sub></i>, <sub><i>b</i></sub>(<i>i</i>) = <i>&#963;</i>(<i>i</i> &#8722; <i>b</i>) mod <i>n</i>.</p>
+<p class="noindentt"><b>Claim 2.3</b> <img src="../images/pg26_3.png" alt="image"/>.</p>
+<p class="noindentt"><b>Proof</b></p>
+<p class="image"><img src="../images/pg26_4.png" alt="image"/></p>
+<p class="noindentt"><b>Lemma 2.1</b> If <i>j</i> &#8800; 0, <i>n</i> is a power of two, and <i>&#963;</i> is a uniformly random odd number in [<i>n</i>], then Pr[<i>&#963;j</i> &#8714; [&#8722;<i>C, C</i>]] &#8804; 4<i>C</i>/<i>n</i>.</p>
+<p class="noindentt"><b>Proof</b> If <i>j</i> = <i>m</i>2<sup><i>l</i></sup> for some odd <i>m</i>, then the distribution of <i>&#963;j</i> as <i>&#963;</i> varies is uniform over <i>m</i>&#8242;2<sup><i>l</i></sup> for all odd <i>m</i>&#8242;. There are thus 2 &#183; round(<i>C</i>/2<sup><i>l</i>+1</sup>) &#60; 4<i>C</i>/2<sup><i>l</i>+1</sup> possible values in [&#8722;<i>C, C</i>] out of <i>n</i>/2<sup><i>l</i>+1</sup> such elements in the orbit, for a chance of at most 4<i>C</i>/<i>n</i>. &#9632;</p>
+<p class="indent"><a id="page_27"/>Note that for simplicity we will only analyze our algorithm when <i>n</i> is a power of two. For general <i>n</i>, the analog of Lemma 2.1 would lose an <i>n</i>/<i>&#966;</i>(<i>n</i>) = <i>O</i>(log log <i>n</i>) factor, where <i>&#966;</i> is Euler&#8217;s totient function. This will correspondingly increase the running time of the algorithm on general <i>n</i>.</p>
+<p class="indent">Claim 2.3 allows us to change the set of coefficients binned to a bucket by changing the permutation; Lemma 2.1 bounds the probability of non-zero coefficients falling into the same bucket.</p>
+<p class="h2"><a id="ch2_2_3"/><b><span class="big1">2.2.3</span>&#160;&#160;&#160;&#160;Subsampled FFT</b></p>
+<p class="noindent">Suppose we have a vector <i>x</i> &#8712; &#8450;<sup><i>n</i></sup> and a parameter <i>B</i> dividing <i>n</i>, and would like to compute <i>y&#770;<sub>i</sub></i> = <i>x&#770;<sub>i</sub></i><sub>(<i>n</i>/<i>B</i>)</sub> for <i>i</i> &#8712; [<i>B</i>].</p>
+<p class="noindentt"><b>Claim 2.4</b> <i>y&#770;</i> is the <i>B</i>-dimensional Fourier transform of <img src="../images/in27_1.png" alt="image"/>. Therefore, <i>y&#770;</i> can be computed in <i>O</i>(|supp(<i>x</i>)| + <i>B</i> log <i>B</i>) time.</p>
+<p class="noindentt"><b>Proof</b></p>
+<p class="image"><img src="../images/pg27_1.png" alt="image"/></p>
+<p class="h2"><a id="ch2_2_4"/><b><span class="big1">2.2.4</span>&#160;&#160;&#160;&#160;2D Aliasing Filter</b></p>
+<p class="noindent">The aliasing filter presented in <a href="09_Chapter01.xhtml#ch1_1_2">Section 1.1.2</a>. The filter generalizes to two dimensions as follows:</p>
+<p class="indent">Given a 2D matrix <img src="../images/in27_2.png" alt="image"/>, and <i>B<sub>r</sub>, B<sub>c</sub></i> that divide <img src="../images/in23_2.png" alt="image"/>, then for all (<i>i, j</i>) &#8712; [<i>B<sub>r</sub></i>] &#215; [<i>B<sub>c</sub></i>] set</p>
+<p class="image"><img src="../images/pg27_2.png" alt="image"/></p>
+<p class="noindent">Then, compute the 2D DFT <i>y&#770;</i> of <i>y</i>. Observe that <i>y&#770;</i> is a folded version of <i>x&#770;</i>:</p>
+<p class="image"><img src="../images/pg27_3.png" alt="image"/></p>
+</body>
+</html>

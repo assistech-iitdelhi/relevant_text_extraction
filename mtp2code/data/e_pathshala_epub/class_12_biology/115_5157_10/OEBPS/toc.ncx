@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ncx version="2005-1" xmlns="http://www.daisy.org/z3986/2005/ncx/">
+  <head>
+    <meta content="urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b" name="dtb:uid"/>
+    <meta content="3" name="dtb:depth"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>Unknown</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="navPoint-1" playOrder="1">
+      <navLabel>
+        <text>Chapter 10</text>
+      </navLabel>
+      <content src="Text/Chapter-10.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-2" playOrder="2">
+      <navLabel>
+        <text>Microbes in Human Welfare</text>
+      </navLabel>
+      <content src="Text/Chapter-10.xhtml#sigil_toc_id_1"/>
+      <navPoint id="navPoint-3" playOrder="3">
+        <navLabel>
+          <text>10.1 Microbes in Household Products</text>
+        </navLabel>
+        <content src="Text/Chapter-10.xhtml#sigil_toc_id_2"/>
+      </navPoint>
+      <navPoint id="navPoint-4" playOrder="4">
+        <navLabel>
+          <text>10.2 Microbes in Industrial Products</text>
+        </navLabel>
+        <content src="Text/Chapter-10.xhtml#sigil_toc_id_3"/>
+        <navPoint id="navPoint-5" playOrder="5">
+          <navLabel>
+            <text>10.2.1 Fermented Beverages</text>
+          </navLabel>
+          <content src="Text/Chapter-10.xhtml#sigil_toc_id_4"/>
+        </navPoint>
+        <navPoint id="navPoint-6" playOrder="6">
+          <navLabel>
+            <text>10.2.2 Antibiotics</text>
+          </navLabel>
+          <content src="Text/Chapter-10.xhtml#sigil_toc_id_5"/>
+        </navPoint>
+        <navPoint id="navPoint-7" playOrder="7">
+          <navLabel>
+            <text>10.2.3 Chemicals, Enzymes and other Bioactive Molecules</text>
+          </navLabel>
+          <content src="Text/Chapter-10.xhtml#sigil_toc_id_6"/>
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint-8" playOrder="8">
+        <navLabel>
+          <text>10.3 Microbes in Sewage Treatment</text>
+        </navLabel>
+        <content src="Text/Chapter-10.xhtml#sigil_toc_id_7"/>
+      </navPoint>
+      <navPoint id="navPoint-9" playOrder="9">
+        <navLabel>
+          <text>10.4 Microbes in Production of Biogas</text>
+        </navLabel>
+        <content src="Text/Chapter-10.xhtml#sigil_toc_id_8"/>
+      </navPoint>
+      <navPoint id="navPoint-10" playOrder="10">
+        <navLabel>
+          <text>10.5 Microbes as Biocontrol Agents</text>
+        </navLabel>
+        <content src="Text/Chapter-10.xhtml#sigil_toc_id_9"/>
+      </navPoint>
+      <navPoint id="navPoint-11" playOrder="11">
+        <navLabel>
+          <text>10.6 Microbes as Biofertilisers</text>
+        </navLabel>
+        <content src="Text/Chapter-10.xhtml#sigil_toc_id_10"/>
+      </navPoint>
+    </navPoint>
+  </navMap>
+</ncx>

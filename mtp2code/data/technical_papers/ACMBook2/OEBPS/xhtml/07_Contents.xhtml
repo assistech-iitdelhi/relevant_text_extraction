@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>The Sparse Fourier Transform: Theory and Practice</title>
+<link rel="stylesheet" type="text/css" href="../styles/stylesheet.css"/>
+<link rel="stylesheet" type="application/vnd.adobe-page-template+xml" href="../styles/page-template.xpgt"/>
+</head>
+<body>
+<p class="fmtitle"><a id="page_xi"/><b>Contents</b></p>
+<table cellpadding="0" cellspacing="0" width="100%">
+<col width="30%"/>
+<col width="70%"/>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toct"><a href="08_Preface.xhtml">Preface</a></p></td>
+</tr>
+<tr>
+<td valign="top"><p class="toc1r"><a href="09_Chapter01.xhtml"><b>Chapter 1</b></a></p></td>
+<td valign="top"><p class="toc1"><a href="09_Chapter01.xhtml"><b>Introduction</b></a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="09_Chapter01.xhtml#ch1_1">1.1&#160;&#160;&#160;&#160;Sparse Fourier Transform Algorithms</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="09_Chapter01.xhtml#ch1_2">1.2&#160;&#160;&#160;&#160;Applications of the Sparse Fourier Transform</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="09_Chapter01.xhtml#ch1_3">1.3&#160;&#160;&#160;&#160;Book Overview</a></p></td>
+</tr>
+<tr>
+<td valign="top"><p class="tocpr"><a href="10_Part01.xhtml"><b>PART I</b></a></p></td>
+<td valign="top"><p class="tocp"><a href="10_Part01.xhtml"><b>THEORY OF THE SPARSE FOURIER TRANSFORM</b></a></p></td>
+</tr>
+<tr>
+<td valign="top"><p class="toc1r"><a href="11_Chapter02.xhtml"><b>Chapter 2</b></a></p></td>
+<td valign="top"><p class="toc1"><a href="11_Chapter02.xhtml"><b>Preliminaries</b></a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="11_Chapter02.xhtml#ch2_1">2.1&#160;&#160;&#160;&#160;Notation</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="11_Chapter02.xhtml#ch2_2">2.2&#160;&#160;&#160;&#160;Basics</a></p></td>
+</tr>
+<tr>
+<td valign="top"><p class="toc1r"><a href="12_Chapter03.xhtml"><b>Chapter 3</b></a></p></td>
+<td valign="top"><p class="toc1"><a href="12_Chapter03.xhtml"><b>Simple and Practical Algorithm</b></a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="12_Chapter03.xhtml#ch3_1">3.1&#160;&#160;&#160;&#160;Introduction</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="12_Chapter03.xhtml#ch3_2">3.2&#160;&#160;&#160;&#160;Algorithm</a></p></td>
+</tr>
+<tr>
+<td valign="top"><p class="toc1r"><a href="13_Chapter04.xhtml"><b>Chapter 4</b></a></p></td>
+<td valign="top"><p class="toc1"><a href="13_Chapter04.xhtml"><b>Optimizing Runtime Complexity</b></a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="13_Chapter04.xhtml#ch4_1">4.1&#160;&#160;&#160;&#160;Introduction</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="13_Chapter04.xhtml#ch4_2">4.2&#160;&#160;&#160;&#160;Algorithm for the Exactly Sparse Case</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="13_Chapter04.xhtml#ch4_3">4.3&#160;&#160;&#160;&#160;Algorithm for the General Case</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="13_Chapter04.xhtml#ch4_4">4.4&#160;&#160;&#160;&#160;Extension to Two Dimensions</a></p></td>
+</tr>
+<tr>
+<td valign="top"><p class="toc1r"><a href="14_Chapter05.xhtml"><b>Chapter 5</b></a></p></td>
+<td valign="top"><p class="toc1"><a href="14_Chapter05.xhtml"><b>Optimizing Sample Complexity</b></a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="14_Chapter05.xhtml#ch5_1">5.1&#160;&#160;&#160;&#160;Introduction</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="14_Chapter05.xhtml#ch5_2">5.2&#160;&#160;&#160;&#160;Algorithm for the Exactly Sparse Case</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="14_Chapter05.xhtml#ch5_3">5.3&#160;&#160;&#160;&#160;Algorithm for the General Case</a></p></td>
+</tr>
+<tr>
+<td valign="top"><p class="toc1r"><a href="15_Chapter06.xhtml"><b>Chapter 6</b></a></p></td>
+<td valign="top"><p class="toc1"><a href="15_Chapter06.xhtml"><b>Numerical Evaluation</b></a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="15_Chapter06.xhtml#ch6_1">6.1&#160;&#160;&#160;&#160;Implementation</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="15_Chapter06.xhtml#ch6_2">6.2&#160;&#160;&#160;&#160;Experimental Setup</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="15_Chapter06.xhtml#ch6_3">6.3&#160;&#160;&#160;&#160;Numerical Results</a></p></td>
+</tr>
+<tr>
+<td valign="top"><p class="tocpr"><a href="16_Part02.xhtml"><b>PART II</b></a></p></td>
+<td valign="top"><p class="tocp"><a href="16_Part02.xhtml"><b>APPLICATIONS OF THE SPARSE FOURIER TRANSFORM</b></a></p></td>
+</tr>
+<tr>
+<td valign="top"><p class="toc1r"><a href="17_Chapter07.xhtml"><b>Chapter 7</b></a></p></td>
+<td valign="top"><p class="toc1"><a href="17_Chapter07.xhtml"><b>GHz-Wide Spectrum Sensing and Decoding</b></a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="17_Chapter07.xhtml#ch7_1">7.1&#160;&#160;&#160;&#160;Introduction</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="17_Chapter07.xhtml#ch7_2">7.2&#160;&#160;&#160;&#160;Related Work</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="17_Chapter07.xhtml#ch7_3">7.3&#160;&#160;&#160;&#160;BigBand</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="17_Chapter07.xhtml#ch7_4">7.4&#160;&#160;&#160;&#160;Channel Estimation and Calibration</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="17_Chapter07.xhtml#ch7_5">7.5&#160;&#160;&#160;&#160;Differential Sensing of Non-Sparse Spectrum</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="17_Chapter07.xhtml#ch7_6">7.6&#160;&#160;&#160;&#160;A USRP-Based Implementation</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="17_Chapter07.xhtml#ch7_7">7.7&#160;&#160;&#160;&#160;BigBand&#8217;s Spectrum Sensing Results</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="17_Chapter07.xhtml#ch7_8">7.8&#160;&#160;&#160;&#160;BigBand&#8217;s Decoding Results</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="17_Chapter07.xhtml#ch7_9">7.9&#160;&#160;&#160;&#160;D-BigBand&#8217;s Sensing Results</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="17_Chapter07.xhtml#ch7_10">7.10&#160;&#160;Conclusion</a></p></td>
+</tr>
+<tr>
+<td valign="top"><p class="toc1r"><a href="18_Chapter08.xhtml"><b>Chapter 8</b></a></p></td>
+<td valign="top"><p class="toc1"><a href="18_Chapter08.xhtml"><b>Faster GPS Synchronization</b></a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="18_Chapter08.xhtml#ch8_1">8.1&#160;&#160;&#160;&#160;Introduction</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="18_Chapter08.xhtml#ch8_2">8.2&#160;&#160;&#160;&#160;GPS Primer</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="18_Chapter08.xhtml#ch8_3">8.3&#160;&#160;&#160;&#160;QuickSync</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="18_Chapter08.xhtml#ch8_4">8.4&#160;&#160;&#160;&#160;Theoretical Guarantees</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="18_Chapter08.xhtml#ch8_5">8.5&#160;&#160;&#160;&#160;Doppler Shift and Frequency Offset</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="18_Chapter08.xhtml#ch8_6">8.6&#160;&#160;&#160;&#160;Testing Environment</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="18_Chapter08.xhtml#ch8_7">8.7&#160;&#160;&#160;&#160;Results</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="18_Chapter08.xhtml#ch8_8">8.8&#160;&#160;&#160;&#160;Related Work</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="18_Chapter08.xhtml#ch8_9">8.9&#160;&#160;&#160;&#160;Conclusion</a></p></td>
+</tr>
+<tr>
+<td valign="top"><p class="toc1r"><a href="19_Chapter09.xhtml"><b>Chapter 9</b></a></p></td>
+<td valign="top"><p class="toc1"><a href="19_Chapter09.xhtml"><b>Light Field Reconstruction Using Continuous Fourier Sparsity</b></a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="19_Chapter09.xhtml#ch9_1">9.1&#160;&#160;&#160;&#160;Introduction</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="19_Chapter09.xhtml#ch9_2">9.2&#160;&#160;&#160;&#160;Related Work</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="19_Chapter09.xhtml#ch9_3">9.3&#160;&#160;&#160;&#160;Sparsity in the Discrete vs. Continuous Fourier Domain</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="19_Chapter09.xhtml#ch9_4">9.4&#160;&#160;&#160;&#160;Light Field Notation</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="19_Chapter09.xhtml#ch9_5">9.5&#160;&#160;&#160;&#160;Light Field Reconstruction Algorithm</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="19_Chapter09.xhtml#ch9_6">9.6&#160;&#160;&#160;&#160;Experiments</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="19_Chapter09.xhtml#ch9_7">9.7&#160;&#160;&#160;&#160;Results</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="19_Chapter09.xhtml#ch9_8">9.8&#160;&#160;&#160;&#160;Discussion</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="19_Chapter09.xhtml#ch9_9">9.9&#160;&#160;&#160;&#160;Conclusion</a></p></td>
+</tr>
+<tr>
+<td valign="top"><p class="toc1r"><a href="20_Chapter10.xhtml"><b>Chapter 10</b></a></p></td>
+<td valign="top"><p class="toc1"><a href="20_Chapter10.xhtml"><b>Fast In-Vivo MRS Acquisition with Artifact Suppression</b></a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="20_Chapter10.xhtml#ch10_1">10.1&#160;&#160;Introduction</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="20_Chapter10.xhtml#ch10_2">10.2&#160;&#160;MRS-SFT</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="20_Chapter10.xhtml#ch10_3">10.3&#160;&#160;Methods</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="20_Chapter10.xhtml#ch10_4">10.4&#160;&#160;MRS Results</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="20_Chapter10.xhtml#ch10_5">10.5&#160;&#160;Conclusion</a></p></td>
+</tr>
+<tr>
+<td valign="top"><p class="toc1r"><a href="21_Chapter11.xhtml"><b>Chapter 11</b></a></p></td>
+<td valign="top"><p class="toc1"><a href="21_Chapter11.xhtml"><b>Fast Multi-Dimensional NMR Acquisition and Processing</b></a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="21_Chapter11.xhtml#ch11_1">11.1&#160;&#160;Introduction</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="21_Chapter11.xhtml#ch11_2">11.2&#160;&#160;Multi-Dimensional Sparse Fourier Transform</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="21_Chapter11.xhtml#ch11_3">11.3&#160;&#160;Materials and Methods</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="21_Chapter11.xhtml#ch11_4">11.4&#160;&#160;Results</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="21_Chapter11.xhtml#ch11_5">11.5&#160;&#160;Discussion</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="21_Chapter11.xhtml#ch11_6">11.6&#160;&#160;Conclusion</a></p></td>
+</tr>
+<tr>
+<td valign="top"><p class="toc1r"><a href="22_Chapter12.xhtml"><b>Chapter 12</b></a></p></td>
+<td valign="top"><p class="toc1"><a href="22_Chapter12.xhtml"><b>Conclusion</b></a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toc"><a href="22_Chapter12.xhtml#ch12_1">12.1&#160;&#160;Future Directions</a></p></td>
+</tr>
+<tr>
+<td valign="top"><p class="toc1r"><a href="23_Appendix01.xhtml"><b>Appendix A</b></a></p></td>
+<td valign="top"><p class="toc1"><a href="23_Appendix01.xhtml"><b>Proofs</b></a></p></td>
+</tr>
+<tr>
+<td valign="top"><p class="toc1r"><a href="24_Appendix02.xhtml"><b>Appendix B</b></a></p></td>
+<td valign="top"><p class="toc1"><a href="24_Appendix02.xhtml"><b>The Optimality of the Exactly <i>k</i>-Sparse Algorithm 4.1</b></a></p></td>
+</tr>
+<tr>
+<td valign="top"><p class="toc1r"><a href="25_Appendix03.xhtml"><b>Appendix C</b></a></p></td>
+<td valign="top"><p class="toc1"><a href="25_Appendix03.xhtml"><b>Lower Bound of the Sparse Fourier Transform in the General Case</b></a></p></td>
+</tr>
+<tr>
+<td valign="top"><p class="toc1r"><a href="26_Appendix04.xhtml"><b>Appendix D</b></a></p></td>
+<td valign="top"><p class="toc1"><a href="26_Appendix04.xhtml"><b>Efficient Constructions of Window Functions</b></a></p></td>
+</tr>
+<tr>
+<td valign="top"><p class="toc1r"><a href="27_Appendix05.xhtml"><b>Appendix E</b></a></p></td>
+<td valign="top"><p class="toc1"><a href="27_Appendix05.xhtml"><b>Sample Lower Bound for the Bernoulli Distribution</b></a></p></td>
+</tr>
+<tr>
+<td valign="top"><p class="toc1r"><a href="28_Appendix06.xhtml"><b>Appendix F</b></a></p></td>
+<td valign="top"><p class="toc1"><a href="28_Appendix06.xhtml"><b>Analysis of the QuickSync System</b></a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="tocs"><a href="28_Appendix06.xhtml#appF_1">F.1&#160;&#160;&#160;&#160;Analysis of the Baseline Algorithm</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="tocs"><a href="28_Appendix06.xhtml#appF_2">F.2&#160;&#160;&#160;&#160;Tightness of the Variance Bound</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="tocs"><a href="28_Appendix06.xhtml#appF_3">F.3&#160;&#160;&#160;&#160;Analysis of the QuickSync Algorithm</a></p></td>
+</tr>
+<tr>
+<td valign="top"><p class="toc1r"><a href="29_Appendix07.xhtml"><b>Appendix G</b></a></p></td>
+<td valign="top"><p class="toc1"><a href="29_Appendix07.xhtml"><b>A 0.75 Million Point Sparse Fourier Transform Chip</b></a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="tocs1"><a href="29_Appendix07.xhtml#appG_1">G.1&#160;&#160;&#160;&#160;The Algorithm</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="tocs1"><a href="29_Appendix07.xhtml#appG_2">G.2&#160;&#160;&#160;&#160;The Architecture</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="tocs1"><a href="29_Appendix07.xhtml#appG_3">G.3&#160;&#160;&#160;&#160;The Chip</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toct"><a href="30_Reference.xhtml">References</a></p></td>
+</tr>
+<tr>
+<td valign="top"/>
+<td valign="top"><p class="toca"><a href="31_Author.xhtml">Author Biography</a></p></td>
+</tr>
+</table>
+</body>
+</html>

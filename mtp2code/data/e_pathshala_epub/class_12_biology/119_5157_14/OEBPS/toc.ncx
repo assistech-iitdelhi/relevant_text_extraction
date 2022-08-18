@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ncx version="2005-1" xmlns="http://www.daisy.org/z3986/2005/ncx/">
+  <head>
+    <meta content="urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b" name="dtb:uid"/>
+    <meta content="3" name="dtb:depth"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>Unknown</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="navPoint-1" playOrder="1">
+      <navLabel>
+        <text>Chapter 14</text>
+      </navLabel>
+      <content src="Text/Chapter-14.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-2" playOrder="2">
+      <navLabel>
+        <text>Ecosystem</text>
+      </navLabel>
+      <content src="Text/Chapter-14.xhtml#sigil_toc_id_1"/>
+      <navPoint id="navPoint-3" playOrder="3">
+        <navLabel>
+          <text>14.1 Ecosystem – Structure and Function</text>
+        </navLabel>
+        <content src="Text/Chapter-14.xhtml#sigil_toc_id_2"/>
+      </navPoint>
+      <navPoint id="navPoint-4" playOrder="4">
+        <navLabel>
+          <text>14.2. Productivity</text>
+        </navLabel>
+        <content src="Text/Chapter-14.xhtml#sigil_toc_id_3"/>
+      </navPoint>
+      <navPoint id="navPoint-5" playOrder="5">
+        <navLabel>
+          <text>14.3 Decomposition</text>
+        </navLabel>
+        <content src="Text/Chapter-14.xhtml#sigil_toc_id_4"/>
+      </navPoint>
+      <navPoint id="navPoint-6" playOrder="6">
+        <navLabel>
+          <text>14.4 Energy Flow</text>
+        </navLabel>
+        <content src="Text/Chapter-14.xhtml#sigil_toc_id_5"/>
+      </navPoint>
+      <navPoint id="navPoint-7" playOrder="7">
+        <navLabel>
+          <text>14.5 Ecological Pyramids</text>
+        </navLabel>
+        <content src="Text/Chapter-14.xhtml#sigil_toc_id_6"/>
+      </navPoint>
+      <navPoint id="navPoint-8" playOrder="8">
+        <navLabel>
+          <text>14.6 Ecological Succession</text>
+        </navLabel>
+        <content src="Text/Chapter-14.xhtml#sigil_toc_id_7"/>
+        <navPoint id="navPoint-9" playOrder="9">
+          <navLabel>
+            <text>14.6.1 Succession of Plants</text>
+          </navLabel>
+          <content src="Text/Chapter-14.xhtml#sigil_toc_id_8"/>
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint-10" playOrder="10">
+        <navLabel>
+          <text>14.7 Nutrient Cycling</text>
+        </navLabel>
+        <content src="Text/Chapter-14.xhtml#sigil_toc_id_9"/>
+        <navPoint id="navPoint-11" playOrder="11">
+          <navLabel>
+            <text>14.7.1 Ecosystem – Carbon Cycle</text>
+          </navLabel>
+          <content src="Text/Chapter-14.xhtml#sigil_toc_id_10"/>
+        </navPoint>
+        <navPoint id="navPoint-12" playOrder="12">
+          <navLabel>
+            <text>14.7.2 Ecosystem – Phosphorus Cycle</text>
+          </navLabel>
+          <content src="Text/Chapter-14.xhtml#sigil_toc_id_11"/>
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint-13" playOrder="13">
+        <navLabel>
+          <text>14.8 Ecosystem Services</text>
+        </navLabel>
+        <content src="Text/Chapter-14.xhtml#sigil_toc_id_12"/>
+      </navPoint>
+    </navPoint>
+  </navMap>
+</ncx>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="bookid" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta name="generator" content="Adobe InDesign" />
+    <dc:date>2020-05-14</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2020-10-09T13:47:33Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta name="Sigil version" content="0.9.10" />
+  </metadata>
+  <manifest>
+    <item id="Mathematical-Reasoning-FINAL-05.01" href="Text/Mathematical%20Reasoning%20FINAL%2005.01.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="toc" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="ch-14.css" href="Styles/ch-14.css" media-type="text/css"/>
+    <item id="SymbolMT.ttf" href="Fonts/SymbolMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="TimesNewRomanPS-BoldItalicMT.ttf" href="Fonts/TimesNewRomanPS-BoldItalicMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="TimesNewRomanPS-BoldMT.ttf" href="Fonts/TimesNewRomanPS-BoldMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="TimesNewRomanPS-ItalicMT.ttf" href="Fonts/TimesNewRomanPS-ItalicMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="TimesNewRomanPSMT.ttf" href="Fonts/TimesNewRomanPSMT.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="Wingdings-Regular.ttf" href="Fonts/Wingdings-Regular.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="Wingdings2.TTF" href="Fonts/Wingdings2.TTF" media-type="application/vnd.ms-opentype"/>
+    <item id="x1000.png" href="Images/1000.png" media-type="image/png"/>
+    <item id="x1005.png" href="Images/1005.png" media-type="image/png"/>
+    <item id="x1010.png" href="Images/1010.png" media-type="image/png"/>
+    <item id="x1015.png" href="Images/1015.png" media-type="image/png"/>
+    <item id="x1020.png" href="Images/1020.png" media-type="image/png"/>
+    <item id="x1025.png" href="Images/1025.png" media-type="image/png"/>
+    <item id="x1030.png" href="Images/1030.png" media-type="image/png"/>
+    <item id="x1035.png" href="Images/1035.png" media-type="image/png"/>
+    <item id="x1040.png" href="Images/1040.png" media-type="image/png"/>
+    <item id="x1045.png" href="Images/1045.png" media-type="image/png"/>
+    <item id="x1050.png" href="Images/1050.png" media-type="image/png"/>
+    <item id="x1055.png" href="Images/1055.png" media-type="image/png"/>
+    <item id="x1060.png" href="Images/1060.png" media-type="image/png"/>
+    <item id="x1065.png" href="Images/1065.png" media-type="image/png"/>
+    <item id="x1070.png" href="Images/1070.png" media-type="image/png"/>
+    <item id="x1075.png" href="Images/1075.png" media-type="image/png"/>
+    <item id="x1081.png" href="Images/1081.png" media-type="image/png"/>
+    <item id="x533.png" href="Images/533.png" media-type="image/png"/>
+    <item id="x544.png" href="Images/544.png" media-type="image/png"/>
+    <item id="x545.png" href="Images/545.png" media-type="image/png"/>
+    <item id="x980.png" href="Images/980.png" media-type="image/png"/>
+    <item id="x985.png" href="Images/985.png" media-type="image/png"/>
+    <item id="x990.png" href="Images/990.png" media-type="image/png"/>
+    <item id="x995.png" href="Images/995.png" media-type="image/png"/>
+    <item id="george-boole_fmt.png" href="Images/george%20boole_fmt.png" media-type="image/png"/>
+    <item id="QR11076CH14_fmt.png" href="Images/QR11076CH14_fmt.png" media-type="image/png"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="Mathematical-Reasoning-FINAL-05.01"/>
+  </spine>
+</package>

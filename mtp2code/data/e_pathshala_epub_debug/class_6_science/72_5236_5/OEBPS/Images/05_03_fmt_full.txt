@@ -1,0 +1,141 @@
+text_annotations {
+  locale: "und"
+  description: "\353\271\231\n"
+  bounding_poly {
+    vertices {
+      x: 354
+      y: 200
+    }
+    vertices {
+      x: 363
+      y: 200
+    }
+    vertices {
+      x: 363
+      y: 227
+    }
+    vertices {
+      x: 354
+      y: 227
+    }
+  }
+}
+text_annotations {
+  description: "\353\271\231"
+  bounding_poly {
+    vertices {
+      x: 354
+      y: 201
+    }
+    vertices {
+      x: 360
+      y: 200
+    }
+    vertices {
+      x: 363
+      y: 226
+    }
+    vertices {
+      x: 357
+      y: 227
+    }
+  }
+}
+full_text_annotation {
+  pages {
+    width: 425
+    height: 285
+    blocks {
+      bounding_box {
+        vertices {
+          x: 354
+          y: 201
+        }
+        vertices {
+          x: 360
+          y: 200
+        }
+        vertices {
+          x: 363
+          y: 226
+        }
+        vertices {
+          x: 357
+          y: 227
+        }
+      }
+      paragraphs {
+        bounding_box {
+          vertices {
+            x: 354
+            y: 201
+          }
+          vertices {
+            x: 360
+            y: 200
+          }
+          vertices {
+            x: 363
+            y: 226
+          }
+          vertices {
+            x: 357
+            y: 227
+          }
+        }
+        words {
+          bounding_box {
+            vertices {
+              x: 354
+              y: 201
+            }
+            vertices {
+              x: 360
+              y: 200
+            }
+            vertices {
+              x: 363
+              y: 226
+            }
+            vertices {
+              x: 357
+              y: 227
+            }
+          }
+          symbols {
+            property {
+              detected_break {
+                type_: LINE_BREAK
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 354
+                y: 201
+              }
+              vertices {
+                x: 360
+                y: 200
+              }
+              vertices {
+                x: 363
+                y: 226
+              }
+              vertices {
+                x: 357
+                y: 227
+              }
+            }
+            text: "\353\271\231"
+            confidence: 0.20000000298023224
+          }
+          confidence: 0.20000000298023224
+        }
+        confidence: 0.20000000298023224
+      }
+      block_type: TEXT
+      confidence: 0.20000000298023224
+    }
+  }
+  text: "\353\271\231\n"
+}

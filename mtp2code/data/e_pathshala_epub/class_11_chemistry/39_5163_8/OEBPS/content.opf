@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/" unique-identifier="bookid" version="3.0" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign 12.0" name="generator"/>
+    <meta property="ibooks:specified-fonts">true</meta>
+    <dc:title>ch8</dc:title>
+    <dc:date>2018-06-12T03:19:39Z</dc:date>
+    <dc:language>en-GB</dc:language>
+    <dc:language>en-US</dc:language>
+    <meta property="dcterms:modified">2018-08-08T08:40:08Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta content="0.9.3" name="Sigil version"/>
+    <meta name="cover" content="cover.png"/>
+  </metadata>
+  <manifest>
+    <item href="Text/ch8.xhtml" id="ch8" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="Text/toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
+    <item href="Styles/idGeneratedStyles.css" id="idGeneratedStyles.css" media-type="text/css"/>
+    <item href="Fonts/Bookman-Demi.TTF" id="Bookman-Demi.TTF" media-type="application/x-font-ttf"/>
+    <item href="Fonts/Bookman-DemiItalic.TTF" id="Bookman-DemiItalic.TTF" media-type="application/x-font-ttf"/>
+    <item href="Fonts/Bookman-Light.TTF" id="Bookman-Light.TTF" media-type="application/x-font-ttf"/>
+    <item href="Fonts/Bookman-LightItalic.TTF" id="Bookman-LightItalic.TTF" media-type="application/x-font-ttf"/>
+    <item href="Fonts/MathB.TTF" id="MathB.TTF" media-type="application/x-font-ttf"/>
+    <item href="Fonts/TimesNewRomanPS-BoldMT.TTF" id="TimesNewRomanPS-BoldMT.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Fonts/TimesNewRomanPSMT.TTF" id="TimesNewRomanPSMT.TTF" media-type="application/vnd.ms-opentype"/>
+    <item href="Images/1.png" id="x1.png" media-type="image/png"/>
+    <item href="Images/2.png" id="x2.png" media-type="image/png"/>
+    <item href="Images/3.png" id="x3.png" media-type="image/png"/>
+    <item href="Images/A-1.png" id="A-1.png" media-type="image/png"/>
+    <item href="Images/A-2.png" id="A-2.png" media-type="image/png"/>
+    <item href="Images/A-3.png" id="A-3.png" media-type="image/png"/>
+    <item href="Images/A-4.png" id="A-4.png" media-type="image/png"/>
+    <item href="Images/A-5.png" id="A-5.png" media-type="image/png"/>
+    <item href="Images/A-6.png" id="A-6.png" media-type="image/png"/>
+    <item href="Images/arrow-heat.png" id="arrow-heat.png" media-type="image/png"/>
+    <item href="Images/arrow-hv.png" id="arrow-hv.png" media-type="image/png"/>
+    <item href="Images/arrow.png" id="arrow.png" media-type="image/png"/>
+    <item href="Images/arrow1.png" id="arrow1.png" media-type="image/png"/>
+    <item href="Images/Fig8_1.png" id="Fig8_1.png" media-type="image/png"/>
+    <item href="Images/Fig8_2.png" id="Fig8_2.png" media-type="image/png"/>
+    <item href="Images/Fig8_3.png" id="Fig8_3.png" media-type="image/png"/>
+    <item href="Images/objectives.png" id="objectives.png" media-type="image/png"/>
+    <item href="Images/quot-3.png" id="quot-3.png" media-type="image/png"/>
+    <item href="Images/summary-Ex-L.png" id="summary-Ex-L.png" media-type="image/png"/>
+    <item href="Images/summary-Ex-L1.png" id="summary-Ex-L1.png" media-type="image/png"/>
+    <item href="Images/summary-Ex-L2.png" id="summary-Ex-L2.png" media-type="image/png"/>
+    <item href="Images/summary-Ex-L3.png" id="summary-Ex-L3.png" media-type="image/png"/>
+    <item href="Images/summary-Ex-R.png" id="summary-Ex-R.png" media-type="image/png"/>
+    <item href="Images/summary-Ex-R1.png" id="summary-Ex-R1.png" media-type="image/png"/>
+    <item href="Images/summary-Ex-R2.png" id="summary-Ex-R2.png" media-type="image/png"/>
+    <item href="Images/summary-Ex-R3.png" id="summary-Ex-R3.png" media-type="image/png"/>
+    <item href="Fonts/Bookman-Light0001.ttf" id="Bookman-Light.ttf" media-type="application/x-font-ttf"/>
+    <item href="Fonts/Symbol.ttf" id="Symbol.ttf" media-type="application/x-font-ttf"/>
+    <item href="Fonts/TimesNewRomanPS-BoldMT0001.ttf" id="TimesNewRomanPS-BoldMT.ttf" media-type="application/x-font-ttf"/>
+    <item href="Fonts/TimesNewRomanPSMT0001.ttf" id="TimesNewRomanPSMT.ttf" media-type="application/x-font-ttf"/>
+    <item href="Images/cover.png" id="cover.png" media-type="image/png" properties="cover-image"/>
+    <item href="Text/cover.xhtml" id="cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    <item href="Images/table8.1.JPG" id="table8.1.JPG" media-type="image/jpeg"/>
+    <item href="Images/E.png" id="E.png" media-type="image/png"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="ch8"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference href="Text/cover.xhtml" title="Cover" type="cover"></reference>
+  </guide>
+</package>

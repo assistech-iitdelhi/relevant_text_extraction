@@ -1,0 +1,287 @@
+
+html, body {
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body {
+font-size:100%;
+line-height:150%;
+padding:2%;
+text-align:justify;
+}
+
+* {
+margin:0;
+padding:0;
+}
+.box1{
+background-color:#fef6dc;
+padding:15px;
+border:1px solid #f7931d;
+border-style:double;
+}
+.box2{
+background-color:#eae3d8;
+padding: 15px;
+font-size:0.9em;
+line-height:150%;
+}
+.box{
+background-color:#fcf9ce;
+padding:15px;
+border:1px solid #4a7335;
+}
+.author{
+color:#fff;
+font-size:1em;
+background:#6b4d10;
+padding:5px;
+}
+
+img
+{
+	max-width:100%;
+}
+.caption1
+{
+	font-style: italic; 
+	font-size: 0.83em; 
+	color: #4D4D4D;
+	text-align:center;
+}
+.exercises{
+color:#f7931d;
+font-size:1.5em;
+padding:10px;
+}
+
+/* Chapter Name */
+h1
+{
+color:#fff;
+font-size:1.5em;
+background:#4d7335;
+padding:10px;
+}
+/* Chapter number */
+h2
+{
+color:#4d7335;
+font-size:1.4em;
+padding:10px;
+}
+/* Concept Heading */
+h3
+{
+color:#4d7335;
+font-size:1.3em;
+font-weight:bold;
+margin-top:20px;
+}
+/* Sub Heading */
+h4
+{
+color:#4d7335;
+font-size:1.1em;
+font-weight:bold;
+}
+/* Sub Heading 2*/
+h5
+{
+color:#CC0000;
+font-size:1.1em;
+font-weight:bold;
+}
+.clear
+{
+	clear:both;
+}
+.Head-5, .char-style-override-7{
+font-style: italic;
+}
+.unit-chapter-no, .char-style-override-6
+{
+font-weight:bold;
+}
+ .char-style-override-16, .char-style-override-3{
+font-weight:bold;
+font-style: italic;
+}
+.lining_box
+{
+border:2px solid #a89571;
+padding:15px;
+background:#eae3d8;
+border-radius:15px;
+}
+ .sup
+ { 
+            vertical-align: super; 
+        font-size: small;  
+        } 
+.sub
+ { 
+            vertical-align: sub; 
+            font-size: small; 
+        } 
+.top_border
+{
+padding:2px;
+border-top:1px solid #6b4d10;
+}
+.top_border1
+{
+padding:2px;
+border-top:5px solid #6b4d10;
+}
+
+.Caption, .Fig-text
+{
+	font-style: italic; 
+	font-size: 0.83em; 
+	color: #4D4D4D;
+}
+p
+{
+	margin-top:10px;
+}
+table
+{
+	width:100%;
+	background:#fff2e4;
+	border:2px solid #fcbc75;
+	
+}
+td
+{
+	padding:10px;
+	border:2px solid #fff;
+	border-collapse:collapse;
+}
+
+.cover_img_small
+{
+width:50%;
+}
+@media only screen and (max-width: 767px) {
+
+.cover_img_small
+{
+width:90%;
+}
+}
+div.layout
+
+{
+
+text-align: center;
+
+}
+
+div.chapter_pos
+
+
+{
+
+
+text-align: center;
+
+
+width: 96%;
+
+
+position:absolute;
+
+
+top:70%;
+
+
+font-weight:bold;
+
+
+font-size:28px;
+
+
+color:#fff;
+
+
+}
+
+
+div.chapter_pos div
+
+
+{
+
+
+background:#B9881B;
+
+
+padding:10px;
+
+
+width:40%;
+
+
+margin:auto;
+
+opacity:0.9;
+
+
+}
+
+
+div.chapter_pos div span
+
+
+{
+
+
+font-size:0.7em;
+
+
+color:#eaeaea;
+
+
+font-weight:normal;
+
+
+}
+
+@media only screen and (max-width: 767px) {
+
+
+div.chapter_pos
+
+
+{
+
+
+font-size:0.8em;
+
+line-height:120%;
+
+top:50%;
+
+}
+
+
+div.chapter_pos div span
+
+
+{
+
+
+font-size:0.7em;
+
+
+}
+
+
+
+}
+
+test.css
+Open with
+Renu Deswal 
+(renu.deswal2012@gmail.com)Displaying test.css.

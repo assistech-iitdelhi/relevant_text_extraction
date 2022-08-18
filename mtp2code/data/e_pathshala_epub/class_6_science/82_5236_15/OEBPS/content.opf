@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="bookid" xmlns="http://www.idpf.org/2007/opf" prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta name="generator" content="Adobe InDesign 13.1" />
+    <meta property="ibooks:specified-fonts">true</meta>
+    <dc:title>Chapter-15</dc:title>
+    <dc:date>2019-05-13T04:30:13Z</dc:date>
+    <dc:language>en-US</dc:language>
+    <meta property="dcterms:modified">2019-06-03T12:44:54Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta name="Sigil version" content="0.9.10" />
+    <meta name="cover" content="fesc1cc.jpg" />
+  </metadata>
+  <manifest>
+    <item id="Chapter-15" href="Text/Chapter-15.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="toc" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="idGeneratedStyles.css" href="Styles/idGeneratedStyles.css" media-type="text/css"/>
+    <item id="Bookman-Light.TTF" href="Fonts/Bookman-Light.TTF" media-type="application/x-font-ttf"/>
+    <item id="Bookman-LightItalic.TTF" href="Fonts/Bookman-LightItalic.TTF" media-type="application/x-font-ttf"/>
+    <item id="Wingdings-Regular.ttf" href="Fonts/Wingdings-Regular.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="x0652CH15.png" href="Images/0652CH15.png" media-type="image/png"/>
+    <item id="x1.png" href="Images/1.png" media-type="image/png"/>
+    <item id="x15.12.png" href="Images/15.12.png" media-type="image/png"/>
+    <item id="x15_01_firkis.png" href="Images/15_01_firkis.png" media-type="image/png"/>
+    <item id="x15_02_making_firki.png" href="Images/15_02_making_firki.png" media-type="image/png"/>
+    <item id="x15_02_making_firki1.png" href="Images/15_02_making_firki1.png" media-type="image/png"/>
+    <item id="x15_03_wheather_cock.png" href="Images/15_03_wheather_cock.png" media-type="image/png"/>
+    <item id="x15_04_exp_empty_bottle.png" href="Images/15_04_exp_empty_bottle.png" media-type="image/png"/>
+    <item id="x15_05_oxygen_cylender.png" href="Images/15_05_oxygen_cylender.png" media-type="image/png"/>
+    <item id="x15_05_oxygen_cylender1.png" href="Images/15_05_oxygen_cylender1.png" media-type="image/png"/>
+    <item id="x15_07_beam.png" href="Images/15_07_beam.png" media-type="image/png"/>
+    <item id="x15_08_traffic.png" href="Images/15_08_traffic.png" media-type="image/png"/>
+    <item id="x15_09_air_composition.png" href="Images/15_09_air_composition.png" media-type="image/png"/>
+    <item id="x15_10_contains_air.png" href="Images/15_10_contains_air.png" media-type="image/png"/>
+    <item id="x15_11_soil_has_air.png" href="Images/15_11_soil_has_air.png" media-type="image/png"/>
+    <item id="x2.png" href="Images/2.png" media-type="image/png"/>
+    <item id="x3.png" href="Images/3.png" media-type="image/png"/>
+    <item id="baloon_1.png" href="Images/baloon_1.png" media-type="image/png"/>
+    <item id="baloon_2.png" href="Images/baloon_2.png" media-type="image/png"/>
+    <item id="baloon_21.png" href="Images/baloon_21.png" media-type="image/png"/>
+    <item id="boojho_01.png" href="Images/boojho_01.png" media-type="image/png"/>
+    <item id="boojho_02.png" href="Images/boojho_02.png" media-type="image/png"/>
+    <item id="boojho_paheli_02.png" href="Images/boojho_paheli_02.png" media-type="image/png"/>
+    <item id="exrcse.png" href="Images/exrcse.png" media-type="image/png"/>
+    <item id="KW.png" href="Images/KW.png" media-type="image/png"/>
+    <item id="paheli_1.png" href="Images/paheli_1.png" media-type="image/png"/>
+    <item id="paheli_2.png" href="Images/paheli_2.png" media-type="image/png"/>
+    <item id="smry.png" href="Images/smry.png" media-type="image/png"/>
+    <item id="sum.png" href="Images/sum.png" media-type="image/png"/>
+    <item id="Table_keyW.png" href="Images/Table_keyW.png" media-type="image/png"/>
+    <item id="fesc1cc.jpg" href="Images/fesc1cc.jpg" media-type="image/jpeg" properties="cover-image"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    <item id="x15.1.png" href="Images/15.1.png" media-type="image/png"/>
+    <item id="x15.2.png" href="Images/15.2.png" media-type="image/png"/>
+    <item id="x15.3.png" href="Images/15.3.png" media-type="image/png"/>
+    <item id="x15.4.png" href="Images/15.4.png" media-type="image/png"/>
+    <item id="x15.5.png" href="Images/15.5.png" media-type="image/png"/>
+    <item id="x15.6.png" href="Images/15.6.png" media-type="image/png"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Chapter-15"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

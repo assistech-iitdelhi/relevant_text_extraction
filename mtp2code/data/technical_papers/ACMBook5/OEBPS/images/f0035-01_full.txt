@@ -1,0 +1,163 @@
+text_annotations {
+  locale: "und"
+  description: "HI\n"
+  bounding_poly {
+    vertices {
+      x: 446
+      y: 170
+    }
+    vertices {
+      x: 540
+      y: 170
+    }
+    vertices {
+      x: 540
+      y: 233
+    }
+    vertices {
+      x: 446
+      y: 233
+    }
+  }
+}
+text_annotations {
+  description: "HI"
+  bounding_poly {
+    vertices {
+      x: 450
+      y: 170
+    }
+    vertices {
+      x: 540
+      y: 176
+    }
+    vertices {
+      x: 536
+      y: 233
+    }
+    vertices {
+      x: 446
+      y: 227
+    }
+  }
+}
+full_text_annotation {
+  pages {
+    width: 600
+    height: 388
+    blocks {
+      bounding_box {
+        vertices {
+          x: 450
+          y: 170
+        }
+        vertices {
+          x: 540
+          y: 176
+        }
+        vertices {
+          x: 536
+          y: 233
+        }
+        vertices {
+          x: 446
+          y: 227
+        }
+      }
+      paragraphs {
+        bounding_box {
+          vertices {
+            x: 450
+            y: 170
+          }
+          vertices {
+            x: 540
+            y: 176
+          }
+          vertices {
+            x: 536
+            y: 233
+          }
+          vertices {
+            x: 446
+            y: 227
+          }
+        }
+        words {
+          bounding_box {
+            vertices {
+              x: 450
+              y: 170
+            }
+            vertices {
+              x: 540
+              y: 176
+            }
+            vertices {
+              x: 536
+              y: 233
+            }
+            vertices {
+              x: 446
+              y: 227
+            }
+          }
+          symbols {
+            bounding_box {
+              vertices {
+                x: 450
+                y: 170
+              }
+              vertices {
+                x: 527
+                y: 175
+              }
+              vertices {
+                x: 523
+                y: 232
+              }
+              vertices {
+                x: 446
+                y: 227
+              }
+            }
+            text: "H"
+            confidence: 0.8999999761581421
+          }
+          symbols {
+            property {
+              detected_break {
+                type_: LINE_BREAK
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 531
+                y: 175
+              }
+              vertices {
+                x: 540
+                y: 176
+              }
+              vertices {
+                x: 536
+                y: 232
+              }
+              vertices {
+                x: 527
+                y: 232
+              }
+            }
+            text: "I"
+            confidence: 0.7200000286102295
+          }
+          confidence: 0.8100000023841858
+        }
+        confidence: 0.8100000023841858
+      }
+      block_type: TEXT
+      confidence: 0.8100000023841858
+    }
+  }
+  text: "HI\n"
+}

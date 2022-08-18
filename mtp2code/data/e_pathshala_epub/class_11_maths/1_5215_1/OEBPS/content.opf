@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package unique-identifier="uuid_id" version="2.0" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:calibre="http://calibre.kovidgoyal.net/2009/metadata" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dc:identifier id="uuid_id" opf:scheme="uuid">7fcfc80e-da21-45b2-af86-05b4ba5387d6</dc:identifier>
+    <dc:title>FINAL Ch_1 02.01.06</dc:title>
+    <dc:contributor opf:role="bkp">toepub.com</dc:contributor>
+    <dc:subject>FINAL Ch_1 02.01.06</dc:subject>
+    <dc:description>FINAL Ch_1 02.01.06</dc:description>
+    <dc:creator opf:file-as="Unknown" opf:role="aut">admin</dc:creator>
+    <dc:language>en</dc:language>
+    <meta content="2015-12-03T11:15:51.401792+00:00" name="calibre:timestamp"/>
+    <meta content="0.9.3" name="Sigil version"/>
+    <dc:date opf:event="modification">2021-02-02</dc:date>
+    <meta name="cover" content="Cover.png"/>
+  </metadata>
+  <manifest>
+    <item href="Images/index-1_1.jpg" id="id2" media-type="image/jpeg"/>
+    <item href="Text/Chapter%201.html" id="Chapter_1.html" media-type="application/xhtml+xml"/>
+    <item href="Styles/mathematics.css" id="mathematics.css" media-type="text/css"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="Images/george.jpg" id="george.jpg" media-type="image/jpeg"/>
+    <item href="Images/g1.jpg" id="g1.jpg" media-type="image/jpeg"/>
+    <item href="Images/set.jpg" id="set.jpg" media-type="image/jpeg"/>
+    <item href="Images/set2.jpg" id="set2.jpg" media-type="image/jpeg"/>
+    <item href="Images/12w.jpg" id="x12w.jpg" media-type="image/jpeg"/>
+    <item href="Images/12rt.jpg" id="x12rt.jpg" media-type="image/jpeg"/>
+    <item href="Images/ab.jpg" id="ab.jpg" media-type="image/jpeg"/>
+    <item href="Images/ua.jpg" id="ua.jpg" media-type="image/jpeg"/>
+    <item href="Images/ua2.jpg" id="ua2.jpg" media-type="image/jpeg"/>
+    <item href="Images/ua3.jpg" id="ua3.jpg" media-type="image/jpeg"/>
+    <item href="Images/ua4.jpg" id="ua4.jpg" media-type="image/jpeg"/>
+    <item href="Images/ua5.jpg" id="ua5.jpg" media-type="image/jpeg"/>
+    <item href="Images/ua6.jpg" id="ua6.jpg" media-type="image/jpeg"/>
+    <item href="Images/ua7.jpg" id="ua7.jpg" media-type="image/jpeg"/>
+    <item href="Images/ua8.jpg" id="ua8.jpg" media-type="image/jpeg"/>
+    <item href="Images/ua9.jpg" id="ua9.jpg" media-type="image/jpeg"/>
+    <item href="Images/ab1.jpg" id="ab1.jpg" media-type="image/jpeg"/>
+    <item href="Images/ab2.jpg" id="ab2.jpg" media-type="image/jpeg"/>
+    <item href="Images/ab3.jpg" id="ab3.jpg" media-type="image/jpeg"/>
+    <item href="Images/ab4.jpg" id="ab4.jpg" media-type="image/jpeg"/>
+    <item href="Images/Cover.png" id="Cover.png" media-type="image/png"/>
+    <item href="Text/cover.xhtml" id="cover.xhtml" media-type="application/xhtml+xml"/>
+    <item href="Images/Mathematics-001.png" id="Mathematics-001.png" media-type="image/png"/>
+    <item href="Styles/sgc-toc.css" id="sgc-toc.css" media-type="text/css"/>
+    <item href="Text/TOC.xhtml" id="TOC.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Chapter_1.html"/>
+    <itemref idref="TOC.xhtml"/>
+  </spine>
+  <guide>
+    <reference href="Text/cover.xhtml" title="Cover" type="cover"></reference>
+    <reference href="Text/TOC.xhtml" title="Table Of Contents" type="toc"></reference>
+  </guide>
+</package>

@@ -1,0 +1,2 @@
+Figure 6.8Conditional sequence operator evaluates an ordinary state on first event type’s start/end followed by second event type’s start/end within Δt=[δ1,δ2] time units. Time state set δ1 and δ2 values based on the first event’s timestamp in the event stream. These values are used in the evaluation phase of the next ordinary state.
+Conditional sequence (Ei;𝛚[δ1,δ2]⁢Ej): As shown in Figure 6.8, this operator detects if event type Ei is followed by event type Ej within [δ1,δ2] time units.

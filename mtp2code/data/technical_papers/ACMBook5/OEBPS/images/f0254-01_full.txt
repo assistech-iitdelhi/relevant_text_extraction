@@ -1,0 +1,141 @@
+text_annotations {
+  locale: "und"
+  description: "W\n"
+  bounding_poly {
+    vertices {
+      x: 107
+      y: 81
+    }
+    vertices {
+      x: 167
+      y: 81
+    }
+    vertices {
+      x: 167
+      y: 145
+    }
+    vertices {
+      x: 107
+      y: 145
+    }
+  }
+}
+text_annotations {
+  description: "W"
+  bounding_poly {
+    vertices {
+      x: 107
+      y: 126
+    }
+    vertices {
+      x: 132
+      y: 82
+    }
+    vertices {
+      x: 167
+      y: 101
+    }
+    vertices {
+      x: 142
+      y: 146
+    }
+  }
+}
+full_text_annotation {
+  pages {
+    width: 413
+    height: 263
+    blocks {
+      bounding_box {
+        vertices {
+          x: 107
+          y: 126
+        }
+        vertices {
+          x: 132
+          y: 82
+        }
+        vertices {
+          x: 167
+          y: 101
+        }
+        vertices {
+          x: 142
+          y: 146
+        }
+      }
+      paragraphs {
+        bounding_box {
+          vertices {
+            x: 107
+            y: 126
+          }
+          vertices {
+            x: 132
+            y: 82
+          }
+          vertices {
+            x: 167
+            y: 101
+          }
+          vertices {
+            x: 142
+            y: 146
+          }
+        }
+        words {
+          bounding_box {
+            vertices {
+              x: 107
+              y: 126
+            }
+            vertices {
+              x: 132
+              y: 82
+            }
+            vertices {
+              x: 167
+              y: 101
+            }
+            vertices {
+              x: 142
+              y: 146
+            }
+          }
+          symbols {
+            property {
+              detected_break {
+                type_: LINE_BREAK
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 107
+                y: 126
+              }
+              vertices {
+                x: 132
+                y: 82
+              }
+              vertices {
+                x: 167
+                y: 101
+              }
+              vertices {
+                x: 142
+                y: 146
+              }
+            }
+            text: "W"
+            confidence: 0.9599999785423279
+          }
+          confidence: 0.9599999785423279
+        }
+        confidence: 0.9599999785423279
+      }
+      block_type: TEXT
+      confidence: 0.9599999785423279
+    }
+  }
+  text: "W\n"
+}

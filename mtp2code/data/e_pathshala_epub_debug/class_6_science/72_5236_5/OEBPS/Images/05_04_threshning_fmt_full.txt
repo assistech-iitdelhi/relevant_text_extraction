@@ -1,0 +1,163 @@
+text_annotations {
+  locale: "und"
+  description: "Ry\n"
+  bounding_poly {
+    vertices {
+      x: 297
+      y: 307
+    }
+    vertices {
+      x: 324
+      y: 307
+    }
+    vertices {
+      x: 324
+      y: 333
+    }
+    vertices {
+      x: 297
+      y: 333
+    }
+  }
+}
+text_annotations {
+  description: "Ry"
+  bounding_poly {
+    vertices {
+      x: 297
+      y: 308
+    }
+    vertices {
+      x: 324
+      y: 307
+    }
+    vertices {
+      x: 324
+      y: 332
+    }
+    vertices {
+      x: 297
+      y: 333
+    }
+  }
+}
+full_text_annotation {
+  pages {
+    width: 467
+    height: 337
+    blocks {
+      bounding_box {
+        vertices {
+          x: 297
+          y: 308
+        }
+        vertices {
+          x: 324
+          y: 307
+        }
+        vertices {
+          x: 324
+          y: 332
+        }
+        vertices {
+          x: 297
+          y: 333
+        }
+      }
+      paragraphs {
+        bounding_box {
+          vertices {
+            x: 297
+            y: 308
+          }
+          vertices {
+            x: 324
+            y: 307
+          }
+          vertices {
+            x: 324
+            y: 332
+          }
+          vertices {
+            x: 297
+            y: 333
+          }
+        }
+        words {
+          bounding_box {
+            vertices {
+              x: 297
+              y: 308
+            }
+            vertices {
+              x: 324
+              y: 307
+            }
+            vertices {
+              x: 324
+              y: 332
+            }
+            vertices {
+              x: 297
+              y: 333
+            }
+          }
+          symbols {
+            bounding_box {
+              vertices {
+                x: 297
+                y: 309
+              }
+              vertices {
+                x: 315
+                y: 309
+              }
+              vertices {
+                x: 315
+                y: 333
+              }
+              vertices {
+                x: 297
+                y: 333
+              }
+            }
+            text: "R"
+            confidence: 0.10999999940395355
+          }
+          symbols {
+            property {
+              detected_break {
+                type_: LINE_BREAK
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 319
+                y: 308
+              }
+              vertices {
+                x: 324
+                y: 308
+              }
+              vertices {
+                x: 324
+                y: 332
+              }
+              vertices {
+                x: 319
+                y: 332
+              }
+            }
+            text: "y"
+            confidence: 0.03999999910593033
+          }
+          confidence: 0.07000000029802322
+        }
+        confidence: 0.07000000029802322
+      }
+      block_type: TEXT
+      confidence: 0.07000000029802322
+    }
+  }
+  text: "Ry\n"
+}

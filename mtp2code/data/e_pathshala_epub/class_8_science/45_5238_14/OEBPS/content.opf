@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="bookid" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta content="Adobe InDesign" name="generator" />
+    <dc:date>2019-05-08</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2019-06-03T13:03:48Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta content="0.9.10" name="Sigil version" />
+    <meta name="cover" content="Capture.JPG" />
+  </metadata>
+  <manifest>
+    <item id="ch14" href="Text/ch14.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="toc" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="ch14.css" href="Styles/ch14.css" media-type="text/css"/>
+    <item id="Wingdings-Regular.ttf" href="Fonts/Wingdings-Regular.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="x0854CH14_fmt.png" href="Images/0854CH14_fmt.png" media-type="image/png"/>
+    <item id="x14_fmt.png" href="Images/14_fmt.png" media-type="image/png"/>
+    <item id="x14_01a_contductors_boo_fmt.jpeg" href="Images/14_01a_contductors_boo_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x14_01b_insulators_pahe_fmt.jpeg" href="Images/14_01b_insulators_pahe_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x14_03_fmt.jpeg" href="Images/14_03_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x14_08_fmt.jpeg" href="Images/14_08_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x38.png" href="Images/38.png" media-type="image/png"/>
+    <item id="x1344.png" href="Images/1344.png" media-type="image/png"/>
+    <item id="x1566.png" href="Images/1566.png" media-type="image/png"/>
+    <item id="x1639.png" href="Images/1639.png" media-type="image/png"/>
+    <item id="x1656.png" href="Images/1656.png" media-type="image/png"/>
+    <item id="x1893.png" href="Images/1893.png" media-type="image/png"/>
+    <item id="x1932.png" href="Images/1932.png" media-type="image/png"/>
+    <item id="x1993.png" href="Images/1993.png" media-type="image/png"/>
+    <item id="carbon_rod.png" href="Images/carbon_rod.png" media-type="image/png"/>
+    <item id="copper_plate.png" href="Images/copper_plate.png" media-type="image/png"/>
+    <item id="gc.png" href="Images/gc.png" media-type="image/png"/>
+    <item id="light_for_box_fmt.jpeg" href="Images/light%20for%20box_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="pc.png" href="Images/pc.png" media-type="image/png"/>
+    <item id="Capture.JPG" href="Images/Capture.JPG" media-type="image/jpeg" properties="cover-image"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="ch14"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

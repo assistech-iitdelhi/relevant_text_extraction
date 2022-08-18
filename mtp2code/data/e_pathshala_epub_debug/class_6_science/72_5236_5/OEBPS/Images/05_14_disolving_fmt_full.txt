@@ -1,0 +1,163 @@
+text_annotations {
+  locale: "und"
+  description: "Se\n"
+  bounding_poly {
+    vertices {
+      x: 236
+      y: 223
+    }
+    vertices {
+      x: 298
+      y: 223
+    }
+    vertices {
+      x: 298
+      y: 255
+    }
+    vertices {
+      x: 236
+      y: 255
+    }
+  }
+}
+text_annotations {
+  description: "Se"
+  bounding_poly {
+    vertices {
+      x: 236
+      y: 223
+    }
+    vertices {
+      x: 298
+      y: 223
+    }
+    vertices {
+      x: 298
+      y: 255
+    }
+    vertices {
+      x: 236
+      y: 255
+    }
+  }
+}
+full_text_annotation {
+  pages {
+    width: 425
+    height: 304
+    blocks {
+      bounding_box {
+        vertices {
+          x: 236
+          y: 223
+        }
+        vertices {
+          x: 298
+          y: 223
+        }
+        vertices {
+          x: 298
+          y: 255
+        }
+        vertices {
+          x: 236
+          y: 255
+        }
+      }
+      paragraphs {
+        bounding_box {
+          vertices {
+            x: 236
+            y: 223
+          }
+          vertices {
+            x: 298
+            y: 223
+          }
+          vertices {
+            x: 298
+            y: 255
+          }
+          vertices {
+            x: 236
+            y: 255
+          }
+        }
+        words {
+          bounding_box {
+            vertices {
+              x: 236
+              y: 223
+            }
+            vertices {
+              x: 298
+              y: 223
+            }
+            vertices {
+              x: 298
+              y: 255
+            }
+            vertices {
+              x: 236
+              y: 255
+            }
+          }
+          symbols {
+            bounding_box {
+              vertices {
+                x: 236
+                y: 223
+              }
+              vertices {
+                x: 256
+                y: 223
+              }
+              vertices {
+                x: 256
+                y: 255
+              }
+              vertices {
+                x: 236
+                y: 255
+              }
+            }
+            text: "S"
+            confidence: 0.6899999976158142
+          }
+          symbols {
+            property {
+              detected_break {
+                type_: LINE_BREAK
+              }
+            }
+            bounding_box {
+              vertices {
+                x: 263
+                y: 223
+              }
+              vertices {
+                x: 298
+                y: 223
+              }
+              vertices {
+                x: 298
+                y: 255
+              }
+              vertices {
+                x: 263
+                y: 255
+              }
+            }
+            text: "e"
+            confidence: 0.019999999552965164
+          }
+          confidence: 0.3499999940395355
+        }
+        confidence: 0.3499999940395355
+      }
+      block_type: TEXT
+      confidence: 0.3499999940395355
+    }
+  }
+  text: "Se\n"
+}

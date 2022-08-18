@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="bookid" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta name="generator" content="Adobe InDesign" />
+    <dc:date>2019-05-08</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2019-06-03T13:03:32Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta name="Sigil version" content="0.9.10" />
+    <meta name="cover" content="Capture.JPG" />
+  </metadata>
+  <manifest>
+    <item id="ch17" href="Text/ch17.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="toc" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="ch17.css" href="Styles/ch17.css" media-type="text/css"/>
+    <item id="Wingdings-Regular.ttf" href="Fonts/Wingdings-Regular.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="x0854CH17_fmt.png" href="Images/0854CH17_fmt.png" media-type="image/png"/>
+    <item id="x17_fmt.png" href="Images/17_fmt.png" media-type="image/png"/>
+    <item id="mur_fmt.png" href="Images/mur_fmt.png" media-type="image/png"/>
+    <item id="x17_1_fmt.jpeg" href="Images/17_1_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_2_fmt.jpeg" href="Images/17_2_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_4a_fmt.jpeg" href="Images/17_4a_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_4b_fmt.jpeg" href="Images/17_4b_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_5_fmt.jpeg" href="Images/17_5_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_6_fmt.jpeg" href="Images/17_6_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_7_fmt.jpeg" href="Images/17_7_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_8_fmt.jpeg" href="Images/17_8_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_9_fmt.jpeg" href="Images/17_9_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_10_fmt.jpeg" href="Images/17_10_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_12_fmt.jpeg" href="Images/17_12_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_13_fmt.jpeg" href="Images/17_13_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_14_fmt.jpeg" href="Images/17_14_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_15_fmt.jpeg" href="Images/17_15_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_16_fmt.jpeg" href="Images/17_16_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_18_fmt.jpeg" href="Images/17_18_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_19_fmt.jpeg" href="Images/17_19_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_20_fmt.jpeg" href="Images/17_20_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_21_fmt.jpeg" href="Images/17_21_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_22_fmt.jpeg" href="Images/17_22_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_24_fmt.jpeg" href="Images/17_24_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_26_fmt.jpeg" href="Images/17_26_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_27_fmt.jpeg" href="Images/17_27_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x17_28_fmt.jpeg" href="Images/17_28_fmt.jpeg" media-type="image/jpeg"/>
+    <item id="x36.png" href="Images/36.png" media-type="image/png"/>
+    <item id="x104.PNG" href="Images/104.PNG" media-type="image/png"/>
+    <item id="x872.PNG" href="Images/872.PNG" media-type="image/png"/>
+    <item id="x873.PNG" href="Images/873.PNG" media-type="image/png"/>
+    <item id="x1133.PNG" href="Images/1133.PNG" media-type="image/png"/>
+    <item id="x1136.PNG" href="Images/1136.PNG" media-type="image/png"/>
+    <item id="x1137.PNG" href="Images/1137.PNG" media-type="image/png"/>
+    <item id="x2153.png" href="Images/2153.png" media-type="image/png"/>
+    <item id="x2683.png" href="Images/2683.png" media-type="image/png"/>
+    <item id="x3276.png" href="Images/3276.png" media-type="image/png"/>
+    <item id="ab2.png" href="Images/ab2.png" media-type="image/png"/>
+    <item id="asteroid.png" href="Images/asteroid.png" media-type="image/png"/>
+    <item id="Capture.JPG" href="Images/Capture.JPG" media-type="image/jpeg" properties="cover-image"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="ch17"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

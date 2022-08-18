@@ -1,0 +1,375 @@
+body {
+font-family:"Arial";
+font-size:100%;
+line-height:150%;
+padding:2%;
+text-align:justify;
+}
+
+* {
+margin:0;
+padding:0;
+}
+
+h1
+{
+color:#FFF;
+background:#00AFEB;
+padding:10px;
+font-size:1.5em;
+text-transform: uppercase;
+}
+
+h2 {
+color:#00AFEB;
+
+}
+h3, .subHeading {
+	color:#00AFEB;
+	font-weight:bold;
+	text-transform: uppercase; 
+}
+h4
+{
+color:#00A7DF;
+	font-weight:bold;
+	
+}
+
+.CharOverride-9
+{
+font-weight:bold;
+
+}
+.CharOverride-16,.CharOverride-27
+{
+vertical-align:super;
+}
+
+.CharOverride-11
+{
+font-weight:bold;
+font-style:italic;
+}
+.char-style-override-1{
+
+
+
+font-weight:bold;}
+
+italic
+{
+}
+b, .char-style-override-19{
+font-weight:bold;
+}
+
+
+
+
+.image {
+text-align:center;
+}
+.author {
+text-align:right;
+}
+
+.chapterHeading {
+font-size:160%;
+color: gray;
+margin-bottom:20px;
+}
+
+.chapterNumber {
+	font-size: 125%;
+	font-family: "Arial";
+}
+
+.subHeading {
+color:#ce1337;
+font-size:125%;
+}
+
+.center {
+	text-align: center;
+}
+
+.excercise {
+text-transform:uppercase;
+font-weight:bold;
+margin:1% 0%;
+}
+
+
+
+
+
+img
+{
+	vertical-align:middle;
+	max-width:90%;
+padding:5px;
+}
+.img_left
+{
+	margin-left:0px;
+}
+ul
+{
+	margin-left:45px;
+}
+p.Chapter-No- {
+	color:#000000;
+	font-size:1.417em;
+	text-align:left;
+}
+p.Begin-Question {
+	color:#0089cf;
+	font-size:1.333em;
+}
+/*p.SubTitle2 {
+	color:#0089cf;
+	font-size:1.333em;
+}
+
+*/
+span.char-style-override-2 {
+	color:#a3238e;
+}
+p.Box-Sub-Title {
+	color:#0089cf;
+	font-size:1.333em;
+}
+p.Subhead-2 {
+	font-size:1em;
+}
+p.Imagine {
+	color:#ec008c;
+	font-size:1.042em;
+}
+p.Excercise-Title {
+	color:#a3238e;
+	font-size:1.333em;
+}
+p.Excercise {
+	color:#6d6e71;
+	font-size:1em;
+	font-weight:500;
+}
+.caption, .char-style-override-32,.footnote
+{
+	font-style: italic; 
+	font-size: 0.83em; 
+	color: #4D4D4D;
+	text-align:center;
+}
+.note
+{
+font-style:italic;
+font-size:0.83em;
+}
+
+p
+{
+	margin-top:10px;
+}
+
+.footer
+{
+	display:none;
+}
+table td
+{
+	padding:10px;
+}
+.conc
+{
+	color:#006699;
+}
+div.layout
+{
+  text-align: center;
+}
+div.chapter_pos
+
+{
+
+text-align: center;
+
+width: 96%;
+
+position:absolute;
+
+top:50%;
+
+font-weight:bold;
+
+font-size:28px;
+
+color:#fff;
+
+}
+
+div.chapter_pos div
+
+{
+
+background:#993300;
+
+padding:10px;
+
+width:40%;
+
+margin:auto;
+opacity:0.9;
+
+}
+
+div.chapter_pos div span
+
+{
+
+font-size:0.7em;
+
+color:#eaeaea;
+
+font-weight:normal;
+
+}
+
+.clear
+{
+clear:both;
+}
+
+
+/* Chapter Name */
+
+/* Concept Heading */
+.ConceptHeading
+{
+color:#00aeef;
+font-size:1.3em;
+font-weight:bold;
+margin-top:20px;
+}
+/* Sub Heading */
+.SubHeading
+{
+color:#00aeef;
+font-size:1.1em;
+font-weight:bold;
+}
+/* Sub Heading 2*/
+.SubHeading2
+{
+color:#B04AA2;
+f
+ont-size:1em;
+font-weight:bold;
+}
+/* Hightlisght Boxes */
+.NewWordBox{
+background-color:#C5EBFA;
+padding: 15px;
+font-size:0.9em;
+line-height:120%;
+}
+.activityBox{
+background-color:#C5EBFA;
+color:#00A7DF;
+padding: 15px;
+font-size:0.9em;
+line-height:120%;
+border:2px solid #00A7DF;
+}
+.caption
+{
+font-style: italic;
+font-size: 0.83em;
+color: #4D4D4D;
+text-align:center;
+}
+
+ .lining_box2
+{
+border:2px solid #800080;
+padding:15px;
+border-radius:15px;
+
+}
+.lining_box3
+{
+border:1px solid #00aeef;
+padding:15px;
+}
+.box{
+background:#C5EBFA;
+padding: 15px;
+border:2px solid #000;
+
+}
+table
+{
+    width:100%;
+    border:1px solid #000;
+    border-collapse:collapse;
+}
+td
+{
+    padding:10px;
+    border:1px solid #000;
+    border-collapse:collapse;
+}
+
+.cover_img_small
+{
+width:50%;
+}
+@media only screen and (max-width: 767px) {
+
+
+img
+{
+	max-width:80%;
+padding:5px;
+}
+div.chapter_pos
+{
+top:20%;
+font-size:1em;
+}
+div.chapter_pos div
+{
+width:80%;
+}
+.cover_img_small
+{
+width:90%;
+}
+}
+b{
+color:#00aeef;
+
+}
+.char-style-override-60,.char-style-override-81
+{
+
+color:#00aeef;
+font-weight:bold;
+font-style: italic;
+}
+.char-style-override-55,.char-style-override-64,.char-style-override-102{
+vertical-align:super;
+font-size:0.8em;
+}
+.char-style-override-15,.char-style-override-31
+{color:#00aeef;
+font-weight:bold;}
+.char-style-override-82,.char-style-override-84
+
+{
+
+vertical-align:sub;
+font-size:0.8em;
+}

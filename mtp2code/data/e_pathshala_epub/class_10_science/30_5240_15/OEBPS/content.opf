@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="BookId" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+    <dc:identifier opf:scheme="UUID" id="BookId">urn:uuid:111edf0a-842c-465f-9f6a-49b57348ff40</dc:identifier>
+    <dc:title>Science</dc:title>
+    <dc:title>Textbook Std. X</dc:title>
+    <dc:date opf:event="modification">2015-09-21</dc:date>
+    <meta property="title-type" refines="#t1">main</meta>
+    <meta property="display-seq" refines="#t1">1</meta>
+    <meta property="title-type" refines="#t2">subtitle</meta>
+    <meta property="display-seq" refines="#t2">2</meta>
+    <meta content="0.9.9" name="Sigil version" />
+    <meta property="dcterms:modified">2018-08-01T14:00:10Z</meta>
+    <meta name="cover" content="cover.png" />
+  </metadata>
+  <manifest>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="science.css" href="Styles/science.css" media-type="text/css"/>
+    <item id="x1241.png" href="Images/1241.png" media-type="image/png"/>
+    <item id="x1252.png" href="Images/1252.png" media-type="image/png"/>
+    <item id="x1257.png" href="Images/1257.png" media-type="image/png"/>
+    <item id="x976.png" href="Images/976.png" media-type="image/png"/>
+    <item id="x993.png" href="Images/993.png" media-type="image/png"/>
+    <item id="x1048.png" href="Images/1048.png" media-type="image/png"/>
+    <item id="x1083.png" href="Images/1083.png" media-type="image/png"/>
+    <item id="x1261.png" href="Images/1261.png" media-type="image/png"/>
+    <item id="x1271.png" href="Images/1271.png" media-type="image/png"/>
+    <item id="Chapter-15.html" href="Text/Chapter-15.html" media-type="application/xhtml+xml"/>
+    <item id="x20.png" href="Images/20.png" media-type="image/png"/>
+    <item id="x21.png" href="Images/21.png" media-type="image/png"/>
+    <item id="e1.png" href="Images/e1.png" media-type="image/png"/>
+    <item id="cover.png" href="Images/cover.png" media-type="image/png" properties="cover-image"/>
+    <item id="nav.xhtml" href="Text/nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="x1125.PNG" href="Images/1125.PNG" media-type="image/png"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Chapter-15.html"/>
+    <itemref idref="nav.xhtml" linear="no"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

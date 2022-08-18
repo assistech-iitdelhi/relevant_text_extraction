@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>The Sparse Fourier Transform: Theory and Practice</title>
+<link rel="stylesheet" type="text/css" href="../styles/stylesheet.css"/>
+<link rel="stylesheet" type="application/vnd.adobe-page-template+xml" href="../styles/page-template.xpgt"/>
+</head>
+<body>
+<p class="chnoa"><a id="page_219"/><b>APPENDIX</b></p>
+<p class="chno"><b>B</b></p>
+<p class="chtitle"><b>The Optimality of the Exactly <i>k</i>-Sparse Algorithm 4.1</b></p>
+<p class="noindent">If we assume that FFT is optimal and hence the DFT cannot be computed in less than <i>O</i>(<i>n</i> log <i>n</i>) time, then Algorithm 4.1 described in <a href="13_Chapter04.xhtml#ch4_2">Section 4.2</a> for the exactly k-sparse case is <i>optimal</i> as long as <i>k</i> = <i>n</i><sup>&#8486;(1)</sup>. In this appendix, we show that by reducing a <i>k</i>-dimensional DFT to the an exact <i>k</i>-sparse <i>n</i>-dimensional DFT.</p>
+<p class="indent">Assume that <i>k</i> divides <i>n</i>.</p>
+<p class="noindentt"><b>Lemma B.1</b> Suppose that there is an algorithm <i>A</i> that, given an <i>n</i>-dimensional vector <i>y</i> such that <i>y&#770;</i> is <i>k</i>-sparse, computes <i>y&#770;</i> in time <i>T</i>(<i>k</i>). Then there is an algorithm <i>A</i>&#8242; that given a <i>k</i>-dimensional vector <i>x</i> computes <i>x&#770;</i> in time <i>O</i>(<i>T</i>(<i>k</i>))).</p>
+<p class="noindentt"><b>Proof</b> Given a <i>k</i>-dimensional vector <i>x</i>, we define <img src="../images/in219_1.png" alt="image"/> for <i>i</i> = 0 &#8230; <i>n</i> &#8211; 1. Whenever <i>A</i> requests a sample <i>y<sub>i</sub></i>, we compute it from <i>x</i> in constant time. Moreover, we have that <img src="../images/in219_2.png" alt="image"/> if <i>i</i> is a multiple of (<i>n</i>/<i>k</i>), and <i>y&#770;<sub>i</sub></i> = 0 otherwise. Thus, <i>y&#770;</i> is <i>k</i>-sparse. Since <i>x&#770;</i> can be immediately recovered from <i>y&#770;</i>, the lemma follows. &#9632;</p>
+<p class="noindentt"><b>Corollary B.1</b> Assume that the <i>n</i>-dimensional DFT cannot be computed in <i>o</i>(<i>n</i> log <i>n</i>) time. Then any algorithm for the <i>k</i>-sparse DFT (for vectors of arbitrary dimension) must run in &#8486;(<i>k</i> log <i>k</i>) time.</p>
+</body>
+</html>

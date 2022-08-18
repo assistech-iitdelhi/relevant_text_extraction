@@ -1,0 +1,30 @@
+-------   sentence-transformers/all-mpnet-base-v2   ------------------
+ least distance cosine threshold =  0.72
+ least distance =  0.4794034760696244
+ least distnant FNR =  0.4126428545206309
+ least distnant FPR =  0.43053684709175766
+ number of total figures =  41
+-------   sentence-transformers/multi-qa-MiniLM-L6-cos-v1   ------------------
+ least distance cosine threshold =  0.92
+ least distance =  0.48307914747006914
+ least distnant FNR =  0.4903988114904793
+ least distnant FPR =  0.39016067351980666
+ number of total figures =  41
+-------   sentence-transformers/all-MiniLM-L6-v2   ------------------
+ least distance cosine threshold =  1.32
+ least distance =  0.5145515338344011
+ least distnant FNR =  0.6158992342516371
+ least distnant FPR =  0.2934287934287934
+ number of total figures =  41
+-------   sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2   ------------------
+ least distance cosine threshold =  0.56
+ least distance =  0.526472522174371
+ least distnant FNR =  0.3437147682039323
+ least distnant FPR =  0.44327541399571935
+ number of total figures =  41
+-------   sentence-transformers/bert-base-nli-mean-tokens   ------------------
+ least distance cosine threshold =  0.52
+ least distance =  0.6082699501883538
+ least distnant FNR =  0.3254006674440111
+ least distnant FPR =  0.44577977269146224
+ number of total figures =  41

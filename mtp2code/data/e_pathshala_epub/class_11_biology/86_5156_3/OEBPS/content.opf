@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="bookid" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta name="generator" content="Adobe InDesign" />
+    <dc:date>2020-05-04</dc:date>
+    <dc:language>en-GB</dc:language>
+    <meta property="dcterms:modified">2020-08-26T16:59:59Z</meta>
+    <dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+    <meta name="Sigil version" content="0.9.12" />
+    <meta name="cover" content="cover.png" />
+  </metadata>
+  <manifest>
+    <item id="ch-3" href="Text/ch-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="toc" href="Text/toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="ch-3.css" href="Styles/ch-3.css" media-type="text/css"/>
+    <item id="BookmanOldStyle-Bold.TTF" href="Fonts/BookmanOldStyle-Bold.TTF" media-type="application/vnd.ms-opentype"/>
+    <item id="BookmanOldStyle-BoldItalic.TTF" href="Fonts/BookmanOldStyle-BoldItalic.TTF" media-type="application/vnd.ms-opentype"/>
+    <item id="x1027.png" href="Images/1027.png" media-type="image/png"/>
+    <item id="x1038.png" href="Images/1038.png" media-type="image/png"/>
+    <item id="x11080CH03_fmt.png" href="Images/11080CH03_fmt.png" media-type="image/png"/>
+    <item id="x1129.png" href="Images/1129.png" media-type="image/png"/>
+    <item id="x1130.png" href="Images/1130.png" media-type="image/png"/>
+    <item id="x1140.png" href="Images/1140.png" media-type="image/png"/>
+    <item id="x1141.png" href="Images/1141.png" media-type="image/png"/>
+    <item id="x1142.png" href="Images/1142.png" media-type="image/png"/>
+    <item id="x1195.png" href="Images/1195.png" media-type="image/png"/>
+    <item id="x1269.png" href="Images/1269.png" media-type="image/png"/>
+    <item id="x1284.png" href="Images/1284.png" media-type="image/png"/>
+    <item id="x1293.png" href="Images/1293.png" media-type="image/png"/>
+    <item id="x1300.png" href="Images/1300.png" media-type="image/png"/>
+    <item id="x1341.png" href="Images/1341.png" media-type="image/png"/>
+    <item id="x3.3c_fmt.png" href="Images/3.3c_fmt.png" media-type="image/png"/>
+    <item id="x3.4a_fmt.png" href="Images/3.4a_fmt.png" media-type="image/png"/>
+    <item id="x3.5a_fmt.png" href="Images/3.5a_fmt.png" media-type="image/png"/>
+    <item id="x3.5b_fmt.png" href="Images/3.5b_fmt.png" media-type="image/png"/>
+    <item id="x824.png" href="Images/824.png" media-type="image/png"/>
+    <item id="x932.png" href="Images/932.png" media-type="image/png"/>
+    <item id="x938.png" href="Images/938.png" media-type="image/png"/>
+    <item id="x939.png" href="Images/939.png" media-type="image/png"/>
+    <item id="x940.png" href="Images/940.png" media-type="image/png"/>
+    <item id="x950.png" href="Images/950.png" media-type="image/png"/>
+    <item id="x981.png" href="Images/981.png" media-type="image/png"/>
+    <item id="fig-3-1NEW---Copy_fmt.png" href="Images/fig%203-1NEW%20-%20Copy_fmt.png" media-type="image/png"/>
+    <item id="fig-3-3d_fmt.png" href="Images/fig%203-3d_fmt.png" media-type="image/png"/>
+    <item id="fig-3-4a-_fmt.png" href="Images/fig%203-4a-_fmt.png" media-type="image/png"/>
+    <item id="Screenshot_from_2020-08-26_10-30-45.png" href="Images/Screenshot%20from%202020-08-26%2010-30-45.png" media-type="image/png"/>
+    <item id="Screenshot_from_2020-08-26_10-32-46.png" href="Images/Screenshot%20from%202020-08-26%2010-32-46.png" media-type="image/png"/>
+    <item id="Screenshot_from_2020-08-26_10-34-56.png" href="Images/Screenshot%20from%202020-08-26%2010-34-56.png" media-type="image/png"/>
+    <item id="cover.png" href="Images/cover.png" media-type="image/png" properties="cover-image"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="ch-3"/>
+    <itemref idref="toc"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

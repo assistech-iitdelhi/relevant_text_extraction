@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ncx version="2005-1" xmlns="http://www.daisy.org/z3986/2005/ncx/">
+  <head>
+    <meta content="urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b" name="dtb:uid"/>
+    <meta content="3" name="dtb:depth"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>Unknown</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="navPoint-1" playOrder="1">
+      <navLabel>
+        <text>UNIT IX</text>
+      </navLabel>
+      <content src="Text/Chapter-11.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-2" playOrder="2">
+      <navLabel>
+        <text>BIOTECHNOLOGY</text>
+      </navLabel>
+      <content src="Text/Chapter-11.xhtml#sigil_toc_id_1"/>
+      <navPoint id="navPoint-3" playOrder="3">
+        <navLabel>
+          <text>CHAPTER 11</text>
+        </navLabel>
+        <content src="Text/Chapter-11.xhtml#sigil_toc_id_2"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-4" playOrder="4">
+      <navLabel>
+        <text>BIOTECHNOLOGY: PRINCIPLES AND PROCESSES</text>
+      </navLabel>
+      <content src="Text/Chapter-11.xhtml#sigil_toc_id_3"/>
+      <navPoint id="navPoint-5" playOrder="5">
+        <navLabel>
+          <text>11.1 Principles of Biotechnology</text>
+        </navLabel>
+        <content src="Text/Chapter-11.xhtml#sigil_toc_id_4"/>
+      </navPoint>
+      <navPoint id="navPoint-6" playOrder="6">
+        <navLabel>
+          <text>11.2 Tools of Recombinant DNA Technology</text>
+        </navLabel>
+        <content src="Text/Chapter-11.xhtml#sigil_toc_id_5"/>
+        <navPoint id="navPoint-7" playOrder="7">
+          <navLabel>
+            <text>11.2.1 Restriction Enzymes</text>
+          </navLabel>
+          <content src="Text/Chapter-11.xhtml#sigil_toc_id_6"/>
+        </navPoint>
+        <navPoint id="navPoint-8" playOrder="8">
+          <navLabel>
+            <text>11.2.2 Cloning Vectors</text>
+          </navLabel>
+          <content src="Text/Chapter-11.xhtml#sigil_toc_id_7"/>
+        </navPoint>
+        <navPoint id="navPoint-9" playOrder="9">
+          <navLabel>
+            <text>11.2.3 Competent Host (For Transformation with Recombinant DNA)</text>
+          </navLabel>
+          <content src="Text/Chapter-11.xhtml#sigil_toc_id_8"/>
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint-10" playOrder="10">
+        <navLabel>
+          <text>11.3 Processes of Recombinant DNA Technology</text>
+        </navLabel>
+        <content src="Text/Chapter-11.xhtml#sigil_toc_id_9"/>
+        <navPoint id="navPoint-11" playOrder="11">
+          <navLabel>
+            <text>11.3.1 Isolation of the Genetic Material (DNA)</text>
+          </navLabel>
+          <content src="Text/Chapter-11.xhtml#sigil_toc_id_10"/>
+        </navPoint>
+        <navPoint id="navPoint-12" playOrder="12">
+          <navLabel>
+            <text>11.3.2 Cutting of DNA at Specific Locations</text>
+          </navLabel>
+          <content src="Text/Chapter-11.xhtml#sigil_toc_id_11"/>
+        </navPoint>
+        <navPoint id="navPoint-13" playOrder="13">
+          <navLabel>
+            <text>11.3.3 Amplification of Gene of Interest using PCR</text>
+          </navLabel>
+          <content src="Text/Chapter-11.xhtml#sigil_toc_id_12"/>
+        </navPoint>
+        <navPoint id="navPoint-14" playOrder="14">
+          <navLabel>
+            <text>11.3.4 Insertion of Recombinant DNA into the Host Cell/Organism</text>
+          </navLabel>
+          <content src="Text/Chapter-11.xhtml#sigil_toc_id_13"/>
+        </navPoint>
+        <navPoint id="navPoint-15" playOrder="15">
+          <navLabel>
+            <text>11.3.5 Obtaining the Foreign Gene Product</text>
+          </navLabel>
+          <content src="Text/Chapter-11.xhtml#sigil_toc_id_14"/>
+        </navPoint>
+        <navPoint id="navPoint-16" playOrder="16">
+          <navLabel>
+            <text>11.3.6 Downstream Processing</text>
+          </navLabel>
+          <content src="Text/Chapter-11.xhtml#sigil_toc_id_15"/>
+        </navPoint>
+      </navPoint>
+    </navPoint>
+  </navMap>
+</ncx>
